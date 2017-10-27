@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sample">
+      <UniqueIdentifier>{26f75333-b4d3-452d-9cb6-1a6259cf5654}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugin">
+      <UniqueIdentifier>{c683d559-8817-4301-bd70-765ad17c6128}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RPC3Sample.cpp">
+      <Filter>Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\DependentExtensions\RPC3\RPC3.cpp">
+      <Filter>Plugin</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\DependentExtensions\RPC3\RPC3.h">
+      <Filter>Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DependentExtensions\RPC3\RPC3_Boost.h">
+      <Filter>Plugin</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ClientLogger">
+      <UniqueIdentifier>{9b240ed9-785a-405b-9f12-1fa989cf404f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ogre">
+      <UniqueIdentifier>{b72a7e45-3eba-49c6-9470-bb5d73935832}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Optional\DX9_BackbufferGrabber.cpp">
+      <Filter>ClientLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Optional\Ogre3D_DX9_BackbufferGrabber.cpp">
+      <Filter>ClientLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SQLite3ClientPlugin.cpp">
+      <Filter>ClientLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SQLite3PluginCommon.cpp">
+      <Filter>ClientLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SQLiteClientLoggerPlugin.cpp">
+      <Filter>ClientLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SQLiteLoggerCommon.cpp">
+      <Filter>ClientLogger</Filter>
+    </ClCompile>
+    <ClCompile Include="BspCollision.cpp">
+      <Filter>Ogre</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Optional\DX9_BackbufferGrabber.h">
+      <Filter>ClientLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Optional\Ogre3D_DX9_BackbufferGrabber.h">
+      <Filter>ClientLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SQLite3ClientPlugin.h">
+      <Filter>ClientLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SQLite3PluginCommon.h">
+      <Filter>ClientLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SQLiteClientLoggerPlugin.h">
+      <Filter>ClientLogger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SQLiteLoggerCommon.h">
+      <Filter>ClientLogger</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
