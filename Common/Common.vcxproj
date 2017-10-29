@@ -69,13 +69,13 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)3rd\pthread\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rd\pthread\include;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)3rd\RakNet\Source</IncludePath>
     <TargetExt>.lib</TargetExt>
     <TargetName>libcommon_d</TargetName>
     <OutDir>$(SolutionDir)lib\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)3rd\pthread\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rd\pthread\include;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)3rd\RakNet\Source</IncludePath>
     <TargetName>libcommon</TargetName>
     <TargetExt>.lib</TargetExt>
     <OutDir>$(SolutionDir)lib\</OutDir>
@@ -85,6 +85,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>DEBUG;WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -101,6 +103,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -121,12 +124,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\common\BaseServer.h" />
     <ClInclude Include="..\src\common\common.h" />
+    <ClInclude Include="..\src\common\NetworkConnection.h" />
+    <ClInclude Include="..\src\common\objectpool.h" />
+    <ClInclude Include="..\src\common\TcpConnection.h" />
+    <ClInclude Include="..\src\common\TcpListener.h" />
     <ClInclude Include="..\src\common\ThreadPool.h" />
+    <ClInclude Include="..\src\common\Timer.h" />
+    <ClInclude Include="..\src\common\UdpConnection.h" />
+    <ClInclude Include="..\src\common\UdpListener.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\common\BaseServer.cpp" />
     <ClCompile Include="..\src\common\common.cpp" />
+    <ClCompile Include="..\src\common\NetworkConnection.cpp" />
+    <ClCompile Include="..\src\common\TcpConnection.cpp" />
+    <ClCompile Include="..\src\common\TcpListener.cpp" />
     <ClCompile Include="..\src\common\ThreadPool.cpp" />
+    <ClCompile Include="..\src\common\Timer.cpp" />
+    <ClCompile Include="..\src\common\UdpConnection.cpp" />
+    <ClCompile Include="..\src\common\UdpListener.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

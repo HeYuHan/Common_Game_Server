@@ -117,7 +117,7 @@ int main(void)
 	pk.publicKeyMode=RakNet::PKM_USE_KNOWN_PUBLIC_KEY;
 	bool b = client->Connect(ip, atoi(serverPort), "Rumpelstiltskin", (int) strlen("Rumpelstiltskin"), &pk)==RakNet::CONNECTION_ATTEMPT_STARTED;	
 #else
-	RakNet::ConnectionAttemptResult car = client->Connect(ip, atoi(serverPort), "Rumpelstiltskin", (int) strlen("Rumpelstiltskin"));
+	RakNet::ConnectionAttemptResult car = client->Connect(ip, atoi(serverPort), "", 0);
 	RakAssert(car==RakNet::CONNECTION_ATTEMPT_STARTED);
 #endif
 
