@@ -313,7 +313,7 @@ enum {
 #endif
 #endif
 
-#if !defined(HAVE_STRUCT_TIMESPEC) && !defined(_INC_TIME)
+#if !defined(HAVE_STRUCT_TIMESPEC)
 #define HAVE_STRUCT_TIMESPEC
 #if !defined(_TIMESPEC_DEFINED)
 #define _TIMESPEC_DEFINED
