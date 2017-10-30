@@ -14,18 +14,19 @@ BaseServer::~BaseServer()
 	m_EvetBase = NULL;
 }
 
-void BaseServer::Init()
+bool BaseServer::Init()
 {
 #ifdef WIN32  
 	WSAData wsaData;
 	WSAStartup(MAKEWORD(2, 0), &wsaData);
 #endif
 	m_EvetBase = event_base_new();
+	return NULL != m_EvetBase;
 }
 
-void BaseServer::Run()
+int BaseServer::Run()
 {
-	event_base_dispatch(m_EvetBase);
+	return event_base_dispatch(m_EvetBase);
 	
 }
 

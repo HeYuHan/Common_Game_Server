@@ -3,13 +3,14 @@
 #include <Timer.h>
 ChannelServer gChannelServer;
 Timer m_UpdateTimer;
+
 void ChannnelUpdate(float time, void *channel)
 {
 	gChannelServer.Update(time);
 }
 ChannelServer::ChannelServer()
 {
-	Timer m_UpdateTimer;
+	
 }
 
 ChannelServer::~ChannelServer()
@@ -43,12 +44,37 @@ void ChannelServer::OnUdpAccept(Packet* p)
 	m_UdpClientMap.insert(UdpClientMapPair(p->guid.g, c));
 }
 
-void ChannelServer::Init()
+bool ChannelServer::Init()
 {
-	BaseServer::Init();
-	m_ClientPool.Initialize(256);
-	m_UpdateTimer.Init(GetEventBase(), 0.01f, ChannnelUpdate, this, true);
-	m_UpdateTimer.Begin();
+	if (!BaseServer::Init())
+	{
+		return false;
+	}
+	if (!m_ClientPool.Initialize(m_Config.max_client))
+	{
+		return false;
+	}
+	if (!m_RoomPool.Initialize(m_Config.max_room))
+	{
+		return false;
+	}
+	if (!CreateUdpServer(m_Config.ip, m_Config.port, m_Config.pwd,m_Config.max_client))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+int ChannelServer::Run()
+{
+	if (Init())
+	{
+		m_UpdateTimer.Init(GetEventBase(), 0.01f, ChannnelUpdate, this, true);
+		m_UpdateTimer.Begin();
+		return BaseServer::Run();
+	}
+	return -1;
 }
 
 void ChannelServer::Update(float time)

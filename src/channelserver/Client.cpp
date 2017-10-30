@@ -1,5 +1,7 @@
 #include "pch.h"
-ChannelClient::ChannelClient()
+ChannelClient::ChannelClient():
+	uid(0),
+	m_NetState(NET_NONE)
 {
 	connection = this;
 	stream = this;
@@ -19,4 +21,9 @@ void ChannelClient::OnDisconnected()
 
 void ChannelClient::DisConnect()
 {
+}
+
+void ChannelClient::OnMessage()
+{
+
 }

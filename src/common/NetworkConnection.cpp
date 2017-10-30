@@ -26,9 +26,6 @@ NetworkStream::~NetworkStream()
 	write_buff = nullptr;
 }
 
-void NetworkStream::OnMessage()
-{
-}
 
 void NetworkStream::OnRevcMessage()
 {

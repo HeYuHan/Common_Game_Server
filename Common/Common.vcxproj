@@ -69,13 +69,13 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rd\pthread\include;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)3rd\RakNet\Source</IncludePath>
+    <IncludePath>$(SolutionDir)3rd\log4cpp\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rd\pthread\include;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)3rd\RakNet\Source</IncludePath>
     <TargetExt>.lib</TargetExt>
     <TargetName>libcommon_d</TargetName>
     <OutDir>$(SolutionDir)lib\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rd\pthread\include;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)3rd\RakNet\Source</IncludePath>
+    <IncludePath>$(SolutionDir)3rd\log4cpp\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rd\pthread\include;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)3rd\RakNet\Source</IncludePath>
     <TargetName>libcommon</TargetName>
     <TargetExt>.lib</TargetExt>
     <OutDir>$(SolutionDir)lib\</OutDir>
@@ -85,7 +85,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>DEBUG;WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;DEBUG;WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -103,7 +103,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -126,6 +126,8 @@
   <ItemGroup>
     <ClInclude Include="..\src\common\BaseServer.h" />
     <ClInclude Include="..\src\common\common.h" />
+    <ClInclude Include="..\src\common\linux\getopt.h" />
+    <ClInclude Include="..\src\common\log.h" />
     <ClInclude Include="..\src\common\NetworkConnection.h" />
     <ClInclude Include="..\src\common\objectpool.h" />
     <ClInclude Include="..\src\common\TcpConnection.h" />
@@ -138,6 +140,8 @@
   <ItemGroup>
     <ClCompile Include="..\src\common\BaseServer.cpp" />
     <ClCompile Include="..\src\common\common.cpp" />
+    <ClCompile Include="..\src\common\linux\getopt.cpp" />
+    <ClCompile Include="..\src\common\log.cpp" />
     <ClCompile Include="..\src\common\NetworkConnection.cpp" />
     <ClCompile Include="..\src\common\TcpConnection.cpp" />
     <ClCompile Include="..\src\common\TcpListener.cpp" />

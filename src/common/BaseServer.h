@@ -8,8 +8,8 @@ protected:
 	BaseServer();
 	~BaseServer();
 public:
-	virtual void Init();
-	virtual void Run();
+	virtual bool Init();
+	virtual int Run();
 	struct event_base* GetEventBase();
 private:
 	struct event_base* m_EvetBase;

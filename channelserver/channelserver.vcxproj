@@ -71,14 +71,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)3rd\RakNet\Source;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)src\common\;$(SolutionDir)3rd\pthread\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)3rd\log4cpp\include;$(SolutionDir)3rd\RakNet\Source;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)src\common\linux;$(SolutionDir)src\common\;$(SolutionDir)3rd\pthread\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)exe</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)3rd\RakNet\Source;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)src\common\;$(SolutionDir)3rd\pthread\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)3rd\log4cpp\include;$(SolutionDir)3rd\RakNet\Source;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)src\common\;$(SolutionDir)3rd\pthread\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)exe</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -88,7 +90,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32;WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -117,7 +119,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32;WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
@@ -151,6 +153,7 @@
     <ClInclude Include="..\src\channelserver\ChannelServer.h" />
     <ClInclude Include="..\src\channelserver\Client.h" />
     <ClInclude Include="..\src\channelserver\pch.h" />
+    <ClInclude Include="..\src\channelserver\Room.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -164,6 +167,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\src\channelserver\main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\channelserver\Room.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>

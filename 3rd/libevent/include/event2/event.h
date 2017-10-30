@@ -179,6 +179,7 @@
 
   Core functions for waiting for and receiving events, and using event bases.
 */
+
 #ifdef __cplusplus
 extern "C" {
 #endif

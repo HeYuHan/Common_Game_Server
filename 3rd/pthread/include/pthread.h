@@ -252,7 +252,7 @@ enum {
 #    define HAVE_MODE_T
 #  endif
 #endif
-
+#define HAVE_STRUCT_TIMESPEC
 /*
  *
  */

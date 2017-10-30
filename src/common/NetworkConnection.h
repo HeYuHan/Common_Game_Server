@@ -7,12 +7,16 @@ typedef enum
 {
 	READERROR = 0, WRITEERROR = 1
 }NETERR;
+typedef enum
+{
+	NET_NONE=0,NET_CONNECTED,NET_DISCONNECTED
+}NetState;
 class NetworkStream
 {
 public:
 	NetworkStream(int send_buff_size = 1024 * 512, int read_buff_size = 1024 * 512);
 	~NetworkStream();
-	virtual void OnMessage();
+	virtual void OnMessage()=0;
 	virtual void Update();
 	void Reset();
 	void OnRevcMessage();
