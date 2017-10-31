@@ -19,11 +19,14 @@ void ChannelClient::OnDisconnected()
 {
 }
 
-void ChannelClient::DisConnect()
-{
-}
 
 void ChannelClient::OnMessage()
 {
-
+	byte b = 0;
+	int i = 0;
+	float f = 0;
+	ReadByte(b);
+	ReadInt(i);
+	ReadFloat(f);
+	ReadFloat(f);
 }

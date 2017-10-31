@@ -23,15 +23,18 @@ void Logger::Init()
 	{
 		strcpy(fileName, "../log/log_file.log");
 	}
-	RollingFileAppender *fileAppender = new RollingFileAppender(name, fileName);
-	OstreamAppender *consoleAppender = new OstreamAppender(name, &std::cout);
 	PatternLayout *layout = new PatternLayout();
 	layout->setConversionPattern("%d: %p %c %x: %m%n");
-	fileAppender->setLayout(layout);
-	consoleAppender->setLayout(layout);
 	logger = &Category::getRoot().getInstance(name);
+#ifndef DEBUG
+	RollingFileAppender *fileAppender = new RollingFileAppender(name, fileName);
+	fileAppender->setLayout(layout);
 	logger->addAppender(fileAppender);
+#endif
+	OstreamAppender *consoleAppender = new OstreamAppender(name, &std::cout);
+	consoleAppender->setLayout(layout);
 	logger->addAppender(consoleAppender);
+
 	logger->setPriority(Priority::DEBUG);
 }
 

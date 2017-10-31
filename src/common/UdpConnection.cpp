@@ -87,6 +87,7 @@ void UdpConnection::Update()
 			// This tells the client they have connected
 			printf("ID_CONNECTION_REQUEST_ACCEPTED to %s with GUID %s\n", m_MessagePacket->systemAddress.ToString(true), m_MessagePacket->guid.ToString());
 			printf("My external address is %s\n", m_Socket->GetExternalID(m_MessagePacket->systemAddress).ToString(true));
+			m_SystemAddress = m_MessagePacket->systemAddress;
 			OnConnected();
 			break;
 		case ID_CONNECTED_PING:
@@ -106,12 +107,13 @@ int UdpConnection::Read(void * data, int size)
 {
 	if (m_MessagePacket)
 	{
-		if (size < m_MessagePacket->length)
+		int data_size = m_MessagePacket->length - 1;
+		if (size < data_size)
 		{
 			throw "data size too less";
 		}
-		memcpy(data, m_MessagePacket->data, m_MessagePacket->length);
-		return m_MessagePacket->length;
+		memcpy(data, m_MessagePacket->data+1, data_size);
+		return data_size;
 	}
 	return 0;
 }

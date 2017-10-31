@@ -9,7 +9,6 @@ public:
 	~ChannelClient();
 	virtual void OnConnected();
 	virtual void OnDisconnected();
-	virtual void DisConnect();
 	virtual void OnMessage();
 public:
 	unsigned int uid;

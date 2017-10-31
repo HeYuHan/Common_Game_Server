@@ -20,7 +20,7 @@ public:
 	bool Connect(const char* ip, int port);
 	void InitServerSocket(RakPeerInterface* server, SystemAddress address);
 	void OnServerMessage(Packet* p);
-	virtual void DisConnect();
+	void DisConnect();
 	
 public:
 	bool m_IsServer;
