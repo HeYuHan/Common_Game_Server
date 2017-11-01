@@ -1,23 +1,30 @@
 #pragma once
 #ifndef __CHANNELSERVER_H__
 #define __CHANNELSERVER_H__
-#include <BaseServer.h>
+#ifndef _WIN32
+#include <tr1/unordered_map>
+#else
 #include <unordered_map>
+#endif
+#include <BaseServer.h>
+
 #include <objectpool.h>
 #include <UdpListener.h>
 #include "Room.h"
 using namespace RakNet;
 class ChannelClient;
-typedef std::tr1::unordered_map<uint64, ChannelClient*> UdpClientMap;
 typedef std::pair<uint64, ChannelClient*> UdpClientMapPair;
+typedef std::tr1::unordered_map<uint64, ChannelClient*> UdpClientMap;
 typedef std::tr1::unordered_map<uint64, ChannelClient*>::iterator UdpClientIterator;
 struct ChannelConfig
 {
-	char ip[64] = "127.0.0.1";
-	char pwd[64] = "channel";
-	int port=9500;
-	int max_client=512;
-	int max_room = 100;
+	char ip[64];
+	char pwd[64];
+	int port;
+	int max_client;
+	int max_room;
+public:
+	ChannelConfig();
 };
 class ChannelServer:public BaseServer,public UdpListener
 {

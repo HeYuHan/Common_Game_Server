@@ -14,7 +14,7 @@
 #pragma comment(lib,"./../3rd/libevent/libevent_extras.lib")
 //RakNet_VS2008_LibStatic_Release_Win32.lib
 //raknet
-#ifdef DEBUG
+#ifdef _DEBUG
 #pragma comment(lib,"./../3rd/RakNet/Lib/RakNet_VS2008_LibStatic_Debug_Win32.lib")
 #else
 #pragma comment(lib,"./../3rd/RakNet/Lib/RakNet_VS2008_LibStatic_Release_Win32.lib")
@@ -33,13 +33,16 @@ typedef unsigned int uint32;
 typedef int int32;
 typedef unsigned short uint16;
 typedef short int16;
-#ifdef _WIN32
 typedef unsigned long int ulong;
 typedef unsigned short int ushort;
 typedef unsigned int uint;
-#endif // MSBUILD
 void ThreadSleep(unsigned int s);
+
+#ifdef _WIN32
 int gettimeofday(struct timeval *tp, void *tzp);
+#endif // _WIN32
+
+
 #endif // !__COMMON__H_
 //#include "BaseServer.h"
 //#include "NetworkConnection.h"

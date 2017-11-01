@@ -1,0 +1,50 @@
+.TH "log4cpp::TimeStampComponent" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::TimeStampComponent \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBlog4cpp::PatternLayout::PatternComponent\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimeStampComponent\fP (std::string timeFormat)"
+.br
+.ti -1c
+.RI "virtual void \fBappend\fP (\fBstd::ostringstream\fP &out, const \fBLoggingEvent\fP &event)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const char *const \fBFORMAT_ISO8601\fP = '%Y-%m-%d %H:%M:%S,%l'"
+.br
+.ti -1c
+.RI "static const char *const \fBFORMAT_ABSOLUTE\fP = '%H:%M:%S,%l'"
+.br
+.ti -1c
+.RI "static const char *const \fBFORMAT_DATE\fP = '%d %b %Y %H:%M:%S,%l'"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::TimeStampComponent::TimeStampComponent (std::string timeFormat)\fC [inline]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cpp::TimeStampComponent::append (\fBstd::ostringstream\fP & out, const \fBLoggingEvent\fP & event)\fC [inline, virtual]\fP"
+.PP
+Implements \fBlog4cpp::PatternLayout::PatternComponent\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "const char *const \fBlog4cpp::TimeStampComponent::FORMAT_ABSOLUTE\fP = '%H:%M:%S,%l'\fC [static]\fP"
+.SS "const char *const \fBlog4cpp::TimeStampComponent::FORMAT_DATE\fP = '%d %b %Y %H:%M:%S,%l'\fC [static]\fP"
+.SS "const char *const \fBlog4cpp::TimeStampComponent::FORMAT_ISO8601\fP = '%Y-%m-%d %H:%M:%S,%l'\fC [static]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

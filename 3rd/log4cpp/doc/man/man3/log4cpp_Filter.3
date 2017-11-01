@@ -1,0 +1,168 @@
+.TH "log4cpp::Filter" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::Filter \- 
+.PP
+Users should extend this class to implement customized logging event filtering.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Filter.hh>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDecision\fP { \fBDENY\fP =  -1, \fBNEUTRAL\fP =  0, \fBACCEPT\fP =  1 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFilter\fP ()"
+.br
+.RI "\fIDefault Constructor for \fBFilter\fP. \fP"
+.ti -1c
+.RI "virtual \fB~Filter\fP ()"
+.br
+.RI "\fIDestructor for \fBFilter\fP. \fP"
+.ti -1c
+.RI "virtual void \fBsetChainedFilter\fP (\fBFilter\fP *filter)"
+.br
+.RI "\fISet the next \fBFilter\fP in the \fBFilter\fP chain. \fP"
+.ti -1c
+.RI "virtual \fBFilter\fP * \fBgetChainedFilter\fP ()"
+.br
+.RI "\fIGet the next \fBFilter\fP in the \fBFilter\fP chain. \fP"
+.ti -1c
+.RI "virtual \fBFilter\fP * \fBgetEndOfChain\fP ()"
+.br
+.RI "\fIGet the last \fBFilter\fP in the \fBFilter\fP chain. \fP"
+.ti -1c
+.RI "virtual void \fBappendChainedFilter\fP (\fBFilter\fP *filter)"
+.br
+.RI "\fIAdd a \fBFilter\fP to the end of the \fBFilter\fP chain. \fP"
+.ti -1c
+.RI "virtual \fBDecision\fP \fBdecide\fP (const \fBLoggingEvent\fP &event)"
+.br
+.RI "\fIDecide whether to accept or deny a \fBLoggingEvent\fP. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBDecision\fP \fB_decide\fP (const \fBLoggingEvent\fP &event)=0"
+.br
+.RI "\fIDecide whether \fBthis\fP \fBFilter\fP accepts or denies the given \fBLoggingEvent\fP. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Users should extend this class to implement customized logging event filtering. 
+
+Note that \fBlog4cpp::Category\fP and lof4cpp::Appender have built-in filtering rules. It is suggested that you first use and understand the built-in rules before rushing to write your own custom filters.
+.PP
+This abstract class assumes and also imposes that filters be organized in a linear chain. The \fCdecide(LoggingEvent)\fP method of each filter is called sequentially, in the order of their addition to the chain.
+.PP
+The \fCdecide(LoggingEvent)\fP method must return a Decision value, either DENY, NEUTRAL or ACCCEPT.
+.PP
+If the value DENY is returned, then the log event is dropped immediately without consulting with the remaining filters.
+.PP
+If the value NEUTRAL is returned, then the next filter in the chain is consulted. If there are no more filters in the chain, then the log event is logged. Thus, in the presence of no filters, the default behaviour is to log all logging events.
+.PP
+If the value ACCEPT is returned, then the log event is logged without consulting the remaining filters.
+.PP
+The philosophy of \fBlog4cpp\fP filters is largely inspired from the Linux ipchains. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBlog4cpp::Filter::Decision\fP"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIDENY \fP\fP
+.TP
+\fB\fINEUTRAL \fP\fP
+.TP
+\fB\fIACCEPT \fP\fP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::Filter::Filter ()"
+.PP
+Default Constructor for \fBFilter\fP. 
+.SS "log4cpp::Filter::~Filter ()\fC [virtual]\fP"
+.PP
+Destructor for \fBFilter\fP. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBDecision\fP log4cpp::Filter::_decide (const \fBLoggingEvent\fP & event)\fC [protected, pure virtual]\fP"
+.PP
+Decide whether \fBthis\fP \fBFilter\fP accepts or denies the given \fBLoggingEvent\fP. Actual implementation of \fBFilter\fP should override this method and not \fCdecide(LoggingEvent&)\fP. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP The \fBLoggingEvent\fP to decide on. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The Decision 
+.RE
+.PP
+
+.SS "void log4cpp::Filter::appendChainedFilter (\fBFilter\fP * filter)\fC [virtual]\fP"
+.PP
+Add a \fBFilter\fP to the end of the \fBFilter\fP chain. Convience method for \fBgetEndOfChain()\fP->setChainedFilter(filter). 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfilter\fP The filter to add to the end of the chain. 
+.RE
+.PP
+
+.SS "\fBFilter::Decision\fP log4cpp::Filter::decide (const \fBLoggingEvent\fP & event)\fC [virtual]\fP"
+.PP
+Decide whether to accept or deny a \fBLoggingEvent\fP. This method will walk the entire chain until a non neutral decision has been made or the end of the chain has been reached. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP The \fBLoggingEvent\fP to decide on. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The Decision 
+.RE
+.PP
+
+.SS "\fBFilter\fP * log4cpp::Filter::getChainedFilter ()\fC [virtual]\fP"
+.PP
+Get the next \fBFilter\fP in the \fBFilter\fP chain. \fBReturns:\fP
+.RS 4
+The next \fBFilter\fP or NULL if the current filter is the last in the chain 
+.RE
+.PP
+
+.SS "\fBFilter\fP * log4cpp::Filter::getEndOfChain ()\fC [virtual]\fP"
+.PP
+Get the last \fBFilter\fP in the \fBFilter\fP chain. \fBReturns:\fP
+.RS 4
+The last \fBFilter\fP in the \fBFilter\fP chain 
+.RE
+.PP
+
+.SS "void log4cpp::Filter::setChainedFilter (\fBFilter\fP * filter)\fC [virtual]\fP"
+.PP
+Set the next \fBFilter\fP in the \fBFilter\fP chain. \fBParameters:\fP
+.RS 4
+\fIfilter\fP The filter to chain 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

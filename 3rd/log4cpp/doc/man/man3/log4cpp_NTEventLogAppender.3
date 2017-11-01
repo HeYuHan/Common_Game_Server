@@ -1,0 +1,164 @@
+.TH "log4cpp::NTEventLogAppender" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::NTEventLogAppender \- 
+.PP
+\fBNTEventLogAppender\fP is an \fBAppender\fP that sends LoggingEvents to the Windows event log.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NTEventLogAppender.hh>\fP
+.PP
+Inherits \fBlog4cpp::AppenderSkeleton\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNTEventLogAppender\fP (const std::string &name, const std::string &sourceName)"
+.br
+.RI "\fIInstantiate an \fBNTEventLogAppender\fP with given name and source. \fP"
+.ti -1c
+.RI "virtual \fB~NTEventLogAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBreopen\fP ()"
+.br
+.RI "\fICalls \fBopen()\fP and \fBclose()\fP. \fP"
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "\fIRelease any resources allocated within the appender such as file handles, network connections, etc. \fP"
+.ti -1c
+.RI "virtual bool \fBrequiresLayout\fP () const "
+.br
+.RI "\fIThe \fBNTEventLogAppender\fP does its own \fBLayout\fP. \fP"
+.ti -1c
+.RI "virtual void \fBsetLayout\fP (\fBLayout\fP *layout)"
+.br
+.RI "\fISet the \fBLayout\fP for this appender. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "WORD \fBgetCategory\fP (\fBPriority::Value\fP priority)"
+.br
+.RI "\fIConvert \fBlog4cpp\fP \fBPriority\fP to an EventLog category. \fP"
+.ti -1c
+.RI "WORD \fBgetType\fP (\fBPriority::Value\fP priority)"
+.br
+.RI "\fIConvert \fBlog4cpp\fP \fBPriority\fP to an EventLog type. \fP"
+.ti -1c
+.RI "HKEY \fBregGetKey\fP (TCHAR *subkey, DWORD *disposition)"
+.br
+.ti -1c
+.RI "void \fBregSetString\fP (HKEY hkey, TCHAR *name, TCHAR *value)"
+.br
+.ti -1c
+.RI "void \fBregSetDword\fP (HKEY hkey, TCHAR *name, DWORD value)"
+.br
+.ti -1c
+.RI "void \fBaddRegistryInfo\fP (const char *source)"
+.br
+.ti -1c
+.RI "virtual void \fBopen\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fB_append\fP (const \fBLoggingEvent\fP &event)"
+.br
+.RI "\fISends a \fBLoggingEvent\fP to NT Event log. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "HANDLE \fB_hEventSource\fP"
+.br
+.ti -1c
+.RI "std::string \fB_strSourceName\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBNTEventLogAppender\fP is an \fBAppender\fP that sends LoggingEvents to the Windows event log. 
+
+Building log4cpp.dsp/log4cppDLL.dsp creates the resource DLL NTEventLogAppender.dll. Do not forget to place this DLL in a directory that is on the PATH of the Windows system. Otherwise, the category and message will not display correctly in Event Viewer.
+.br
+ \fBNB:\fP This class is only available on Win32 platforms. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::NTEventLogAppender::NTEventLogAppender (const std::string & name, const std::string & sourceName)"
+.PP
+Instantiate an \fBNTEventLogAppender\fP with given name and source. \fBParameters:\fP
+.RS 4
+\fIname\fP The name of the \fBAppender\fP 
+.br
+\fIsourceName\fP The source name to log 
+.RE
+.PP
+
+.SS "log4cpp::NTEventLogAppender::~NTEventLogAppender ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cpp::NTEventLogAppender::_append (const \fBLoggingEvent\fP & event)\fC [protected, virtual]\fP"
+.PP
+Sends a \fBLoggingEvent\fP to NT Event log. \fBParameters:\fP
+.RS 4
+\fIevent\fP the \fBLoggingEvent\fP to log. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "void log4cpp::NTEventLogAppender::addRegistryInfo (const char * source)\fC [protected]\fP"
+.SS "void log4cpp::NTEventLogAppender::close ()\fC [virtual]\fP"
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "WORD log4cpp::NTEventLogAppender::getCategory (\fBPriority::Value\fP priority)\fC [protected]\fP"
+.PP
+Convert \fBlog4cpp\fP \fBPriority\fP to an EventLog category. Each category is backed by a message resource so that proper category names will be displayed in the NT Event Viewer. 
+.SS "WORD log4cpp::NTEventLogAppender::getType (\fBPriority::Value\fP priority)\fC [protected]\fP"
+.PP
+Convert \fBlog4cpp\fP \fBPriority\fP to an EventLog type. The \fBlog4cpp\fP package supports 8 defined priorites, but the NT EventLog only knows 3 event types of interest to us: ERROR, WARNING, and INFO. 
+.SS "void log4cpp::NTEventLogAppender::open ()\fC [protected, virtual]\fP"
+.SS "HKEY log4cpp::NTEventLogAppender::regGetKey (TCHAR * subkey, DWORD * disposition)\fC [protected]\fP"
+.SS "void log4cpp::NTEventLogAppender::regSetDword (HKEY hkey, TCHAR * name, DWORD value)\fC [protected]\fP"
+.SS "void log4cpp::NTEventLogAppender::regSetString (HKEY hkey, TCHAR * name, TCHAR * value)\fC [protected]\fP"
+.SS "bool log4cpp::NTEventLogAppender::reopen ()\fC [virtual]\fP"
+.PP
+Calls \fBopen()\fP and \fBclose()\fP. 
+.PP
+Reimplemented from \fBlog4cpp::AppenderSkeleton\fP.
+.SS "bool log4cpp::NTEventLogAppender::requiresLayout () const\fC [virtual]\fP"
+.PP
+The \fBNTEventLogAppender\fP does its own \fBLayout\fP. \fBReturns:\fP
+.RS 4
+false 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "void log4cpp::NTEventLogAppender::setLayout (\fBLayout\fP * layout)\fC [virtual]\fP"
+.PP
+Set the \fBLayout\fP for this appender. \fBParameters:\fP
+.RS 4
+\fIlayout\fP The layout to use. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "HANDLE \fBlog4cpp::NTEventLogAppender::_hEventSource\fP\fC [protected]\fP"
+.SS "std::string \fBlog4cpp::NTEventLogAppender::_strSourceName\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

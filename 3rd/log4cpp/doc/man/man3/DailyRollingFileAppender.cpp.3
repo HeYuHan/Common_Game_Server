@@ -1,0 +1,63 @@
+.TH "DailyRollingFileAppender.cpp" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DailyRollingFileAppender.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'PortabilityImpl.hh'\fP
+.br
+\fC#include <sys/types.h>\fP
+.br
+\fC#include <sys/stat.h>\fP
+.br
+\fC#include <fcntl.h>\fP
+.br
+\fC#include <log4cpp/DailyRollingFileAppender.hh>\fP
+.br
+\fC#include <log4cpp/Category.hh>\fP
+.br
+\fC#include <log4cpp/FactoryParams.hh>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <cstdio>\fP
+.br
+\fC#include <cstring>\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+\fC#include <iostream>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cpp\fP"
+.br
+.PP
+
+.RI "\fIThe top level namespace for all 'Log for C++' types and classes. \fP"
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPATHDELIMITER\fP   '\\\\'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_daily_roll_file_appender\fP (const FactoryParams &)"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define PATHDELIMITER   '\\\\'"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

@@ -25,7 +25,6 @@ UdpListener::~UdpListener()
 bool UdpListener::CreateUdpServer(const char * ip, int port, const char* pwd, int max_client)
 {
 	m_Socket = RakNet::RakPeerInterface::GetInstance();
-	RakNet::RakNetStatistics *rss;
 	m_Socket->SetIncomingPassword(pwd, strlen(pwd));
 	m_Socket->SetTimeoutTime(30000, RakNet::UNASSIGNED_SYSTEM_ADDRESS);
 	RakNet::SocketDescriptor socketDescriptors[2];

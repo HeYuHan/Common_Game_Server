@@ -1,8 +1,4 @@
 #include "Room.h"
-static void RoomUpdate(float time, void *arg)
-{
-
-}
 
 ChannelRoom::ChannelRoom()
 {

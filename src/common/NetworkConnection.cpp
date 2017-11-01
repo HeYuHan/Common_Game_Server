@@ -1,6 +1,5 @@
 #include "NetworkConnection.h"
-#include <stdio.h>
-#include <string>
+#include<string.h>
 NetworkStream::NetworkStream(int send_buff_size, int read_buff_size)
 {
 	read_buff = new char[read_buff_size];
@@ -22,8 +21,8 @@ NetworkStream::~NetworkStream()
 {
 	delete[] read_buff;
 	delete[] write_buff;
-	read_buff = nullptr;
-	write_buff = nullptr;
+	read_buff = NULL;
+	write_buff = NULL;
 }
 
 
@@ -129,7 +128,7 @@ void NetworkStream::WriteString(const char* str)
 }
 void NetworkStream::WriteData(const void* data, int count)
 {
-	if (write_buff == nullptr || count < 0 || write_end + count > write_buff_end)
+	if (write_buff == NULL || count < 0 || write_end + count > write_buff_end)
 	{
 		throw WRITEERROR;
 	}
@@ -205,7 +204,7 @@ int NetworkStream::ReadString(char* str, int size)
 }
 void NetworkStream::ReadData(void* data, int count)
 {
-	if (read_buff == nullptr || count < 0 || read_position + count > read_end)
+	if (read_buff == NULL || count < 0 || read_position + count > read_end)
 	{
 		throw READERROR;
 	}

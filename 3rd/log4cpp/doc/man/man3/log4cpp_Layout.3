@@ -1,0 +1,58 @@
+.TH "log4cpp::Layout" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::Layout \- 
+.PP
+Extend this abstract class to create your own log layout format.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Layout.hh>\fP
+.PP
+Inherited by \fBlog4cpp::BasicLayout\fP, \fBlog4cpp::PassThroughLayout\fP, \fBlog4cpp::PatternLayout\fP, and \fBlog4cpp::SimpleLayout\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~Layout\fP ()"
+.br
+.RI "\fIDestructor for \fBLayout\fP. \fP"
+.ti -1c
+.RI "virtual std::string \fBformat\fP (const \fBLoggingEvent\fP &event)=0"
+.br
+.RI "\fIFormats the \fBLoggingEvent\fP data to a string that appenders can log. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Extend this abstract class to create your own log layout format. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual log4cpp::Layout::~Layout ()\fC [inline, virtual]\fP"
+.PP
+Destructor for \fBLayout\fP. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual std::string log4cpp::Layout::format (const \fBLoggingEvent\fP & event)\fC [pure virtual]\fP"
+.PP
+Formats the \fBLoggingEvent\fP data to a string that appenders can log. Implement this method to create your own layout format. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP The \fBLoggingEvent\fP. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an appendable string. 
+.RE
+.PP
+
+.PP
+Implemented in \fBlog4cpp::BasicLayout\fP, \fBlog4cpp::PassThroughLayout\fP, \fBlog4cpp::PatternLayout\fP, and \fBlog4cpp::SimpleLayout\fP.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

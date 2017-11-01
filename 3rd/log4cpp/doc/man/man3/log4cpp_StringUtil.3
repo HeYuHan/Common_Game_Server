@@ -1,0 +1,87 @@
+.TH "log4cpp::StringUtil" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::StringUtil \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <StringUtil.hh>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBvform\fP (const char *format, va_list args)"
+.br
+.RI "\fIReturns a string contructed from the a format specifier and a va_list of arguments, analogously to vprintf(3). \fP"
+.ti -1c
+.RI "static std::string \fBtrim\fP (const std::string &s)"
+.br
+.RI "\fIReturns a string identical to the given string but without leading or trailing HTABs or spaces. \fP"
+.ti -1c
+.RI "static unsigned int \fBsplit\fP (std::vector< std::string > &v, const std::string &s, char delimiter, unsigned int maxSegments=INT_MAX)"
+.br
+.RI "\fIsplits a string into a vector of string segments based on the given delimiter. \fP"
+.ti -1c
+.RI "template<typename T > static unsigned int \fBsplit\fP (T &output, const std::string &s, char delimiter, unsigned int maxSegments=INT_MAX)"
+.br
+.RI "\fIsplits a string into string segments based on the given delimiter and assigns the segments through an output_iterator. \fP"
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > static unsigned int log4cpp::StringUtil::split (T & output, const std::string & s, char delimiter, unsigned int maxSegments = \fCINT_MAX\fP)\fC [inline, static]\fP"
+.PP
+splits a string into string segments based on the given delimiter and assigns the segments through an output_iterator. \fBParameters:\fP
+.RS 4
+\fIoutput\fP The output_iterator through which to assign the string segments. Typically this will be a back_insertion_iterator. 
+.br
+\fIs\fP The string to split into segments. 
+.br
+\fIdelimiter\fP The delimiter character 
+.br
+\fImaxSegments\fP The maximum number of segments. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The actual number of segments (limited by maxSegments). 
+.RE
+.PP
+
+.SS "unsigned int log4cpp::StringUtil::split (std::vector< std::string > & v, const std::string & s, char delimiter, unsigned int maxSegments = \fCINT_MAX\fP)\fC [static]\fP"
+.PP
+splits a string into a vector of string segments based on the given delimiter. \fBParameters:\fP
+.RS 4
+\fIv\fP The vector in which the segments will be stored. The vector will be emptied before storing the segments 
+.br
+\fIs\fP The string to split into segments. 
+.br
+\fIdelimiter\fP The delimiter character 
+.br
+\fImaxSegments\fP the maximum number of segments. Upon return v.size() <= maxSegments. The string is scanned from left to right so v[maxSegments - 1] may contain a string containing the delimiter character. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The actual number of segments (limited by maxSegments). 
+.RE
+.PP
+
+.SS "std::string log4cpp::StringUtil::trim (const std::string & s)\fC [static]\fP"
+.PP
+Returns a string identical to the given string but without leading or trailing HTABs or spaces. 
+.SS "std::string log4cpp::StringUtil::vform (const char * format, va_list args)\fC [static]\fP"
+.PP
+Returns a string contructed from the a format specifier and a va_list of arguments, analogously to vprintf(3). \fBParameters:\fP
+.RS 4
+\fIformat\fP the format specifier. 
+.br
+\fIargs\fP the va_list of arguments. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

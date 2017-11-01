@@ -15,9 +15,10 @@ static unsigned char GetPacketIdentifier(RakNet::Packet *p)
 UdpConnection::UdpConnection():
 	m_IsServer(false),
 	m_Socket(NULL),
-	m_MessagePacket(NULL),
-	m_SystemAddress(UNASSIGNED_SYSTEM_ADDRESS)
+	m_SystemAddress(UNASSIGNED_SYSTEM_ADDRESS),
+	m_MessagePacket(NULL)
 {
+	m_Type = UDP_SOCKET;
 }
 
 UdpConnection::~UdpConnection()
@@ -42,7 +43,7 @@ void UdpConnection::Update()
 			break;
 		case ID_ALREADY_CONNECTED:
 			// Connection lost normally
-			printf("ID_ALREADY_CONNECTED with guid %" PRINTF_64_BIT_MODIFIER "u\n", m_MessagePacket->guid);
+			//printf("ID_ALREADY_CONNECTED with guid %" PRINTF_64_BIT_MODIFIER "u\n", m_MessagePacket->guid);
 			break;
 		case ID_INCOMPATIBLE_PROTOCOL_VERSION:
 			printf("ID_INCOMPATIBLE_PROTOCOL_VERSION\n");
@@ -80,7 +81,7 @@ void UdpConnection::Update()
 			// Couldn't deliver a reliable packet - i.e. the other system was abnormally
 			// terminated
 			printf("ID_CONNECTION_LOST\n");
-			OnDisconnected();
+			//OnDisconnected();
 			break;
 
 		case ID_CONNECTION_REQUEST_ACCEPTED:

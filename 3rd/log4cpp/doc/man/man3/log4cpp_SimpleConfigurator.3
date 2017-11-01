@@ -1,0 +1,83 @@
+.TH "log4cpp::SimpleConfigurator" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::SimpleConfigurator \- 
+.PP
+This class implements a simple Configurator for \fBlog4cpp\fP.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SimpleConfigurator.hh>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBconfigure\fP (const std::string &initFileName)  throw (ConfigureFailure)"
+.br
+.RI "\fIConfigure \fBlog4cpp\fP with the configuration in the given file. \fP"
+.ti -1c
+.RI "static void \fBconfigure\fP (std::istream &initFile)  throw (ConfigureFailure)"
+.br
+.RI "\fIConfigure \fBlog4cpp\fP with the configuration in the given file. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements a simple Configurator for \fBlog4cpp\fP. 
+
+It is a temporary hack with an undocumented configuration format. 
+.PP
+\fBDeprecated\fP
+.RS 4
+As of version 0.3.2 \fBlog4cpp\fP includes a log4j format compatible \fBPropertyConfigurator\fP, removing the need for \fBSimpleConfigurator\fP. This class will be removed in 0.4.0. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cpp::SimpleConfigurator::configure (std::istream & initFile)  throw (\fBConfigureFailure\fP)\fC [static]\fP"
+.PP
+Configure \fBlog4cpp\fP with the configuration in the given file. NB. The configuration file format is undocumented and may change without notice. 
+.PP
+\fBSince:\fP
+.RS 4
+0.3.1 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinitFile\fP an input stream to the configuration file 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBConfigureFailure\fP\fP if the method encountered a read or syntax error. 
+.RE
+.PP
+
+.SS "void log4cpp::SimpleConfigurator::configure (const std::string & initFileName)  throw (\fBConfigureFailure\fP)\fC [static]\fP"
+.PP
+Configure \fBlog4cpp\fP with the configuration in the given file. NB. The configuration file format is undocumented and may change without notice. 
+.PP
+\fBSince:\fP
+.RS 4
+0.2.6 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinitFileName\fP name of the configuration file 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBConfigureFailure\fP\fP if the method encountered a read or syntax error. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

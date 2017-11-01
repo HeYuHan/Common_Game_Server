@@ -1,4 +1,4 @@
-#include "pch.h"
+#include "Client.h"
 ChannelClient::ChannelClient():
 	uid(0),
 	m_NetState(NET_NONE)

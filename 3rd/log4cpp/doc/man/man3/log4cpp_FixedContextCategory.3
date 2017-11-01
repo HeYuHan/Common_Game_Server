@@ -1,0 +1,272 @@
+.TH "log4cpp::FixedContextCategory" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::FixedContextCategory \- 
+.PP
+This \fBCategory\fP subclass replaces the \fBNDC\fP field in LoggingEvents with a fixed context string.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FixedContextCategory.hh>\fP
+.PP
+Inherits \fBlog4cpp::Category\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFixedContextCategory\fP (const std::string &name, const std::string &context='')"
+.br
+.RI "\fIConstructor. \fP"
+.ti -1c
+.RI "virtual \fB~FixedContextCategory\fP ()"
+.br
+.RI "\fIDestructor for \fBCategory\fP. \fP"
+.ti -1c
+.RI "virtual void \fBsetContext\fP (const std::string &context)"
+.br
+.RI "\fISet the context string used as \fBNDC\fP. \fP"
+.ti -1c
+.RI "virtual std::string \fBgetContext\fP () const "
+.br
+.RI "\fIReturn the context string used as \fBNDC\fP. \fP"
+.ti -1c
+.RI "virtual \fBPriority::Value\fP \fBgetPriority\fP () const   throw ()"
+.br
+.RI "\fIReturns the assigned \fBPriority\fP, if any, for this \fBCategory\fP. \fP"
+.ti -1c
+.RI "virtual \fBPriority::Value\fP \fBgetChainedPriority\fP () const   throw ()"
+.br
+.RI "\fIStarting from this \fBCategory\fP, search the category hierarchy for a set priority and return it. \fP"
+.ti -1c
+.RI "virtual void \fBaddAppender\fP (\fBAppender\fP *appender)  throw ()"
+.br
+.RI "\fIFor the moment this method does nothing. \fP"
+.ti -1c
+.RI "virtual void \fBaddAppender\fP (\fBAppender\fP &appender)"
+.br
+.RI "\fIFor the moment this method does nothing. \fP"
+.ti -1c
+.RI "virtual \fBAppender\fP * \fBgetAppender\fP () const "
+.br
+.RI "\fIReturns the \fBAppender\fP for this \fBCategory\fP, or NULL if no \fBAppender\fP has been set. \fP"
+.ti -1c
+.RI "virtual \fBAppender\fP * \fBgetAppender\fP (const std::string &name) const "
+.br
+.RI "\fIReturns the specified \fBAppender\fP for this \fBCategory\fP, or NULL if the \fBAppender\fP is not attached to this \fBCategory\fP. \fP"
+.ti -1c
+.RI "virtual \fBAppenderSet\fP \fBgetAllAppenders\fP () const "
+.br
+.RI "\fIReturns the set of Appenders currently attached to this Catogory. \fP"
+.ti -1c
+.RI "virtual void \fBremoveAllAppenders\fP ()"
+.br
+.RI "\fIRemoves all appenders set for this \fBCategory\fP. \fP"
+.ti -1c
+.RI "virtual bool \fBownsAppender\fP () const   throw ()"
+.br
+.RI "\fIFixedContextAppenders cannot own Appenders. \fP"
+.ti -1c
+.RI "virtual bool \fBownsAppender\fP (\fBAppender\fP *appender) const   throw ()"
+.br
+.RI "\fIFixedContextAppenders cannot own Appenders. \fP"
+.ti -1c
+.RI "virtual void \fBcallAppenders\fP (const \fBLoggingEvent\fP &event)  throw ()"
+.br
+.RI "\fICall the appenders in the hierarchy starting at \fCthis\fP. \fP"
+.ti -1c
+.RI "virtual void \fBsetAdditivity\fP (bool additivity)"
+.br
+.RI "\fISet the additivity flag for this \fBCategory\fP instance. \fP"
+.ti -1c
+.RI "virtual bool \fBgetAdditivity\fP () const   throw ()"
+.br
+.RI "\fIReturns the additivity flag for this \fBCategory\fP instance. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fB_logUnconditionally2\fP (\fBPriority::Value\fP priority, const std::string &message)  throw ()"
+.br
+.RI "\fIUnconditionally log a message with the specified priority. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This \fBCategory\fP subclass replaces the \fBNDC\fP field in LoggingEvents with a fixed context string. 
+
+All handling of Appenders, etc. is delgated to the 'normal' \fBCategory\fP with the same name. Its intended use is for object instances that serve a single client: they contruct a \fBFixedContextCategory\fP with the client identifier as context. Unlike with regular \fBCategory\fP instances one has to explicitly create \fBFixedContextCategory\fP instances using the constructor. This also implies one has to take cake of destruction of the instance as well. 
+.PP
+\fBSince:\fP
+.RS 4
+0.2.4 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::FixedContextCategory::FixedContextCategory (const std::string & name, const std::string & context = \fC''\fP)"
+.PP
+Constructor. \fBParameters:\fP
+.RS 4
+\fIname\fP the fully qualified name of this Categories delegate \fBCategory\fP. 
+.br
+\fIcontext\fP the context to fill the \fBNDC\fP field of LoggingEvents with. 
+.RE
+.PP
+
+.SS "log4cpp::FixedContextCategory::~FixedContextCategory ()\fC [virtual]\fP"
+.PP
+Destructor for \fBCategory\fP. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cpp::FixedContextCategory::_logUnconditionally2 (\fBPriority::Value\fP priority, const std::string & message)  throw ()\fC [protected, virtual]\fP"
+.PP
+Unconditionally log a message with the specified priority. \fBParameters:\fP
+.RS 4
+\fIpriority\fP The priority of this log message. 
+.br
+\fImessage\fP string to write in the log file 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "void log4cpp::FixedContextCategory::addAppender (\fBAppender\fP & appender)\fC [virtual]\fP"
+.PP
+For the moment this method does nothing. 
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "void log4cpp::FixedContextCategory::addAppender (\fBAppender\fP * appender)  throw ()\fC [virtual]\fP"
+.PP
+For the moment this method does nothing. 
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "void log4cpp::FixedContextCategory::callAppenders (const \fBLoggingEvent\fP & event)  throw ()\fC [virtual]\fP"
+.PP
+Call the appenders in the hierarchy starting at \fCthis\fP. If no appenders could be found, emit a warning.
+.PP
+This method always calls all the appenders inherited form the hierracy circumventing any evaluation of whether to log or not to log the particular log request.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP The \fBLoggingEvent\fP to log. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "bool log4cpp::FixedContextCategory::getAdditivity () const  throw ()\fC [virtual]\fP"
+.PP
+Returns the additivity flag for this \fBCategory\fP instance. 
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "\fBAppenderSet\fP log4cpp::FixedContextCategory::getAllAppenders () const\fC [virtual]\fP"
+.PP
+Returns the set of Appenders currently attached to this Catogory. \fBSince:\fP
+.RS 4
+0.3.1 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The set of attached Appenders. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "\fBAppender\fP * log4cpp::FixedContextCategory::getAppender (const std::string & name) const\fC [virtual]\fP"
+.PP
+Returns the specified \fBAppender\fP for this \fBCategory\fP, or NULL if the \fBAppender\fP is not attached to this \fBCategory\fP. \fBSince:\fP
+.RS 4
+0.2.7 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBAppender\fP. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "\fBAppender\fP * log4cpp::FixedContextCategory::getAppender () const\fC [virtual]\fP"
+.PP
+Returns the \fBAppender\fP for this \fBCategory\fP, or NULL if no \fBAppender\fP has been set. \fBReturns:\fP
+.RS 4
+The \fBAppender\fP. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "\fBPriority::Value\fP log4cpp::FixedContextCategory::getChainedPriority () const  throw ()\fC [virtual]\fP"
+.PP
+Starting from this \fBCategory\fP, search the category hierarchy for a set priority and return it. Otherwise, return the priority of the root category.
+.PP
+The \fBCategory\fP class is designed so that this method executes as quickly as possible. 
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "std::string log4cpp::FixedContextCategory::getContext () const\fC [virtual]\fP"
+.PP
+Return the context string used as \fBNDC\fP. \fBReturns:\fP
+.RS 4
+the context string. 
+.RE
+.PP
+
+.SS "\fBPriority::Value\fP log4cpp::FixedContextCategory::getPriority () const  throw ()\fC [virtual]\fP"
+.PP
+Returns the assigned \fBPriority\fP, if any, for this \fBCategory\fP. \fBReturns:\fP
+.RS 4
+\fBPriority\fP - the assigned \fBPriority\fP, can be \fBPriority::NOTSET\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "bool log4cpp::FixedContextCategory::ownsAppender (\fBAppender\fP * appender) const  throw ()\fC [virtual]\fP"
+.PP
+FixedContextAppenders cannot own Appenders. \fBReturns:\fP
+.RS 4
+false 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "bool log4cpp::FixedContextCategory::ownsAppender () const  throw ()\fC [virtual]\fP"
+.PP
+FixedContextAppenders cannot own Appenders. \fBReturns:\fP
+.RS 4
+false 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "void log4cpp::FixedContextCategory::removeAllAppenders ()\fC [virtual]\fP"
+.PP
+Removes all appenders set for this \fBCategory\fP. Currently a \fBCategory\fP can have only one appender, but this may change in the future. 
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "void log4cpp::FixedContextCategory::setAdditivity (bool additivity)\fC [virtual]\fP"
+.PP
+Set the additivity flag for this \fBCategory\fP instance. 
+.PP
+Reimplemented from \fBlog4cpp::Category\fP.
+.SS "void log4cpp::FixedContextCategory::setContext (const std::string & context)\fC [virtual]\fP"
+.PP
+Set the context string used as \fBNDC\fP. \fBParameters:\fP
+.RS 4
+\fIcontext\fP the context string 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

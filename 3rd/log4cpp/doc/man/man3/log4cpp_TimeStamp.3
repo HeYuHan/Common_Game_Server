@@ -1,0 +1,96 @@
+.TH "log4cpp::TimeStamp" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::TimeStamp \- 
+.PP
+A simple \fBTimeStamp\fP abstraction.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TimeStamp.hh>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimeStamp\fP ()"
+.br
+.RI "\fIConstructs a \fBTimeStamp\fP representing 'now'. \fP"
+.ti -1c
+.RI "\fBTimeStamp\fP (unsigned int seconds, unsigned int microSeconds=0)"
+.br
+.RI "\fIConstructs a \fBTimeStamp\fP representing the given offset since the epoch ( 00:00:00 1970/1/1 UTC). \fP"
+.ti -1c
+.RI "int \fBgetSeconds\fP () const "
+.br
+.RI "\fIReturns the 'seconds' part of the \fBTimeStamp\fP. \fP"
+.ti -1c
+.RI "int \fBgetMilliSeconds\fP () const "
+.br
+.RI "\fIReturns the 'subseconds' part of the \fBTimeStamp\fP in milliseconds, \fBgetMilliSeconds()\fP == \fBgetMicroSeconds()\fP / 1000. \fP"
+.ti -1c
+.RI "int \fBgetMicroSeconds\fP () const "
+.br
+.RI "\fIReturns the subsecond part of the \fBTimeStamp\fP in microseconds. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const \fBTimeStamp\fP & \fBgetStartTime\fP ()"
+.br
+.RI "\fIReturns a \fBTimeStamp\fP representing the time at which the application started. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fB_seconds\fP"
+.br
+.ti -1c
+.RI "int \fB_microSeconds\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBTimeStamp\fP \fB_startStamp\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A simple \fBTimeStamp\fP abstraction. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::TimeStamp::TimeStamp ()"
+.PP
+Constructs a \fBTimeStamp\fP representing 'now'. 
+.SS "log4cpp::TimeStamp::TimeStamp (unsigned int seconds, unsigned int microSeconds = \fC0\fP)"
+.PP
+Constructs a \fBTimeStamp\fP representing the given offset since the epoch ( 00:00:00 1970/1/1 UTC). 
+.SH "Member Function Documentation"
+.PP 
+.SS "int log4cpp::TimeStamp::getMicroSeconds () const\fC [inline]\fP"
+.PP
+Returns the subsecond part of the \fBTimeStamp\fP in microseconds. The actual precision of this value depends on the platform and may be in the order of milliseconds rather than microseconds. 
+.SS "int log4cpp::TimeStamp::getMilliSeconds () const\fC [inline]\fP"
+.PP
+Returns the 'subseconds' part of the \fBTimeStamp\fP in milliseconds, \fBgetMilliSeconds()\fP == \fBgetMicroSeconds()\fP / 1000. 
+.SS "int log4cpp::TimeStamp::getSeconds () const\fC [inline]\fP"
+.PP
+Returns the 'seconds' part of the \fBTimeStamp\fP. 
+.SS "static const \fBTimeStamp\fP& log4cpp::TimeStamp::getStartTime ()\fC [inline, static]\fP"
+.PP
+Returns a \fBTimeStamp\fP representing the time at which the application started. 
+.SH "Member Data Documentation"
+.PP 
+.SS "int \fBlog4cpp::TimeStamp::_microSeconds\fP\fC [protected]\fP"
+.SS "int \fBlog4cpp::TimeStamp::_seconds\fP\fC [protected]\fP"
+.SS "\fBTimeStamp\fP \fBlog4cpp::TimeStamp::_startStamp\fP\fC [static, protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

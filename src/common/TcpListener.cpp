@@ -1,5 +1,9 @@
 #include "TcpListener.h"
-
+#include<string.h>
+#ifndef _WIN32
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#endif // !_WIN32
 TcpListener::TcpListener(event_base & base):
 	m_BaseEvent(base),
 	m_Listener(NULL)

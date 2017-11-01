@@ -1,0 +1,133 @@
+.TH "log4cpp::PropertyConfiguratorImpl" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::PropertyConfiguratorImpl \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PropertyConfiguratorImpl.hh>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::map< std::string, \fBAppender\fP * > \fBAppenderMap\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPropertyConfiguratorImpl\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~PropertyConfiguratorImpl\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdoConfigure\fP (const std::string &initFileName)  throw (ConfigureFailure)"
+.br
+.ti -1c
+.RI "virtual void \fBdoConfigure\fP (std::istream &in)  throw (ConfigureFailure)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBconfigureCategory\fP (const std::string &categoryname)  throw (ConfigureFailure)"
+.br
+.RI "\fIconfigure the given category. \fP"
+.ti -1c
+.RI "void \fBgetCategories\fP (std::vector< std::string > &categories) const "
+.br
+.RI "\fIGet a list of categories for which we should do the configuration. \fP"
+.ti -1c
+.RI "void \fBinstantiateAllAppenders\fP ()  throw (ConfigureFailure)"
+.br
+.ti -1c
+.RI "\fBAppender\fP * \fBinstantiateAppender\fP (const std::string &name)"
+.br
+.RI "\fIIntantiate and configure the appender referred to by the given name. \fP"
+.ti -1c
+.RI "void \fBsetLayout\fP (\fBAppender\fP *appender, const std::string &name)"
+.br
+.RI "\fIMethod for instantiating and configuring the layouts associated with each appender. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBProperties\fP \fB_properties\fP"
+.br
+.ti -1c
+.RI "\fBAppenderMap\fP \fB_allAppenders\fP"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::map<std::string, \fBAppender\fP*> \fBlog4cpp::PropertyConfiguratorImpl::AppenderMap\fP"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::PropertyConfiguratorImpl::PropertyConfiguratorImpl ()"
+.SS "log4cpp::PropertyConfiguratorImpl::~PropertyConfiguratorImpl ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cpp::PropertyConfiguratorImpl::configureCategory (const std::string & categoryname)  throw (\fBConfigureFailure\fP)\fC [protected]\fP"
+.PP
+configure the given category. This includes setting its \fBPriority\fP and adding any Appenders. 
+.PP
+\fBTodo\fP
+.RS 4
+setting other properties like 'additivity'. 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcategoryname\fP Name of the category to configure. The name 'rootCategory' refers to the root \fBCategory\fP. throw \fBConfigureFailure\fP 
+.RE
+.PP
+
+.SS "void log4cpp::PropertyConfiguratorImpl::doConfigure (std::istream & in)  throw (\fBConfigureFailure\fP)\fC [virtual]\fP"
+.SS "void log4cpp::PropertyConfiguratorImpl::doConfigure (const std::string & initFileName)  throw (\fBConfigureFailure\fP)\fC [virtual]\fP"
+.SS "void log4cpp::PropertyConfiguratorImpl::getCategories (std::vector< std::string > & categories) const\fC [protected]\fP"
+.PP
+Get a list of categories for which we should do the configuration. Get the categories contained within the map of properties.
+.PP
+This simply extracts the categories from the map. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcategories\fP Reference to a list which is to receive the list of categories.
+.RE
+.PP
+Since the category looks something like 'category.xxxxx.yyy.zzz', we need to search the entire map to figure out which properties are category listings. Seems like there might be a more elegant solution. 
+.SS "void log4cpp::PropertyConfiguratorImpl::instantiateAllAppenders ()  throw (\fBConfigureFailure\fP)\fC [protected]\fP"
+.SS "\fBAppender\fP * log4cpp::PropertyConfiguratorImpl::instantiateAppender (const std::string & name)\fC [protected]\fP"
+.PP
+Intantiate and configure the appender referred to by the given name. This method searches the map to find all configuration parameters for the appender, and adds the appender to the given category. This isn't very general in the sense that it will need to be modified for each type of appender and layout. A more general solution would be to define an 'options' interface for each appender and layout, so that we can simply call this method with a list of options instead of needing to know what is or is not available. This would also require some generic way of instantiating an object for which we have no knowledge. An 'AppenderFactory' could be used which maps the given type to an actual object class registered with the factory (?? is this possible?). 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP String containing the name of the type of appender to be instantiated. 
+.RE
+.PP
+
+.SS "void log4cpp::PropertyConfiguratorImpl::setLayout (\fBAppender\fP * appender, const std::string & name)\fC [protected]\fP"
+.PP
+Method for instantiating and configuring the layouts associated with each appender. \fBParameters:\fP
+.RS 4
+\fIappender\fP \fBAppender\fP to which we are setting this layout. 
+.br
+\fIname\fP Name in the properties of this appender. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBAppenderMap\fP \fBlog4cpp::PropertyConfiguratorImpl::_allAppenders\fP\fC [protected]\fP"
+.SS "\fBProperties\fP \fBlog4cpp::PropertyConfiguratorImpl::_properties\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

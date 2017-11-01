@@ -1,0 +1,65 @@
+.TH "log4cpp::BufferingAppender" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::BufferingAppender \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BufferingAppender.hh>\fP
+.PP
+Inherits \fBlog4cpp::LayoutAppender\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBufferingAppender\fP (const std::string name, unsigned long max_size, std::auto_ptr< \fBAppender\fP > sink, std::auto_ptr< \fBTriggeringEventEvaluator\fP > evaluator)"
+.br
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "\fIRelease any resources allocated within the appender such as file handles, network connections, etc. \fP"
+.ti -1c
+.RI "bool \fBgetLossy\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetLossy\fP (bool lossy)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fB_append\fP (const \fBLoggingEvent\fP &event)"
+.br
+.RI "\fILog in \fBAppender\fP specific way. \fP"
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::BufferingAppender::BufferingAppender (const std::string name, unsigned long max_size, std::auto_ptr< \fBAppender\fP > sink, std::auto_ptr< \fBTriggeringEventEvaluator\fP > evaluator)"
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cpp::BufferingAppender::_append (const \fBLoggingEvent\fP & event)\fC [protected, virtual]\fP"
+.PP
+Log in \fBAppender\fP specific way. Subclasses of \fBAppender\fP should implement this method to perform actual logging. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP The \fBLoggingEvent\fP to log. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "virtual void log4cpp::BufferingAppender::close ()\fC [inline, virtual]\fP"
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "bool log4cpp::BufferingAppender::getLossy () const\fC [inline]\fP"
+.SS "void log4cpp::BufferingAppender::setLossy (bool lossy)\fC [inline]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

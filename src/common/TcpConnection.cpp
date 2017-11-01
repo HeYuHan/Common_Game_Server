@@ -1,8 +1,15 @@
 #include "TcpConnection.h"
+#include<string.h>
+#ifndef _WIN32
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#endif // !_WIN32
+
 TcpConnection::TcpConnection():
 	m_Socket(-1),
 	m_BufferEvent(NULL)
 {
+	m_Type = TCP_SOCKET;
 }
 
 TcpConnection::~TcpConnection()
@@ -51,7 +58,7 @@ bool TcpConnection::Connect(const char * ip, int port, event_base * base)
 	memset(&addr, 0, sizeof(addr));
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(port);
-	addr.sin_addr.S_un.S_addr = inet_addr(ip);
+	addr.sin_addr.s_addr = inet_addr(ip);
 	if (0 == bufferevent_socket_connect(m_BufferEvent, (sockaddr*)&addr, sizeof(addr)))
 	{
 		m_Socket = bufferevent_getfd(m_BufferEvent);

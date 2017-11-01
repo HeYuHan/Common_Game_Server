@@ -59,7 +59,6 @@ int main(int argc,char **argv)
 			break;
 		}
 	}
-
 	gChannelServer.Run();
 	return 0;
 }

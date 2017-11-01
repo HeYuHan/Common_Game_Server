@@ -1,0 +1,98 @@
+.TH "log4cpp::LayoutAppender" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::LayoutAppender \- 
+.PP
+\fBLayoutAppender\fP is a common superclass for all Appenders that require a \fBLayout\fP.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LayoutAppender.hh>\fP
+.PP
+Inherits \fBlog4cpp::AppenderSkeleton\fP.
+.PP
+Inherited by \fBlog4cpp::BufferingAppender\fP, \fBlog4cpp::FileAppender\fP, \fBlog4cpp::OstreamAppender\fP, \fBlog4cpp::RemoteSyslogAppender\fP, \fBlog4cpp::StringQueueAppender\fP, \fBlog4cpp::SyslogAppender\fP, and \fBlog4cpp::Win32DebugAppender\fP.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBBasicLayout\fP \fBDefaultLayoutType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLayoutAppender\fP (const std::string &name)"
+.br
+.ti -1c
+.RI "virtual \fB~LayoutAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBrequiresLayout\fP () const "
+.br
+.RI "\fICheck if the appender requires a layout. \fP"
+.ti -1c
+.RI "virtual void \fBsetLayout\fP (\fBLayout\fP *layout=NULL)"
+.br
+.RI "\fISet the \fBLayout\fP for this appender. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLayout\fP & \fB_getLayout\fP ()"
+.br
+.RI "\fIReturn the layout of the appender. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBLayoutAppender\fP is a common superclass for all Appenders that require a \fBLayout\fP. 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef \fBBasicLayout\fP \fBlog4cpp::LayoutAppender::DefaultLayoutType\fP"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::LayoutAppender::LayoutAppender (const std::string & name)"
+.SS "log4cpp::LayoutAppender::~LayoutAppender ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBLayout\fP & log4cpp::LayoutAppender::_getLayout ()\fC [protected]\fP"
+.PP
+Return the layout of the appender. This method is the \fBLayout\fP accessor for subclasses of \fBLayoutAppender\fP. 
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBLayout\fP. 
+.RE
+.PP
+
+.SS "bool log4cpp::LayoutAppender::requiresLayout () const\fC [virtual]\fP"
+.PP
+Check if the appender requires a layout. All LayoutAppenders do, therefore this method returns true for all subclasses.
+.PP
+\fBReturns:\fP
+.RS 4
+true. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "void log4cpp::LayoutAppender::setLayout (\fBLayout\fP * layout = \fCNULL\fP)\fC [virtual]\fP"
+.PP
+Set the \fBLayout\fP for this appender. \fBParameters:\fP
+.RS 4
+\fIlayout\fP The layout to use. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

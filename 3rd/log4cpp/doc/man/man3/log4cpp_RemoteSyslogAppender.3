@@ -1,0 +1,150 @@
+.TH "log4cpp::RemoteSyslogAppender" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::RemoteSyslogAppender \- 
+.PP
+\fBRemoteSyslogAppender\fP sends LoggingEvents to a remote syslog system.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RemoteSyslogAppender.hh>\fP
+.PP
+Inherits \fBlog4cpp::LayoutAppender\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRemoteSyslogAppender\fP (const std::string &name, const std::string &syslogName, const std::string &relayer, int facility=LOG_USER, int portNumber=514)"
+.br
+.RI "\fIInstantiate a \fBRemoteSyslogAppender\fP with given name and name and facility for syslog. \fP"
+.ti -1c
+.RI "virtual \fB~RemoteSyslogAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBreopen\fP ()"
+.br
+.RI "\fICloses and reopens the socket. \fP"
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "\fICloses the socket. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBtoSyslogPriority\fP (\fBPriority::Value\fP priority)"
+.br
+.RI "\fITranslates a \fBlog4cpp\fP priority to a syslog priority. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBopen\fP ()"
+.br
+.RI "\fIJust creates the socket. \fP"
+.ti -1c
+.RI "virtual void \fB_append\fP (const \fBLoggingEvent\fP &event)"
+.br
+.RI "\fISends a \fBLoggingEvent\fP to the remote syslog. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fB_syslogName\fP"
+.br
+.ti -1c
+.RI "const std::string \fB_relayer\fP"
+.br
+.ti -1c
+.RI "int \fB_facility\fP"
+.br
+.ti -1c
+.RI "int \fB_portNumber\fP"
+.br
+.ti -1c
+.RI "SOCKET \fB_socket\fP"
+.br
+.ti -1c
+.RI "in_addr_t \fB_ipAddr\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBRemoteSyslogAppender\fP sends LoggingEvents to a remote syslog system. 
+
+Also see: draft-ietf-syslog-syslog-12.txt 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::RemoteSyslogAppender::RemoteSyslogAppender (const std::string & name, const std::string & syslogName, const std::string & relayer, int facility = \fCLOG_USER\fP, int portNumber = \fC514\fP)"
+.PP
+Instantiate a \fBRemoteSyslogAppender\fP with given name and name and facility for syslog. \fBParameters:\fP
+.RS 4
+\fIname\fP The name of the \fBAppender\fP 
+.br
+\fIsyslogName\fP The ident parameter in the openlog(3) call. 
+.br
+\fIrelayer\fP The IP address or hostname of a standard syslog host. 
+.br
+\fIfacility\fP The syslog facility to log to. Defaults to LOG_USER. Value '-1' implies to use the default. 
+.br
+\fIportNumber\fP An alternative port number. Defaults to the standard syslog port number (514). Value '-1' implies to use the default. 
+.RE
+.PP
+
+.SS "log4cpp::RemoteSyslogAppender::~RemoteSyslogAppender ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cpp::RemoteSyslogAppender::_append (const \fBLoggingEvent\fP & event)\fC [protected, virtual]\fP"
+.PP
+Sends a \fBLoggingEvent\fP to the remote syslog. \fBParameters:\fP
+.RS 4
+\fIevent\fP the \fBLoggingEvent\fP to log. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "void log4cpp::RemoteSyslogAppender::close ()\fC [virtual]\fP"
+.PP
+Closes the socket. 
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "void log4cpp::RemoteSyslogAppender::open ()\fC [protected, virtual]\fP"
+.PP
+Just creates the socket. 
+.SS "bool log4cpp::RemoteSyslogAppender::reopen ()\fC [virtual]\fP"
+.PP
+Closes and reopens the socket. 
+.PP
+Reimplemented from \fBlog4cpp::AppenderSkeleton\fP.
+.SS "int log4cpp::RemoteSyslogAppender::toSyslogPriority (\fBPriority::Value\fP priority)\fC [static]\fP"
+.PP
+Translates a \fBlog4cpp\fP priority to a syslog priority. \fBParameters:\fP
+.RS 4
+\fIpriority\fP The \fBlog4cpp\fP priority. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the syslog priority. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int \fBlog4cpp::RemoteSyslogAppender::_facility\fP\fC [protected]\fP"
+.SS "in_addr_t \fBlog4cpp::RemoteSyslogAppender::_ipAddr\fP\fC [protected]\fP"
+.SS "int \fBlog4cpp::RemoteSyslogAppender::_portNumber\fP\fC [protected]\fP"
+.SS "const std::string \fBlog4cpp::RemoteSyslogAppender::_relayer\fP\fC [protected]\fP"
+.SS "SOCKET \fBlog4cpp::RemoteSyslogAppender::_socket\fP\fC [protected]\fP"
+.SS "const std::string \fBlog4cpp::RemoteSyslogAppender::_syslogName\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

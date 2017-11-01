@@ -1,0 +1,201 @@
+.TH "log4cpp::AppenderSkeleton" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::AppenderSkeleton \- 
+.PP
+\fBAppenderSkeleton\fP is a helper class, simplifying implementation of Appenders: it already takes care of handling of Thresholds and Filters.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AppenderSkeleton.hh>\fP
+.PP
+Inherits \fBlog4cpp::Appender\fP.
+.PP
+Inherited by \fBlog4cpp::AbortAppender\fP, \fBlog4cpp::IdsaAppender\fP, \fBlog4cpp::LayoutAppender\fP, and \fBlog4cpp::NTEventLogAppender\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~AppenderSkeleton\fP ()"
+.br
+.RI "\fIDestructor for \fBAppenderSkeleton\fP. \fP"
+.ti -1c
+.RI "virtual void \fBdoAppend\fP (const \fBLoggingEvent\fP &event)"
+.br
+.RI "\fILog in \fBAppender\fP specific way. \fP"
+.ti -1c
+.RI "virtual bool \fBreopen\fP ()"
+.br
+.RI "\fIReopens the output destination of this \fBAppender\fP, e.g. \fP"
+.ti -1c
+.RI "virtual void \fBclose\fP ()=0"
+.br
+.RI "\fIRelease any resources allocated within the appender such as file handles, network connections, etc. \fP"
+.ti -1c
+.RI "virtual bool \fBrequiresLayout\fP () const =0"
+.br
+.RI "\fICheck if the appender uses a layout. \fP"
+.ti -1c
+.RI "virtual void \fBsetLayout\fP (\fBLayout\fP *layout)=0"
+.br
+.RI "\fISet the \fBLayout\fP for this appender. \fP"
+.ti -1c
+.RI "virtual void \fBsetThreshold\fP (\fBPriority::Value\fP priority)"
+.br
+.RI "\fISet the threshold priority of this \fBAppender\fP. \fP"
+.ti -1c
+.RI "virtual \fBPriority::Value\fP \fBgetThreshold\fP ()"
+.br
+.RI "\fIGet the threshold priority of this \fBAppender\fP. \fP"
+.ti -1c
+.RI "virtual void \fBsetFilter\fP (\fBFilter\fP *filter)"
+.br
+.RI "\fISet a \fBFilter\fP for this appender. \fP"
+.ti -1c
+.RI "virtual \fBFilter\fP * \fBgetFilter\fP ()"
+.br
+.RI "\fIGet the \fBFilter\fP for this appender. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAppenderSkeleton\fP (const std::string &name)"
+.br
+.RI "\fIConstructor for \fBAppenderSkeleton\fP. \fP"
+.ti -1c
+.RI "virtual void \fB_append\fP (const \fBLoggingEvent\fP &event)=0"
+.br
+.RI "\fILog in \fBAppender\fP specific way. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBAppenderSkeleton\fP is a helper class, simplifying implementation of Appenders: it already takes care of handling of Thresholds and Filters. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::AppenderSkeleton::AppenderSkeleton (const std::string & name)\fC [protected]\fP"
+.PP
+Constructor for \fBAppenderSkeleton\fP. Will only be used in \fBgetAppender()\fP (and in derived classes of course). 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP The name of this \fBAppender\fP. 
+.RE
+.PP
+
+.SS "log4cpp::AppenderSkeleton::~AppenderSkeleton ()\fC [virtual]\fP"
+.PP
+Destructor for \fBAppenderSkeleton\fP. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cpp::AppenderSkeleton::_append (const \fBLoggingEvent\fP & event)\fC [protected, pure virtual]\fP"
+.PP
+Log in \fBAppender\fP specific way. Subclasses of \fBAppender\fP should implement this method to perform actual logging. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP The \fBLoggingEvent\fP to log. 
+.RE
+.PP
+
+.PP
+Implemented in \fBlog4cpp::AbortAppender\fP, \fBlog4cpp::BufferingAppender\fP, \fBlog4cpp::DailyRollingFileAppender\fP, \fBlog4cpp::FileAppender\fP, \fBlog4cpp::IdsaAppender\fP, \fBlog4cpp::NTEventLogAppender\fP, \fBlog4cpp::OstreamAppender\fP, \fBlog4cpp::RemoteSyslogAppender\fP, \fBlog4cpp::RollingFileAppender\fP, \fBlog4cpp::StringQueueAppender\fP, \fBlog4cpp::SyslogAppender\fP, and \fBlog4cpp::Win32DebugAppender\fP.
+.SS "virtual void log4cpp::AppenderSkeleton::close ()\fC [pure virtual]\fP"
+.PP
+Release any resources allocated within the appender such as file handles, network connections, etc. 
+.PP
+Implements \fBlog4cpp::Appender\fP.
+.PP
+Implemented in \fBlog4cpp::AbortAppender\fP, \fBlog4cpp::BufferingAppender\fP, \fBlog4cpp::FileAppender\fP, \fBlog4cpp::IdsaAppender\fP, \fBlog4cpp::NTEventLogAppender\fP, \fBlog4cpp::OstreamAppender\fP, \fBlog4cpp::RemoteSyslogAppender\fP, \fBlog4cpp::StringQueueAppender\fP, \fBlog4cpp::SyslogAppender\fP, and \fBlog4cpp::Win32DebugAppender\fP.
+.SS "void log4cpp::AppenderSkeleton::doAppend (const \fBLoggingEvent\fP & event)\fC [virtual]\fP"
+.PP
+Log in \fBAppender\fP specific way. \fBParameters:\fP
+.RS 4
+\fIevent\fP The \fBLoggingEvent\fP to log. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::Appender\fP.
+.SS "\fBFilter\fP * log4cpp::AppenderSkeleton::getFilter ()\fC [virtual]\fP"
+.PP
+Get the \fBFilter\fP for this appender. \fBReturns:\fP
+.RS 4
+the filter, or NULL if no filter has been set. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::Appender\fP.
+.SS "\fBPriority::Value\fP log4cpp::AppenderSkeleton::getThreshold ()\fC [virtual]\fP"
+.PP
+Get the threshold priority of this \fBAppender\fP. \fBReturns:\fP
+.RS 4
+the threshold 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::Appender\fP.
+.SS "bool log4cpp::AppenderSkeleton::reopen ()\fC [virtual]\fP"
+.PP
+Reopens the output destination of this \fBAppender\fP, e.g. the logfile or TCP socket. 
+.PP
+\fBReturns:\fP
+.RS 4
+false if an error occured during reopening, true otherwise. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::Appender\fP.
+.PP
+Reimplemented in \fBlog4cpp::AbortAppender\fP, \fBlog4cpp::FileAppender\fP, \fBlog4cpp::IdsaAppender\fP, \fBlog4cpp::NTEventLogAppender\fP, \fBlog4cpp::OstreamAppender\fP, \fBlog4cpp::RemoteSyslogAppender\fP, \fBlog4cpp::StringQueueAppender\fP, and \fBlog4cpp::SyslogAppender\fP.
+.SS "virtual bool log4cpp::AppenderSkeleton::requiresLayout () const\fC [pure virtual]\fP"
+.PP
+Check if the appender uses a layout. \fBReturns:\fP
+.RS 4
+true if the appender implementation requires a layout. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::Appender\fP.
+.PP
+Implemented in \fBlog4cpp::AbortAppender\fP, \fBlog4cpp::IdsaAppender\fP, \fBlog4cpp::LayoutAppender\fP, and \fBlog4cpp::NTEventLogAppender\fP.
+.SS "void log4cpp::AppenderSkeleton::setFilter (\fBFilter\fP * filter)\fC [virtual]\fP"
+.PP
+Set a \fBFilter\fP for this appender. 
+.PP
+Implements \fBlog4cpp::Appender\fP.
+.SS "virtual void log4cpp::AppenderSkeleton::setLayout (\fBLayout\fP * layout)\fC [pure virtual]\fP"
+.PP
+Set the \fBLayout\fP for this appender. \fBParameters:\fP
+.RS 4
+\fIlayout\fP The layout to use. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::Appender\fP.
+.PP
+Implemented in \fBlog4cpp::AbortAppender\fP, \fBlog4cpp::IdsaAppender\fP, \fBlog4cpp::LayoutAppender\fP, and \fBlog4cpp::NTEventLogAppender\fP.
+.SS "void log4cpp::AppenderSkeleton::setThreshold (\fBPriority::Value\fP priority)\fC [virtual]\fP"
+.PP
+Set the threshold priority of this \fBAppender\fP. The \fBAppender\fP will not appender LoggingEvents with a priority lower than the threshold. Use \fBPriority::NOTSET\fP to disable threshold checking. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpriority\fP The priority to set. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::Appender\fP.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

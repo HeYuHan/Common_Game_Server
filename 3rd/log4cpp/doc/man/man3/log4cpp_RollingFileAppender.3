@@ -1,0 +1,99 @@
+.TH "log4cpp::RollingFileAppender" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::RollingFileAppender \- 
+.PP
+\fBRollingFileAppender\fP is a \fBFileAppender\fP that rolls over the logfile once it has reached a certain size limit.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RollingFileAppender.hh>\fP
+.PP
+Inherits \fBlog4cpp::FileAppender\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRollingFileAppender\fP (const std::string &name, const std::string &fileName, size_t maxFileSize=10 *1024 *1024, unsigned int maxBackupIndex=1, bool append=true, mode_t mode=00644)"
+.br
+.ti -1c
+.RI "virtual void \fBsetMaxBackupIndex\fP (unsigned int maxBackups)"
+.br
+.ti -1c
+.RI "virtual unsigned int \fBgetMaxBackupIndex\fP () const "
+.br
+.ti -1c
+.RI "virtual void \fBsetMaximumFileSize\fP (size_t maxFileSize)"
+.br
+.ti -1c
+.RI "virtual size_t \fBgetMaxFileSize\fP () const "
+.br
+.ti -1c
+.RI "virtual void \fBrollOver\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fB_append\fP (const \fBLoggingEvent\fP &event)"
+.br
+.RI "\fILog in \fBAppender\fP specific way. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fB_maxBackupIndex\fP"
+.br
+.ti -1c
+.RI "unsigned short int \fB_maxBackupIndexWidth\fP"
+.br
+.ti -1c
+.RI "size_t \fB_maxFileSize\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBRollingFileAppender\fP is a \fBFileAppender\fP that rolls over the logfile once it has reached a certain size limit. 
+
+\fBSince:\fP
+.RS 4
+0.3.1 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::RollingFileAppender::RollingFileAppender (const std::string & name, const std::string & fileName, size_t maxFileSize = \fC10*1024*1024\fP, unsigned int maxBackupIndex = \fC1\fP, bool append = \fCtrue\fP, mode_t mode = \fC00644\fP)"
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cpp::RollingFileAppender::_append (const \fBLoggingEvent\fP & event)\fC [protected, virtual]\fP"
+.PP
+Log in \fBAppender\fP specific way. Subclasses of \fBAppender\fP should implement this method to perform actual logging. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP The \fBLoggingEvent\fP to log. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cpp::FileAppender\fP.
+.SS "unsigned int log4cpp::RollingFileAppender::getMaxBackupIndex () const\fC [virtual]\fP"
+.SS "size_t log4cpp::RollingFileAppender::getMaxFileSize () const\fC [virtual]\fP"
+.SS "void log4cpp::RollingFileAppender::rollOver ()\fC [virtual]\fP"
+.SS "void log4cpp::RollingFileAppender::setMaxBackupIndex (unsigned int maxBackups)\fC [virtual]\fP"
+.SS "void log4cpp::RollingFileAppender::setMaximumFileSize (size_t maxFileSize)\fC [virtual]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "unsigned int \fBlog4cpp::RollingFileAppender::_maxBackupIndex\fP\fC [protected]\fP"
+.SS "unsigned short int \fBlog4cpp::RollingFileAppender::_maxBackupIndexWidth\fP\fC [protected]\fP"
+.SS "size_t \fBlog4cpp::RollingFileAppender::_maxFileSize\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

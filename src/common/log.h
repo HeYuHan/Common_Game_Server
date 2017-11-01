@@ -1,8 +1,17 @@
 #pragma once
 #ifndef __LOG_H__
 #define __LOG_H__
+
+
+#include <iostream>
 #ifdef _WIN32
 #include <log4cpp/config-win32.h>
+#ifdef _DEBUG
+#pragma comment(lib,"./../3rd/log4cpp/lib/log4cpp_d.lib")
+#else
+#pragma comment(lib,"./../3rd/log4cpp/lib/log4cpp.lib")
+#endif
+#endif // _WIN32
 #include <log4cpp/Category.hh>
 #include <log4cpp/Appender.hh>
 #include <log4cpp/FileAppender.hh>
@@ -10,13 +19,6 @@
 #include <log4cpp/PatternLayout.hh>
 #include <log4cpp/RollingFileAppender.hh>
 #include <log4cpp/OstreamAppender.hh>
-#include <iostream>
-#ifdef DEBUG
-#pragma comment(lib,"./../3rd/log4cpp/lib/log4cpp_d.lib")
-#else
-#pragma comment(lib,"./../3rd/log4cpp/lib/log4cpp.lib")
-#endif
-#endif // _WIN32
 using namespace log4cpp;
 class Logger
 {

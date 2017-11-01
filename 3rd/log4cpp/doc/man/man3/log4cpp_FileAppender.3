@@ -1,0 +1,166 @@
+.TH "log4cpp::FileAppender" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::FileAppender \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FileAppender.hh>\fP
+.PP
+Inherits \fBlog4cpp::LayoutAppender\fP.
+.PP
+Inherited by \fBlog4cpp::DailyRollingFileAppender\fP, and \fBlog4cpp::RollingFileAppender\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFileAppender\fP (const std::string &name, const std::string &fileName, bool append=true, mode_t mode=00644)"
+.br
+.RI "\fIConstructs a \fBFileAppender\fP. \fP"
+.ti -1c
+.RI "\fBFileAppender\fP (const std::string &name, int fd)"
+.br
+.RI "\fIConstructs a \fBFileAppender\fP to an already open file descriptor. \fP"
+.ti -1c
+.RI "virtual \fB~FileAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBreopen\fP ()"
+.br
+.RI "\fIReopens the logfile. \fP"
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "\fICloses the logfile. \fP"
+.ti -1c
+.RI "virtual void \fBsetAppend\fP (bool append)"
+.br
+.RI "\fISets the append vs truncate flag. \fP"
+.ti -1c
+.RI "virtual bool \fBgetAppend\fP () const "
+.br
+.RI "\fIGets the value of the 'append' option. \fP"
+.ti -1c
+.RI "virtual void \fBsetMode\fP (mode_t mode)"
+.br
+.RI "\fISets the file open mode. \fP"
+.ti -1c
+.RI "virtual mode_t \fBgetMode\fP () const "
+.br
+.RI "\fIGets the file open mode. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fB_append\fP (const \fBLoggingEvent\fP &event)"
+.br
+.RI "\fILog in \fBAppender\fP specific way. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fB_fileName\fP"
+.br
+.ti -1c
+.RI "int \fB_fd\fP"
+.br
+.ti -1c
+.RI "int \fB_flags\fP"
+.br
+.ti -1c
+.RI "mode_t \fB_mode\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::FileAppender::FileAppender (const std::string & name, const std::string & fileName, bool append = \fCtrue\fP, mode_t mode = \fC00644\fP)"
+.PP
+Constructs a \fBFileAppender\fP. \fBParameters:\fP
+.RS 4
+\fIname\fP the name of the \fBAppender\fP. 
+.br
+\fIfileName\fP the name of the file to which the \fBAppender\fP has to log. 
+.br
+\fIappend\fP whether the \fBAppender\fP has to truncate the file or just append to it if it already exists. Defaults to 'true'. 
+.br
+\fImode\fP file mode to open the logfile with. Defaults to 00644. 
+.RE
+.PP
+
+.SS "log4cpp::FileAppender::FileAppender (const std::string & name, int fd)"
+.PP
+Constructs a \fBFileAppender\fP to an already open file descriptor. \fBParameters:\fP
+.RS 4
+\fIname\fP the name of the \fBAppender\fP. 
+.br
+\fIfd\fP the file descriptor to which the \fBAppender\fP has to log. 
+.RE
+.PP
+
+.SS "log4cpp::FileAppender::~FileAppender ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cpp::FileAppender::_append (const \fBLoggingEvent\fP & event)\fC [protected, virtual]\fP"
+.PP
+Log in \fBAppender\fP specific way. Subclasses of \fBAppender\fP should implement this method to perform actual logging. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP The \fBLoggingEvent\fP to log. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.PP
+Reimplemented in \fBlog4cpp::DailyRollingFileAppender\fP, and \fBlog4cpp::RollingFileAppender\fP.
+.SS "void log4cpp::FileAppender::close ()\fC [virtual]\fP"
+.PP
+Closes the logfile. 
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "bool log4cpp::FileAppender::getAppend () const\fC [virtual]\fP"
+.PP
+Gets the value of the 'append' option. 
+.SS "mode_t log4cpp::FileAppender::getMode () const\fC [virtual]\fP"
+.PP
+Gets the file open mode. 
+.SS "bool log4cpp::FileAppender::reopen ()\fC [virtual]\fP"
+.PP
+Reopens the logfile. This can be useful for logfiles that are rotated externally, e.g. by logrotate. This method is a NOOP for FileAppenders that have been constructed with a file descriptor. 
+.PP
+\fBReturns:\fP
+.RS 4
+true if the reopen succeeded. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBlog4cpp::AppenderSkeleton\fP.
+.SS "void log4cpp::FileAppender::setAppend (bool append)\fC [virtual]\fP"
+.PP
+Sets the append vs truncate flag. NB. currently the \fBFileAppender\fP opens the logfile in the constructor. Therefore this method is too late to influence the first file opening. We'll need something similar to log4j's activateOptions(). 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIappend\fP false to truncate, true to append 
+.RE
+.PP
+
+.SS "void log4cpp::FileAppender::setMode (mode_t mode)\fC [virtual]\fP"
+.PP
+Sets the file open mode. 
+.SH "Member Data Documentation"
+.PP 
+.SS "int \fBlog4cpp::FileAppender::_fd\fP\fC [protected]\fP"
+.SS "const std::string \fBlog4cpp::FileAppender::_fileName\fP\fC [protected]\fP"
+.SS "int \fBlog4cpp::FileAppender::_flags\fP\fC [protected]\fP"
+.SS "mode_t \fBlog4cpp::FileAppender::_mode\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

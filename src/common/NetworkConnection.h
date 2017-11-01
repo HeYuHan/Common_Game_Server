@@ -5,6 +5,10 @@
 class NetworkConnection;
 typedef enum
 {
+	TCP_SOCKET=1,UDP_SOCKET
+}SocketType;
+typedef enum
+{
 	READERROR = 0, WRITEERROR = 1
 }NETERR;
 typedef enum
@@ -80,6 +84,7 @@ public:
 	virtual void DisConnect()=0;
 public:
 	NetworkStream* stream;
+	SocketType m_Type;
 
 };
 #endif

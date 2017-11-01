@@ -1,0 +1,77 @@
+.TH "log4cpp::threading" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::threading \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBThreadLocalDataHolder\fP"
+.br
+.RI "\fIThis class holds Thread local data of type T, i.e. \fP"
+.ti -1c
+.RI "class \fBMSMutex\fP"
+.br
+.RI "\fIA simple object wrapper around CreateMutex() and DeleteMutex(). \fP"
+.ti -1c
+.RI "class \fBMSScopedLock\fP"
+.br
+.RI "\fIA simple object wrapper around WaitForSingleObject() and ReleaseMutex(). \fP"
+.ti -1c
+.RI "class \fBMutex\fP"
+.br
+.ti -1c
+.RI "class \fBScopedLock\fP"
+.br
+.RI "\fIdefinition of \fBScopedLock\fP; \fP"
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef boost::mutex \fBMutex\fP"
+.br
+.RI "\fIDummy type 'int' for \fBMutex\fP. \fP"
+.ti -1c
+.RI "typedef boost::mutex::scoped_lock \fBScopedLock\fP"
+.br
+.RI "\fIDummy type 'int' defintion of \fBScopedLock\fP;. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBgetThreadId\fP ()"
+.br
+.RI "\fIReturn an identifier for the current thread. \fP"
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef omni_mutex \fBlog4cpp::threading::Mutex\fP"
+.PP
+Dummy type 'int' for \fBMutex\fP. A simple, non recursive \fBMutex\fP.
+.PP
+Yes, this adds a bit of overhead in the for of extra memory, but unfortunately 'void' is illegal.
+.PP
+Equivalent to Boost.Threads boost::mutex 
+.SS "typedef omni_mutex_lock \fBlog4cpp::threading::ScopedLock\fP"
+.PP
+Dummy type 'int' defintion of \fBScopedLock\fP;. A simple 'resource acquisition is initialization' idiom type lock for \fBMutex\fP.
+.PP
+Equivalent to Boost.Threads boost::scoped_lock. 
+.SH "Function Documentation"
+.PP 
+.SS "std::string log4cpp::threading::getThreadId ()\fC [static]\fP"
+.PP
+Return an identifier for the current thread. returns the thread ID
+.PP
+What these identifiers look like is completely up to the underlying thread library.
+.PP
+What these identifiers look like is completely up to the underlying thread library. OmniThreads returns the POSIX thread Id. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

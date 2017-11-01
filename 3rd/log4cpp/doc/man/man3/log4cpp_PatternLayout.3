@@ -1,0 +1,121 @@
+.TH "log4cpp::PatternLayout" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::PatternLayout \- 
+.PP
+\fBPatternLayout\fP is a simple fixed format \fBLayout\fP implementation.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PatternLayout.hh>\fP
+.PP
+Inherits \fBlog4cpp::Layout\fP.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBPatternComponent\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPatternLayout\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~PatternLayout\fP ()"
+.br
+.ti -1c
+.RI "virtual std::string \fBformat\fP (const \fBLoggingEvent\fP &event)"
+.br
+.RI "\fIFormats the \fBLoggingEvent\fP in the style set by the setConversionPattern call. \fP"
+.ti -1c
+.RI "virtual void \fBsetConversionPattern\fP (const std::string &conversionPattern)  throw (ConfigureFailure)"
+.br
+.RI "\fISets the format of log lines handled by this \fBPatternLayout\fP. \fP"
+.ti -1c
+.RI "virtual std::string \fBgetConversionPattern\fP () const "
+.br
+.ti -1c
+.RI "virtual void \fBclearConversionPattern\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const char * \fBDEFAULT_CONVERSION_PATTERN\fP = '%m%n'"
+.br
+.RI "\fIThe default conversion pattern. \fP"
+.ti -1c
+.RI "static const char * \fBSIMPLE_CONVERSION_PATTERN\fP = '%p - %m%n'"
+.br
+.RI "\fIA conversion pattern equivalent to the \fBSimpleLayout\fP. \fP"
+.ti -1c
+.RI "static const char * \fBBASIC_CONVERSION_PATTERN\fP = '%R %p %c %x: %m%n'"
+.br
+.RI "\fIA conversion pattern equivalent to the \fBBasicLayout\fP. \fP"
+.ti -1c
+.RI "static const char * \fBTTCC_CONVERSION_PATTERN\fP = '%r [%t] %p %c %x - %m%n'"
+.br
+.RI "\fIA conversion pattern equivalent to the TTCCLayout. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPatternLayout\fP is a simple fixed format \fBLayout\fP implementation. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::PatternLayout::PatternLayout ()"
+.SS "log4cpp::PatternLayout::~PatternLayout ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cpp::PatternLayout::clearConversionPattern ()\fC [virtual]\fP"
+.SS "std::string log4cpp::PatternLayout::format (const \fBLoggingEvent\fP & event)\fC [virtual]\fP"
+.PP
+Formats the \fBLoggingEvent\fP in the style set by the setConversionPattern call. By default, set to '%%m%%n' 
+.PP
+Implements \fBlog4cpp::Layout\fP.
+.SS "std::string log4cpp::PatternLayout::getConversionPattern () const\fC [virtual]\fP"
+.SS "void log4cpp::PatternLayout::setConversionPattern (const std::string & conversionPattern)  throw (\fBConfigureFailure\fP)\fC [virtual]\fP"
+.PP
+Sets the format of log lines handled by this \fBPatternLayout\fP. By default, set to '%%m%%n'.
+.br
+ Format characters are as follows:
+.br
+ \fB%%\fP - a single percent sign \fB%c\fP - the category \fB%d\fP - the date
+.br
+ Date format: The date format character may be followed by a date format specifier enclosed between braces. For example, %d{%H:%M:%S,%l} or %d{%d %m %Y %H:%M:%S,%l}. If no date format specifier is given then the following format is used: 'Wed Jan 02 02:03:55 1980'. The date format specifier admits the same syntax as the ANSI C function strftime, with 1 addition. The addition is the specifier %l for milliseconds, padded with zeros to make 3 digits. \fB%m\fP - the message \fB%n\fP - the platform specific line separator \fB%p\fP - the priority \fB%r\fP - milliseconds since this layout was created. \fB%R\fP - seconds since Jan 1, 1970 \fB%u\fP - clock ticks since process start \fB%x\fP - the \fBNDC\fP 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIconversionPattern\fP the conversion pattern 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBConfigureFailure\fP\fP if the pattern is invalid 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "const char * \fBlog4cpp::PatternLayout::BASIC_CONVERSION_PATTERN\fP = '%R %p %c %x: %m%n'\fC [static]\fP"
+.PP
+A conversion pattern equivalent to the \fBBasicLayout\fP. 
+.SS "const char * \fBlog4cpp::PatternLayout::DEFAULT_CONVERSION_PATTERN\fP = '%m%n'\fC [static]\fP"
+.PP
+The default conversion pattern. 
+.SS "const char * \fBlog4cpp::PatternLayout::SIMPLE_CONVERSION_PATTERN\fP = '%p - %m%n'\fC [static]\fP"
+.PP
+A conversion pattern equivalent to the \fBSimpleLayout\fP. 
+.SS "const char * \fBlog4cpp::PatternLayout::TTCC_CONVERSION_PATTERN\fP = '%r [%t] %p %c %x - %m%n'\fC [static]\fP"
+.PP
+A conversion pattern equivalent to the TTCCLayout. Note: TTCCLayout is in log4j but not \fBlog4cpp\fP. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

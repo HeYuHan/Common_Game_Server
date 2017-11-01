@@ -1,4 +1,5 @@
 #include "log.h"
+#include <memory.h>
 Logger gLogger;
 Logger::Logger():
 	logger(NULL)
@@ -24,9 +25,9 @@ void Logger::Init()
 		strcpy(fileName, "../log/log_file.log");
 	}
 	PatternLayout *layout = new PatternLayout();
-	layout->setConversionPattern("%d: %p %c %x: %m%n");
+	layout->setConversionPattern("%d:%c|%p:%m%n");
 	logger = &Category::getRoot().getInstance(name);
-#ifndef DEBUG
+#ifndef _DEBUG
 	RollingFileAppender *fileAppender = new RollingFileAppender(name, fileName);
 	fileAppender->setLayout(layout);
 	logger->addAppender(fileAppender);

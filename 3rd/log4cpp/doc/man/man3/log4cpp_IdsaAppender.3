@@ -1,0 +1,137 @@
+.TH "log4cpp::IdsaAppender" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::IdsaAppender \- 
+.PP
+\fBIdsaAppender\fP is an \fBAppender\fP that sends LoggingEvents to the IDS/A logger and reference monitor by Marc Welz.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IdsaAppender.hh>\fP
+.PP
+Inherits \fBlog4cpp::AppenderSkeleton\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIdsaAppender\fP (const std::string &name, const std::string &idsaName)"
+.br
+.RI "\fIInstantiate an \fBIdsaAppender\fP with given name and name. \fP"
+.ti -1c
+.RI "virtual \fB~IdsaAppender\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBreopen\fP ()"
+.br
+.RI "\fICalls idsa_open() and idsa_close(). \fP"
+.ti -1c
+.RI "virtual void \fBclose\fP ()"
+.br
+.RI "\fICalls idsa_close(). \fP"
+.ti -1c
+.RI "virtual bool \fBrequiresLayout\fP () const "
+.br
+.RI "\fIThe \fBIdsaAppender\fP does its own \fBLayout\fP. \fP"
+.ti -1c
+.RI "virtual void \fBsetLayout\fP (\fBLayout\fP *layout)"
+.br
+.RI "\fISet the \fBLayout\fP for this appender. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBopen\fP ()"
+.br
+.RI "\fICalls idsa_open(). \fP"
+.ti -1c
+.RI "virtual void \fB_append\fP (const \fBLoggingEvent\fP &event)"
+.br
+.RI "\fISends a \fBLoggingEvent\fP to idsa. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fB_idsaName\fP"
+.br
+.ti -1c
+.RI "IDSA_CONNECTION * \fB_idsaConnection\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBIdsaAppender\fP is an \fBAppender\fP that sends LoggingEvents to the IDS/A logger and reference monitor by Marc Welz. 
+
+See http://jade.cs.uct.ac.za/idsa/ for more information on IDS/A. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::IdsaAppender::IdsaAppender (const std::string & name, const std::string & idsaName)"
+.PP
+Instantiate an \fBIdsaAppender\fP with given name and name. Unlike the syslog API, idsa allows multiple connections. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP The name of the \fBAppender\fP 
+.br
+\fIidsaName\fP The service parameter of idsa 
+.RE
+.PP
+
+.SS "virtual log4cpp::IdsaAppender::~IdsaAppender ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void log4cpp::IdsaAppender::_append (const \fBLoggingEvent\fP & event)\fC [protected, virtual]\fP"
+.PP
+Sends a \fBLoggingEvent\fP to idsa. \fBParameters:\fP
+.RS 4
+\fIevent\fP the \fBLoggingEvent\fP to log. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "virtual void log4cpp::IdsaAppender::close ()\fC [virtual]\fP"
+.PP
+Calls idsa_close(). 
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "virtual void log4cpp::IdsaAppender::open ()\fC [protected, virtual]\fP"
+.PP
+Calls idsa_open(). 
+.SS "virtual bool log4cpp::IdsaAppender::reopen ()\fC [virtual]\fP"
+.PP
+Calls idsa_open() and idsa_close(). 
+.PP
+Reimplemented from \fBlog4cpp::AppenderSkeleton\fP.
+.SS "virtual bool log4cpp::IdsaAppender::requiresLayout () const\fC [virtual]\fP"
+.PP
+The \fBIdsaAppender\fP does its own \fBLayout\fP. \fBReturns:\fP
+.RS 4
+false 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SS "virtual void log4cpp::IdsaAppender::setLayout (\fBLayout\fP * layout)\fC [virtual]\fP"
+.PP
+Set the \fBLayout\fP for this appender. \fBParameters:\fP
+.RS 4
+\fIlayout\fP The layout to use. 
+.RE
+.PP
+
+.PP
+Implements \fBlog4cpp::AppenderSkeleton\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "IDSA_CONNECTION* \fBlog4cpp::IdsaAppender::_idsaConnection\fP\fC [protected]\fP"
+.SS "const std::string \fBlog4cpp::IdsaAppender::_idsaName\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

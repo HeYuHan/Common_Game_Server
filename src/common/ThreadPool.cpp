@@ -82,7 +82,7 @@ bool ThreadBuffer::Empty()
 
 bool ThreadBuffer::Full()
 {
-	return m_TaskQueue.size()==m_Size;
+	return ((int)m_TaskQueue.size())==m_Size;
 }
 
 

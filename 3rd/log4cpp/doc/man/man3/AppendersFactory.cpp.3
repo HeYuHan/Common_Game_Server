@@ -1,0 +1,67 @@
+.TH "AppendersFactory.cpp" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AppendersFactory.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log4cpp/AppendersFactory.hh>\fP
+.br
+\fC#include <stdexcept>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlog4cpp\fP"
+.br
+.PP
+
+.RI "\fIThe top level namespace for all 'Log for C++' types and classes. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_file_appender\fP (const FactoryParams &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_roll_file_appender\fP (const FactoryParams &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_daily_roll_file_appender\fP (const FactoryParams &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_idsa_appender\fP (const FactoryParams &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_nt_event_log_appender\fP (const FactoryParams &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_remote_syslog_appender\fP (const FactoryParams &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_syslog_appender\fP (const FactoryParams &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_win32_debug_appender\fP (const FactoryParams &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_abort_appender\fP (const FactoryParams &params)"
+.br
+.ti -1c
+.RI "std::auto_ptr< Appender > \fBlog4cpp::create_smtp_appender\fP (const FactoryParams &)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static AppendersFactory * \fBlog4cpp::appenders_factory_\fP = 0"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

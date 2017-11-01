@@ -1,0 +1,384 @@
+.TH "log4cpp" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp \- 
+.PP
+The top level namespace for all 'Log for C++' types and classes.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBdetails\fP"
+.br
+.ti -1c
+.RI "namespace \fBthreading\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAbortAppender\fP"
+.br
+.RI "\fIThis \fBAppender\fP causes the application to abort() upon the first append() call. \fP"
+.ti -1c
+.RI "class \fBAppender\fP"
+.br
+.RI "\fIImplement this interface for your own strategies for printing log statements. \fP"
+.ti -1c
+.RI "class \fBAppendersFactory\fP"
+.br
+.ti -1c
+.RI "class \fBAppenderSkeleton\fP"
+.br
+.RI "\fI\fBAppenderSkeleton\fP is a helper class, simplifying implementation of Appenders: it already takes care of handling of Thresholds and Filters. \fP"
+.ti -1c
+.RI "class \fBBasicConfigurator\fP"
+.br
+.RI "\fIThis class implements a trivial default configuration for \fBlog4cpp\fP: it adds a \fBFileAppender\fP that logs to stdout and uses a \fBBasicLayout\fP to the root \fBCategory\fP. \fP"
+.ti -1c
+.RI "class \fBBasicLayout\fP"
+.br
+.RI "\fI\fBBasicLayout\fP is a simple fixed format \fBLayout\fP implementation. \fP"
+.ti -1c
+.RI "class \fBBufferingAppender\fP"
+.br
+.ti -1c
+.RI "class \fBCategory\fP"
+.br
+.RI "\fIThis is the central class in the log4j package. \fP"
+.ti -1c
+.RI "class \fBCategoryStream\fP"
+.br
+.RI "\fIThis class enables streaming simple types and objects to a category. \fP"
+.ti -1c
+.RI "class \fBConfigureFailure\fP"
+.br
+.RI "\fIException class for configuration. \fP"
+.ti -1c
+.RI "class \fBDailyRollingFileAppender\fP"
+.br
+.RI "\fI\fBDailyRollingFileAppender\fP is a \fBFileAppender\fP that rolls over the logfile once the next day starts. \fP"
+.ti -1c
+.RI "class \fBFactoryParams\fP"
+.br
+.ti -1c
+.RI "class \fBFileAppender\fP"
+.br
+.ti -1c
+.RI "class \fBFilter\fP"
+.br
+.RI "\fIUsers should extend this class to implement customized logging event filtering. \fP"
+.ti -1c
+.RI "class \fBFixedContextCategory\fP"
+.br
+.RI "\fIThis \fBCategory\fP subclass replaces the \fBNDC\fP field in LoggingEvents with a fixed context string. \fP"
+.ti -1c
+.RI "class \fBHierarchyMaintainer\fP"
+.br
+.RI "\fI\fBHierarchyMaintainer\fP is an internal \fBlog4cpp\fP class. \fP"
+.ti -1c
+.RI "class \fBIdsaAppender\fP"
+.br
+.RI "\fI\fBIdsaAppender\fP is an \fBAppender\fP that sends LoggingEvents to the IDS/A logger and reference monitor by Marc Welz. \fP"
+.ti -1c
+.RI "class \fBLayout\fP"
+.br
+.RI "\fIExtend this abstract class to create your own log layout format. \fP"
+.ti -1c
+.RI "class \fBLayoutAppender\fP"
+.br
+.RI "\fI\fBLayoutAppender\fP is a common superclass for all Appenders that require a \fBLayout\fP. \fP"
+.ti -1c
+.RI "class \fBLayoutsFactory\fP"
+.br
+.ti -1c
+.RI "class \fBLevelEvaluator\fP"
+.br
+.ti -1c
+.RI "struct \fBLoggingEvent\fP"
+.br
+.RI "\fIThe internal representation of logging events. \fP"
+.ti -1c
+.RI "class \fBwidth\fP"
+.br
+.ti -1c
+.RI "class \fBtab\fP"
+.br
+.ti -1c
+.RI "class \fBNDC\fP"
+.br
+.RI "\fIThe \fBNDC\fP class implements \fInested diagnostic contexts\fP as defined by Neil Harrison in the article 'Patterns for Logging
+       Diagnostic Messages' part of the book '<i>Pattern Languages of
+       Program Design 3</i>' edited by Martin et al. \fP"
+.ti -1c
+.RI "class \fBNTEventLogAppender\fP"
+.br
+.RI "\fI\fBNTEventLogAppender\fP is an \fBAppender\fP that sends LoggingEvents to the Windows event log. \fP"
+.ti -1c
+.RI "class \fBOstreamAppender\fP"
+.br
+.RI "\fI\fBOstreamAppender\fP appends LoggingEvents to ostreams. \fP"
+.ti -1c
+.RI "class \fBPassThroughLayout\fP"
+.br
+.ti -1c
+.RI "class \fBPatternLayout\fP"
+.br
+.RI "\fI\fBPatternLayout\fP is a simple fixed format \fBLayout\fP implementation. \fP"
+.ti -1c
+.RI "class \fBPriority\fP"
+.br
+.RI "\fIThe \fBPriority\fP class provides importance levels with which one can categorize log messages. \fP"
+.ti -1c
+.RI "class \fBPropertyConfigurator\fP"
+.br
+.RI "\fIProperty configurator will read a config file using the same (or similar) format to the config file used by log4j. \fP"
+.ti -1c
+.RI "class \fBRemoteSyslogAppender\fP"
+.br
+.RI "\fI\fBRemoteSyslogAppender\fP sends LoggingEvents to a remote syslog system. \fP"
+.ti -1c
+.RI "class \fBRollingFileAppender\fP"
+.br
+.RI "\fI\fBRollingFileAppender\fP is a \fBFileAppender\fP that rolls over the logfile once it has reached a certain size limit. \fP"
+.ti -1c
+.RI "class \fBSimpleConfigurator\fP"
+.br
+.RI "\fIThis class implements a simple Configurator for \fBlog4cpp\fP. \fP"
+.ti -1c
+.RI "class \fBSimpleLayout\fP"
+.br
+.RI "\fI\fBBasicLayout\fP is a simple fixed format \fBLayout\fP implementation. \fP"
+.ti -1c
+.RI "class \fBStringQueueAppender\fP"
+.br
+.RI "\fIThis class puts log messages in an in-memory queue. \fP"
+.ti -1c
+.RI "class \fBSyslogAppender\fP"
+.br
+.RI "\fI\fBSyslogAppender\fP sends LoggingEvents to the local syslog system. \fP"
+.ti -1c
+.RI "class \fBTimeStamp\fP"
+.br
+.RI "\fIA simple \fBTimeStamp\fP abstraction. \fP"
+.ti -1c
+.RI "class \fBTriggeringEventEvaluator\fP"
+.br
+.ti -1c
+.RI "class \fBTriggeringEventEvaluatorFactory\fP"
+.br
+.ti -1c
+.RI "class \fBWin32DebugAppender\fP"
+.br
+.RI "\fI\fBWin32DebugAppender\fP simply sends the log message to the default system debugger on Win32 systems. \fP"
+.ti -1c
+.RI "struct \fBStringLiteralComponent\fP"
+.br
+.ti -1c
+.RI "struct \fBCategoryNameComponent\fP"
+.br
+.ti -1c
+.RI "struct \fBMessageComponent\fP"
+.br
+.ti -1c
+.RI "struct \fBNDCComponent\fP"
+.br
+.ti -1c
+.RI "struct \fBPriorityComponent\fP"
+.br
+.ti -1c
+.RI "struct \fBThreadNameComponent\fP"
+.br
+.ti -1c
+.RI "struct \fBProcessorTimeComponent\fP"
+.br
+.ti -1c
+.RI "struct \fBTimeStampComponent\fP"
+.br
+.ti -1c
+.RI "struct \fBSecondsSinceEpochComponent\fP"
+.br
+.ti -1c
+.RI "struct \fBMillisSinceEpochComponent\fP"
+.br
+.ti -1c
+.RI "struct \fBFormatModifierComponent\fP"
+.br
+.ti -1c
+.RI "class \fBProperties\fP"
+.br
+.ti -1c
+.RI "class \fBPropertyConfiguratorImpl\fP"
+.br
+.ti -1c
+.RI "class \fBStringUtil\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::set< \fBAppender\fP * > \fBAppenderSet\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LOG4CPP_EXPORT \fBCategoryStream\fP & \fBeol\fP (\fBCategoryStream\fP &os)"
+.br
+.RI "\fIeol manipulator \fP"
+.ti -1c
+.RI "LOG4CPP_EXPORT \fBCategoryStream\fP & \fBleft\fP (\fBCategoryStream\fP &os)"
+.br
+.RI "\fIleft manipulator \fP"
+.ti -1c
+.RI "std::auto_ptr< \fBAppender\fP > \fBcreate_abort_appender\fP (const \fBFactoryParams\fP &params)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBAppender\fP > \fBcreate_file_appender\fP (const \fBFactoryParams\fP &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBAppender\fP > \fBcreate_roll_file_appender\fP (const \fBFactoryParams\fP &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBAppender\fP > \fBcreate_daily_roll_file_appender\fP (const \fBFactoryParams\fP &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBAppender\fP > \fBcreate_idsa_appender\fP (const \fBFactoryParams\fP &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBAppender\fP > \fBcreate_nt_event_log_appender\fP (const \fBFactoryParams\fP &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBAppender\fP > \fBcreate_remote_syslog_appender\fP (const \fBFactoryParams\fP &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBAppender\fP > \fBcreate_syslog_appender\fP (const \fBFactoryParams\fP &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBAppender\fP > \fBcreate_win32_debug_appender\fP (const \fBFactoryParams\fP &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBAppender\fP > \fBcreate_smtp_appender\fP (const \fBFactoryParams\fP &)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBLayout\fP > \fBcreate_basic_layout\fP (const \fBFactoryParams\fP &params)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBLayout\fP > \fBcreate_simple_layout\fP (const \fBFactoryParams\fP &params)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBLayout\fP > \fBcreate_pattern_layout\fP (const \fBFactoryParams\fP &params)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBLayout\fP > \fBcreate_pass_through_layout\fP (const \fBFactoryParams\fP &params)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBTriggeringEventEvaluator\fP > \fBcreate_level_evaluator\fP (const \fBFactoryParams\fP &params)"
+.br
+.ti -1c
+.RI "void \fBlocaltime\fP (const ::time_t *time,::tm *t)"
+.br
+.ti -1c
+.RI "ostream & \fBoperator<<\fP (ostream &os, const \fBwidth\fP &w)"
+.br
+.ti -1c
+.RI "ostream & \fBoperator<<\fP (ostream &os, const \fBtab\fP &t)"
+.br
+.ti -1c
+.RI "template<typename T > const T & \fBmin\fP (const T &a, const T &b)"
+.br
+.ti -1c
+.RI "template<typename T > const T & \fBmax\fP (const T &a, const T &b)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "class LOG4CPP_EXPORT \fBFilter\fP"
+.br
+.ti -1c
+.RI "static \fBAppender::AppenderMapStorageInitializer\fP \fBappenderMapStorageInitializer\fP"
+.br
+.ti -1c
+.RI "class LOG4CPP_EXPORT \fBCategory\fP"
+.br
+.ti -1c
+.RI "class LOG4CPP_EXPORT \fBCategoryStream\fP"
+.br
+.ti -1c
+.RI "static int \fBappenders_nifty_counter\fP"
+.br
+.ti -1c
+.RI "static char \fBappenderMapStorage_buf\fP [sizeof(\fBAppender::AppenderMapStorage\fP)]"
+.br
+.ti -1c
+.RI "static \fBAppendersFactory\fP * \fBappenders_factory_\fP = 0"
+.br
+.ti -1c
+.RI "static const std::string \fBEMPTY\fP"
+.br
+.ti -1c
+.RI "static \fBLayoutsFactory\fP * \fBlayouts_factory_\fP = 0"
+.br
+.ti -1c
+.RI "static \fBTriggeringEventEvaluatorFactory\fP * \fBevaluators_factory_\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The top level namespace for all 'Log for C++' types and classes. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef std::set<\fBAppender\fP *> \fBlog4cpp::AppenderSet\fP"
+.SH "Function Documentation"
+.PP 
+.SS "std::auto_ptr< \fBAppender\fP > log4cpp::create_abort_appender (const FactoryParams & params)"
+.SS "std::auto_ptr< \fBLayout\fP > log4cpp::create_basic_layout (const FactoryParams & params)"
+.SS "std::auto_ptr< \fBAppender\fP > log4cpp::create_daily_roll_file_appender (const FactoryParams & params)"
+.SS "std::auto_ptr< \fBAppender\fP > log4cpp::create_file_appender (const FactoryParams & params)"
+.SS "std::auto_ptr<\fBAppender\fP> log4cpp::create_idsa_appender (const FactoryParams &)"
+.SS "std::auto_ptr< \fBTriggeringEventEvaluator\fP > log4cpp::create_level_evaluator (const FactoryParams & params)"
+.SS "std::auto_ptr< \fBAppender\fP > log4cpp::create_nt_event_log_appender (const FactoryParams & params)"
+.SS "std::auto_ptr< \fBLayout\fP > log4cpp::create_pass_through_layout (const FactoryParams & params)"
+.SS "std::auto_ptr< \fBLayout\fP > log4cpp::create_pattern_layout (const FactoryParams & params)"
+.SS "std::auto_ptr< \fBAppender\fP > log4cpp::create_remote_syslog_appender (const FactoryParams & params)"
+.SS "std::auto_ptr< \fBAppender\fP > log4cpp::create_roll_file_appender (const FactoryParams & params)"
+.SS "std::auto_ptr< \fBLayout\fP > log4cpp::create_simple_layout (const FactoryParams & params)"
+.SS "std::auto_ptr<\fBAppender\fP> log4cpp::create_smtp_appender (const FactoryParams &)"
+.SS "std::auto_ptr<\fBAppender\fP> log4cpp::create_syslog_appender (const FactoryParams &)"
+.SS "std::auto_ptr< \fBAppender\fP > log4cpp::create_win32_debug_appender (const FactoryParams & params)"
+.SS "\fBCategoryStream\fP & log4cpp::eol (CategoryStream & os)"
+.PP
+eol manipulator 
+.SS "\fBCategoryStream\fP & log4cpp::left (CategoryStream & os)"
+.PP
+left manipulator 
+.SS "void log4cpp::localtime (const ::time_t * time, ::tm * t)"
+.SS "template<typename T > const T& log4cpp::max (const T & a, const T & b)\fC [inline]\fP"
+.SS "template<typename T > const T& log4cpp::min (const T & a, const T & b)\fC [inline]\fP"
+.SS "ostream& log4cpp::operator<< (ostream & os, const tab & t)"
+.SS "ostream& log4cpp::operator<< (ostream & os, const width & w)"
+.SH "Variable Documentation"
+.PP 
+.SS "char \fBlog4cpp::appenderMapStorage_buf\fP[sizeof(\fBAppender::AppenderMapStorage\fP)]\fC [static]\fP"
+.SS "\fBAppender::AppenderMapStorageInitializer\fP \fBlog4cpp::appenderMapStorageInitializer\fP\fC [static]\fP"
+.SS "\fBAppendersFactory\fP* \fBlog4cpp::appenders_factory_\fP = 0\fC [static]\fP"
+.SS "int \fBlog4cpp::appenders_nifty_counter\fP\fC [static]\fP"
+.SS "class LOG4CPP_EXPORT \fBlog4cpp::Category\fP"
+.SS "class LOG4CPP_EXPORT \fBlog4cpp::CategoryStream\fP"
+.SS "const std::string \fBlog4cpp::EMPTY\fP\fC [static]\fP"
+.SS "\fBTriggeringEventEvaluatorFactory\fP* \fBlog4cpp::evaluators_factory_\fP = 0\fC [static]\fP"
+.SS "class LOG4CPP_EXPORT \fBlog4cpp::Filter\fP"
+.SS "\fBLayoutsFactory\fP* \fBlog4cpp::layouts_factory_\fP = 0\fC [static]\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

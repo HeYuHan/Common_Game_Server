@@ -1,0 +1,54 @@
+.TH "log4cpp::LayoutsFactory" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::LayoutsFactory \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LayoutsFactory.hh>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBFactoryParams\fP \fBparams_t\fP"
+.br
+.ti -1c
+.RI "typedef std::auto_ptr< \fBLayout\fP >(* \fBcreate_function_t\fP )(const \fBparams_t\fP &params)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBregisterCreator\fP (const std::string &class_name, \fBcreate_function_t\fP create_function)"
+.br
+.ti -1c
+.RI "std::auto_ptr< \fBLayout\fP > \fBcreate\fP (const std::string &class_name, const \fBparams_t\fP &params)"
+.br
+.ti -1c
+.RI "bool \fBregisted\fP (const std::string &class_name) const "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBLayoutsFactory\fP & \fBgetInstance\fP ()"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::auto_ptr<\fBLayout\fP>(* \fBlog4cpp::LayoutsFactory::create_function_t\fP)(const \fBparams_t\fP &params)"
+.SS "typedef \fBFactoryParams\fP \fBlog4cpp::LayoutsFactory::params_t\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "std::auto_ptr< \fBLayout\fP > log4cpp::LayoutsFactory::create (const std::string & class_name, const \fBparams_t\fP & params)"
+.SS "\fBLayoutsFactory\fP & log4cpp::LayoutsFactory::getInstance ()\fC [static]\fP"
+.SS "bool log4cpp::LayoutsFactory::registed (const std::string & class_name) const"
+.SS "void log4cpp::LayoutsFactory::registerCreator (const std::string & class_name, \fBcreate_function_t\fP create_function)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.

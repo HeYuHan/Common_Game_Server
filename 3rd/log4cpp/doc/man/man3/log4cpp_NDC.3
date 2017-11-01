@@ -1,0 +1,239 @@
+.TH "log4cpp::NDC" 3 "1 Nov 2017" "Version 1.1" "log4cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log4cpp::NDC \- 
+.PP
+The \fBNDC\fP class implements \fInested diagnostic contexts\fP as defined by Neil Harrison in the article 'Patterns for Logging
+       Diagnostic Messages' part of the book '<i>Pattern Languages of
+       Program Design 3</i>' edited by Martin et al.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NDC.hh>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBDiagnosticContext\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< \fBDiagnosticContext\fP > \fBContextStack\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNDC\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~NDC\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fB_clear\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBContextStack\fP * \fB_cloneStack\fP ()"
+.br
+.ti -1c
+.RI "virtual const std::string & \fB_get\fP () const "
+.br
+.ti -1c
+.RI "virtual size_t \fB_getDepth\fP () const "
+.br
+.ti -1c
+.RI "virtual void \fB_inherit\fP (\fBContextStack\fP *stack)"
+.br
+.ti -1c
+.RI "virtual std::string \fB_pop\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fB_push\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "virtual void \fB_setMaxDepth\fP (int maxDepth)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBclear\fP ()"
+.br
+.RI "\fIClear any nested disgnostic information if any. \fP"
+.ti -1c
+.RI "static \fBContextStack\fP * \fBcloneStack\fP ()"
+.br
+.RI "\fIClone the diagnostic context for the current thread. \fP"
+.ti -1c
+.RI "static const std::string & \fBget\fP ()"
+.br
+.RI "\fIGet the current diagnostic context string. \fP"
+.ti -1c
+.RI "static size_t \fBgetDepth\fP ()"
+.br
+.RI "\fIGet the current nesting depth of this diagnostic context. \fP"
+.ti -1c
+.RI "static void \fBinherit\fP (\fBContextStack\fP *stack)"
+.br
+.ti -1c
+.RI "static std::string \fBpop\fP ()"
+.br
+.RI "\fIClients should call this method before leaving a diagnostic context. \fP"
+.ti -1c
+.RI "static void \fBpush\fP (const std::string &message)"
+.br
+.RI "\fIPush new diagnostic context information for the current thread. \fP"
+.ti -1c
+.RI "static void \fBsetMaxDepth\fP (int maxDepth)"
+.br
+.RI "\fISet the maximum nesting depth for the current \fBNDC\fP. \fP"
+.ti -1c
+.RI "static \fBNDC\fP & \fBgetNDC\fP ()"
+.br
+.RI "\fIReturn the \fBNDC\fP for the current thread. \fP"
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBContextStack\fP \fB_stack\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBNDC\fP class implements \fInested diagnostic contexts\fP as defined by Neil Harrison in the article 'Patterns for Logging
+       Diagnostic Messages' part of the book '<i>Pattern Languages of
+       Program Design 3</i>' edited by Martin et al. 
+
+A Nested Diagnostic Context, or \fBNDC\fP in short, is an instrument to distinguish interleaved log output from different sources. Log output is typically interleaved when a server handles multiple clients near-simulatanously.
+.PP
+Interleaved log output can still be meaningful if each log entry from different contexts had a distinctive stamp. This is where NDCs come into play.
+.PP
+\fI\fBNote that NDCs are managed on a per thread basis\fP\fP. \fBNDC\fP operations such as \fCpush\fP, \fC pop\fP, \fCclear\fP, \fCgetDepth\fP and \fC setMaxDepth\fP affect the \fBNDC\fP of the \fIcurrent\fP thread only. NDCs of other threads remain unaffected.
+.PP
+To build an \fBNDC\fP one uses the \fCpush\fP operation. Simply put,
+.PP
+.PD 0
+.IP "\(bu" 2
+Contexts can be nested.
+.PP
+.PP
+
+.IP "\(bu" 2
+When entering a context, call \fC\fBNDC.push\fP\fP. As a side effect, if there is no nested diagnostic context for the current thread, this method will create it.
+.PP
+.PP
+
+.IP "\(bu" 2
+When leaving a context, call \fC\fBNDC.pop\fP\fP. 
+.PP
+.PP
+There is no penalty for forgetting to match each \fCpush\fP operation with a corresponding \fCpop\fP, except the obvious mismatch between the real application context and the context set in the \fBNDC\fP.
+.PP
+Custom Layouts may include the nested diagnostic context for the current thread in log messages, without any user intervention. Hence, even if a server is serving multiple clients simultaneously, the logs emanating from the same code (belonging to the same category) can still be distinguished because each client request will have a different \fBNDC\fP tag.
+.PP
+\fIUnfortunately, unlike Java, C++ does not have platform independent multithreading support. Therefore, currently \fBlog4cpp\fP is not multithread aware, it implicitly assumes only one thread exists, the main process thread. \fP 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::vector<\fBDiagnosticContext\fP> \fBlog4cpp::NDC::ContextStack\fP"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "log4cpp::NDC::NDC ()"
+.SS "log4cpp::NDC::~NDC ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void log4cpp::NDC::_clear ()\fC [virtual]\fP"
+.SS "\fBNDC::ContextStack\fP * log4cpp::NDC::_cloneStack ()\fC [virtual]\fP"
+.SS "const std::string & log4cpp::NDC::_get () const\fC [virtual]\fP"
+.SS "size_t log4cpp::NDC::_getDepth () const\fC [virtual]\fP"
+.SS "void log4cpp::NDC::_inherit (\fBNDC::ContextStack\fP * stack)\fC [virtual]\fP"
+.SS "std::string log4cpp::NDC::_pop ()\fC [virtual]\fP"
+.SS "void log4cpp::NDC::_push (const std::string & message)\fC [virtual]\fP"
+.SS "void log4cpp::NDC::_setMaxDepth (int maxDepth)\fC [virtual]\fP"
+.SS "void log4cpp::NDC::clear ()\fC [static]\fP"
+.PP
+Clear any nested disgnostic information if any. This method is useful in cases where the same thread can be potentially used over and over in different unrelated contexts.
+.PP
+This method is equivalent to calling the \fCsetMaxDepth\fP method with a zero \fCmaxDepth\fP argument. 
+.SS "\fBNDC::ContextStack\fP * log4cpp::NDC::cloneStack ()\fC [static]\fP"
+.PP
+Clone the diagnostic context for the current thread. Internally a diagnostic context is represented as a stack. A given thread can supply the stack (i.e. diagnostic context) to a child thread so that the child can inherit the parent thread's diagnostic context.
+.PP
+The child thread uses the \fCinherit\fP method to inherit the parent's diagnostic context.
+.PP
+\fBReturns:\fP
+.RS 4
+Stack A clone of the current thread's diagnostic context. 
+.RE
+.PP
+
+.SS "const std::string & log4cpp::NDC::get ()\fC [static]\fP"
+.PP
+Get the current diagnostic context string. \fBReturns:\fP
+.RS 4
+the context string. 
+.RE
+.PP
+
+.SS "size_t log4cpp::NDC::getDepth ()\fC [static]\fP"
+.PP
+Get the current nesting depth of this diagnostic context. \fBReturns:\fP
+.RS 4
+the nesting depth 
+.RE
+.PP
+
+.SS "\fBNDC\fP & log4cpp::NDC::getNDC ()\fC [static]\fP"
+.PP
+Return the \fBNDC\fP for the current thread. \fBReturns:\fP
+.RS 4
+the \fBNDC\fP for the current thread 
+.RE
+.PP
+
+.SS "void log4cpp::NDC::inherit (\fBNDC::ContextStack\fP * stack)\fC [static]\fP"
+.SS "std::string log4cpp::NDC::pop ()\fC [static]\fP"
+.PP
+Clients should call this method before leaving a diagnostic context. The returned value is the value that was pushed last. If no context is available, then the empty string '' is returned.
+.PP
+\fBReturns:\fP
+.RS 4
+String The innermost diagnostic context. 
+.RE
+.PP
+
+.SS "void log4cpp::NDC::push (const std::string & message)\fC [static]\fP"
+.PP
+Push new diagnostic context information for the current thread. The contents of the \fCmessage\fP parameter is determined solely by the client.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP The new diagnostic context information. 
+.RE
+.PP
+
+.SS "void log4cpp::NDC::setMaxDepth (int maxDepth)\fC [static]\fP"
+.PP
+Set the maximum nesting depth for the current \fBNDC\fP. Curently NDCs do not enforce a maximum depth and consequentially this method has no effect. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImaxDepth\fP the maximum nesting depth 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBContextStack\fP \fBlog4cpp::NDC::_stack\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for log4cpp from the source code.
