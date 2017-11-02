@@ -84,11 +84,11 @@ void NetworkStream::Reset()
 
 //////////////////////////////////////////////////////////////
 //write data
-void NetworkStream::WirteByte(byte data)
+void NetworkStream::WriteByte(byte data)
 {
 	WriteData(&data, sizeof(byte));
 }
-void NetworkStream::WirteByte(char data)
+void NetworkStream::WriteByte(char data)
 {
 	WriteData(&data, sizeof(char));
 }
@@ -142,14 +142,30 @@ void NetworkStream::WriteData(const void* data, int count)
 void NetworkStream::BeginWrite()
 {
 	write_position = write_buff;
-	write_end = write_buff + 4;
+	if (connection->m_Type == UDP_SOCKET)
+	{
+		write_end = write_buff + 5;
+	}
+	else
+	{
+		write_end = write_buff + 4;
+	}
 
 }
 void NetworkStream::EndWrite()
 {
-	int len = write_end - write_position - 4;
-	memcpy(write_position, &len, 4);
-	if (connection)connection->Send(write_position, len+4);
+	int head_len = connection->m_Type == UDP_SOCKET ? 5 : 4;
+	int data_len = write_end - write_position - head_len;
+	if (connection->m_Type == UDP_SOCKET)
+	{
+		write_position[0] = 254;
+		memcpy(write_position+1, &data_len, 4);
+	}
+	else
+	{
+		memcpy(write_position, &data_len, 4);
+	}
+	if (connection)connection->Send(write_position, data_len+head_len);
 }
 //////////////////////////////////////////////////////////////
 //read data

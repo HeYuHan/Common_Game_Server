@@ -1304,7 +1304,7 @@ void SwigDirector_FileListTransferCBInterface::swig_init_callbacks() {
 extern "C" {
 #endif
 
-SWIGEXPORT int SWIGSTDCALL CSharp_SWIG_CSHARP_NO_IMCLASS_STATIC_CONSTRUCTOR_get() {
+SWIGEXPORT int SWIGSTDCALL SWIG_CSHARP_NO_IMCLASS_STATIC_CONSTRUCTOR_get() {
   int jresult ;
   int result;
   
@@ -1314,7 +1314,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_SWIG_CSHARP_NO_IMCLASS_STATIC_CONSTRUCTOR_get(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ColumnDescriptor__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_ColumnDescriptor__SWIG_0() {
   void * jresult ;
   ColumnDescriptor *result = 0 ;
   
@@ -1324,7 +1324,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_ColumnDescriptor__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ColumnDescriptor(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_ColumnDescriptor(void * jarg1) {
   ColumnDescriptor *arg1 = (ColumnDescriptor *) 0 ;
   
   arg1 = (ColumnDescriptor *)jarg1; 
@@ -1332,7 +1332,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_ColumnDescriptor(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ColumnDescriptor__SWIG_1(char * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL new_ColumnDescriptor__SWIG_1(char * jarg1, int jarg2) {
   void * jresult ;
   char *arg1 ;
   DataStructures::Table::ColumnType arg2 ;
@@ -1346,7 +1346,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_ColumnDescriptor__SWIG_1(char * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ColumnDescriptor_columnName_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL ColumnDescriptor_columnName_set(void * jarg1, char * jarg2) {
   ColumnDescriptor *arg1 = (ColumnDescriptor *) 0 ;
   char *arg2 ;
   
@@ -1363,7 +1363,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ColumnDescriptor_columnName_set(void * jarg1,
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_ColumnDescriptor_columnName_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL ColumnDescriptor_columnName_get(void * jarg1) {
   char * jresult ;
   ColumnDescriptor *arg1 = (ColumnDescriptor *) 0 ;
   char *result = 0 ;
@@ -1375,7 +1375,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_ColumnDescriptor_columnName_get(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ColumnDescriptor_columnType_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL ColumnDescriptor_columnType_set(void * jarg1, int jarg2) {
   ColumnDescriptor *arg1 = (ColumnDescriptor *) 0 ;
   DataStructures::Table::ColumnType arg2 ;
   
@@ -1385,7 +1385,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ColumnDescriptor_columnType_set(void * jarg1,
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_ColumnDescriptor_columnType_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL ColumnDescriptor_columnType_get(void * jarg1) {
   int jresult ;
   ColumnDescriptor *arg1 = (ColumnDescriptor *) 0 ;
   DataStructures::Table::ColumnType result;
@@ -1397,7 +1397,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ColumnDescriptor_columnType_get(void * jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Cell__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_Cell__SWIG_0() {
   void * jresult ;
   Cell *result = 0 ;
   
@@ -1407,7 +1407,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Cell__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Cell(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_Cell(void * jarg1) {
   Cell *arg1 = (Cell *) 0 ;
   
   arg1 = (Cell *)jarg1; 
@@ -1415,7 +1415,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Cell(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL Cell_Clear(void * jarg1) {
   Cell *arg1 = (Cell *) 0 ;
   
   arg1 = (Cell *)jarg1; 
@@ -1423,7 +1423,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Set__SWIG_0(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL Cell_Set__SWIG_0(void * jarg1, int jarg2) {
   Cell *arg1 = (Cell *) 0 ;
   int arg2 ;
   
@@ -1433,7 +1433,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Set__SWIG_0(void * jarg1, int jarg2) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Set__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL Cell_Set__SWIG_1(void * jarg1, unsigned int jarg2) {
   Cell *arg1 = (Cell *) 0 ;
   unsigned int arg2 ;
   
@@ -1443,7 +1443,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Set__SWIG_1(void * jarg1, unsigned int j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Set__SWIG_2(void * jarg1, double jarg2) {
+SWIGEXPORT void SWIGSTDCALL Cell_Set__SWIG_2(void * jarg1, double jarg2) {
   Cell *arg1 = (Cell *) 0 ;
   double arg2 ;
   
@@ -1453,7 +1453,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Set__SWIG_2(void * jarg1, double jarg2) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Set__SWIG_3(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Cell_Set__SWIG_3(void * jarg1, char * jarg2) {
   Cell *arg1 = (Cell *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -1463,7 +1463,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Set__SWIG_3(void * jarg1, char * jarg2) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Get__SWIG_0(void * jarg1, int * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Cell_Get__SWIG_0(void * jarg1, int * jarg2) {
   Cell *arg1 = (Cell *) 0 ;
   int *arg2 = (int *) 0 ;
   
@@ -1473,7 +1473,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Get__SWIG_0(void * jarg1, int * jarg2) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Get__SWIG_1(void * jarg1, double * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Cell_Get__SWIG_1(void * jarg1, double * jarg2) {
   Cell *arg1 = (Cell *) 0 ;
   double *arg2 = (double *) 0 ;
   
@@ -1483,7 +1483,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Get__SWIG_1(void * jarg1, double * jarg2
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Cell_ToString(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL Cell_ToString(void * jarg1, int jarg2) {
   void * jresult ;
   Cell *arg1 = (Cell *) 0 ;
   DataStructures::Table::ColumnType arg2 ;
@@ -1497,7 +1497,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Cell_ToString(void * jarg1, int jarg2) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Cell_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL Cell_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   Cell *arg1 = (Cell *) 0 ;
   Cell *arg2 = 0 ;
@@ -1515,7 +1515,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Cell_CopyData(void * jarg1, void * jarg2) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Cell__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_Cell__SWIG_1(void * jarg1) {
   void * jresult ;
   Cell *arg1 = 0 ;
   Cell *result = 0 ;
@@ -1531,7 +1531,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Cell__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Cell_EstimateColumnType(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL Cell_EstimateColumnType(void * jarg1) {
   int jresult ;
   Cell *arg1 = (Cell *) 0 ;
   DataStructures::Table::ColumnType result;
@@ -1543,7 +1543,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Cell_EstimateColumnType(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_isEmpty_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL Cell_isEmpty_set(void * jarg1, unsigned int jarg2) {
   Cell *arg1 = (Cell *) 0 ;
   bool arg2 ;
   
@@ -1553,7 +1553,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_isEmpty_set(void * jarg1, unsigned int j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Cell_isEmpty_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL Cell_isEmpty_get(void * jarg1) {
   unsigned int jresult ;
   Cell *arg1 = (Cell *) 0 ;
   bool result;
@@ -1565,7 +1565,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Cell_isEmpty_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_i_set(void * jarg1, double jarg2) {
+SWIGEXPORT void SWIGSTDCALL Cell_i_set(void * jarg1, double jarg2) {
   Cell *arg1 = (Cell *) 0 ;
   double arg2 ;
   
@@ -1575,7 +1575,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_i_set(void * jarg1, double jarg2) {
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_Cell_i_get(void * jarg1) {
+SWIGEXPORT double SWIGSTDCALL Cell_i_get(void * jarg1) {
   double jresult ;
   Cell *arg1 = (Cell *) 0 ;
   double result;
@@ -1587,7 +1587,7 @@ SWIGEXPORT double SWIGSTDCALL CSharp_Cell_i_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Set__SWIG_4(void * jarg1, unsigned char* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL Cell_Set__SWIG_4(void * jarg1, unsigned char* jarg2, int jarg3) {
   Cell *arg1 = (Cell *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -1601,7 +1601,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Set__SWIG_4(void * jarg1, unsigned char*
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Get__SWIG_2(void * jarg1, unsigned char* jarg2, int * jarg3) {
+SWIGEXPORT void SWIGSTDCALL Cell_Get__SWIG_2(void * jarg1, unsigned char* jarg2, int * jarg3) {
   Cell *arg1 = (Cell *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int *arg3 = (int *) 0 ;
@@ -1615,7 +1615,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Cell_Get__SWIG_2(void * jarg1, unsigned char*
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_Cell_GetHelper(void * jarg1, char * jarg2) {
+SWIGEXPORT char * SWIGSTDCALL Cell_GetHelper(void * jarg1, char * jarg2) {
   char * jresult ;
   Cell *arg1 = (Cell *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1629,7 +1629,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_Cell_GetHelper(void * jarg1, char * jarg2) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Row_cells_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Row_cells_set(void * jarg1, void * jarg2) {
   Row *arg1 = (Row *) 0 ;
   DataStructures::List< Cell * > *arg2 = (DataStructures::List< Cell * > *) 0 ;
   
@@ -1639,7 +1639,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Row_cells_set(void * jarg1, void * jarg2) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Row_cells_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL Row_cells_get(void * jarg1) {
   void * jresult ;
   Row *arg1 = (Row *) 0 ;
   DataStructures::List< Cell * > *result = 0 ;
@@ -1651,7 +1651,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Row_cells_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Row_UpdateCell__SWIG_0(void * jarg1, unsigned int jarg2, double jarg3) {
+SWIGEXPORT void SWIGSTDCALL Row_UpdateCell__SWIG_0(void * jarg1, unsigned int jarg2, double jarg3) {
   Row *arg1 = (Row *) 0 ;
   unsigned int arg2 ;
   double arg3 ;
@@ -1663,7 +1663,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Row_UpdateCell__SWIG_0(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Row_UpdateCell__SWIG_1(void * jarg1, unsigned int jarg2, char * jarg3) {
+SWIGEXPORT void SWIGSTDCALL Row_UpdateCell__SWIG_1(void * jarg1, unsigned int jarg2, char * jarg3) {
   Row *arg1 = (Row *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -1675,7 +1675,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Row_UpdateCell__SWIG_1(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Row_UpdateCell__SWIG_2(void * jarg1, unsigned int jarg2, int jarg3, unsigned char* jarg4) {
+SWIGEXPORT void SWIGSTDCALL Row_UpdateCell__SWIG_2(void * jarg1, unsigned int jarg2, int jarg3, unsigned char* jarg4) {
   Row *arg1 = (Row *) 0 ;
   unsigned int arg2 ;
   int arg3 ;
@@ -1691,7 +1691,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Row_UpdateCell__SWIG_2(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Row() {
+SWIGEXPORT void * SWIGSTDCALL new_Row() {
   void * jresult ;
   Row *result = 0 ;
   
@@ -1701,7 +1701,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Row() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Row(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_Row(void * jarg1) {
   Row *arg1 = (Row *) 0 ;
   
   arg1 = (Row *)jarg1; 
@@ -1709,7 +1709,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Row(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FilterQuery__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_FilterQuery__SWIG_0() {
   void * jresult ;
   FilterQuery *result = 0 ;
   
@@ -1719,7 +1719,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FilterQuery__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FilterQuery(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_FilterQuery(void * jarg1) {
   FilterQuery *arg1 = (FilterQuery *) 0 ;
   
   arg1 = (FilterQuery *)jarg1; 
@@ -1727,7 +1727,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FilterQuery(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FilterQuery__SWIG_1(unsigned int jarg1, void * jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL new_FilterQuery__SWIG_1(unsigned int jarg1, void * jarg2, int jarg3) {
   void * jresult ;
   unsigned int arg1 ;
   Cell *arg2 = (Cell *) 0 ;
@@ -1743,7 +1743,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FilterQuery__SWIG_1(unsigned int jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FilterQuery_columnName_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FilterQuery_columnName_set(void * jarg1, char * jarg2) {
   FilterQuery *arg1 = (FilterQuery *) 0 ;
   char *arg2 ;
   
@@ -1760,7 +1760,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FilterQuery_columnName_set(void * jarg1, char
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_FilterQuery_columnName_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL FilterQuery_columnName_get(void * jarg1) {
   char * jresult ;
   FilterQuery *arg1 = (FilterQuery *) 0 ;
   char *result = 0 ;
@@ -1772,7 +1772,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_FilterQuery_columnName_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FilterQuery_columnIndex_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FilterQuery_columnIndex_set(void * jarg1, unsigned int jarg2) {
   FilterQuery *arg1 = (FilterQuery *) 0 ;
   unsigned int arg2 ;
   
@@ -1782,7 +1782,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FilterQuery_columnIndex_set(void * jarg1, uns
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FilterQuery_columnIndex_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FilterQuery_columnIndex_get(void * jarg1) {
   unsigned int jresult ;
   FilterQuery *arg1 = (FilterQuery *) 0 ;
   unsigned int result;
@@ -1794,7 +1794,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FilterQuery_columnIndex_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FilterQuery_cellValue_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FilterQuery_cellValue_set(void * jarg1, void * jarg2) {
   FilterQuery *arg1 = (FilterQuery *) 0 ;
   Cell *arg2 = (Cell *) 0 ;
   
@@ -1804,7 +1804,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FilterQuery_cellValue_set(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FilterQuery_cellValue_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FilterQuery_cellValue_get(void * jarg1) {
   void * jresult ;
   FilterQuery *arg1 = (FilterQuery *) 0 ;
   Cell *result = 0 ;
@@ -1816,7 +1816,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FilterQuery_cellValue_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FilterQuery_operation_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FilterQuery_operation_set(void * jarg1, int jarg2) {
   FilterQuery *arg1 = (FilterQuery *) 0 ;
   DataStructures::Table::FilterQueryType arg2 ;
   
@@ -1826,7 +1826,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FilterQuery_operation_set(void * jarg1, int j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_FilterQuery_operation_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL FilterQuery_operation_get(void * jarg1) {
   int jresult ;
   FilterQuery *arg1 = (FilterQuery *) 0 ;
   DataStructures::Table::FilterQueryType result;
@@ -1838,7 +1838,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_FilterQuery_operation_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SortQuery_columnIndex_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL SortQuery_columnIndex_set(void * jarg1, unsigned int jarg2) {
   SortQuery *arg1 = (SortQuery *) 0 ;
   unsigned int arg2 ;
   
@@ -1848,7 +1848,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SortQuery_columnIndex_set(void * jarg1, unsig
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SortQuery_columnIndex_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL SortQuery_columnIndex_get(void * jarg1) {
   unsigned int jresult ;
   SortQuery *arg1 = (SortQuery *) 0 ;
   unsigned int result;
@@ -1860,7 +1860,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SortQuery_columnIndex_get(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SortQuery_operation_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL SortQuery_operation_set(void * jarg1, int jarg2) {
   SortQuery *arg1 = (SortQuery *) 0 ;
   DataStructures::Table::SortQueryType arg2 ;
   
@@ -1870,7 +1870,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SortQuery_operation_set(void * jarg1, int jar
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_SortQuery_operation_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL SortQuery_operation_get(void * jarg1) {
   int jresult ;
   SortQuery *arg1 = (SortQuery *) 0 ;
   DataStructures::Table::SortQueryType result;
@@ -1882,7 +1882,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_SortQuery_operation_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SortQuery() {
+SWIGEXPORT void * SWIGSTDCALL new_SortQuery() {
   void * jresult ;
   SortQuery *result = 0 ;
   
@@ -1892,7 +1892,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_SortQuery() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_SortQuery(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_SortQuery(void * jarg1) {
   SortQuery *arg1 = (SortQuery *) 0 ;
   
   arg1 = (SortQuery *)jarg1; 
@@ -1900,7 +1900,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_SortQuery(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_fileIndex_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_fileIndex_set(void * jarg1, unsigned int jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned int arg2 ;
   
@@ -1910,7 +1910,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_fileIndex_set(void * jarg1, unsi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_fileIndex_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL OnFileStruct_fileIndex_get(void * jarg1) {
   unsigned int jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned int result;
@@ -1922,7 +1922,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_fileIndex_get(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_fileName_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_fileName_set(void * jarg1, char * jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   char *arg2 ;
   
@@ -1939,7 +1939,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_fileName_set(void * jarg1, char 
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_OnFileStruct_fileName_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL OnFileStruct_fileName_get(void * jarg1) {
   char * jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   char *result = 0 ;
@@ -1951,7 +1951,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_OnFileStruct_fileName_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_fileData_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_fileData_set(void * jarg1, char * jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -1969,7 +1969,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_fileData_set(void * jarg1, char 
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_OnFileStruct_fileData_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL OnFileStruct_fileData_get(void * jarg1) {
   char * jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   char *result = 0 ;
@@ -1981,7 +1981,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_OnFileStruct_fileData_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_byteLengthOfThisFile_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_byteLengthOfThisFile_set(void * jarg1, unsigned int jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   BitSize_t arg2 ;
   
@@ -1991,7 +1991,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_byteLengthOfThisFile_set(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_byteLengthOfThisFile_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL OnFileStruct_byteLengthOfThisFile_get(void * jarg1) {
   unsigned int jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   BitSize_t result;
@@ -2003,7 +2003,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_byteLengthOfThisFile_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_bytesDownloadedForThisFile_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_bytesDownloadedForThisFile_set(void * jarg1, unsigned int jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   BitSize_t arg2 ;
   
@@ -2013,7 +2013,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_bytesDownloadedForThisFile_set(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_bytesDownloadedForThisFile_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL OnFileStruct_bytesDownloadedForThisFile_get(void * jarg1) {
   unsigned int jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   BitSize_t result;
@@ -2025,7 +2025,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_bytesDownloadedForThisFi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_setID_set(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_setID_set(void * jarg1, unsigned short jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned short arg2 ;
   
@@ -2035,7 +2035,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_setID_set(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_OnFileStruct_setID_get(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL OnFileStruct_setID_get(void * jarg1) {
   unsigned short jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned short result;
@@ -2047,7 +2047,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_OnFileStruct_setID_get(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_numberOfFilesInThisSet_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_numberOfFilesInThisSet_set(void * jarg1, unsigned int jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned int arg2 ;
   
@@ -2057,7 +2057,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_numberOfFilesInThisSet_set(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_numberOfFilesInThisSet_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL OnFileStruct_numberOfFilesInThisSet_get(void * jarg1) {
   unsigned int jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned int result;
@@ -2069,7 +2069,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_numberOfFilesInThisSet_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_byteLengthOfThisSet_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_byteLengthOfThisSet_set(void * jarg1, unsigned int jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned int arg2 ;
   
@@ -2079,7 +2079,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_byteLengthOfThisSet_set(void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_byteLengthOfThisSet_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL OnFileStruct_byteLengthOfThisSet_get(void * jarg1) {
   unsigned int jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned int result;
@@ -2091,7 +2091,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_byteLengthOfThisSet_get(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_bytesDownloadedForThisSet_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_bytesDownloadedForThisSet_set(void * jarg1, unsigned int jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned int arg2 ;
   
@@ -2101,7 +2101,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_bytesDownloadedForThisSet_set(vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_bytesDownloadedForThisSet_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL OnFileStruct_bytesDownloadedForThisSet_get(void * jarg1) {
   unsigned int jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned int result;
@@ -2113,7 +2113,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OnFileStruct_bytesDownloadedForThisSe
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_context_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_context_set(void * jarg1, void * jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   FileListNodeContext *arg2 = (FileListNodeContext *) 0 ;
   
@@ -2123,7 +2123,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_context_set(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_OnFileStruct_context_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL OnFileStruct_context_get(void * jarg1) {
   void * jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   FileListNodeContext *result = 0 ;
@@ -2135,7 +2135,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OnFileStruct_context_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_senderSystemAddress_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_senderSystemAddress_set(void * jarg1, void * jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   SystemAddress *arg2 = (SystemAddress *) 0 ;
   
@@ -2145,7 +2145,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_senderSystemAddress_set(void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_OnFileStruct_senderSystemAddress_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL OnFileStruct_senderSystemAddress_get(void * jarg1) {
   void * jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   SystemAddress *result = 0 ;
@@ -2157,7 +2157,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OnFileStruct_senderSystemAddress_get(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_senderGuid_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_senderGuid_set(void * jarg1, void * jarg2) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   RakNetGUID *arg2 = (RakNetGUID *) 0 ;
   
@@ -2167,7 +2167,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_senderGuid_set(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_OnFileStruct_senderGuid_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL OnFileStruct_senderGuid_get(void * jarg1) {
   void * jresult ;
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   RakNetGUID *result = 0 ;
@@ -2179,7 +2179,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OnFileStruct_senderGuid_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_OnFileStruct() {
+SWIGEXPORT void * SWIGSTDCALL new_OnFileStruct() {
   void * jresult ;
   OnFileStruct *result = 0 ;
   
@@ -2189,7 +2189,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_OnFileStruct() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_SetFileData(void * jarg1, unsigned char* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL OnFileStruct_SetFileData(void * jarg1, unsigned char* jarg2, int jarg3) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -2203,7 +2203,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OnFileStruct_SetFileData(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_OnFileStruct(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_OnFileStruct(void * jarg1) {
   OnFileStruct *arg1 = (OnFileStruct *) 0 ;
   
   arg1 = (OnFileStruct *)jarg1; 
@@ -2211,7 +2211,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_OnFileStruct(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_onFileStruct_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_onFileStruct_set(void * jarg1, void * jarg2) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   OnFileStruct *arg2 = (OnFileStruct *) 0 ;
   
@@ -2221,7 +2221,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_onFileStruct_set(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileProgressStruct_onFileStruct_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FileProgressStruct_onFileStruct_get(void * jarg1) {
   void * jresult ;
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   OnFileStruct *result = 0 ;
@@ -2233,7 +2233,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileProgressStruct_onFileStruct_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_partCount_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_partCount_set(void * jarg1, unsigned int jarg2) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   unsigned int arg2 ;
   
@@ -2243,7 +2243,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_partCount_set(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileProgressStruct_partCount_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileProgressStruct_partCount_get(void * jarg1) {
   unsigned int jresult ;
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   unsigned int result;
@@ -2255,7 +2255,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileProgressStruct_partCount_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_partTotal_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_partTotal_set(void * jarg1, unsigned int jarg2) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   unsigned int arg2 ;
   
@@ -2265,7 +2265,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_partTotal_set(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileProgressStruct_partTotal_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileProgressStruct_partTotal_get(void * jarg1) {
   unsigned int jresult ;
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   unsigned int result;
@@ -2277,7 +2277,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileProgressStruct_partTotal_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_dataChunkLength_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_dataChunkLength_set(void * jarg1, unsigned int jarg2) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   unsigned int arg2 ;
   
@@ -2287,7 +2287,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_dataChunkLength_set(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileProgressStruct_dataChunkLength_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileProgressStruct_dataChunkLength_get(void * jarg1) {
   unsigned int jresult ;
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   unsigned int result;
@@ -2299,7 +2299,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileProgressStruct_dataChunkLength_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_firstDataChunk_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_firstDataChunk_set(void * jarg1, char * jarg2) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -2317,7 +2317,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_firstDataChunk_set(void * 
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_FileProgressStruct_firstDataChunk_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL FileProgressStruct_firstDataChunk_get(void * jarg1) {
   char * jresult ;
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   char *result = 0 ;
@@ -2329,7 +2329,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_FileProgressStruct_firstDataChunk_get(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_iriDataChunk_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_iriDataChunk_set(void * jarg1, char * jarg2) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -2347,7 +2347,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_iriDataChunk_set(void * ja
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_FileProgressStruct_iriDataChunk_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL FileProgressStruct_iriDataChunk_get(void * jarg1) {
   char * jresult ;
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   char *result = 0 ;
@@ -2359,7 +2359,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_FileProgressStruct_iriDataChunk_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_iriWriteOffset_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_iriWriteOffset_set(void * jarg1, unsigned int jarg2) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   unsigned int arg2 ;
   
@@ -2369,7 +2369,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_iriWriteOffset_set(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileProgressStruct_iriWriteOffset_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileProgressStruct_iriWriteOffset_get(void * jarg1) {
   unsigned int jresult ;
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   unsigned int result;
@@ -2381,7 +2381,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileProgressStruct_iriWriteOffset_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_senderSystemAddress_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_senderSystemAddress_set(void * jarg1, void * jarg2) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   SystemAddress *arg2 = (SystemAddress *) 0 ;
   
@@ -2391,7 +2391,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_senderSystemAddress_set(vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileProgressStruct_senderSystemAddress_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FileProgressStruct_senderSystemAddress_get(void * jarg1) {
   void * jresult ;
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   SystemAddress *result = 0 ;
@@ -2403,7 +2403,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileProgressStruct_senderSystemAddress_get(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_senderGuid_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_senderGuid_set(void * jarg1, void * jarg2) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   RakNetGUID *arg2 = (RakNetGUID *) 0 ;
   
@@ -2413,7 +2413,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_senderGuid_set(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileProgressStruct_senderGuid_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FileProgressStruct_senderGuid_get(void * jarg1) {
   void * jresult ;
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   RakNetGUID *result = 0 ;
@@ -2425,7 +2425,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileProgressStruct_senderGuid_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_allocateIrIDataChunkAutomatically_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_allocateIrIDataChunkAutomatically_set(void * jarg1, unsigned int jarg2) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   bool arg2 ;
   
@@ -2435,7 +2435,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_allocateIrIDataChunkAutoma
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileProgressStruct_allocateIrIDataChunkAutomatically_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileProgressStruct_allocateIrIDataChunkAutomatically_get(void * jarg1) {
   unsigned int jresult ;
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   bool result;
@@ -2447,7 +2447,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileProgressStruct_allocateIrIDataChu
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileProgressStruct() {
+SWIGEXPORT void * SWIGSTDCALL new_FileProgressStruct() {
   void * jresult ;
   FileProgressStruct *result = 0 ;
   
@@ -2457,7 +2457,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileProgressStruct() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_SetFirstDataChunk(void * jarg1, unsigned char* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_SetFirstDataChunk(void * jarg1, unsigned char* jarg2, int jarg3) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -2471,7 +2471,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_SetFirstDataChunk(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_SetIriDataChunk(void * jarg1, unsigned char* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL FileProgressStruct_SetIriDataChunk(void * jarg1, unsigned char* jarg2, int jarg3) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -2485,7 +2485,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileProgressStruct_SetIriDataChunk(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileProgressStruct(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_FileProgressStruct(void * jarg1) {
   FileProgressStruct *arg1 = (FileProgressStruct *) 0 ;
   
   arg1 = (FileProgressStruct *)jarg1; 
@@ -2493,7 +2493,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileProgressStruct(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DownloadCompleteStruct_setID_set(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL DownloadCompleteStruct_setID_set(void * jarg1, unsigned short jarg2) {
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   unsigned short arg2 ;
   
@@ -2503,7 +2503,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DownloadCompleteStruct_setID_set(void * jarg1
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_DownloadCompleteStruct_setID_get(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL DownloadCompleteStruct_setID_get(void * jarg1) {
   unsigned short jresult ;
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   unsigned short result;
@@ -2515,7 +2515,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_DownloadCompleteStruct_setID_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DownloadCompleteStruct_numberOfFilesInThisSet_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL DownloadCompleteStruct_numberOfFilesInThisSet_set(void * jarg1, unsigned int jarg2) {
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   unsigned int arg2 ;
   
@@ -2525,7 +2525,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DownloadCompleteStruct_numberOfFilesInThisSet
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DownloadCompleteStruct_numberOfFilesInThisSet_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL DownloadCompleteStruct_numberOfFilesInThisSet_get(void * jarg1) {
   unsigned int jresult ;
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   unsigned int result;
@@ -2537,7 +2537,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DownloadCompleteStruct_numberOfFilesI
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DownloadCompleteStruct_byteLengthOfThisSet_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL DownloadCompleteStruct_byteLengthOfThisSet_set(void * jarg1, unsigned int jarg2) {
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   unsigned int arg2 ;
   
@@ -2547,7 +2547,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DownloadCompleteStruct_byteLengthOfThisSet_se
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DownloadCompleteStruct_byteLengthOfThisSet_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL DownloadCompleteStruct_byteLengthOfThisSet_get(void * jarg1) {
   unsigned int jresult ;
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   unsigned int result;
@@ -2559,7 +2559,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DownloadCompleteStruct_byteLengthOfTh
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DownloadCompleteStruct_senderSystemAddress_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL DownloadCompleteStruct_senderSystemAddress_set(void * jarg1, void * jarg2) {
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   SystemAddress *arg2 = (SystemAddress *) 0 ;
   
@@ -2569,7 +2569,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DownloadCompleteStruct_senderSystemAddress_se
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DownloadCompleteStruct_senderSystemAddress_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL DownloadCompleteStruct_senderSystemAddress_get(void * jarg1) {
   void * jresult ;
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   SystemAddress *result = 0 ;
@@ -2581,7 +2581,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DownloadCompleteStruct_senderSystemAddress_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DownloadCompleteStruct_senderGuid_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL DownloadCompleteStruct_senderGuid_set(void * jarg1, void * jarg2) {
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   RakNetGUID *arg2 = (RakNetGUID *) 0 ;
   
@@ -2591,7 +2591,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DownloadCompleteStruct_senderGuid_set(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DownloadCompleteStruct_senderGuid_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL DownloadCompleteStruct_senderGuid_get(void * jarg1) {
   void * jresult ;
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   RakNetGUID *result = 0 ;
@@ -2603,7 +2603,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DownloadCompleteStruct_senderGuid_get(void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DownloadCompleteStruct() {
+SWIGEXPORT void * SWIGSTDCALL new_DownloadCompleteStruct() {
   void * jresult ;
   DownloadCompleteStruct *result = 0 ;
   
@@ -2613,7 +2613,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DownloadCompleteStruct() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_DownloadCompleteStruct(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_DownloadCompleteStruct(void * jarg1) {
   DownloadCompleteStruct *arg1 = (DownloadCompleteStruct *) 0 ;
   
   arg1 = (DownloadCompleteStruct *)jarg1; 
@@ -2621,7 +2621,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_DownloadCompleteStruct(void * jarg1) {
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_StatisticsToStringHelper(void * jarg1, char * jarg2, int jarg3) {
+SWIGEXPORT char * SWIGSTDCALL StatisticsToStringHelper(void * jarg1, char * jarg2, int jarg3) {
   char * jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2637,7 +2637,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_StatisticsToStringHelper(void * jarg1, char
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp___GET_TIME_64BIT_get() {
+SWIGEXPORT int SWIGSTDCALL __GET_TIME_64BIT_get() {
   int jresult ;
   int result;
   
@@ -2647,7 +2647,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp___GET_TIME_64BIT_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_MAX_ALLOCA_STACK_ALLOCATION_get() {
+SWIGEXPORT int SWIGSTDCALL MAX_ALLOCA_STACK_ALLOCATION_get() {
   int jresult ;
   int result;
   
@@ -2657,7 +2657,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_MAX_ALLOCA_STACK_ALLOCATION_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__USE_RAK_MEMORY_OVERRIDE_get() {
+SWIGEXPORT int SWIGSTDCALL _USE_RAK_MEMORY_OVERRIDE_get() {
   int jresult ;
   int result;
   
@@ -2667,7 +2667,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__USE_RAK_MEMORY_OVERRIDE_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_OPEN_SSL_CLIENT_SUPPORT_get() {
+SWIGEXPORT int SWIGSTDCALL OPEN_SSL_CLIENT_SUPPORT_get() {
   int jresult ;
   int result;
   
@@ -2677,7 +2677,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_OPEN_SSL_CLIENT_SUPPORT_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_BITSTREAM_STACK_ALLOCATION_SIZE_get() {
+SWIGEXPORT int SWIGSTDCALL BITSTREAM_STACK_ALLOCATION_SIZE_get() {
   int jresult ;
   int result;
   
@@ -2687,7 +2687,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_BITSTREAM_STACK_ALLOCATION_SIZE_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_MAXIMUM_NUMBER_OF_INTERNAL_IDS_get() {
+SWIGEXPORT int SWIGSTDCALL MAXIMUM_NUMBER_OF_INTERNAL_IDS_get() {
   int jresult ;
   int result;
   
@@ -2697,7 +2697,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_MAXIMUM_NUMBER_OF_INTERNAL_IDS_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_DATAGRAM_MESSAGE_ID_ARRAY_LENGTH_get() {
+SWIGEXPORT int SWIGSTDCALL DATAGRAM_MESSAGE_ID_ARRAY_LENGTH_get() {
   int jresult ;
   int result;
   
@@ -2707,7 +2707,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_DATAGRAM_MESSAGE_ID_ARRAY_LENGTH_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RESEND_BUFFER_ARRAY_LENGTH_get() {
+SWIGEXPORT int SWIGSTDCALL RESEND_BUFFER_ARRAY_LENGTH_get() {
   int jresult ;
   int result;
   
@@ -2717,7 +2717,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RESEND_BUFFER_ARRAY_LENGTH_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RESEND_BUFFER_ARRAY_MASK_get() {
+SWIGEXPORT int SWIGSTDCALL RESEND_BUFFER_ARRAY_MASK_get() {
   int jresult ;
   int result;
   
@@ -2727,7 +2727,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RESEND_BUFFER_ARRAY_MASK_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_GET_TIME_SPIKE_LIMIT_get() {
+SWIGEXPORT int SWIGSTDCALL GET_TIME_SPIKE_LIMIT_get() {
   int jresult ;
   int result;
   
@@ -2737,7 +2737,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_GET_TIME_SPIKE_LIMIT_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_USE_SLIDING_WINDOW_CONGESTION_CONTROL_get() {
+SWIGEXPORT int SWIGSTDCALL USE_SLIDING_WINDOW_CONGESTION_CONTROL_get() {
   int jresult ;
   int result;
   
@@ -2747,7 +2747,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_USE_SLIDING_WINDOW_CONGESTION_CONTROL_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PREALLOCATE_LARGE_MESSAGES_get() {
+SWIGEXPORT int SWIGSTDCALL PREALLOCATE_LARGE_MESSAGES_get() {
   int jresult ;
   int result;
   
@@ -2757,7 +2757,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PREALLOCATE_LARGE_MESSAGES_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RAKNET_SUPPORT_IPV6_get() {
+SWIGEXPORT int SWIGSTDCALL RAKNET_SUPPORT_IPV6_get() {
   int jresult ;
   int result;
   
@@ -2767,7 +2767,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RAKNET_SUPPORT_IPV6_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RAKSTRING_TYPE_IS_UNICODE_get() {
+SWIGEXPORT int SWIGSTDCALL RAKSTRING_TYPE_IS_UNICODE_get() {
   int jresult ;
   int result;
   
@@ -2777,7 +2777,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RAKSTRING_TYPE_IS_UNICODE_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RPC4_GLOBAL_REGISTRATION_MAX_FUNCTIONS_get() {
+SWIGEXPORT int SWIGSTDCALL RPC4_GLOBAL_REGISTRATION_MAX_FUNCTIONS_get() {
   int jresult ;
   int result;
   
@@ -2787,7 +2787,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RPC4_GLOBAL_REGISTRATION_MAX_FUNCTIONS_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RPC4_GLOBAL_REGISTRATION_MAX_FUNCTION_NAME_LENGTH_get() {
+SWIGEXPORT int SWIGSTDCALL RPC4_GLOBAL_REGISTRATION_MAX_FUNCTION_NAME_LENGTH_get() {
   int jresult ;
   int result;
   
@@ -2797,7 +2797,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RPC4_GLOBAL_REGISTRATION_MAX_FUNCTION_NAME_LEN
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_XBOX_BYPASS_SECURITY_get() {
+SWIGEXPORT int SWIGSTDCALL XBOX_BYPASS_SECURITY_get() {
   int jresult ;
   int result;
   
@@ -2807,7 +2807,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_XBOX_BYPASS_SECURITY_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_BUFFERED_PACKETS_PAGE_SIZE_get() {
+SWIGEXPORT int SWIGSTDCALL BUFFERED_PACKETS_PAGE_SIZE_get() {
   int jresult ;
   int result;
   
@@ -2817,7 +2817,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_BUFFERED_PACKETS_PAGE_SIZE_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_INTERNAL_PACKET_PAGE_SIZE_get() {
+SWIGEXPORT int SWIGSTDCALL INTERNAL_PACKET_PAGE_SIZE_get() {
   int jresult ;
   int result;
   
@@ -2827,7 +2827,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_INTERNAL_PACKET_PAGE_SIZE_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RAKPEER_USER_THREADED_get() {
+SWIGEXPORT int SWIGSTDCALL RAKPEER_USER_THREADED_get() {
   int jresult ;
   int result;
   
@@ -2837,7 +2837,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RAKPEER_USER_THREADED_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_USE_ALLOCA_get() {
+SWIGEXPORT int SWIGSTDCALL USE_ALLOCA_get() {
   int jresult ;
   int result;
   
@@ -2847,7 +2847,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_USE_ALLOCA_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_LIBCAT_SECURITY_get() {
+SWIGEXPORT int SWIGSTDCALL LIBCAT_SECURITY_get() {
   int jresult ;
   int result;
   
@@ -2857,7 +2857,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_LIBCAT_SECURITY_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_ConnectionGraph2_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_ConnectionGraph2_get() {
   int jresult ;
   int result;
   
@@ -2867,7 +2867,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_ConnectionGraph2_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_DirectoryDeltaTransfer_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_DirectoryDeltaTransfer_get() {
   int jresult ;
   int result;
   
@@ -2877,7 +2877,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_DirectoryDeltaTransfer_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_FileListTransfer_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_FileListTransfer_get() {
   int jresult ;
   int result;
   
@@ -2887,7 +2887,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_FileListTransfer_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_FullyConnectedMesh_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_FullyConnectedMesh_get() {
   int jresult ;
   int result;
   
@@ -2897,7 +2897,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_FullyConnectedMesh_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_FullyConnectedMesh2_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_FullyConnectedMesh2_get() {
   int jresult ;
   int result;
   
@@ -2907,7 +2907,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_FullyConnectedMesh2_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_MessageFilter_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_MessageFilter_get() {
   int jresult ;
   int result;
   
@@ -2917,7 +2917,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_MessageFilter_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_NatPunchthroughClient_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_NatPunchthroughClient_get() {
   int jresult ;
   int result;
   
@@ -2927,7 +2927,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_NatPunchthroughClient_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_NatPunchthroughServer_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_NatPunchthroughServer_get() {
   int jresult ;
   int result;
   
@@ -2937,7 +2937,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_NatPunchthroughServer_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_NatTypeDetectionClient_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_NatTypeDetectionClient_get() {
   int jresult ;
   int result;
   
@@ -2947,7 +2947,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_NatTypeDetectionClient_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_NatTypeDetectionServer_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_NatTypeDetectionServer_get() {
   int jresult ;
   int result;
   
@@ -2957,7 +2957,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_NatTypeDetectionServer_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_PacketLogger_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_PacketLogger_get() {
   int jresult ;
   int result;
   
@@ -2967,7 +2967,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_PacketLogger_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_ReadyEvent_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_ReadyEvent_get() {
   int jresult ;
   int result;
   
@@ -2977,7 +2977,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_ReadyEvent_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_ReplicaManager3_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_ReplicaManager3_get() {
   int jresult ;
   int result;
   
@@ -2987,7 +2987,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_ReplicaManager3_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_Router2_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_Router2_get() {
   int jresult ;
   int result;
   
@@ -2997,7 +2997,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_Router2_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_RPC4Plugin_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_RPC4Plugin_get() {
   int jresult ;
   int result;
   
@@ -3007,7 +3007,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_RPC4Plugin_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_TeamBalancer_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_TeamBalancer_get() {
   int jresult ;
   int result;
   
@@ -3017,7 +3017,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_TeamBalancer_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_TeamManager_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_TeamManager_get() {
   int jresult ;
   int result;
   
@@ -3027,7 +3027,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_TeamManager_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_UDPProxyClient_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_UDPProxyClient_get() {
   int jresult ;
   int result;
   
@@ -3037,7 +3037,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_UDPProxyClient_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_UDPProxyCoordinator_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_UDPProxyCoordinator_get() {
   int jresult ;
   int result;
   
@@ -3047,7 +3047,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_UDPProxyCoordinator_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_UDPProxyServer_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_UDPProxyServer_get() {
   int jresult ;
   int result;
   
@@ -3057,7 +3057,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_UDPProxyServer_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_ConsoleServer_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_ConsoleServer_get() {
   int jresult ;
   int result;
   
@@ -3067,7 +3067,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_ConsoleServer_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_RakNetTransport_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_RakNetTransport_get() {
   int jresult ;
   int result;
   
@@ -3077,7 +3077,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_RakNetTransport_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_TelnetTransport_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_TelnetTransport_get() {
   int jresult ;
   int result;
   
@@ -3087,7 +3087,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_TelnetTransport_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_TCPInterface_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_TCPInterface_get() {
   int jresult ;
   int result;
   
@@ -3097,7 +3097,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_TCPInterface_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_LogCommandParser_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_LogCommandParser_get() {
   int jresult ;
   int result;
   
@@ -3107,7 +3107,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_LogCommandParser_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_RakNetCommandParser_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_RakNetCommandParser_get() {
   int jresult ;
   int result;
   
@@ -3117,7 +3117,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_RakNetCommandParser_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_EmailSender_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_EmailSender_get() {
   int jresult ;
   int result;
   
@@ -3127,7 +3127,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_EmailSender_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_HTTPConnection_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_HTTPConnection_get() {
   int jresult ;
   int result;
   
@@ -3137,7 +3137,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_HTTPConnection_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_HTTPConnection2_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_HTTPConnection2_get() {
   int jresult ;
   int result;
   
@@ -3147,7 +3147,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_HTTPConnection2_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_PacketizedTCP_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_PacketizedTCP_get() {
   int jresult ;
   int result;
   
@@ -3157,7 +3157,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_PacketizedTCP_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_TwoWayAuthentication_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_TwoWayAuthentication_get() {
   int jresult ;
   int result;
   
@@ -3167,7 +3167,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_TwoWayAuthentication_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_CloudClient_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_CloudClient_get() {
   int jresult ;
   int result;
   
@@ -3177,7 +3177,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_CloudClient_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_CloudServer_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_CloudServer_get() {
   int jresult ;
   int result;
   
@@ -3187,7 +3187,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_CloudServer_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_DynDNS_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_DynDNS_get() {
   int jresult ;
   int result;
   
@@ -3197,7 +3197,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_DynDNS_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_Rackspace_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_Rackspace_get() {
   int jresult ;
   int result;
   
@@ -3207,7 +3207,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_Rackspace_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_FileOperations_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_FileOperations_get() {
   int jresult ;
   int result;
   
@@ -3217,7 +3217,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_FileOperations_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_UDPForwarder_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_UDPForwarder_get() {
   int jresult ;
   int result;
   
@@ -3227,7 +3227,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_UDPForwarder_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_StatisticsHistory_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_StatisticsHistory_get() {
   int jresult ;
   int result;
   
@@ -3237,7 +3237,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_StatisticsHistory_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_LibVoice_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_LibVoice_get() {
   int jresult ;
   int result;
   
@@ -3247,7 +3247,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_LibVoice_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_RelayPlugin_get() {
+SWIGEXPORT int SWIGSTDCALL _RAKNET_SUPPORT_RelayPlugin_get() {
   int jresult ;
   int result;
   
@@ -3257,7 +3257,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__RAKNET_SUPPORT_RelayPlugin_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SimpleMutex() {
+SWIGEXPORT void * SWIGSTDCALL new_SimpleMutex() {
   void * jresult ;
   RakNet::SimpleMutex *result = 0 ;
   
@@ -3267,7 +3267,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_SimpleMutex() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_SimpleMutex(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_SimpleMutex(void * jarg1) {
   RakNet::SimpleMutex *arg1 = (RakNet::SimpleMutex *) 0 ;
   
   arg1 = (RakNet::SimpleMutex *)jarg1; 
@@ -3275,7 +3275,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_SimpleMutex(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SimpleMutex_Lock(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL SimpleMutex_Lock(void * jarg1) {
   RakNet::SimpleMutex *arg1 = (RakNet::SimpleMutex *) 0 ;
   
   arg1 = (RakNet::SimpleMutex *)jarg1; 
@@ -3283,7 +3283,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SimpleMutex_Lock(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SimpleMutex_Unlock(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL SimpleMutex_Unlock(void * jarg1) {
   RakNet::SimpleMutex *arg1 = (RakNet::SimpleMutex *) 0 ;
   
   arg1 = (RakNet::SimpleMutex *)jarg1; 
@@ -3291,7 +3291,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SimpleMutex_Unlock(void * jarg1) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_MAX_RPC_MAP_SIZE_get() {
+SWIGEXPORT int SWIGSTDCALL MAX_RPC_MAP_SIZE_get() {
   int jresult ;
   int result;
   
@@ -3301,7 +3301,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_MAX_RPC_MAP_SIZE_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_UNDEFINED_RPC_INDEX_get() {
+SWIGEXPORT int SWIGSTDCALL UNDEFINED_RPC_INDEX_get() {
   int jresult ;
   int result;
   
@@ -3311,7 +3311,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_UNDEFINED_RPC_INDEX_get() {
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_PRINTF_64_BIT_MODIFIER_get() {
+SWIGEXPORT char * SWIGSTDCALL PRINTF_64_BIT_MODIFIER_get() {
   char * jresult ;
   char *result = 0 ;
   
@@ -3321,7 +3321,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_PRINTF_64_BIT_MODIFIER_get() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PublicKey_publicKeyMode_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PublicKey_publicKeyMode_set(void * jarg1, int jarg2) {
   RakNet::PublicKey *arg1 = (RakNet::PublicKey *) 0 ;
   RakNet::PublicKeyMode arg2 ;
   
@@ -3331,7 +3331,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PublicKey_publicKeyMode_set(void * jarg1, int
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PublicKey_publicKeyMode_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL PublicKey_publicKeyMode_get(void * jarg1) {
   int jresult ;
   RakNet::PublicKey *arg1 = (RakNet::PublicKey *) 0 ;
   RakNet::PublicKeyMode result;
@@ -3343,7 +3343,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PublicKey_publicKeyMode_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PublicKey_remoteServerPublicKey_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PublicKey_remoteServerPublicKey_set(void * jarg1, char * jarg2) {
   RakNet::PublicKey *arg1 = (RakNet::PublicKey *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -3361,7 +3361,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PublicKey_remoteServerPublicKey_set(void * ja
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_PublicKey_remoteServerPublicKey_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL PublicKey_remoteServerPublicKey_get(void * jarg1) {
   char * jresult ;
   RakNet::PublicKey *arg1 = (RakNet::PublicKey *) 0 ;
   char *result = 0 ;
@@ -3373,7 +3373,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_PublicKey_remoteServerPublicKey_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PublicKey_myPublicKey_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PublicKey_myPublicKey_set(void * jarg1, char * jarg2) {
   RakNet::PublicKey *arg1 = (RakNet::PublicKey *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -3391,7 +3391,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PublicKey_myPublicKey_set(void * jarg1, char 
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_PublicKey_myPublicKey_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL PublicKey_myPublicKey_get(void * jarg1) {
   char * jresult ;
   RakNet::PublicKey *arg1 = (RakNet::PublicKey *) 0 ;
   char *result = 0 ;
@@ -3403,7 +3403,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_PublicKey_myPublicKey_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PublicKey_myPrivateKey_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PublicKey_myPrivateKey_set(void * jarg1, char * jarg2) {
   RakNet::PublicKey *arg1 = (RakNet::PublicKey *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -3421,7 +3421,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PublicKey_myPrivateKey_set(void * jarg1, char
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_PublicKey_myPrivateKey_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL PublicKey_myPrivateKey_get(void * jarg1) {
   char * jresult ;
   RakNet::PublicKey *arg1 = (RakNet::PublicKey *) 0 ;
   char *result = 0 ;
@@ -3433,7 +3433,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_PublicKey_myPrivateKey_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PublicKey() {
+SWIGEXPORT void * SWIGSTDCALL new_PublicKey() {
   void * jresult ;
   RakNet::PublicKey *result = 0 ;
   
@@ -3443,7 +3443,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_PublicKey() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PublicKey(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_PublicKey(void * jarg1) {
   RakNet::PublicKey *arg1 = (RakNet::PublicKey *) 0 ;
   
   arg1 = (RakNet::PublicKey *)jarg1; 
@@ -3451,7 +3451,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_PublicKey(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SocketDescriptor__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_SocketDescriptor__SWIG_0() {
   void * jresult ;
   RakNet::SocketDescriptor *result = 0 ;
   
@@ -3461,7 +3461,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_SocketDescriptor__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SocketDescriptor__SWIG_1(unsigned short jarg1, char * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL new_SocketDescriptor__SWIG_1(unsigned short jarg1, char * jarg2) {
   void * jresult ;
   unsigned short arg1 ;
   char *arg2 = (char *) 0 ;
@@ -3475,7 +3475,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_SocketDescriptor__SWIG_1(unsigned short
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_port_set(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL SocketDescriptor_port_set(void * jarg1, unsigned short jarg2) {
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   unsigned short arg2 ;
   
@@ -3485,7 +3485,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_port_set(void * jarg1, unsig
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SocketDescriptor_port_get(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL SocketDescriptor_port_get(void * jarg1) {
   unsigned short jresult ;
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   unsigned short result;
@@ -3497,7 +3497,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SocketDescriptor_port_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_hostAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL SocketDescriptor_hostAddress_set(void * jarg1, char * jarg2) {
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   char *arg2 ;
   
@@ -3514,7 +3514,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_hostAddress_set(void * jarg1
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_SocketDescriptor_hostAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL SocketDescriptor_hostAddress_get(void * jarg1) {
   char * jresult ;
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   char *result = 0 ;
@@ -3526,7 +3526,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_SocketDescriptor_hostAddress_get(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_socketFamily_set(void * jarg1, short jarg2) {
+SWIGEXPORT void SWIGSTDCALL SocketDescriptor_socketFamily_set(void * jarg1, short jarg2) {
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   short arg2 ;
   
@@ -3536,7 +3536,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_socketFamily_set(void * jarg
 }
 
 
-SWIGEXPORT short SWIGSTDCALL CSharp_SocketDescriptor_socketFamily_get(void * jarg1) {
+SWIGEXPORT short SWIGSTDCALL SocketDescriptor_socketFamily_get(void * jarg1) {
   short jresult ;
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   short result;
@@ -3548,7 +3548,7 @@ SWIGEXPORT short SWIGSTDCALL CSharp_SocketDescriptor_socketFamily_get(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_remotePortRakNetWasStartedOn_PS3_PSP2_set(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL SocketDescriptor_remotePortRakNetWasStartedOn_PS3_PSP2_set(void * jarg1, unsigned short jarg2) {
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   unsigned short arg2 ;
   
@@ -3558,7 +3558,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_remotePortRakNetWasStartedOn
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SocketDescriptor_remotePortRakNetWasStartedOn_PS3_PSP2_get(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL SocketDescriptor_remotePortRakNetWasStartedOn_PS3_PSP2_get(void * jarg1) {
   unsigned short jresult ;
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   unsigned short result;
@@ -3570,7 +3570,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SocketDescriptor_remotePortRakNetWa
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_chromeInstance_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL SocketDescriptor_chromeInstance_set(void * jarg1, int jarg2) {
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   int arg2 ;
   
@@ -3580,7 +3580,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_chromeInstance_set(void * ja
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_SocketDescriptor_chromeInstance_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL SocketDescriptor_chromeInstance_get(void * jarg1) {
   int jresult ;
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   int result;
@@ -3592,7 +3592,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_SocketDescriptor_chromeInstance_get(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_blockingSocket_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL SocketDescriptor_blockingSocket_set(void * jarg1, unsigned int jarg2) {
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   bool arg2 ;
   
@@ -3602,7 +3602,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_blockingSocket_set(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SocketDescriptor_blockingSocket_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL SocketDescriptor_blockingSocket_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   bool result;
@@ -3614,7 +3614,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SocketDescriptor_blockingSocket_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_extraSocketOptions_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL SocketDescriptor_extraSocketOptions_set(void * jarg1, unsigned int jarg2) {
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   unsigned int arg2 ;
   
@@ -3624,7 +3624,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SocketDescriptor_extraSocketOptions_set(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SocketDescriptor_extraSocketOptions_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL SocketDescriptor_extraSocketOptions_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   unsigned int result;
@@ -3636,7 +3636,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SocketDescriptor_extraSocketOptions_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_SocketDescriptor(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_SocketDescriptor(void * jarg1) {
   RakNet::SocketDescriptor *arg1 = (RakNet::SocketDescriptor *) 0 ;
   
   arg1 = (RakNet::SocketDescriptor *)jarg1; 
@@ -3644,7 +3644,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_SocketDescriptor(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NonNumericHostString(char * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL NonNumericHostString(char * jarg1) {
   unsigned int jresult ;
   char *arg1 = (char *) 0 ;
   bool result;
@@ -3656,7 +3656,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NonNumericHostString(char * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SystemAddress__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_SystemAddress__SWIG_0() {
   void * jresult ;
   RakNet::SystemAddress *result = 0 ;
   
@@ -3666,7 +3666,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_SystemAddress__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SystemAddress__SWIG_1(char * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_SystemAddress__SWIG_1(char * jarg1) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   RakNet::SystemAddress *result = 0 ;
@@ -3678,7 +3678,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_SystemAddress__SWIG_1(char * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_SystemAddress__SWIG_2(char * jarg1, unsigned short jarg2) {
+SWIGEXPORT void * SWIGSTDCALL new_SystemAddress__SWIG_2(char * jarg1, unsigned short jarg2) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   unsigned short arg2 ;
@@ -3692,7 +3692,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_SystemAddress__SWIG_2(char * jarg1, uns
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_debugPort_set(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_debugPort_set(void * jarg1, unsigned short jarg2) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   unsigned short arg2 ;
   
@@ -3702,7 +3702,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_debugPort_set(void * jarg1, uns
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SystemAddress_debugPort_get(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL SystemAddress_debugPort_get(void * jarg1) {
   unsigned short jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   unsigned short result;
@@ -3714,7 +3714,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SystemAddress_debugPort_get(void * 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_SystemAddress_size() {
+SWIGEXPORT int SWIGSTDCALL SystemAddress_size() {
   int jresult ;
   int result;
   
@@ -3724,7 +3724,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_SystemAddress_size() {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_SystemAddress_ToInteger(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL SystemAddress_ToInteger(void * jarg1) {
   unsigned long jresult ;
   RakNet::SystemAddress *arg1 = 0 ;
   unsigned long result;
@@ -3740,7 +3740,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_SystemAddress_ToInteger(void * jarg1
 }
 
 
-SWIGEXPORT unsigned char SWIGSTDCALL CSharp_SystemAddress_GetIPVersion(void * jarg1) {
+SWIGEXPORT unsigned char SWIGSTDCALL SystemAddress_GetIPVersion(void * jarg1) {
   unsigned char jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   unsigned char result;
@@ -3752,7 +3752,7 @@ SWIGEXPORT unsigned char SWIGSTDCALL CSharp_SystemAddress_GetIPVersion(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_GetIPPROTO(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_GetIPPROTO(void * jarg1) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   unsigned int result;
@@ -3764,7 +3764,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_GetIPPROTO(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_SetToLoopback__SWIG_0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_SetToLoopback__SWIG_0(void * jarg1) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   
   arg1 = (RakNet::SystemAddress *)jarg1; 
@@ -3772,7 +3772,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_SetToLoopback__SWIG_0(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_SetToLoopback__SWIG_1(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_SetToLoopback__SWIG_1(void * jarg1, unsigned char jarg2) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   unsigned char arg2 ;
   
@@ -3782,7 +3782,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_SetToLoopback__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_IsLoopback(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_IsLoopback(void * jarg1) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   bool result;
@@ -3794,7 +3794,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_IsLoopback(void * jarg1
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_SystemAddress_ToString__SWIG_0(void * jarg1, unsigned int jarg2, char jarg3) {
+SWIGEXPORT char * SWIGSTDCALL SystemAddress_ToString__SWIG_0(void * jarg1, unsigned int jarg2, char jarg3) {
   char * jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   bool arg2 ;
@@ -3810,7 +3810,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_SystemAddress_ToString__SWIG_0(void * jarg1
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_SystemAddress_ToString__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT char * SWIGSTDCALL SystemAddress_ToString__SWIG_1(void * jarg1, unsigned int jarg2) {
   char * jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   bool arg2 ;
@@ -3824,7 +3824,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_SystemAddress_ToString__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_ToString__SWIG_2(void * jarg1, unsigned int jarg2, char * jarg3, char jarg4) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_ToString__SWIG_2(void * jarg1, unsigned int jarg2, char * jarg3, char jarg4) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -3838,7 +3838,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_ToString__SWIG_2(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_FromString__SWIG_0(void * jarg1, char * jarg2, char jarg3, int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_FromString__SWIG_0(void * jarg1, char * jarg2, char jarg3, int jarg4) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3856,7 +3856,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_FromString__SWIG_0(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_FromString__SWIG_1(void * jarg1, char * jarg2, char jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_FromString__SWIG_1(void * jarg1, char * jarg2, char jarg3) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3872,7 +3872,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_FromString__SWIG_1(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_FromString__SWIG_2(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_FromString__SWIG_2(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3886,7 +3886,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_FromString__SWIG_2(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_FromStringExplicitPort__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_FromStringExplicitPort__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, int jarg4) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3904,7 +3904,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_FromStringExplicitPort_
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_FromStringExplicitPort__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_FromStringExplicitPort__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3920,7 +3920,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_FromStringExplicitPort_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_CopyPort(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_CopyPort(void * jarg1, void * jarg2) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   
@@ -3934,7 +3934,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_CopyPort(void * jarg1, void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_EqualsExcludingPort(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_EqualsExcludingPort(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
@@ -3952,7 +3952,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_EqualsExcludingPort(voi
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SystemAddress_GetPort(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL SystemAddress_GetPort(void * jarg1) {
   unsigned short jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   unsigned short result;
@@ -3964,7 +3964,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SystemAddress_GetPort(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SystemAddress_GetPortNetworkOrder(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL SystemAddress_GetPortNetworkOrder(void * jarg1) {
   unsigned short jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   unsigned short result;
@@ -3976,7 +3976,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SystemAddress_GetPortNetworkOrder(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_SetPortHostOrder(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_SetPortHostOrder(void * jarg1, unsigned short jarg2) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   unsigned short arg2 ;
   
@@ -3986,7 +3986,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_SetPortHostOrder(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_SetPortNetworkOrder(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_SetPortNetworkOrder(void * jarg1, unsigned short jarg2) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   unsigned short arg2 ;
   
@@ -3996,7 +3996,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_SetPortNetworkOrder(void * jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_SetBinaryAddress__SWIG_0(void * jarg1, char * jarg2, char jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_SetBinaryAddress__SWIG_0(void * jarg1, char * jarg2, char jarg3) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -4012,7 +4012,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_SetBinaryAddress__SWIG_
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_SetBinaryAddress__SWIG_1(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_SetBinaryAddress__SWIG_1(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -4026,7 +4026,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_SetBinaryAddress__SWIG_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_ToString_Old__SWIG_0(void * jarg1, unsigned int jarg2, char * jarg3, char jarg4) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_ToString_Old__SWIG_0(void * jarg1, unsigned int jarg2, char * jarg3, char jarg4) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -4040,7 +4040,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_ToString_Old__SWIG_0(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_ToString_Old__SWIG_1(void * jarg1, unsigned int jarg2, char * jarg3) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_ToString_Old__SWIG_1(void * jarg1, unsigned int jarg2, char * jarg3) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -4052,7 +4052,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_ToString_Old__SWIG_1(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_FixForIPVersion(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_FixForIPVersion(void * jarg1, void * jarg2) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   
@@ -4066,7 +4066,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_FixForIPVersion(void * jarg1, v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_IsLANAddress(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_IsLANAddress(void * jarg1) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   bool result;
@@ -4078,7 +4078,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_IsLANAddress(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_SystemAddress_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL SystemAddress_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
@@ -4096,7 +4096,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_SystemAddress_CopyData(void * jarg1, void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_Equals(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_Equals(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
@@ -4114,7 +4114,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_Equals(void * jarg1, vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_OpNotEqual(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_OpNotEqual(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
@@ -4132,7 +4132,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_OpNotEqual(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_OpGreater(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_OpGreater(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
@@ -4150,7 +4150,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_OpGreater(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_OpLess(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL SystemAddress_OpLess(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
@@ -4168,7 +4168,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_SystemAddress_OpLess(void * jarg1, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_systemIndex_set(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL SystemAddress_systemIndex_set(void * jarg1, unsigned short jarg2) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   RakNet::SystemIndex arg2 ;
   
@@ -4178,7 +4178,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_SystemAddress_systemIndex_set(void * jarg1, u
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SystemAddress_systemIndex_get(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL SystemAddress_systemIndex_get(void * jarg1) {
   unsigned short jresult ;
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   RakNet::SystemIndex result;
@@ -4190,7 +4190,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_SystemAddress_systemIndex_get(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_SystemAddress(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_SystemAddress(void * jarg1) {
   RakNet::SystemAddress *arg1 = (RakNet::SystemAddress *) 0 ;
   
   arg1 = (RakNet::SystemAddress *)jarg1; 
@@ -4198,7 +4198,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_SystemAddress(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetGUID__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetGUID__SWIG_0() {
   void * jresult ;
   RakNet::RakNetGUID *result = 0 ;
   
@@ -4208,7 +4208,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetGUID__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetGUID__SWIG_1(unsigned long long jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetGUID__SWIG_1(unsigned long long jarg1) {
   void * jresult ;
   uint64_t arg1 ;
   RakNet::RakNetGUID *result = 0 ;
@@ -4220,7 +4220,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetGUID__SWIG_1(unsigned long long j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetGUID_g_set(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetGUID_g_set(void * jarg1, unsigned long long jarg2) {
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   uint64_t arg2 ;
   
@@ -4230,7 +4230,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetGUID_g_set(void * jarg1, unsigned long 
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakNetGUID_g_get(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL RakNetGUID_g_get(void * jarg1) {
   unsigned long long jresult ;
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   uint64_t result;
@@ -4242,7 +4242,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakNetGUID_g_get(void * jarg1) 
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakNetGUID_ToString(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL RakNetGUID_ToString(void * jarg1) {
   char * jresult ;
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   char *result = 0 ;
@@ -4254,7 +4254,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakNetGUID_ToString(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetGUID_FromString(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetGUID_FromString(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -4268,7 +4268,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetGUID_FromString(void * jarg1, c
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakNetGUID_ToUint32(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL RakNetGUID_ToUint32(void * jarg1) {
   unsigned long jresult ;
   RakNet::RakNetGUID *arg1 = 0 ;
   unsigned long result;
@@ -4284,7 +4284,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakNetGUID_ToUint32(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetGUID_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetGUID_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -4302,7 +4302,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetGUID_CopyData(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetGUID_systemIndex_set(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetGUID_systemIndex_set(void * jarg1, unsigned short jarg2) {
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   RakNet::SystemIndex arg2 ;
   
@@ -4312,7 +4312,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetGUID_systemIndex_set(void * jarg1, unsi
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_RakNetGUID_systemIndex_get(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL RakNetGUID_systemIndex_get(void * jarg1) {
   unsigned short jresult ;
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   RakNet::SystemIndex result;
@@ -4324,7 +4324,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_RakNetGUID_systemIndex_get(void * j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakNetGUID_size() {
+SWIGEXPORT int SWIGSTDCALL RakNetGUID_size() {
   int jresult ;
   int result;
   
@@ -4334,7 +4334,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakNetGUID_size() {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetGUID_Equals(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetGUID_Equals(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -4352,7 +4352,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetGUID_Equals(void * jarg1, void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetGUID_OpNotEqual(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetGUID_OpNotEqual(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -4370,7 +4370,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetGUID_OpNotEqual(void * jarg1, v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetGUID_OpGreater(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetGUID_OpGreater(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -4388,7 +4388,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetGUID_OpGreater(void * jarg1, vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetGUID_OpLess(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetGUID_OpLess(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -4406,7 +4406,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetGUID_OpLess(void * jarg1, void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetGUID(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetGUID(void * jarg1) {
   RakNet::RakNetGUID *arg1 = (RakNet::RakNetGUID *) 0 ;
   
   arg1 = (RakNet::RakNetGUID *)jarg1; 
@@ -4414,7 +4414,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetGUID(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_AddressOrGUID_rakNetGuid_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL AddressOrGUID_rakNetGuid_set(void * jarg1, void * jarg2) {
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   RakNet::RakNetGUID *arg2 = (RakNet::RakNetGUID *) 0 ;
   
@@ -4424,7 +4424,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_AddressOrGUID_rakNetGuid_set(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_AddressOrGUID_rakNetGuid_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL AddressOrGUID_rakNetGuid_get(void * jarg1) {
   void * jresult ;
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   RakNet::RakNetGUID *result = 0 ;
@@ -4436,7 +4436,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AddressOrGUID_rakNetGuid_get(void * jarg1) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_AddressOrGUID_systemAddress_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL AddressOrGUID_systemAddress_set(void * jarg1, void * jarg2) {
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   RakNet::SystemAddress *arg2 = (RakNet::SystemAddress *) 0 ;
   
@@ -4446,7 +4446,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_AddressOrGUID_systemAddress_set(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_AddressOrGUID_systemAddress_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL AddressOrGUID_systemAddress_get(void * jarg1) {
   void * jresult ;
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   RakNet::SystemAddress *result = 0 ;
@@ -4458,7 +4458,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AddressOrGUID_systemAddress_get(void * jarg
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_AddressOrGUID_GetSystemIndex(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL AddressOrGUID_GetSystemIndex(void * jarg1) {
   unsigned short jresult ;
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   RakNet::SystemIndex result;
@@ -4470,7 +4470,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_AddressOrGUID_GetSystemIndex(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_AddressOrGUID_IsUndefined(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL AddressOrGUID_IsUndefined(void * jarg1) {
   unsigned int jresult ;
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   bool result;
@@ -4482,7 +4482,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_AddressOrGUID_IsUndefined(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_AddressOrGUID_SetUndefined(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL AddressOrGUID_SetUndefined(void * jarg1) {
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   
   arg1 = (RakNet::AddressOrGUID *)jarg1; 
@@ -4490,7 +4490,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_AddressOrGUID_SetUndefined(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_AddressOrGUID_ToInteger(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL AddressOrGUID_ToInteger(void * jarg1) {
   unsigned long jresult ;
   RakNet::AddressOrGUID *arg1 = 0 ;
   unsigned long result;
@@ -4506,7 +4506,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_AddressOrGUID_ToInteger(void * jarg1
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_AddressOrGUID_ToString(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT char * SWIGSTDCALL AddressOrGUID_ToString(void * jarg1, unsigned int jarg2) {
   char * jresult ;
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   bool arg2 ;
@@ -4520,7 +4520,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_AddressOrGUID_ToString(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_AddressOrGUID__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_AddressOrGUID__SWIG_0() {
   void * jresult ;
   RakNet::AddressOrGUID *result = 0 ;
   
@@ -4530,7 +4530,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_AddressOrGUID__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_AddressOrGUID__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_AddressOrGUID__SWIG_1(void * jarg1) {
   void * jresult ;
   RakNet::AddressOrGUID *arg1 = 0 ;
   RakNet::AddressOrGUID *result = 0 ;
@@ -4546,7 +4546,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_AddressOrGUID__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_AddressOrGUID__SWIG_2(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_AddressOrGUID__SWIG_2(void * jarg1) {
   void * jresult ;
   RakNet::SystemAddress *arg1 = 0 ;
   RakNet::AddressOrGUID *result = 0 ;
@@ -4562,7 +4562,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_AddressOrGUID__SWIG_2(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_AddressOrGUID__SWIG_3(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_AddressOrGUID__SWIG_3(void * jarg1) {
   void * jresult ;
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   RakNet::AddressOrGUID *result = 0 ;
@@ -4574,7 +4574,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_AddressOrGUID__SWIG_3(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_AddressOrGUID__SWIG_4(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_AddressOrGUID__SWIG_4(void * jarg1) {
   void * jresult ;
   RakNet::RakNetGUID *arg1 = 0 ;
   RakNet::AddressOrGUID *result = 0 ;
@@ -4590,7 +4590,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_AddressOrGUID__SWIG_4(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_AddressOrGUID_CopyData__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL AddressOrGUID_CopyData__SWIG_0(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   RakNet::AddressOrGUID *arg2 = 0 ;
@@ -4608,7 +4608,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AddressOrGUID_CopyData__SWIG_0(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_AddressOrGUID_CopyData__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL AddressOrGUID_CopyData__SWIG_1(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
@@ -4626,7 +4626,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AddressOrGUID_CopyData__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_AddressOrGUID_CopyData__SWIG_2(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL AddressOrGUID_CopyData__SWIG_2(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -4644,7 +4644,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AddressOrGUID_CopyData__SWIG_2(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_AddressOrGUID_Equals(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL AddressOrGUID_Equals(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   RakNet::AddressOrGUID *arg2 = 0 ;
@@ -4662,7 +4662,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_AddressOrGUID_Equals(void * jarg1, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_AddressOrGUID(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_AddressOrGUID(void * jarg1) {
   RakNet::AddressOrGUID *arg1 = (RakNet::AddressOrGUID *) 0 ;
   
   arg1 = (RakNet::AddressOrGUID *)jarg1; 
@@ -4670,7 +4670,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_AddressOrGUID(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Packet_systemAddress_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Packet_systemAddress_set(void * jarg1, void * jarg2) {
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   RakNet::SystemAddress *arg2 = (RakNet::SystemAddress *) 0 ;
   
@@ -4680,7 +4680,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Packet_systemAddress_set(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Packet_systemAddress_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL Packet_systemAddress_get(void * jarg1) {
   void * jresult ;
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   RakNet::SystemAddress *result = 0 ;
@@ -4692,7 +4692,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Packet_systemAddress_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Packet_guid_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Packet_guid_set(void * jarg1, void * jarg2) {
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   RakNet::RakNetGUID *arg2 = (RakNet::RakNetGUID *) 0 ;
   
@@ -4702,7 +4702,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Packet_guid_set(void * jarg1, void * jarg2) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Packet_guid_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL Packet_guid_get(void * jarg1) {
   void * jresult ;
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   RakNet::RakNetGUID *result = 0 ;
@@ -4714,7 +4714,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Packet_guid_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Packet_length_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL Packet_length_set(void * jarg1, unsigned int jarg2) {
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   unsigned int arg2 ;
   
@@ -4724,7 +4724,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Packet_length_set(void * jarg1, unsigned int 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Packet_length_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL Packet_length_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   unsigned int result;
@@ -4736,7 +4736,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Packet_length_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Packet_bitSize_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL Packet_bitSize_set(void * jarg1, unsigned int jarg2) {
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   RakNet::BitSize_t arg2 ;
   
@@ -4746,7 +4746,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Packet_bitSize_set(void * jarg1, unsigned int
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Packet_bitSize_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL Packet_bitSize_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   RakNet::BitSize_t result;
@@ -4758,7 +4758,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Packet_bitSize_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Packet_data_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Packet_data_set(void * jarg1, void * jarg2) {
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   
@@ -4768,7 +4768,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Packet_data_set(void * jarg1, void * jarg2) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Packet_data_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL Packet_data_get(void * jarg1) {
   void * jresult ;
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   unsigned char *result = 0 ;
@@ -4780,7 +4780,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Packet_data_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Packet_deleteData_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL Packet_deleteData_set(void * jarg1, unsigned int jarg2) {
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   bool arg2 ;
   
@@ -4790,7 +4790,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Packet_deleteData_set(void * jarg1, unsigned 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Packet_deleteData_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL Packet_deleteData_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   bool result;
@@ -4802,7 +4802,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Packet_deleteData_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Packet_wasGeneratedLocally_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL Packet_wasGeneratedLocally_set(void * jarg1, unsigned int jarg2) {
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   bool arg2 ;
   
@@ -4812,7 +4812,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Packet_wasGeneratedLocally_set(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Packet_wasGeneratedLocally_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL Packet_wasGeneratedLocally_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   bool result;
@@ -4824,7 +4824,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Packet_wasGeneratedLocally_get(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Packet() {
+SWIGEXPORT void * SWIGSTDCALL new_Packet() {
   void * jresult ;
   RakNet::Packet *result = 0 ;
   
@@ -4834,7 +4834,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Packet() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Packet_SetPacketData(void * jarg1, unsigned char* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL Packet_SetPacketData(void * jarg1, unsigned char* jarg2, int jarg3) {
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -4848,7 +4848,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Packet_SetPacketData(void * jarg1, unsigned c
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Packet(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_Packet(void * jarg1) {
   RakNet::Packet *arg1 = (RakNet::Packet *) 0 ;
   
   arg1 = (RakNet::Packet *)jarg1; 
@@ -4856,7 +4856,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Packet(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_UNASSIGNED_PLAYER_INDEX_get() {
+SWIGEXPORT unsigned short SWIGSTDCALL UNASSIGNED_PLAYER_INDEX_get() {
   unsigned short jresult ;
   RakNet::SystemIndex result;
   
@@ -4866,7 +4866,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_UNASSIGNED_PLAYER_INDEX_get() {
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_UNASSIGNED_NETWORK_ID_get() {
+SWIGEXPORT unsigned long long SWIGSTDCALL UNASSIGNED_NETWORK_ID_get() {
   unsigned long long jresult ;
   RakNet::NetworkID result;
   
@@ -4876,7 +4876,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_UNASSIGNED_NETWORK_ID_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PING_TIMES_ARRAY_SIZE_get() {
+SWIGEXPORT int SWIGSTDCALL PING_TIMES_ARRAY_SIZE_get() {
   int jresult ;
   int result;
   
@@ -4886,7 +4886,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PING_TIMES_ARRAY_SIZE_get() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_uint24_t_val_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL uint24_t_val_set(void * jarg1, unsigned int jarg2) {
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t arg2 ;
   
@@ -4896,7 +4896,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_uint24_t_val_set(void * jarg1, unsigned int j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_val_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL uint24_t_val_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t result;
@@ -4908,7 +4908,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_val_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_uint24_t__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_uint24_t__SWIG_0() {
   void * jresult ;
   RakNet::uint24_t *result = 0 ;
   
@@ -4918,7 +4918,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_uint24_t__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_uint24_t__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_uint24_t__SWIG_1(void * jarg1) {
   void * jresult ;
   RakNet::uint24_t *arg1 = 0 ;
   RakNet::uint24_t *result = 0 ;
@@ -4934,7 +4934,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_uint24_t__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpPlusPlus(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_OpPlusPlus(void * jarg1) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t result;
@@ -4946,7 +4946,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpPlusPlus(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpMinusMinus(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_OpMinusMinus(void * jarg1) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t result;
@@ -4958,7 +4958,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpMinusMinus(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_CopyData__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_CopyData__SWIG_0(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -4976,7 +4976,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_CopyData__SWIG_0(void * jarg1, voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_Equals__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL uint24_t_Equals__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -4994,7 +4994,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_Equals__SWIG_0(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpNotEqual__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL uint24_t_OpNotEqual__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -5012,7 +5012,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpNotEqual__SWIG_0(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpGreater__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL uint24_t_OpGreater__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -5030,7 +5030,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpGreater__SWIG_0(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpLess__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL uint24_t_OpLess__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -5048,7 +5048,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpLess__SWIG_0(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpPlus__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_OpPlus__SWIG_0(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -5066,7 +5066,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpPlus__SWIG_0(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpMinus__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_OpMinus__SWIG_0(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -5084,7 +5084,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpMinus__SWIG_0(void * jarg1, void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpDivide__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_OpDivide__SWIG_0(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -5102,7 +5102,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpDivide__SWIG_0(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpMultiply__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_OpMultiply__SWIG_0(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -5120,7 +5120,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpMultiply__SWIG_0(void * jarg1, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_uint24_t__SWIG_2(unsigned int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_uint24_t__SWIG_2(unsigned int jarg1) {
   void * jresult ;
   uint32_t *arg1 = 0 ;
   uint32_t temp1 ;
@@ -5134,7 +5134,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_uint24_t__SWIG_2(unsigned int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_CopyData__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_CopyData__SWIG_1(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t *arg2 = 0 ;
@@ -5150,7 +5150,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_CopyData__SWIG_1(void * jarg1, uns
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_Equals__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL uint24_t_Equals__SWIG_1(void * jarg1, unsigned int jarg2) {
   unsigned int jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t *arg2 = 0 ;
@@ -5166,7 +5166,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_Equals__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpNotEqual__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL uint24_t_OpNotEqual__SWIG_1(void * jarg1, unsigned int jarg2) {
   unsigned int jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t *arg2 = 0 ;
@@ -5182,7 +5182,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpNotEqual__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpGreater__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL uint24_t_OpGreater__SWIG_1(void * jarg1, unsigned int jarg2) {
   unsigned int jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t *arg2 = 0 ;
@@ -5198,7 +5198,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpGreater__SWIG_1(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpLess__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL uint24_t_OpLess__SWIG_1(void * jarg1, unsigned int jarg2) {
   unsigned int jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t *arg2 = 0 ;
@@ -5214,7 +5214,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_uint24_t_OpLess__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpPlus__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_OpPlus__SWIG_1(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t *arg2 = 0 ;
@@ -5230,7 +5230,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpPlus__SWIG_1(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpMinus__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_OpMinus__SWIG_1(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t *arg2 = 0 ;
@@ -5246,7 +5246,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpMinus__SWIG_1(void * jarg1, unsi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpDivide__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_OpDivide__SWIG_1(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t *arg2 = 0 ;
@@ -5262,7 +5262,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpDivide__SWIG_1(void * jarg1, uns
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpMultiply__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL uint24_t_OpMultiply__SWIG_1(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   uint32_t *arg2 = 0 ;
@@ -5278,7 +5278,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_uint24_t_OpMultiply__SWIG_1(void * jarg1, u
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_uint24_t(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_uint24_t(void * jarg1) {
   RakNet::uint24_t *arg1 = (RakNet::uint24_t *) 0 ;
   
   arg1 = (RakNet::uint24_t *)jarg1; 
@@ -5286,7 +5286,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_uint24_t(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakString__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakString__SWIG_0() {
   void * jresult ;
   RakNet::RakString *result = 0 ;
   
@@ -5296,7 +5296,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakString__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakString__SWIG_1(char jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakString__SWIG_1(char jarg1) {
   void * jresult ;
   char arg1 ;
   RakNet::RakString *result = 0 ;
@@ -5308,7 +5308,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakString__SWIG_1(char jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakString__SWIG_2(unsigned char jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakString__SWIG_2(unsigned char jarg1) {
   void * jresult ;
   unsigned char arg1 ;
   RakNet::RakString *result = 0 ;
@@ -5320,7 +5320,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakString__SWIG_2(unsigned char jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakString__SWIG_3(char * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakString__SWIG_3(char * jarg1) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   void *arg2 = 0 ;
@@ -5333,7 +5333,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakString__SWIG_3(char * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakString(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakString(void * jarg1) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   
   arg1 = (RakNet::RakString *)jarg1; 
@@ -5341,7 +5341,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakString(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakString__SWIG_4(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakString__SWIG_4(void * jarg1) {
   void * jresult ;
   RakNet::RakString *arg1 = 0 ;
   RakNet::RakString *result = 0 ;
@@ -5357,7 +5357,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakString__SWIG_4(void * jarg1) {
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_C_String(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL RakString_C_String(void * jarg1) {
   char * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *result = 0 ;
@@ -5369,7 +5369,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_C_String(void * jarg1) {
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_C_StringUnsafe(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL RakString_C_StringUnsafe(void * jarg1) {
   char * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *result = 0 ;
@@ -5381,7 +5381,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_C_StringUnsafe(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_CopyData__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakString_CopyData__SWIG_0(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -5399,7 +5399,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_CopyData__SWIG_0(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_CopyData__SWIG_1(void * jarg1, char * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakString_CopyData__SWIG_1(void * jarg1, char * jarg2) {
   void * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -5413,7 +5413,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_CopyData__SWIG_1(void * jarg1, ch
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_CopyData__SWIG_2(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakString_CopyData__SWIG_2(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -5427,7 +5427,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_CopyData__SWIG_2(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_CopyData__SWIG_4(void * jarg1, char jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakString_CopyData__SWIG_4(void * jarg1, char jarg2) {
   void * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char arg2 ;
@@ -5441,7 +5441,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_CopyData__SWIG_4(void * jarg1, ch
 }
 
 
-SWIGEXPORT unsigned char SWIGSTDCALL CSharp_RakString_OpArray(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT unsigned char SWIGSTDCALL RakString_OpArray(void * jarg1, unsigned int jarg2) {
   unsigned char jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   unsigned int arg2 ;
@@ -5455,7 +5455,7 @@ SWIGEXPORT unsigned char SWIGSTDCALL CSharp_RakString_OpArray(void * jarg1, unsi
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_Find__SWIG_0(void * jarg1, char * jarg2, unsigned long jarg3) {
+SWIGEXPORT unsigned long SWIGSTDCALL RakString_Find__SWIG_0(void * jarg1, char * jarg2, unsigned long jarg3) {
   unsigned long jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -5471,7 +5471,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_Find__SWIG_0(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_Find__SWIG_1(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned long SWIGSTDCALL RakString_Find__SWIG_1(void * jarg1, char * jarg2) {
   unsigned long jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -5485,7 +5485,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_Find__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_Equals__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_Equals__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -5503,7 +5503,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_Equals__SWIG_0(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_Equals__SWIG_1(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_Equals__SWIG_1(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -5517,7 +5517,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_Equals__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpLess(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_OpLess(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -5535,7 +5535,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpLess(void * jarg1, void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpLessEquals(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_OpLessEquals(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -5553,7 +5553,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpLessEquals(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpGreater(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_OpGreater(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -5571,7 +5571,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpGreater(void * jarg1, voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpGreaterEquals(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_OpGreaterEquals(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -5589,7 +5589,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpGreaterEquals(void * jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpNotEqual__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_OpNotEqual__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -5607,7 +5607,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpNotEqual__SWIG_0(void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpNotEqual__SWIG_1(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_OpNotEqual__SWIG_1(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -5621,7 +5621,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_OpNotEqual__SWIG_1(void * j
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_ToLower(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL RakString_ToLower(void * jarg1) {
   char * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *result = 0 ;
@@ -5633,7 +5633,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_ToLower(void * jarg1) {
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_ToUpper(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL RakString_ToUpper(void * jarg1) {
   char * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *result = 0 ;
@@ -5645,7 +5645,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_ToUpper(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_Set(void * jarg1, char * jarg2) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *arg2 = (char *) 0 ;
   void *arg3 = 0 ;
@@ -5656,7 +5656,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Set(void * jarg1, char * jarg2) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_Assign(void * jarg1, char * jarg2, unsigned long jarg3, unsigned long jarg4) {
+SWIGEXPORT void * SWIGSTDCALL RakString_Assign(void * jarg1, char * jarg2, unsigned long jarg3, unsigned long jarg4) {
   void * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -5674,7 +5674,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_Assign(void * jarg1, char * jarg2
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_IsEmpty(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_IsEmpty(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   bool result;
@@ -5686,7 +5686,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_IsEmpty(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_GetLength(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL RakString_GetLength(void * jarg1) {
   unsigned long jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   size_t result;
@@ -5698,7 +5698,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_GetLength(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_GetLengthUTF8(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL RakString_GetLengthUTF8(void * jarg1) {
   unsigned long jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   size_t result;
@@ -5710,7 +5710,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_GetLengthUTF8(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Replace(void * jarg1, unsigned int jarg2, unsigned int jarg3, unsigned char jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakString_Replace(void * jarg1, unsigned int jarg2, unsigned int jarg3, unsigned char jarg4) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   unsigned int arg2 ;
   unsigned int arg3 ;
@@ -5724,7 +5724,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Replace(void * jarg1, unsigned int 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SetChar__SWIG_0(void * jarg1, unsigned int jarg2, unsigned char jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakString_SetChar__SWIG_0(void * jarg1, unsigned int jarg2, unsigned char jarg3) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   unsigned int arg2 ;
   unsigned char arg3 ;
@@ -5736,7 +5736,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SetChar__SWIG_0(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SetChar__SWIG_1(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakString_SetChar__SWIG_1(void * jarg1, unsigned int jarg2, void * jarg3) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   unsigned int arg2 ;
   RakNet::RakString arg3 ;
@@ -5754,7 +5754,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SetChar__SWIG_1(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Truncate(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_Truncate(void * jarg1, unsigned int jarg2) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   unsigned int arg2 ;
   
@@ -5764,7 +5764,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Truncate(void * jarg1, unsigned int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_TruncateUTF8(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_TruncateUTF8(void * jarg1, unsigned int jarg2) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   unsigned int arg2 ;
   
@@ -5774,7 +5774,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_TruncateUTF8(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_SubStr(void * jarg1, unsigned int jarg2, unsigned int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL RakString_SubStr(void * jarg1, unsigned int jarg2, unsigned int jarg3) {
   void * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   unsigned int arg2 ;
@@ -5790,7 +5790,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_SubStr(void * jarg1, unsigned int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Erase(void * jarg1, unsigned int jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakString_Erase(void * jarg1, unsigned int jarg2, unsigned int jarg3) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   unsigned int arg2 ;
   unsigned int arg3 ;
@@ -5802,7 +5802,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Erase(void * jarg1, unsigned int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_TerminateAtFirstCharacter(void * jarg1, char jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_TerminateAtFirstCharacter(void * jarg1, char jarg2) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char arg2 ;
   
@@ -5812,7 +5812,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_TerminateAtFirstCharacter(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_TerminateAtLastCharacter(void * jarg1, char jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_TerminateAtLastCharacter(void * jarg1, char jarg2) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char arg2 ;
   
@@ -5822,7 +5822,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_TerminateAtLastCharacter(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_StartAfterFirstCharacter(void * jarg1, char jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_StartAfterFirstCharacter(void * jarg1, char jarg2) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char arg2 ;
   
@@ -5832,7 +5832,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_StartAfterFirstCharacter(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_StartAfterLastCharacter(void * jarg1, char jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_StartAfterLastCharacter(void * jarg1, char jarg2) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char arg2 ;
   
@@ -5842,7 +5842,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_StartAfterLastCharacter(void * jarg
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakString_GetCharacterCount(void * jarg1, char jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakString_GetCharacterCount(void * jarg1, char jarg2) {
   int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char arg2 ;
@@ -5856,7 +5856,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakString_GetCharacterCount(void * jarg1, char
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_RemoveCharacter(void * jarg1, char jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_RemoveCharacter(void * jarg1, char jarg2) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char arg2 ;
   
@@ -5866,7 +5866,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_RemoveCharacter(void * jarg1, char 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_NonVariadic(char * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakString_NonVariadic(char * jarg1) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   RakNet::RakString result;
@@ -5878,7 +5878,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_NonVariadic(char * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_ToInteger__SWIG_0(char * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL RakString_ToInteger__SWIG_0(char * jarg1) {
   unsigned long jresult ;
   char *arg1 = (char *) 0 ;
   unsigned long result;
@@ -5890,7 +5890,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_ToInteger__SWIG_0(char * j
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_ToInteger__SWIG_1(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL RakString_ToInteger__SWIG_1(void * jarg1) {
   unsigned long jresult ;
   RakNet::RakString *arg1 = 0 ;
   unsigned long result;
@@ -5906,7 +5906,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_ToInteger__SWIG_1(void * j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakString_ReadIntFromSubstring(char * jarg1, unsigned long jarg2, unsigned long jarg3) {
+SWIGEXPORT int SWIGSTDCALL RakString_ReadIntFromSubstring(char * jarg1, unsigned long jarg2, unsigned long jarg3) {
   int jresult ;
   char *arg1 = (char *) 0 ;
   size_t arg2 ;
@@ -5922,7 +5922,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakString_ReadIntFromSubstring(char * jarg1, u
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakString_StrCmp(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakString_StrCmp(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -5940,7 +5940,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakString_StrCmp(void * jarg1, void * jarg2) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakString_StrNCmp(void * jarg1, void * jarg2, unsigned long jarg3) {
+SWIGEXPORT int SWIGSTDCALL RakString_StrNCmp(void * jarg1, void * jarg2, unsigned long jarg3) {
   int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -5960,7 +5960,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakString_StrNCmp(void * jarg1, void * jarg2, 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakString_StrICmp(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakString_StrICmp(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -5978,7 +5978,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakString_StrICmp(void * jarg1, void * jarg2) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakString_Clear(void * jarg1) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   
   arg1 = (RakNet::RakString *)jarg1; 
@@ -5986,7 +5986,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Printf(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakString_Printf(void * jarg1) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   
   arg1 = (RakNet::RakString *)jarg1; 
@@ -5994,7 +5994,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Printf(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_IPAddressMatch(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_IPAddressMatch(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -6008,7 +6008,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_IPAddressMatch(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_ContainsNonprintableExceptSpaces(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_ContainsNonprintableExceptSpaces(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   bool result;
@@ -6020,7 +6020,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_ContainsNonprintableExceptS
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_IsEmailAddress(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_IsEmailAddress(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   bool result;
@@ -6032,7 +6032,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_IsEmailAddress(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_URLEncode(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakString_URLEncode(void * jarg1) {
   void * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *result = 0 ;
@@ -6044,7 +6044,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_URLEncode(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_URLDecode(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakString_URLDecode(void * jarg1) {
   void * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *result = 0 ;
@@ -6056,7 +6056,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_URLDecode(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SplitURI(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakString_SplitURI(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   RakNet::RakString *arg3 = 0 ;
@@ -6082,7 +6082,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SplitURI(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_SQLEscape(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakString_SQLEscape(void * jarg1) {
   void * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *result = 0 ;
@@ -6094,7 +6094,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_SQLEscape(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForPOST__SWIG_0(char * jarg1, char * jarg2, char * jarg3, char * jarg4) {
+SWIGEXPORT void * SWIGSTDCALL RakString_FormatForPOST__SWIG_0(char * jarg1, char * jarg2, char * jarg3, char * jarg4) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -6112,7 +6112,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForPOST__SWIG_0(char * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForPOST__SWIG_1(char * jarg1, char * jarg2, char * jarg3) {
+SWIGEXPORT void * SWIGSTDCALL RakString_FormatForPOST__SWIG_1(char * jarg1, char * jarg2, char * jarg3) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -6128,7 +6128,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForPOST__SWIG_1(char * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForPUT__SWIG_0(char * jarg1, char * jarg2, char * jarg3, char * jarg4) {
+SWIGEXPORT void * SWIGSTDCALL RakString_FormatForPUT__SWIG_0(char * jarg1, char * jarg2, char * jarg3, char * jarg4) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -6146,7 +6146,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForPUT__SWIG_0(char * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForPUT__SWIG_1(char * jarg1, char * jarg2, char * jarg3) {
+SWIGEXPORT void * SWIGSTDCALL RakString_FormatForPUT__SWIG_1(char * jarg1, char * jarg2, char * jarg3) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -6162,7 +6162,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForPUT__SWIG_1(char * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForGET__SWIG_0(char * jarg1, char * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakString_FormatForGET__SWIG_0(char * jarg1, char * jarg2) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -6176,7 +6176,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForGET__SWIG_0(char * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForGET__SWIG_1(char * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakString_FormatForGET__SWIG_1(char * jarg1) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   RakNet::RakString result;
@@ -6188,7 +6188,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForGET__SWIG_1(char * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForDELETE__SWIG_0(char * jarg1, char * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakString_FormatForDELETE__SWIG_0(char * jarg1, char * jarg2) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -6202,7 +6202,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForDELETE__SWIG_0(char * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForDELETE__SWIG_1(char * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakString_FormatForDELETE__SWIG_1(char * jarg1) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   RakNet::RakString result;
@@ -6214,7 +6214,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_FormatForDELETE__SWIG_1(char * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_MakeFilePath(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakString_MakeFilePath(void * jarg1) {
   void * jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::RakString *result = 0 ;
@@ -6226,17 +6226,17 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakString_MakeFilePath(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_FreeMemory() {
+SWIGEXPORT void SWIGSTDCALL RakString_FreeMemory() {
   RakNet::RakString::FreeMemory();
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_FreeMemoryNoMutex() {
+SWIGEXPORT void SWIGSTDCALL RakString_FreeMemoryNoMutex() {
   RakNet::RakString::FreeMemoryNoMutex();
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Serialize__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_Serialize__SWIG_0(void * jarg1, void * jarg2) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -6246,7 +6246,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Serialize__SWIG_0(void * jarg1, voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Serialize__SWIG_1(char * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_Serialize__SWIG_1(char * jarg1, void * jarg2) {
   char *arg1 = (char *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -6256,7 +6256,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_Serialize__SWIG_1(char * jarg1, voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_0(void * jarg1, void * jarg2, unsigned char jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakString_SerializeCompressed__SWIG_0(void * jarg1, void * jarg2, unsigned char jarg3, unsigned int jarg4) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   uint8_t arg3 ;
@@ -6270,7 +6270,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_0(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_1(void * jarg1, void * jarg2, unsigned char jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakString_SerializeCompressed__SWIG_1(void * jarg1, void * jarg2, unsigned char jarg3) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   uint8_t arg3 ;
@@ -6282,7 +6282,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_1(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_2(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_SerializeCompressed__SWIG_2(void * jarg1, void * jarg2) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -6292,7 +6292,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_2(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_3(char * jarg1, void * jarg2, unsigned char jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakString_SerializeCompressed__SWIG_3(char * jarg1, void * jarg2, unsigned char jarg3, unsigned int jarg4) {
   char *arg1 = (char *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   uint8_t arg3 ;
@@ -6306,7 +6306,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_3(char * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_4(char * jarg1, void * jarg2, unsigned char jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakString_SerializeCompressed__SWIG_4(char * jarg1, void * jarg2, unsigned char jarg3) {
   char *arg1 = (char *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   uint8_t arg3 ;
@@ -6318,7 +6318,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_4(char * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_5(char * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakString_SerializeCompressed__SWIG_5(char * jarg1, void * jarg2) {
   char *arg1 = (char *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -6328,7 +6328,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_SerializeCompressed__SWIG_5(char * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_Deserialize__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_Deserialize__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -6342,7 +6342,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_Deserialize__SWIG_0(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_Deserialize__SWIG_1(char * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_Deserialize__SWIG_1(char * jarg1, void * jarg2) {
   unsigned int jresult ;
   char *arg1 = (char *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -6356,7 +6356,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_Deserialize__SWIG_1(char * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_DeserializeCompressed__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_DeserializeCompressed__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -6372,7 +6372,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_DeserializeCompressed__SWIG
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_DeserializeCompressed__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_DeserializeCompressed__SWIG_1(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -6386,7 +6386,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_DeserializeCompressed__SWIG
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_DeserializeCompressed__SWIG_2(char * jarg1, void * jarg2, unsigned int jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_DeserializeCompressed__SWIG_2(char * jarg1, void * jarg2, unsigned int jarg3) {
   unsigned int jresult ;
   char *arg1 = (char *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -6402,7 +6402,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_DeserializeCompressed__SWIG
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_DeserializeCompressed__SWIG_3(char * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakString_DeserializeCompressed__SWIG_3(char * jarg1, void * jarg2) {
   unsigned int jresult ;
   char *arg1 = (char *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -6416,7 +6416,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakString_DeserializeCompressed__SWIG
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_ToString__SWIG_0(long long jarg1) {
+SWIGEXPORT char * SWIGSTDCALL RakString_ToString__SWIG_0(long long jarg1) {
   char * jresult ;
   int64_t arg1 ;
   char *result = 0 ;
@@ -6428,7 +6428,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_ToString__SWIG_0(long long jarg1)
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_ToString__SWIG_1(unsigned long long jarg1) {
+SWIGEXPORT char * SWIGSTDCALL RakString_ToString__SWIG_1(unsigned long long jarg1) {
   char * jresult ;
   uint64_t arg1 ;
   char *result = 0 ;
@@ -6440,7 +6440,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakString_ToString__SWIG_1(unsigned long lo
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_GetSizeToAllocate(unsigned long jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL RakString_GetSizeToAllocate(unsigned long jarg1) {
   unsigned long jresult ;
   size_t arg1 ;
   size_t result;
@@ -6452,7 +6452,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakString_GetSizeToAllocate(unsigned
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakString_RakStringComp(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakString_RakStringComp(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakString *arg1 = 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -6474,17 +6474,17 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakString_RakStringComp(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_LockMutex() {
+SWIGEXPORT void SWIGSTDCALL RakString_LockMutex() {
   RakNet::RakString::LockMutex();
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_UnlockMutex() {
+SWIGEXPORT void SWIGSTDCALL RakString_UnlockMutex() {
   RakNet::RakString::UnlockMutex();
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakString_AppendBytes(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakString_AppendBytes(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
   RakNet::RakString *arg1 = (RakNet::RakString *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   unsigned int arg3 ;
@@ -6498,7 +6498,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakString_AppendBytes(void * jarg1, unsigned 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_OpPlus(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL OpPlus(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakString *arg1 = 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -6520,7 +6520,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OpPlus(void * jarg1, void * jarg2) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakWString__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakWString__SWIG_0() {
   void * jresult ;
   RakNet::RakWString *result = 0 ;
   
@@ -6530,7 +6530,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakWString__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakWString__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakWString__SWIG_1(void * jarg1) {
   void * jresult ;
   RakNet::RakString *arg1 = 0 ;
   RakNet::RakWString *result = 0 ;
@@ -6546,7 +6546,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakWString__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakWString__SWIG_2(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakWString__SWIG_2(void * jarg1) {
   void * jresult ;
   wchar_t *arg1 = (wchar_t *) 0 ;
   RakNet::RakWString *result = 0 ;
@@ -6558,7 +6558,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakWString__SWIG_2(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakWString__SWIG_3(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakWString__SWIG_3(void * jarg1) {
   void * jresult ;
   RakNet::RakWString *arg1 = 0 ;
   RakNet::RakWString *result = 0 ;
@@ -6574,7 +6574,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakWString__SWIG_3(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakWString__SWIG_4(char * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakWString__SWIG_4(char * jarg1) {
   void * jresult ;
   char *arg1 = (char *) 0 ;
   RakNet::RakWString *result = 0 ;
@@ -6586,7 +6586,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakWString__SWIG_4(char * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakWString(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakWString(void * jarg1) {
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   
   arg1 = (RakNet::RakWString *)jarg1; 
@@ -6594,7 +6594,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakWString(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakWString_C_String(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakWString_C_String(void * jarg1) {
   void * jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   wchar_t *result = 0 ;
@@ -6606,7 +6606,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakWString_C_String(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakWString_CopyData__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakWString_CopyData__SWIG_0(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::RakWString *arg2 = 0 ;
@@ -6624,7 +6624,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakWString_CopyData__SWIG_0(void * jarg1, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakWString_CopyData__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakWString_CopyData__SWIG_1(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -6642,7 +6642,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakWString_CopyData__SWIG_1(void * jarg1, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakWString_CopyData__SWIG_2(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakWString_CopyData__SWIG_2(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   wchar_t *arg2 = (wchar_t *) (wchar_t *)0 ;
@@ -6656,7 +6656,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakWString_CopyData__SWIG_2(void * jarg1, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakWString_CopyData__SWIG_4(void * jarg1, char * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakWString_CopyData__SWIG_4(void * jarg1, char * jarg2) {
   void * jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   char *arg2 = (char *) (char *)0 ;
@@ -6670,7 +6670,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakWString_CopyData__SWIG_4(void * jarg1, c
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_Equals(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakWString_Equals(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::RakWString *arg2 = 0 ;
@@ -6688,7 +6688,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_Equals(void * jarg1, void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_OpLess(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakWString_OpLess(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::RakWString *arg2 = 0 ;
@@ -6706,7 +6706,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_OpLess(void * jarg1, void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_OpLessEquals(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakWString_OpLessEquals(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::RakWString *arg2 = 0 ;
@@ -6724,7 +6724,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_OpLessEquals(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_OpGreater(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakWString_OpGreater(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::RakWString *arg2 = 0 ;
@@ -6742,7 +6742,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_OpGreater(void * jarg1, vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_OpGreaterEquals(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakWString_OpGreaterEquals(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::RakWString *arg2 = 0 ;
@@ -6760,7 +6760,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_OpGreaterEquals(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_OpNotEqual(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakWString_OpNotEqual(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::RakWString *arg2 = 0 ;
@@ -6778,7 +6778,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_OpNotEqual(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_Set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakWString_Set(void * jarg1, void * jarg2) {
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   wchar_t *arg2 = (wchar_t *) 0 ;
   
@@ -6788,7 +6788,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_Set(void * jarg1, void * jarg2) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_IsEmpty(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakWString_IsEmpty(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   bool result;
@@ -6800,7 +6800,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_IsEmpty(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakWString_GetLength(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL RakWString_GetLength(void * jarg1) {
   unsigned long jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   size_t result;
@@ -6812,7 +6812,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakWString_GetLength(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakWString_ToInteger(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL RakWString_ToInteger(void * jarg1) {
   unsigned long jresult ;
   RakNet::RakWString *arg1 = 0 ;
   unsigned long result;
@@ -6828,7 +6828,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_RakWString_ToInteger(void * jarg1) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakWString_StrCmp(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakWString_StrCmp(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::RakWString *arg2 = 0 ;
@@ -6846,7 +6846,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakWString_StrCmp(void * jarg1, void * jarg2) 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakWString_StrICmp(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakWString_StrICmp(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::RakWString *arg2 = 0 ;
@@ -6864,7 +6864,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakWString_StrICmp(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakWString_Clear(void * jarg1) {
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   
   arg1 = (RakNet::RakWString *)jarg1; 
@@ -6872,7 +6872,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_Printf(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakWString_Printf(void * jarg1) {
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   
   arg1 = (RakNet::RakWString *)jarg1; 
@@ -6880,7 +6880,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_Printf(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_FPrintf(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakWString_FPrintf(void * jarg1, void * jarg2) {
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   FILE *arg2 = (FILE *) 0 ;
   
@@ -6890,7 +6890,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_FPrintf(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_Serialize__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakWString_Serialize__SWIG_0(void * jarg1, void * jarg2) {
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -6900,7 +6900,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_Serialize__SWIG_0(void * jarg1, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_Serialize__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakWString_Serialize__SWIG_1(void * jarg1, void * jarg2) {
   wchar_t *arg1 = (wchar_t *) (wchar_t *)0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -6910,7 +6910,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakWString_Serialize__SWIG_1(void * jarg1, vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_Deserialize__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakWString_Deserialize__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakWString *arg1 = (RakNet::RakWString *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -6924,7 +6924,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_Deserialize__SWIG_0(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_Deserialize__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakWString_Deserialize__SWIG_1(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   wchar_t *arg1 = (wchar_t *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -6938,7 +6938,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakWString_Deserialize__SWIG_1(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_BitStream_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL BitStream_GetInstance() {
   void * jresult ;
   RakNet::BitStream *result = 0 ;
   
@@ -6948,7 +6948,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BitStream_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_DestroyInstance(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -6956,7 +6956,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_DestroyInstance(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_BitStream__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_BitStream__SWIG_0() {
   void * jresult ;
   RakNet::BitStream *result = 0 ;
   
@@ -6966,7 +6966,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_BitStream__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_BitStream__SWIG_1(unsigned int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_BitStream__SWIG_1(unsigned int jarg1) {
   void * jresult ;
   unsigned int arg1 ;
   RakNet::BitStream *result = 0 ;
@@ -6978,7 +6978,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_BitStream__SWIG_1(unsigned int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_BitStream__SWIG_2(unsigned char* jarg1, unsigned int jarg2, unsigned int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL new_BitStream__SWIG_2(unsigned char* jarg1, unsigned int jarg2, unsigned int jarg3) {
   void * jresult ;
   unsigned char *arg1 = (unsigned char *) 0 ;
   unsigned int arg2 ;
@@ -6996,7 +6996,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_BitStream__SWIG_2(unsigned char* jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_BitStream(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_BitStream(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7004,7 +7004,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_BitStream(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Reset(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Reset(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7012,7 +7012,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Reset(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeFloat16(void * jarg1, unsigned int jarg2, float * jarg3, float jarg4, float jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeFloat16(void * jarg1, unsigned int jarg2, float * jarg3, float jarg4, float jarg5) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -7032,7 +7032,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeFloat16(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeBits__SWIG_0(void * jarg1, unsigned int jarg2, unsigned char* jarg3, unsigned int jarg4, unsigned int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeBits__SWIG_0(void * jarg1, unsigned int jarg2, unsigned char* jarg3, unsigned int jarg4, unsigned int jarg5) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -7054,7 +7054,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeBits__SWIG_0(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeBits__SWIG_1(void * jarg1, unsigned int jarg2, unsigned char* jarg3, unsigned int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeBits__SWIG_1(void * jarg1, unsigned int jarg2, unsigned char* jarg3, unsigned int jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -7074,7 +7074,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeBits__SWIG_1(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_1(void * jarg1, void * jarg2, unsigned int jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_1(void * jarg1, void * jarg2, unsigned int jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -7090,7 +7090,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_1(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_2(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_2(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -7104,7 +7104,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_2(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_1(void * jarg1, void * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_1(void * jarg1, void * jarg2, unsigned int jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t arg3 ;
@@ -7116,7 +7116,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_1(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_2(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_2(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -7126,7 +7126,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_2(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteFloat16(void * jarg1, float jarg2, float jarg3, float jarg4) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteFloat16(void * jarg1, float jarg2, float jarg3, float jarg4) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float arg2 ;
   float arg3 ;
@@ -7140,7 +7140,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteFloat16(void * jarg1, float ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadFloat16(void * jarg1, float * jarg2, float jarg3, float jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadFloat16(void * jarg1, float * jarg2, float jarg3, float jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
@@ -7158,7 +7158,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadFloat16(void * jarg1, f
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_ResetReadPointer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_ResetReadPointer(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7166,7 +7166,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_ResetReadPointer(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_ResetWritePointer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_ResetWritePointer(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7174,7 +7174,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_ResetWritePointer(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_AssertStreamEmpty(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_AssertStreamEmpty(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7182,7 +7182,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_AssertStreamEmpty(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_PrintBits(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_PrintBits(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7190,7 +7190,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_PrintBits(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_PrintHex(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_PrintHex(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7198,7 +7198,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_PrintHex(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_IgnoreBits(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_IgnoreBits(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t arg2 ;
   
@@ -7208,7 +7208,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_IgnoreBits(void * jarg1, unsigned i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_IgnoreBytes(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_IgnoreBytes(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned int arg2 ;
   
@@ -7218,7 +7218,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_IgnoreBytes(void * jarg1, unsigned 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_SetWriteOffset(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_SetWriteOffset(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t arg2 ;
   
@@ -7228,7 +7228,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_SetWriteOffset(void * jarg1, unsign
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetNumberOfBitsUsed(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_GetNumberOfBitsUsed(void * jarg1) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t result;
@@ -7240,7 +7240,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetNumberOfBitsUsed(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetWriteOffset(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_GetWriteOffset(void * jarg1) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t result;
@@ -7252,7 +7252,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetWriteOffset(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetNumberOfBytesUsed(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_GetNumberOfBytesUsed(void * jarg1) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t result;
@@ -7264,7 +7264,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetNumberOfBytesUsed(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetReadOffset(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_GetReadOffset(void * jarg1) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t result;
@@ -7276,7 +7276,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetReadOffset(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_SetReadOffset(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_SetReadOffset(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t arg2 ;
   
@@ -7286,7 +7286,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_SetReadOffset(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetNumberOfUnreadBits(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_GetNumberOfUnreadBits(void * jarg1) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t result;
@@ -7298,7 +7298,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetNumberOfUnreadBits(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_SetData(void * jarg1, unsigned char* jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_SetData(void * jarg1, unsigned char* jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   
@@ -7310,7 +7310,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_SetData(void * jarg1, unsigned char
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteBits__SWIG_0(void * jarg1, unsigned char* jarg2, unsigned int jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteBits__SWIG_0(void * jarg1, unsigned char* jarg2, unsigned int jarg3, unsigned int jarg4) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   RakNet::BitSize_t arg3 ;
@@ -7326,7 +7326,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteBits__SWIG_0(void * jarg1, uns
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteBits__SWIG_1(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteBits__SWIG_1(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   RakNet::BitSize_t arg3 ;
@@ -7340,7 +7340,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteBits__SWIG_1(void * jarg1, uns
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteAlignedBytes(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteAlignedBytes(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   unsigned int arg3 ;
@@ -7354,7 +7354,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteAlignedBytes(void * jarg1, uns
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_EndianSwapBytes(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_EndianSwapBytes(void * jarg1, int jarg2, int jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -7366,7 +7366,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_EndianSwapBytes(void * jarg1, int j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedBytes(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadAlignedBytes(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -7384,7 +7384,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedBytes(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_AlignWriteToByteBoundary(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_AlignWriteToByteBoundary(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7392,7 +7392,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_AlignWriteToByteBoundary(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_AlignReadToByteBoundary(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_AlignReadToByteBoundary(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7400,7 +7400,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_AlignReadToByteBoundary(void * jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadBits__SWIG_0(void * jarg1, unsigned char* jarg2, unsigned int jarg3, unsigned int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadBits__SWIG_0(void * jarg1, unsigned char* jarg2, unsigned int jarg3, unsigned int jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -7420,7 +7420,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadBits__SWIG_0(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadBits__SWIG_1(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadBits__SWIG_1(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -7438,7 +7438,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadBits__SWIG_1(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write0(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write0(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7446,7 +7446,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write0(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write1(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7454,7 +7454,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write1(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadBit(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadBit(void * jarg1) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool result;
@@ -7466,7 +7466,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadBit(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_AssertCopyData(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL BitStream_AssertCopyData(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -7474,7 +7474,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_AssertCopyData(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_SetNumberOfBitsAllocated(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_SetNumberOfBitsAllocated(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t arg2 ;
   
@@ -7484,7 +7484,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_SetNumberOfBitsAllocated(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_AddBitsAndReallocate(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_AddBitsAndReallocate(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t arg2 ;
   
@@ -7494,7 +7494,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_AddBitsAndReallocate(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetNumberOfBitsAllocated(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_GetNumberOfBitsAllocated(void * jarg1) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::BitSize_t result;
@@ -7506,7 +7506,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_GetNumberOfBitsAllocated(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_PadWithZeroToByteLength(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_PadWithZeroToByteLength(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned int arg2 ;
   
@@ -7516,7 +7516,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_PadWithZeroToByteLength(void * jarg
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_0(unsigned char jarg1) {
+SWIGEXPORT int SWIGSTDCALL BitStream_NumberOfLeadingZeroes__SWIG_0(unsigned char jarg1) {
   int jresult ;
   uint8_t arg1 ;
   int result;
@@ -7528,7 +7528,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_0(unsign
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_1(unsigned short jarg1) {
+SWIGEXPORT int SWIGSTDCALL BitStream_NumberOfLeadingZeroes__SWIG_1(unsigned short jarg1) {
   int jresult ;
   uint16_t arg1 ;
   int result;
@@ -7540,7 +7540,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_1(unsign
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_2(unsigned int jarg1) {
+SWIGEXPORT int SWIGSTDCALL BitStream_NumberOfLeadingZeroes__SWIG_2(unsigned int jarg1) {
   int jresult ;
   uint32_t arg1 ;
   int result;
@@ -7552,7 +7552,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_2(unsign
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_3(unsigned long long jarg1) {
+SWIGEXPORT int SWIGSTDCALL BitStream_NumberOfLeadingZeroes__SWIG_3(unsigned long long jarg1) {
   int jresult ;
   uint64_t arg1 ;
   int result;
@@ -7564,7 +7564,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_3(unsign
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_4(signed char jarg1) {
+SWIGEXPORT int SWIGSTDCALL BitStream_NumberOfLeadingZeroes__SWIG_4(signed char jarg1) {
   int jresult ;
   int8_t arg1 ;
   int result;
@@ -7576,7 +7576,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_4(signed
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_5(short jarg1) {
+SWIGEXPORT int SWIGSTDCALL BitStream_NumberOfLeadingZeroes__SWIG_5(short jarg1) {
   int jresult ;
   int16_t arg1 ;
   int result;
@@ -7588,7 +7588,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_5(short 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_6(int jarg1) {
+SWIGEXPORT int SWIGSTDCALL BitStream_NumberOfLeadingZeroes__SWIG_6(int jarg1) {
   int jresult ;
   int32_t arg1 ;
   int result;
@@ -7600,7 +7600,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_6(int ja
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_7(long long jarg1) {
+SWIGEXPORT int SWIGSTDCALL BitStream_NumberOfLeadingZeroes__SWIG_7(long long jarg1) {
   int jresult ;
   int64_t arg1 ;
   int result;
@@ -7612,7 +7612,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_BitStream_NumberOfLeadingZeroes__SWIG_7(long l
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_3(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_3(void * jarg1, char * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = (char *) (char *)0 ;
   
@@ -7622,7 +7622,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_3(void * jarg1, char * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_4(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_4(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   wchar_t *arg2 = (wchar_t *) (wchar_t *)0 ;
   
@@ -7632,7 +7632,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_4(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_1(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_1(void * jarg1, char * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = (char *) (char *)0 ;
   
@@ -7642,7 +7642,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_2(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_2(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   wchar_t *arg2 = (wchar_t *) (wchar_t *)0 ;
   
@@ -7652,7 +7652,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_2(void * jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_DoEndianSwap() {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_DoEndianSwap() {
   unsigned int jresult ;
   bool result;
   
@@ -7662,7 +7662,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_DoEndianSwap() {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_IsBigEndian() {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_IsBigEndian() {
   unsigned int jresult ;
   bool result;
   
@@ -7672,7 +7672,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_IsBigEndian() {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_IsNetworkOrder() {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_IsNetworkOrder() {
   unsigned int jresult ;
   bool result;
   
@@ -7682,7 +7682,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_IsNetworkOrder() {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_IsNetworkOrderInternal() {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_IsNetworkOrderInternal() {
   unsigned int jresult ;
   bool result;
   
@@ -7692,7 +7692,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_IsNetworkOrderInternal() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_ReverseBytes(unsigned char* jarg1, unsigned char* jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_ReverseBytes(unsigned char* jarg1, unsigned char* jarg2, unsigned int jarg3) {
   unsigned char *arg1 = (unsigned char *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   unsigned int arg3 ;
@@ -7708,7 +7708,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_ReverseBytes(unsigned char* jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_ReverseBytesInPlace(unsigned char* jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_ReverseBytesInPlace(unsigned char* jarg1, unsigned int jarg2) {
   unsigned char *arg1 = (unsigned char *) 0 ;
   unsigned int arg2 ;
   
@@ -7720,7 +7720,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_ReverseBytesInPlace(unsigned char* 
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpStringReader(void * jarg1, char * jarg2) {
+SWIGEXPORT char * SWIGSTDCALL BitStream_CSharpStringReader(void * jarg1, char * jarg2) {
   char * jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -7734,7 +7734,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpStringReader(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_CSharpByteReader(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_CSharpByteReader(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -7752,7 +7752,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_CSharpByteReader(void * jar
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpStringReaderCompressedDelta(void * jarg1, char * jarg2) {
+SWIGEXPORT char * SWIGSTDCALL BitStream_CSharpStringReaderCompressedDelta(void * jarg1, char * jarg2) {
   char * jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -7766,7 +7766,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpStringReaderCompressedDelta
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpStringReaderDelta(void * jarg1, char * jarg2) {
+SWIGEXPORT char * SWIGSTDCALL BitStream_CSharpStringReaderDelta(void * jarg1, char * jarg2) {
   char * jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -7780,7 +7780,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpStringReaderDelta(void * ja
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpStringReaderCompressed(void * jarg1, char * jarg2) {
+SWIGEXPORT char * SWIGSTDCALL BitStream_CSharpStringReaderCompressed(void * jarg1, char * jarg2) {
   char * jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -7794,7 +7794,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpStringReaderCompressed(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_6(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_6(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   unsigned int arg3 ;
@@ -7808,7 +7808,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_6(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_CSharpCopyDataHelper(void * jarg1, unsigned char* jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_CSharpCopyDataHelper(void * jarg1, unsigned char* jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -7824,7 +7824,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_CSharpCopyDataHelper(void *
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpPrintBitsHelper(void * jarg1, char * jarg2) {
+SWIGEXPORT char * SWIGSTDCALL BitStream_CSharpPrintBitsHelper(void * jarg1, char * jarg2) {
   char * jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -7838,7 +7838,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpPrintBitsHelper(void * jarg
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpPrintHexHelper(void * jarg1, char * jarg2) {
+SWIGEXPORT char * SWIGSTDCALL BitStream_CSharpPrintHexHelper(void * jarg1, char * jarg2) {
   char * jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -7852,7 +7852,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_BitStream_CSharpPrintHexHelper(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_1(void * jarg1, unsigned int jarg2, unsigned char* jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Serialize__SWIG_1(void * jarg1, unsigned int jarg2, unsigned char* jarg3, unsigned int jarg4) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
   unsigned char *arg3 = (unsigned char *) 0 ;
@@ -7868,7 +7868,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_1(void * jarg1, uns
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedBytesSafe__SWIG_0(void * jarg1, unsigned char* jarg2, int jarg3, int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadAlignedBytesSafe__SWIG_0(void * jarg1, unsigned char* jarg2, int jarg3, int jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -7888,7 +7888,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedBytesSafe__SWIG_
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedBytesSafe__SWIG_1(void * jarg1, unsigned char* jarg2, unsigned int jarg3, unsigned int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadAlignedBytesSafe__SWIG_1(void * jarg1, unsigned char* jarg2, unsigned int jarg3, unsigned int jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -7908,7 +7908,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedBytesSafe__SWIG_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteAlignedVar8(void * jarg1, unsigned char* jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteAlignedVar8(void * jarg1, unsigned char* jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   
@@ -7920,7 +7920,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteAlignedVar8(void * jarg1, unsi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedVar8(void * jarg1, unsigned char* jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadAlignedVar8(void * jarg1, unsigned char* jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -7936,7 +7936,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedVar8(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteAlignedVar16(void * jarg1, unsigned char* jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteAlignedVar16(void * jarg1, unsigned char* jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   
@@ -7948,7 +7948,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteAlignedVar16(void * jarg1, uns
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedVar16(void * jarg1, unsigned char* jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadAlignedVar16(void * jarg1, unsigned char* jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -7964,7 +7964,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedVar16(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteAlignedVar32(void * jarg1, unsigned char* jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteAlignedVar32(void * jarg1, unsigned char* jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   
@@ -7976,7 +7976,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteAlignedVar32(void * jarg1, uns
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedVar32(void * jarg1, unsigned char* jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadAlignedVar32(void * jarg1, unsigned char* jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -7992,7 +7992,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadAlignedVar32(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteAlignedBytesSafe(void * jarg1, unsigned char* jarg2, unsigned int jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteAlignedBytesSafe(void * jarg1, unsigned char* jarg2, unsigned int jarg3, unsigned int jarg4) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   unsigned int arg3 ;
@@ -8008,7 +8008,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteAlignedBytesSafe(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_2(void * jarg1, unsigned int jarg2, unsigned int * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Serialize__SWIG_2(void * jarg1, unsigned int jarg2, unsigned int * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8024,7 +8024,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_2(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_3(void * jarg1, unsigned int jarg2, unsigned char * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Serialize__SWIG_3(void * jarg1, unsigned int jarg2, unsigned char * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8040,7 +8040,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_3(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_4(void * jarg1, unsigned int jarg2, short * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Serialize__SWIG_4(void * jarg1, unsigned int jarg2, short * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8056,7 +8056,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_4(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_5(void * jarg1, unsigned int jarg2, unsigned short * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Serialize__SWIG_5(void * jarg1, unsigned int jarg2, unsigned short * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8072,7 +8072,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_5(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_6(void * jarg1, unsigned int jarg2, long * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Serialize__SWIG_6(void * jarg1, unsigned int jarg2, long * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8088,7 +8088,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_6(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_7(void * jarg1, unsigned int jarg2, long long * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Serialize__SWIG_7(void * jarg1, unsigned int jarg2, long long * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8104,7 +8104,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_7(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_8(void * jarg1, unsigned int jarg2, float * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Serialize__SWIG_8(void * jarg1, unsigned int jarg2, float * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8120,7 +8120,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_8(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_9(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Serialize__SWIG_9(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8140,7 +8140,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_9(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_10(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Serialize__SWIG_10(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8160,7 +8160,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_10(void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_11(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Serialize__SWIG_11(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8180,7 +8180,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Serialize__SWIG_11(void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_2(void * jarg1, unsigned int jarg2, unsigned int * jarg3, unsigned int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_2(void * jarg1, unsigned int jarg2, unsigned int * jarg3, unsigned int jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8200,7 +8200,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_2(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_3(void * jarg1, unsigned int jarg2, unsigned int * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_3(void * jarg1, unsigned int jarg2, unsigned int * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8216,7 +8216,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_3(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_4(void * jarg1, unsigned int jarg2, unsigned char * jarg3, unsigned char jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_4(void * jarg1, unsigned int jarg2, unsigned char * jarg3, unsigned char jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8236,7 +8236,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_4(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_5(void * jarg1, unsigned int jarg2, unsigned char * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_5(void * jarg1, unsigned int jarg2, unsigned char * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8252,7 +8252,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_5(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_6(void * jarg1, unsigned int jarg2, short * jarg3, short jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_6(void * jarg1, unsigned int jarg2, short * jarg3, short jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8272,7 +8272,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_6(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_7(void * jarg1, unsigned int jarg2, short * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_7(void * jarg1, unsigned int jarg2, short * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8288,7 +8288,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_7(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_8(void * jarg1, unsigned int jarg2, unsigned short * jarg3, unsigned short jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_8(void * jarg1, unsigned int jarg2, unsigned short * jarg3, unsigned short jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8308,7 +8308,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_8(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_9(void * jarg1, unsigned int jarg2, unsigned short * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_9(void * jarg1, unsigned int jarg2, unsigned short * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8324,7 +8324,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_9(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_10(void * jarg1, unsigned int jarg2, long * jarg3, long jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_10(void * jarg1, unsigned int jarg2, long * jarg3, long jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8344,7 +8344,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_10(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_11(void * jarg1, unsigned int jarg2, long * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_11(void * jarg1, unsigned int jarg2, long * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8360,7 +8360,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_11(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_12(void * jarg1, unsigned int jarg2, long long * jarg3, long long jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_12(void * jarg1, unsigned int jarg2, long long * jarg3, long long jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8380,7 +8380,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_12(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_13(void * jarg1, unsigned int jarg2, long long * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_13(void * jarg1, unsigned int jarg2, long long * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8396,7 +8396,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_13(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_14(void * jarg1, unsigned int jarg2, float * jarg3, float jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_14(void * jarg1, unsigned int jarg2, float * jarg3, float jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8416,7 +8416,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_14(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_15(void * jarg1, unsigned int jarg2, float * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_15(void * jarg1, unsigned int jarg2, float * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8432,7 +8432,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_15(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_16(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_16(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8458,7 +8458,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_16(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_17(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_17(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8478,7 +8478,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_17(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_18(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_18(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8504,7 +8504,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_18(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_19(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_19(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8524,7 +8524,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_19(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_20(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_20(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8550,7 +8550,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_20(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_21(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeDelta__SWIG_21(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8570,7 +8570,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeDelta__SWIG_21(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_1(void * jarg1, unsigned int jarg2, unsigned int * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressed__SWIG_1(void * jarg1, unsigned int jarg2, unsigned int * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8586,7 +8586,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_2(void * jarg1, unsigned int jarg2, unsigned char * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressed__SWIG_2(void * jarg1, unsigned int jarg2, unsigned char * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8602,7 +8602,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_2
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_3(void * jarg1, unsigned int jarg2, short * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressed__SWIG_3(void * jarg1, unsigned int jarg2, short * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8618,7 +8618,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_3
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_4(void * jarg1, unsigned int jarg2, unsigned short * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressed__SWIG_4(void * jarg1, unsigned int jarg2, unsigned short * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8634,7 +8634,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_4
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_5(void * jarg1, unsigned int jarg2, long * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressed__SWIG_5(void * jarg1, unsigned int jarg2, long * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8650,7 +8650,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_5
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_6(void * jarg1, unsigned int jarg2, long long * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressed__SWIG_6(void * jarg1, unsigned int jarg2, long long * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8666,7 +8666,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_6
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_7(void * jarg1, unsigned int jarg2, float * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressed__SWIG_7(void * jarg1, unsigned int jarg2, float * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8682,7 +8682,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_7
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_8(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressed__SWIG_8(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8702,7 +8702,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_8
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_9(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressed__SWIG_9(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8722,7 +8722,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_9
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_10(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressed__SWIG_10(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8742,7 +8742,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressed__SWIG_1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_2(void * jarg1, unsigned int jarg2, unsigned int * jarg3, unsigned int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_2(void * jarg1, unsigned int jarg2, unsigned int * jarg3, unsigned int jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8762,7 +8762,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_3(void * jarg1, unsigned int jarg2, unsigned int * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_3(void * jarg1, unsigned int jarg2, unsigned int * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8778,7 +8778,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_4(void * jarg1, unsigned int jarg2, unsigned char * jarg3, unsigned char jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_4(void * jarg1, unsigned int jarg2, unsigned char * jarg3, unsigned char jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8798,7 +8798,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_5(void * jarg1, unsigned int jarg2, unsigned char * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_5(void * jarg1, unsigned int jarg2, unsigned char * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8814,7 +8814,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_6(void * jarg1, unsigned int jarg2, short * jarg3, short jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_6(void * jarg1, unsigned int jarg2, short * jarg3, short jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8834,7 +8834,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_7(void * jarg1, unsigned int jarg2, short * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_7(void * jarg1, unsigned int jarg2, short * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8850,7 +8850,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_8(void * jarg1, unsigned int jarg2, unsigned short * jarg3, unsigned short jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_8(void * jarg1, unsigned int jarg2, unsigned short * jarg3, unsigned short jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8870,7 +8870,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_9(void * jarg1, unsigned int jarg2, unsigned short * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_9(void * jarg1, unsigned int jarg2, unsigned short * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8886,7 +8886,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_10(void * jarg1, unsigned int jarg2, long * jarg3, long jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_10(void * jarg1, unsigned int jarg2, long * jarg3, long jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8906,7 +8906,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_11(void * jarg1, unsigned int jarg2, long * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_11(void * jarg1, unsigned int jarg2, long * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8922,7 +8922,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_12(void * jarg1, unsigned int jarg2, long long * jarg3, long long jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_12(void * jarg1, unsigned int jarg2, long long * jarg3, long long jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8942,7 +8942,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_13(void * jarg1, unsigned int jarg2, long long * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_13(void * jarg1, unsigned int jarg2, long long * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8958,7 +8958,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_14(void * jarg1, unsigned int jarg2, float * jarg3, float jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_14(void * jarg1, unsigned int jarg2, float * jarg3, float jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8978,7 +8978,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_15(void * jarg1, unsigned int jarg2, float * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_15(void * jarg1, unsigned int jarg2, float * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -8994,7 +8994,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_16(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_16(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -9020,7 +9020,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_17(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_17(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -9040,7 +9040,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_18(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_18(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -9066,7 +9066,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_19(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_19(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -9086,7 +9086,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_20(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_20(void * jarg1, unsigned int jarg2, void * jarg3, void * jarg4) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -9112,7 +9112,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__SWIG_21(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_SerializeCompressedDelta__SWIG_21(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool arg2 ;
@@ -9132,7 +9132,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_SerializeCompressedDelta__S
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_8(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_8(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool *arg2 = 0 ;
   bool temp2 ;
@@ -9144,7 +9144,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_8(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_9(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_9(void * jarg1, unsigned char jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = 0 ;
   unsigned char temp2 ;
@@ -9156,7 +9156,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_9(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_10(void * jarg1, char jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_10(void * jarg1, char jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = 0 ;
   char temp2 ;
@@ -9168,7 +9168,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_10(void * jarg1, char j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_11(void * jarg1, short jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_11(void * jarg1, short jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   short *arg2 = 0 ;
   short temp2 ;
@@ -9180,7 +9180,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_11(void * jarg1, short 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_12(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_12(void * jarg1, unsigned short jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned short *arg2 = 0 ;
   unsigned short temp2 ;
@@ -9192,7 +9192,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_12(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_13(void * jarg1, long jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_13(void * jarg1, long jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long *arg2 = 0 ;
   long temp2 ;
@@ -9204,7 +9204,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_13(void * jarg1, long j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_14(void * jarg1, long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_14(void * jarg1, long long jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long long *arg2 = 0 ;
   long long temp2 ;
@@ -9216,7 +9216,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_14(void * jarg1, long l
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_15(void * jarg1, float jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_15(void * jarg1, float jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
   float temp2 ;
@@ -9228,7 +9228,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_15(void * jarg1, float 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_16(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_16(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   
@@ -9242,7 +9242,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_16(void * jarg1, void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_17(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_17(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   
@@ -9256,7 +9256,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_17(void * jarg1, void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_18(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_Write__SWIG_18(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
   
@@ -9270,7 +9270,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_Write__SWIG_18(void * jarg1, void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_2(void * jarg1, char * jarg2, char * jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_2(void * jarg1, char * jarg2, char * jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char **arg2 = 0 ;
   char **arg3 = 0 ;
@@ -9290,7 +9290,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_2(void * jarg1, ch
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_3(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_3(void * jarg1, char * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char **arg2 = 0 ;
   char *temp2 = 0 ;
@@ -9304,7 +9304,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_3(void * jarg1, ch
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_4(void * jarg1, unsigned int jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_4(void * jarg1, unsigned int jarg2, unsigned int jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool *arg2 = 0 ;
   bool *arg3 = 0 ;
@@ -9320,7 +9320,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_4(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_5(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_5(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool *arg2 = 0 ;
   bool temp2 ;
@@ -9332,7 +9332,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_5(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_6(void * jarg1, unsigned char jarg2, unsigned char jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_6(void * jarg1, unsigned char jarg2, unsigned char jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = 0 ;
   unsigned char *arg3 = 0 ;
@@ -9348,7 +9348,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_6(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_7(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_7(void * jarg1, unsigned char jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = 0 ;
   unsigned char temp2 ;
@@ -9360,7 +9360,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_7(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_8(void * jarg1, char jarg2, char jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_8(void * jarg1, char jarg2, char jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = 0 ;
   char *arg3 = 0 ;
@@ -9376,7 +9376,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_8(void * jarg1, ch
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_9(void * jarg1, char jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_9(void * jarg1, char jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = 0 ;
   char temp2 ;
@@ -9388,7 +9388,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_9(void * jarg1, ch
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_10(void * jarg1, short jarg2, short jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_10(void * jarg1, short jarg2, short jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   short *arg2 = 0 ;
   short *arg3 = 0 ;
@@ -9404,7 +9404,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_10(void * jarg1, s
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_11(void * jarg1, short jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_11(void * jarg1, short jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   short *arg2 = 0 ;
   short temp2 ;
@@ -9416,7 +9416,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_11(void * jarg1, s
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_12(void * jarg1, unsigned short jarg2, unsigned short jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_12(void * jarg1, unsigned short jarg2, unsigned short jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned short *arg2 = 0 ;
   unsigned short *arg3 = 0 ;
@@ -9432,7 +9432,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_12(void * jarg1, u
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_13(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_13(void * jarg1, unsigned short jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned short *arg2 = 0 ;
   unsigned short temp2 ;
@@ -9444,7 +9444,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_13(void * jarg1, u
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_14(void * jarg1, long jarg2, long jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_14(void * jarg1, long jarg2, long jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long *arg2 = 0 ;
   long *arg3 = 0 ;
@@ -9460,7 +9460,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_14(void * jarg1, l
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_15(void * jarg1, long jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_15(void * jarg1, long jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long *arg2 = 0 ;
   long temp2 ;
@@ -9472,7 +9472,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_15(void * jarg1, l
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_16(void * jarg1, long long jarg2, long long jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_16(void * jarg1, long long jarg2, long long jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long long *arg2 = 0 ;
   long long *arg3 = 0 ;
@@ -9488,7 +9488,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_16(void * jarg1, l
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_17(void * jarg1, long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_17(void * jarg1, long long jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long long *arg2 = 0 ;
   long long temp2 ;
@@ -9500,7 +9500,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_17(void * jarg1, l
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_18(void * jarg1, float jarg2, float jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_18(void * jarg1, float jarg2, float jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
   float *arg3 = 0 ;
@@ -9516,7 +9516,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_18(void * jarg1, f
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_19(void * jarg1, float jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_19(void * jarg1, float jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
   float temp2 ;
@@ -9528,7 +9528,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_19(void * jarg1, f
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_20(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_20(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   RakNet::RakString *arg3 = 0 ;
@@ -9548,7 +9548,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_20(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_21(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_21(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   
@@ -9562,7 +9562,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_21(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_22(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_22(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   RakNet::RakNetGUID *arg3 = 0 ;
@@ -9582,7 +9582,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_22(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_23(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_23(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   
@@ -9596,7 +9596,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_23(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_24(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_24(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
   RakNet::uint24_t *arg3 = 0 ;
@@ -9616,7 +9616,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_24(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_25(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteDelta__SWIG_25(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
   
@@ -9630,7 +9630,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteDelta__SWIG_25(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_5(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_5(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool *arg2 = 0 ;
   bool temp2 ;
@@ -9642,7 +9642,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_5(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_6(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_6(void * jarg1, unsigned char jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = 0 ;
   unsigned char temp2 ;
@@ -9654,7 +9654,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_6(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_7(void * jarg1, char jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_7(void * jarg1, char jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = 0 ;
   char temp2 ;
@@ -9666,7 +9666,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_7(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_8(void * jarg1, short jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_8(void * jarg1, short jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   short *arg2 = 0 ;
   short temp2 ;
@@ -9678,7 +9678,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_8(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_9(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_9(void * jarg1, unsigned short jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned short *arg2 = 0 ;
   unsigned short temp2 ;
@@ -9690,7 +9690,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_9(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_10(void * jarg1, long jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_10(void * jarg1, long jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long *arg2 = 0 ;
   long temp2 ;
@@ -9702,7 +9702,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_10(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_11(void * jarg1, long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_11(void * jarg1, long long jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long long *arg2 = 0 ;
   long long temp2 ;
@@ -9714,7 +9714,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_11(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_12(void * jarg1, float jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_12(void * jarg1, float jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
   float temp2 ;
@@ -9726,7 +9726,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_12(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_13(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_13(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   
@@ -9740,7 +9740,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_13(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_14(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_14(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   
@@ -9754,7 +9754,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_14(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_15(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressed__SWIG_15(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
   
@@ -9768,7 +9768,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressed__SWIG_15(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_2(void * jarg1, char * jarg2, char * jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_2(void * jarg1, char * jarg2, char * jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char **arg2 = 0 ;
   char **arg3 = 0 ;
@@ -9788,7 +9788,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_2(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_3(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_3(void * jarg1, char * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char **arg2 = 0 ;
   char *temp2 = 0 ;
@@ -9802,7 +9802,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_3(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_4(void * jarg1, unsigned int jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_4(void * jarg1, unsigned int jarg2, unsigned int jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool *arg2 = 0 ;
   bool *arg3 = 0 ;
@@ -9818,7 +9818,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_4(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_5(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_5(void * jarg1, unsigned int jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool *arg2 = 0 ;
   bool temp2 ;
@@ -9830,7 +9830,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_5(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_6(void * jarg1, unsigned char jarg2, unsigned char jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_6(void * jarg1, unsigned char jarg2, unsigned char jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = 0 ;
   unsigned char *arg3 = 0 ;
@@ -9846,7 +9846,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_6(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_7(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_7(void * jarg1, unsigned char jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = 0 ;
   unsigned char temp2 ;
@@ -9858,7 +9858,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_7(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_8(void * jarg1, char jarg2, char jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_8(void * jarg1, char jarg2, char jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = 0 ;
   char *arg3 = 0 ;
@@ -9874,7 +9874,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_8(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_9(void * jarg1, char jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_9(void * jarg1, char jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   char *arg2 = 0 ;
   char temp2 ;
@@ -9886,7 +9886,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_9(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_10(void * jarg1, short jarg2, short jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_10(void * jarg1, short jarg2, short jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   short *arg2 = 0 ;
   short *arg3 = 0 ;
@@ -9902,7 +9902,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_10(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_11(void * jarg1, short jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_11(void * jarg1, short jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   short *arg2 = 0 ;
   short temp2 ;
@@ -9914,7 +9914,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_11(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_12(void * jarg1, unsigned short jarg2, unsigned short jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_12(void * jarg1, unsigned short jarg2, unsigned short jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned short *arg2 = 0 ;
   unsigned short *arg3 = 0 ;
@@ -9930,7 +9930,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_12(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_13(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_13(void * jarg1, unsigned short jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned short *arg2 = 0 ;
   unsigned short temp2 ;
@@ -9942,7 +9942,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_13(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_14(void * jarg1, long jarg2, long jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_14(void * jarg1, long jarg2, long jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long *arg2 = 0 ;
   long *arg3 = 0 ;
@@ -9958,7 +9958,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_14(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_15(void * jarg1, long jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_15(void * jarg1, long jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long *arg2 = 0 ;
   long temp2 ;
@@ -9970,7 +9970,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_15(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_16(void * jarg1, long long jarg2, long long jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_16(void * jarg1, long long jarg2, long long jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long long *arg2 = 0 ;
   long long *arg3 = 0 ;
@@ -9986,7 +9986,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_16(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_17(void * jarg1, long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_17(void * jarg1, long long jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long long *arg2 = 0 ;
   long long temp2 ;
@@ -9998,7 +9998,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_17(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_18(void * jarg1, float jarg2, float jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_18(void * jarg1, float jarg2, float jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
   float *arg3 = 0 ;
@@ -10014,7 +10014,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_18(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_19(void * jarg1, float jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_19(void * jarg1, float jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
   float temp2 ;
@@ -10026,7 +10026,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_19(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_20(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_20(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   RakNet::RakString *arg3 = 0 ;
@@ -10046,7 +10046,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_20(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_21(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_21(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   
@@ -10060,7 +10060,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_21(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_22(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_22(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   RakNet::RakNetGUID *arg3 = 0 ;
@@ -10080,7 +10080,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_22(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_23(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_23(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   
@@ -10094,7 +10094,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_23(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_24(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_24(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
   RakNet::uint24_t *arg3 = 0 ;
@@ -10114,7 +10114,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_24(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_25(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL BitStream_WriteCompressedDelta__SWIG_25(void * jarg1, void * jarg2) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
   
@@ -10128,7 +10128,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BitStream_WriteCompressedDelta__SWIG_25(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_3(void * jarg1, unsigned int * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_3(void * jarg1, unsigned int * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool *arg2 = 0 ;
@@ -10143,7 +10143,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_3(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_4(void * jarg1, unsigned char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_4(void * jarg1, unsigned char * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = 0 ;
@@ -10157,7 +10157,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_4(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_5(void * jarg1, short * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_5(void * jarg1, short * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   short *arg2 = 0 ;
@@ -10171,7 +10171,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_5(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_6(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_6(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned short *arg2 = 0 ;
@@ -10189,7 +10189,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_6(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_7(void * jarg1, long * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_7(void * jarg1, long * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long *arg2 = 0 ;
@@ -10203,7 +10203,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_7(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_8(void * jarg1, long long * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_8(void * jarg1, long long * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long long *arg2 = 0 ;
@@ -10217,7 +10217,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_8(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_9(void * jarg1, float * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_9(void * jarg1, float * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
@@ -10231,7 +10231,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_9(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_10(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_10(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -10249,7 +10249,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_10(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_11(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_11(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -10267,7 +10267,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_11(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_12(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_Read__SWIG_12(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -10285,7 +10285,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_Read__SWIG_12(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_1(void * jarg1, unsigned int * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadDelta__SWIG_1(void * jarg1, unsigned int * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool *arg2 = 0 ;
@@ -10300,7 +10300,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_2(void * jarg1, unsigned char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadDelta__SWIG_2(void * jarg1, unsigned char * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = 0 ;
@@ -10314,7 +10314,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_2(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_3(void * jarg1, short * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadDelta__SWIG_3(void * jarg1, short * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   short *arg2 = 0 ;
@@ -10328,7 +10328,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_3(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_4(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadDelta__SWIG_4(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned short *arg2 = 0 ;
@@ -10346,7 +10346,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_4(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_5(void * jarg1, long * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadDelta__SWIG_5(void * jarg1, long * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long *arg2 = 0 ;
@@ -10360,7 +10360,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_5(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_6(void * jarg1, long long * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadDelta__SWIG_6(void * jarg1, long long * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long long *arg2 = 0 ;
@@ -10374,7 +10374,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_6(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_7(void * jarg1, float * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadDelta__SWIG_7(void * jarg1, float * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
@@ -10388,7 +10388,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_7(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_8(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadDelta__SWIG_8(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -10406,7 +10406,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_8(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_9(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadDelta__SWIG_9(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -10424,7 +10424,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_9(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_10(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadDelta__SWIG_10(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -10442,7 +10442,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadDelta__SWIG_10(void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_1(void * jarg1, unsigned int * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressed__SWIG_1(void * jarg1, unsigned int * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool *arg2 = 0 ;
@@ -10457,7 +10457,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_1(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_2(void * jarg1, unsigned char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressed__SWIG_2(void * jarg1, unsigned char * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = 0 ;
@@ -10471,7 +10471,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_2(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_3(void * jarg1, short * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressed__SWIG_3(void * jarg1, short * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   short *arg2 = 0 ;
@@ -10485,7 +10485,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_3(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_4(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressed__SWIG_4(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned short *arg2 = 0 ;
@@ -10503,7 +10503,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_4(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_5(void * jarg1, long * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressed__SWIG_5(void * jarg1, long * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long *arg2 = 0 ;
@@ -10517,7 +10517,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_5(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_6(void * jarg1, long long * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressed__SWIG_6(void * jarg1, long long * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long long *arg2 = 0 ;
@@ -10531,7 +10531,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_6(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_7(void * jarg1, float * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressed__SWIG_7(void * jarg1, float * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
@@ -10545,7 +10545,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_7(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_8(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressed__SWIG_8(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -10563,7 +10563,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_8(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_9(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressed__SWIG_9(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -10581,7 +10581,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_9(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_10(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressed__SWIG_10(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -10599,7 +10599,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressed__SWIG_10(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_1(void * jarg1, unsigned int * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressedDelta__SWIG_1(void * jarg1, unsigned int * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   bool *arg2 = 0 ;
@@ -10614,7 +10614,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_2(void * jarg1, unsigned char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressedDelta__SWIG_2(void * jarg1, unsigned char * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned char *arg2 = 0 ;
@@ -10628,7 +10628,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_2
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_3(void * jarg1, short * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressedDelta__SWIG_3(void * jarg1, short * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   short *arg2 = 0 ;
@@ -10642,7 +10642,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_3
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_4(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressedDelta__SWIG_4(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   unsigned short *arg2 = 0 ;
@@ -10660,7 +10660,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_4
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_5(void * jarg1, long * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressedDelta__SWIG_5(void * jarg1, long * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long *arg2 = 0 ;
@@ -10674,7 +10674,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_5
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_6(void * jarg1, long long * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressedDelta__SWIG_6(void * jarg1, long long * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   long long *arg2 = 0 ;
@@ -10688,7 +10688,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_6
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_7(void * jarg1, float * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressedDelta__SWIG_7(void * jarg1, float * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   float *arg2 = 0 ;
@@ -10702,7 +10702,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_7
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_8(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressedDelta__SWIG_8(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -10720,7 +10720,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_8
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_9(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressedDelta__SWIG_9(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -10738,7 +10738,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_9
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_10(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL BitStream_ReadCompressedDelta__SWIG_10(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   RakNet::uint24_t *arg2 = 0 ;
@@ -10756,7 +10756,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_BitStream_ReadCompressedDelta__SWIG_1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_MAX_UNSIGNED_LONG_get() {
+SWIGEXPORT unsigned int SWIGSTDCALL MAX_UNSIGNED_LONG_get() {
   unsigned int jresult ;
   unsigned int result;
   
@@ -10766,7 +10766,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_MAX_UNSIGNED_LONG_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ByteQueue() {
+SWIGEXPORT void * SWIGSTDCALL new_ByteQueue() {
   void * jresult ;
   DataStructures::ByteQueue *result = 0 ;
   
@@ -10776,7 +10776,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_ByteQueue() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ByteQueue(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_ByteQueue(void * jarg1) {
   DataStructures::ByteQueue *arg1 = (DataStructures::ByteQueue *) 0 ;
   
   arg1 = (DataStructures::ByteQueue *)jarg1; 
@@ -10784,7 +10784,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_ByteQueue(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ByteQueue_GetBytesWritten(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL ByteQueue_GetBytesWritten(void * jarg1) {
   unsigned int jresult ;
   DataStructures::ByteQueue *arg1 = (DataStructures::ByteQueue *) 0 ;
   unsigned int result;
@@ -10796,7 +10796,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ByteQueue_GetBytesWritten(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ByteQueue_IncrementReadOffset(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL ByteQueue_IncrementReadOffset(void * jarg1, unsigned int jarg2) {
   DataStructures::ByteQueue *arg1 = (DataStructures::ByteQueue *) 0 ;
   unsigned int arg2 ;
   
@@ -10806,7 +10806,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ByteQueue_IncrementReadOffset(void * jarg1, u
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ByteQueue_DecrementReadOffset(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL ByteQueue_DecrementReadOffset(void * jarg1, unsigned int jarg2) {
   DataStructures::ByteQueue *arg1 = (DataStructures::ByteQueue *) 0 ;
   unsigned int arg2 ;
   
@@ -10816,7 +10816,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ByteQueue_DecrementReadOffset(void * jarg1, u
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ByteQueue_Clear(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL ByteQueue_Clear(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::ByteQueue *arg1 = (DataStructures::ByteQueue *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -10828,7 +10828,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ByteQueue_Clear(void * jarg1, char * jarg2, u
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ByteQueue_Print(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL ByteQueue_Print(void * jarg1) {
   DataStructures::ByteQueue *arg1 = (DataStructures::ByteQueue *) 0 ;
   
   arg1 = (DataStructures::ByteQueue *)jarg1; 
@@ -10836,7 +10836,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ByteQueue_Print(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ByteQueue_WriteBytes(void * jarg1, unsigned char* jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL ByteQueue_WriteBytes(void * jarg1, unsigned char* jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::ByteQueue *arg1 = (DataStructures::ByteQueue *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   unsigned int arg3 ;
@@ -10854,7 +10854,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ByteQueue_WriteBytes(void * jarg1, unsigned c
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ByteQueue_ReadBytes(void * jarg1, unsigned char* jarg2, unsigned int jarg3, unsigned int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL ByteQueue_ReadBytes(void * jarg1, unsigned char* jarg2, unsigned int jarg3, unsigned int jarg4) {
   unsigned int jresult ;
   DataStructures::ByteQueue *arg1 = (DataStructures::ByteQueue *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -10874,7 +10874,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ByteQueue_ReadBytes(void * jarg1, uns
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_ByteQueue_PeekContiguousBytesHelper(void * jarg1, unsigned int * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL ByteQueue_PeekContiguousBytesHelper(void * jarg1, unsigned int * jarg2) {
   void * jresult ;
   DataStructures::ByteQueue *arg1 = (DataStructures::ByteQueue *) 0 ;
   unsigned int *arg2 = (unsigned int *) 0 ;
@@ -10888,7 +10888,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ByteQueue_PeekContiguousBytesHelper(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_valueOverLastSecond_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_valueOverLastSecond_set(void * jarg1, void * jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   uint64_t *arg2 ;
   
@@ -10902,7 +10902,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_valueOverLastSecond_set(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetStatistics_valueOverLastSecond_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetStatistics_valueOverLastSecond_get(void * jarg1) {
   void * jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   uint64_t *result = 0 ;
@@ -10914,7 +10914,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetStatistics_valueOverLastSecond_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_runningTotal_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_runningTotal_set(void * jarg1, void * jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   uint64_t *arg2 ;
   
@@ -10928,7 +10928,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_runningTotal_set(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetStatistics_runningTotal_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetStatistics_runningTotal_get(void * jarg1) {
   void * jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   uint64_t *result = 0 ;
@@ -10940,7 +10940,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetStatistics_runningTotal_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_connectionStartTime_set(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_connectionStartTime_set(void * jarg1, unsigned long long jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   RakNet::TimeUS arg2 ;
   
@@ -10950,7 +10950,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_connectionStartTime_set(void
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakNetStatistics_connectionStartTime_get(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL RakNetStatistics_connectionStartTime_get(void * jarg1) {
   unsigned long long jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   RakNet::TimeUS result;
@@ -10962,7 +10962,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakNetStatistics_connectionStar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_isLimitedByCongestionControl_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_isLimitedByCongestionControl_set(void * jarg1, unsigned int jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   bool arg2 ;
   
@@ -10972,7 +10972,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_isLimitedByCongestionControl
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetStatistics_isLimitedByCongestionControl_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetStatistics_isLimitedByCongestionControl_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   bool result;
@@ -10984,7 +10984,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetStatistics_isLimitedByCongestio
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_BPSLimitByCongestionControl_set(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_BPSLimitByCongestionControl_set(void * jarg1, unsigned long long jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   uint64_t arg2 ;
   
@@ -10994,7 +10994,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_BPSLimitByCongestionControl_
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakNetStatistics_BPSLimitByCongestionControl_get(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL RakNetStatistics_BPSLimitByCongestionControl_get(void * jarg1) {
   unsigned long long jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   uint64_t result;
@@ -11006,7 +11006,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakNetStatistics_BPSLimitByCong
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_isLimitedByOutgoingBandwidthLimit_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_isLimitedByOutgoingBandwidthLimit_set(void * jarg1, unsigned int jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   bool arg2 ;
   
@@ -11016,7 +11016,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_isLimitedByOutgoingBandwidth
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetStatistics_isLimitedByOutgoingBandwidthLimit_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetStatistics_isLimitedByOutgoingBandwidthLimit_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   bool result;
@@ -11028,7 +11028,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetStatistics_isLimitedByOutgoingB
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_BPSLimitByOutgoingBandwidthLimit_set(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_BPSLimitByOutgoingBandwidthLimit_set(void * jarg1, unsigned long long jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   uint64_t arg2 ;
   
@@ -11038,7 +11038,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_BPSLimitByOutgoingBandwidthL
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakNetStatistics_BPSLimitByOutgoingBandwidthLimit_get(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL RakNetStatistics_BPSLimitByOutgoingBandwidthLimit_get(void * jarg1) {
   unsigned long long jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   uint64_t result;
@@ -11050,7 +11050,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakNetStatistics_BPSLimitByOutg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_messageInSendBuffer_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_messageInSendBuffer_set(void * jarg1, void * jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   unsigned int *arg2 ;
   
@@ -11064,7 +11064,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_messageInSendBuffer_set(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetStatistics_messageInSendBuffer_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetStatistics_messageInSendBuffer_get(void * jarg1) {
   void * jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   unsigned int *result = 0 ;
@@ -11076,7 +11076,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetStatistics_messageInSendBuffer_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_bytesInSendBuffer_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_bytesInSendBuffer_set(void * jarg1, void * jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   double *arg2 ;
   
@@ -11090,7 +11090,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_bytesInSendBuffer_set(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetStatistics_bytesInSendBuffer_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetStatistics_bytesInSendBuffer_get(void * jarg1) {
   void * jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   double *result = 0 ;
@@ -11102,7 +11102,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetStatistics_bytesInSendBuffer_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_messagesInResendBuffer_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_messagesInResendBuffer_set(void * jarg1, unsigned int jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   unsigned int arg2 ;
   
@@ -11112,7 +11112,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_messagesInResendBuffer_set(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetStatistics_messagesInResendBuffer_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetStatistics_messagesInResendBuffer_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   unsigned int result;
@@ -11124,7 +11124,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetStatistics_messagesInResendBuff
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_bytesInResendBuffer_set(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_bytesInResendBuffer_set(void * jarg1, unsigned long long jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   uint64_t arg2 ;
   
@@ -11134,7 +11134,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_bytesInResendBuffer_set(void
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakNetStatistics_bytesInResendBuffer_get(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL RakNetStatistics_bytesInResendBuffer_get(void * jarg1) {
   unsigned long long jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   uint64_t result;
@@ -11146,7 +11146,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakNetStatistics_bytesInResendB
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_packetlossLastSecond_set(void * jarg1, float jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_packetlossLastSecond_set(void * jarg1, float jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   float arg2 ;
   
@@ -11156,7 +11156,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_packetlossLastSecond_set(voi
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_RakNetStatistics_packetlossLastSecond_get(void * jarg1) {
+SWIGEXPORT float SWIGSTDCALL RakNetStatistics_packetlossLastSecond_get(void * jarg1) {
   float jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   float result;
@@ -11168,7 +11168,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_RakNetStatistics_packetlossLastSecond_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_packetlossTotal_set(void * jarg1, float jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_packetlossTotal_set(void * jarg1, float jarg2) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   float arg2 ;
   
@@ -11178,7 +11178,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_packetlossTotal_set(void * j
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_RakNetStatistics_packetlossTotal_get(void * jarg1) {
+SWIGEXPORT float SWIGSTDCALL RakNetStatistics_packetlossTotal_get(void * jarg1) {
   float jresult ;
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   float result;
@@ -11190,7 +11190,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_RakNetStatistics_packetlossTotal_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_SetBytesInSendBuffer(void * jarg1, double* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_SetBytesInSendBuffer(void * jarg1, double* jarg2, int jarg3) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   double *arg2 = (double *) 0 ;
   int arg3 ;
@@ -11204,7 +11204,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_SetBytesInSendBuffer(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_SetMessageInSendBuffer(void * jarg1, unsigned int* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_SetMessageInSendBuffer(void * jarg1, unsigned int* jarg2, int jarg3) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   unsigned int *arg2 = (unsigned int *) 0 ;
   int arg3 ;
@@ -11218,7 +11218,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_SetMessageInSendBuffer(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_SetRunningTotal(void * jarg1, unsigned long long* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_SetRunningTotal(void * jarg1, unsigned long long* jarg2, int jarg3) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   unsigned long long *arg2 = (unsigned long long *) 0 ;
   int arg3 ;
@@ -11232,7 +11232,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_SetRunningTotal(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_SetValueOverLastSecond(void * jarg1, unsigned long long* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetStatistics_SetValueOverLastSecond(void * jarg1, unsigned long long* jarg2, int jarg3) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   unsigned long long *arg2 = (unsigned long long *) 0 ;
   int arg3 ;
@@ -11246,7 +11246,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetStatistics_SetValueOverLastSecond(void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetStatistics() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetStatistics() {
   void * jresult ;
   RakNet::RakNetStatistics *result = 0 ;
   
@@ -11256,7 +11256,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetStatistics() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetStatistics(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetStatistics(void * jarg1) {
   RakNet::RakNetStatistics *arg1 = (RakNet::RakNetStatistics *) 0 ;
   
   arg1 = (RakNet::RakNetStatistics *)jarg1; 
@@ -11264,7 +11264,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetStatistics(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NetworkIDObject() {
+SWIGEXPORT void * SWIGSTDCALL new_NetworkIDObject() {
   void * jresult ;
   RakNet::NetworkIDObject *result = 0 ;
   
@@ -11274,7 +11274,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NetworkIDObject() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NetworkIDObject(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NetworkIDObject(void * jarg1) {
   RakNet::NetworkIDObject *arg1 = (RakNet::NetworkIDObject *) 0 ;
   
   arg1 = (RakNet::NetworkIDObject *)jarg1; 
@@ -11282,7 +11282,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NetworkIDObject(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDObject_SetNetworkIDManagerOrig(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NetworkIDObject_SetNetworkIDManagerOrig(void * jarg1, void * jarg2) {
   RakNet::NetworkIDObject *arg1 = (RakNet::NetworkIDObject *) 0 ;
   RakNet::NetworkIDManager *arg2 = (RakNet::NetworkIDManager *) 0 ;
   
@@ -11292,7 +11292,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDObject_SetNetworkIDManagerOrig(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDObject_SetNetworkIDManagerOrigSwigExplicitNetworkIDObject(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NetworkIDObject_SetNetworkIDManagerOrigSwigExplicitNetworkIDObject(void * jarg1, void * jarg2) {
   RakNet::NetworkIDObject *arg1 = (RakNet::NetworkIDObject *) 0 ;
   RakNet::NetworkIDManager *arg2 = (RakNet::NetworkIDManager *) 0 ;
   
@@ -11302,7 +11302,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDObject_SetNetworkIDManagerOrigSwigEx
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NetworkIDObject_GetNetworkIDManager(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL NetworkIDObject_GetNetworkIDManager(void * jarg1) {
   void * jresult ;
   RakNet::NetworkIDObject *arg1 = (RakNet::NetworkIDObject *) 0 ;
   RakNet::NetworkIDManager *result = 0 ;
@@ -11314,7 +11314,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NetworkIDObject_GetNetworkIDManager(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NetworkIDObject_GetNetworkIDManagerSwigExplicitNetworkIDObject(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL NetworkIDObject_GetNetworkIDManagerSwigExplicitNetworkIDObject(void * jarg1) {
   void * jresult ;
   RakNet::NetworkIDObject *arg1 = (RakNet::NetworkIDObject *) 0 ;
   RakNet::NetworkIDManager *result = 0 ;
@@ -11326,7 +11326,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NetworkIDObject_GetNetworkIDManagerSwigExpl
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_NetworkIDObject_GetNetworkID(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL NetworkIDObject_GetNetworkID(void * jarg1) {
   unsigned long long jresult ;
   RakNet::NetworkIDObject *arg1 = (RakNet::NetworkIDObject *) 0 ;
   RakNet::NetworkID result;
@@ -11338,7 +11338,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_NetworkIDObject_GetNetworkID(vo
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_NetworkIDObject_GetNetworkIDSwigExplicitNetworkIDObject(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL NetworkIDObject_GetNetworkIDSwigExplicitNetworkIDObject(void * jarg1) {
   unsigned long long jresult ;
   RakNet::NetworkIDObject *arg1 = (RakNet::NetworkIDObject *) 0 ;
   RakNet::NetworkID result;
@@ -11350,7 +11350,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_NetworkIDObject_GetNetworkIDSwi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDObject_SetNetworkID(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL NetworkIDObject_SetNetworkID(void * jarg1, unsigned long long jarg2) {
   RakNet::NetworkIDObject *arg1 = (RakNet::NetworkIDObject *) 0 ;
   RakNet::NetworkID arg2 ;
   
@@ -11360,7 +11360,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDObject_SetNetworkID(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDObject_SetNetworkIDSwigExplicitNetworkIDObject(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL NetworkIDObject_SetNetworkIDSwigExplicitNetworkIDObject(void * jarg1, unsigned long long jarg2) {
   RakNet::NetworkIDObject *arg1 = (RakNet::NetworkIDObject *) 0 ;
   RakNet::NetworkID arg2 ;
   
@@ -11370,7 +11370,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDObject_SetNetworkIDSwigExplicitNetwo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDObject_director_connect(void *objarg, SwigDirector_NetworkIDObject::SWIG_Callback0_t callback0, SwigDirector_NetworkIDObject::SWIG_Callback1_t callback1, SwigDirector_NetworkIDObject::SWIG_Callback2_t callback2, SwigDirector_NetworkIDObject::SWIG_Callback3_t callback3) {
+SWIGEXPORT void SWIGSTDCALL NetworkIDObject_director_connect(void *objarg, SwigDirector_NetworkIDObject::SWIG_Callback0_t callback0, SwigDirector_NetworkIDObject::SWIG_Callback1_t callback1, SwigDirector_NetworkIDObject::SWIG_Callback2_t callback2, SwigDirector_NetworkIDObject::SWIG_Callback3_t callback3) {
   RakNet::NetworkIDObject *obj = (RakNet::NetworkIDObject *)objarg;
   SwigDirector_NetworkIDObject *director = dynamic_cast<SwigDirector_NetworkIDObject *>(obj);
   if (director) {
@@ -11379,7 +11379,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDObject_director_connect(void *objarg
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_NETWORK_ID_MANAGER_HASH_LENGTH_get() {
+SWIGEXPORT int SWIGSTDCALL NETWORK_ID_MANAGER_HASH_LENGTH_get() {
   int jresult ;
   int result;
   
@@ -11389,7 +11389,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_NETWORK_ID_MANAGER_HASH_LENGTH_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NetworkIDManager_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL NetworkIDManager_GetInstance() {
   void * jresult ;
   RakNet::NetworkIDManager *result = 0 ;
   
@@ -11399,7 +11399,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NetworkIDManager_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDManager_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL NetworkIDManager_DestroyInstance(void * jarg1) {
   RakNet::NetworkIDManager *arg1 = (RakNet::NetworkIDManager *) 0 ;
   
   arg1 = (RakNet::NetworkIDManager *)jarg1; 
@@ -11407,7 +11407,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDManager_DestroyInstance(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NetworkIDManager() {
+SWIGEXPORT void * SWIGSTDCALL new_NetworkIDManager() {
   void * jresult ;
   RakNet::NetworkIDManager *result = 0 ;
   
@@ -11417,7 +11417,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NetworkIDManager() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NetworkIDManager(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NetworkIDManager(void * jarg1) {
   RakNet::NetworkIDManager *arg1 = (RakNet::NetworkIDManager *) 0 ;
   
   arg1 = (RakNet::NetworkIDManager *)jarg1; 
@@ -11425,7 +11425,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NetworkIDManager(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDManager_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL NetworkIDManager_Clear(void * jarg1) {
   RakNet::NetworkIDManager *arg1 = (RakNet::NetworkIDManager *) 0 ;
   
   arg1 = (RakNet::NetworkIDManager *)jarg1; 
@@ -11433,7 +11433,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NetworkIDManager_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NetworkIDManager_GET_BASE_OBJECT_FROM_IDORIG(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void * SWIGSTDCALL NetworkIDManager_GET_BASE_OBJECT_FROM_IDORIG(void * jarg1, unsigned long long jarg2) {
   void * jresult ;
   RakNet::NetworkIDManager *arg1 = (RakNet::NetworkIDManager *) 0 ;
   RakNet::NetworkID arg2 ;
@@ -11447,7 +11447,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NetworkIDManager_GET_BASE_OBJECT_FROM_IDORI
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PluginInterface2() {
+SWIGEXPORT void * SWIGSTDCALL new_PluginInterface2() {
   void * jresult ;
   RakNet::PluginInterface2 *result = 0 ;
   
@@ -11457,7 +11457,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_PluginInterface2() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PluginInterface2(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_PluginInterface2(void * jarg1) {
   RakNet::PluginInterface2 *arg1 = (RakNet::PluginInterface2 *) 0 ;
   
   arg1 = (RakNet::PluginInterface2 *)jarg1; 
@@ -11465,7 +11465,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_PluginInterface2(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PluginInterface2_UsesReliabilityLayer(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL PluginInterface2_UsesReliabilityLayer(void * jarg1) {
   unsigned int jresult ;
   RakNet::PluginInterface2 *arg1 = (RakNet::PluginInterface2 *) 0 ;
   bool result;
@@ -11477,7 +11477,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PluginInterface2_UsesReliabilityLayer
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PluginInterface2_OnReliabilityLayerNotification(void * jarg1, char * jarg2, unsigned int jarg3, void * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL PluginInterface2_OnReliabilityLayerNotification(void * jarg1, char * jarg2, unsigned int jarg3, void * jarg4, unsigned int jarg5) {
   RakNet::PluginInterface2 *arg1 = (RakNet::PluginInterface2 *) 0 ;
   char *arg2 = (char *) 0 ;
   RakNet::BitSize_t arg3 ;
@@ -11499,7 +11499,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PluginInterface2_OnReliabilityLayerNotificati
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_PluginInterface2_GetRakPeerInterface(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL PluginInterface2_GetRakPeerInterface(void * jarg1) {
   void * jresult ;
   RakNet::PluginInterface2 *arg1 = (RakNet::PluginInterface2 *) 0 ;
   RakNet::RakPeerInterface *result = 0 ;
@@ -11511,7 +11511,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PluginInterface2_GetRakPeerInterface(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_PluginInterface2_GetMyGUIDUnified(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL PluginInterface2_GetMyGUIDUnified(void * jarg1) {
   void * jresult ;
   RakNet::PluginInterface2 *arg1 = (RakNet::PluginInterface2 *) 0 ;
   RakNet::RakNetGUID result;
@@ -11523,7 +11523,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PluginInterface2_GetMyGUIDUnified(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PluginInterface2_SetTCPInterface(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PluginInterface2_SetTCPInterface(void * jarg1, void * jarg2) {
   RakNet::PluginInterface2 *arg1 = (RakNet::PluginInterface2 *) 0 ;
   RakNet::TCPInterface *arg2 = (RakNet::TCPInterface *) 0 ;
   
@@ -11533,7 +11533,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PluginInterface2_SetTCPInterface(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetInstance() {
   void * jresult ;
   RakNet::RakPeerInterface *result = 0 ;
   
@@ -11543,7 +11543,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_DestroyInstance(void * jarg1) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   
   arg1 = (RakNet::RakPeerInterface *)jarg1; 
@@ -11551,7 +11551,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_DestroyInstance(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakPeerInterface(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakPeerInterface(void * jarg1) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   
   arg1 = (RakNet::RakPeerInterface *)jarg1; 
@@ -11559,7 +11559,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakPeerInterface(void * jarg1) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Startup__SWIG_0(void * jarg1, unsigned int jarg2, void * jarg3, unsigned int jarg4, int jarg5) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_Startup__SWIG_0(void * jarg1, unsigned int jarg2, void * jarg3, unsigned int jarg4, int jarg5) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
@@ -11579,7 +11579,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Startup__SWIG_0(void * jarg1,
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Startup__SWIG_1(void * jarg1, unsigned int jarg2, void * jarg3, unsigned int jarg4) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_Startup__SWIG_1(void * jarg1, unsigned int jarg2, void * jarg3, unsigned int jarg4) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
@@ -11597,7 +11597,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Startup__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_InitializeSecurity__SWIG_0(void * jarg1, char * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_InitializeSecurity__SWIG_0(void * jarg1, char * jarg2, char * jarg3, unsigned int jarg4) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11615,7 +11615,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_InitializeSecurity__
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_InitializeSecurity__SWIG_1(void * jarg1, char * jarg2, char * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_InitializeSecurity__SWIG_1(void * jarg1, char * jarg2, char * jarg3) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11631,7 +11631,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_InitializeSecurity__
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_DisableSecurity(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_DisableSecurity(void * jarg1) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   
   arg1 = (RakNet::RakPeerInterface *)jarg1; 
@@ -11639,7 +11639,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_DisableSecurity(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_AddToSecurityExceptionList(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_AddToSecurityExceptionList(void * jarg1, char * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -11649,7 +11649,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_AddToSecurityExceptionList(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_RemoveFromSecurityExceptionList(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_RemoveFromSecurityExceptionList(void * jarg1, char * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -11659,7 +11659,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_RemoveFromSecurityExceptionL
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IsInSecurityExceptionList(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_IsInSecurityExceptionList(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11673,7 +11673,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IsInSecurityExceptio
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetMaximumIncomingConnections(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetMaximumIncomingConnections(void * jarg1, unsigned short jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned short arg2 ;
   
@@ -11683,7 +11683,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetMaximumIncomingConnection
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetMaximumIncomingConnections(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_GetMaximumIncomingConnections(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int result;
@@ -11695,7 +11695,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetMaximumIncomingCo
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_RakPeerInterface_NumberOfConnections(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL RakPeerInterface_NumberOfConnections(void * jarg1) {
   unsigned short jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned short result;
@@ -11707,7 +11707,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_RakPeerInterface_NumberOfConnection
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetIncomingPassword__SWIG_0(void * jarg1, char * jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetIncomingPassword__SWIG_0(void * jarg1, char * jarg2, int jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -11719,7 +11719,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetIncomingPassword__SWIG_0(
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8, unsigned int jarg9, unsigned int jarg10) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_Connect__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8, unsigned int jarg9, unsigned int jarg10) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11749,7 +11749,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_0(void * jarg1,
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8, unsigned int jarg9) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_Connect__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8, unsigned int jarg9) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11777,7 +11777,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_Connect__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11803,7 +11803,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_2(void * jarg1,
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_3(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_Connect__SWIG_3(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11827,7 +11827,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_3(void * jarg1,
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_4(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_Connect__SWIG_4(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11849,7 +11849,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_4(void * jarg1,
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_5(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_Connect__SWIG_5(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11869,7 +11869,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_Connect__SWIG_5(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_Shutdown__SWIG_0(void * jarg1, unsigned int jarg2, unsigned char jarg3, int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_Shutdown__SWIG_0(void * jarg1, unsigned int jarg2, unsigned char jarg3, int jarg4) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
   unsigned char arg3 ;
@@ -11883,7 +11883,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_Shutdown__SWIG_0(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_Shutdown__SWIG_1(void * jarg1, unsigned int jarg2, unsigned char jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_Shutdown__SWIG_1(void * jarg1, unsigned int jarg2, unsigned char jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
   unsigned char arg3 ;
@@ -11895,7 +11895,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_Shutdown__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_Shutdown__SWIG_2(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_Shutdown__SWIG_2(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
   
@@ -11905,7 +11905,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_Shutdown__SWIG_2(void * jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IsActive(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_IsActive(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   bool result;
@@ -11917,7 +11917,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IsActive(void * jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetNextSendReceipt(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_GetNextSendReceipt(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   uint32_t result;
@@ -11929,7 +11929,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetNextSendReceipt(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IncrementNextSendReceipt(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_IncrementNextSendReceipt(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   uint32_t result;
@@ -11941,7 +11941,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IncrementNextSendRec
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Send__SWIG_0(void * jarg1, char * jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8, unsigned int jarg9) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_Send__SWIG_0(void * jarg1, char * jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8, unsigned int jarg9) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11975,7 +11975,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Send__SWIG_0(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Send__SWIG_1(void * jarg1, char * jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_Send__SWIG_1(void * jarg1, char * jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -12007,7 +12007,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Send__SWIG_1(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SendLoopback__SWIG_0(void * jarg1, char * jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SendLoopback__SWIG_0(void * jarg1, char * jarg2, int jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -12019,7 +12019,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SendLoopback__SWIG_0(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Send__SWIG_2(void * jarg1, void * jarg2, int jarg3, int jarg4, char jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_Send__SWIG_2(void * jarg1, void * jarg2, int jarg3, int jarg4, char jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -12051,7 +12051,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Send__SWIG_2(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Send__SWIG_3(void * jarg1, void * jarg2, int jarg3, int jarg4, char jarg5, void * jarg6, unsigned int jarg7) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_Send__SWIG_3(void * jarg1, void * jarg2, int jarg3, int jarg4, char jarg5, void * jarg6, unsigned int jarg7) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -12081,7 +12081,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Send__SWIG_3(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_Receive(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_Receive(void * jarg1) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::Packet *result = 0 ;
@@ -12093,7 +12093,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_Receive(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_DeallocatePacket(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_DeallocatePacket(void * jarg1, void * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   
@@ -12103,7 +12103,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_DeallocatePacket(void * jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetMaximumNumberOfPeers(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_GetMaximumNumberOfPeers(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int result;
@@ -12115,7 +12115,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetMaximumNumberOfPe
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_CloseConnection__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, unsigned char jarg4, int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_CloseConnection__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, unsigned char jarg4, int jarg5) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::AddressOrGUID arg2 ;
   bool arg3 ;
@@ -12137,7 +12137,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_CloseConnection__SWIG_0(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_CloseConnection__SWIG_1(void * jarg1, void * jarg2, unsigned int jarg3, unsigned char jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_CloseConnection__SWIG_1(void * jarg1, void * jarg2, unsigned int jarg3, unsigned char jarg4) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::AddressOrGUID arg2 ;
   bool arg3 ;
@@ -12157,7 +12157,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_CloseConnection__SWIG_1(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_CloseConnection__SWIG_2(void * jarg1, void * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_CloseConnection__SWIG_2(void * jarg1, void * jarg2, unsigned int jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::AddressOrGUID arg2 ;
   bool arg3 ;
@@ -12175,7 +12175,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_CloseConnection__SWIG_2(void
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetConnectionState(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_GetConnectionState(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -12195,7 +12195,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetConnectionState(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_CancelConnectionAttempt(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_CancelConnectionAttempt(void * jarg1, void * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress const *argp2 ;
@@ -12211,7 +12211,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_CancelConnectionAttempt(void
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetIndexFromSystemAddress(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_GetIndexFromSystemAddress(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -12231,7 +12231,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetIndexFromSystemAddress(voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetSystemAddressFromIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetSystemAddressFromIndex(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
@@ -12245,7 +12245,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetSystemAddressFromIndex(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetGUIDFromIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetGUIDFromIndex(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
@@ -12259,7 +12259,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetGUIDFromIndex(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_GetSystemList(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_GetSystemList(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   DataStructures::List< RakNet::SystemAddress > *arg2 = 0 ;
   DataStructures::List< RakNet::RakNetGUID > *arg3 = 0 ;
@@ -12279,7 +12279,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_GetSystemList(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_AddToBanList__SWIG_0(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_AddToBanList__SWIG_0(void * jarg1, char * jarg2, unsigned int jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   RakNet::TimeMS arg3 ;
@@ -12291,7 +12291,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_AddToBanList__SWIG_0(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_AddToBanList__SWIG_1(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_AddToBanList__SWIG_1(void * jarg1, char * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -12301,7 +12301,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_AddToBanList__SWIG_1(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_RemoveFromBanList(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_RemoveFromBanList(void * jarg1, char * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -12311,7 +12311,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_RemoveFromBanList(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_ClearBanList(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_ClearBanList(void * jarg1) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   
   arg1 = (RakNet::RakPeerInterface *)jarg1; 
@@ -12319,7 +12319,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_ClearBanList(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IsBanned(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_IsBanned(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -12333,7 +12333,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IsBanned(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetLimitIPConnectionFrequency(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetLimitIPConnectionFrequency(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   bool arg2 ;
   
@@ -12343,7 +12343,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetLimitIPConnectionFrequenc
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_Ping__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_Ping__SWIG_0(void * jarg1, void * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress const *argp2 ;
@@ -12359,7 +12359,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_Ping__SWIG_0(void * jarg1, v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Ping__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, unsigned int jarg4, unsigned int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_Ping__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, unsigned int jarg4, unsigned int jarg5) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -12379,7 +12379,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Ping__SWIG_1(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Ping__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, unsigned int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_Ping__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, unsigned int jarg4) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -12397,7 +12397,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Ping__SWIG_2(void * 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetAveragePing(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_GetAveragePing(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -12417,7 +12417,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetAveragePing(void * jarg1, 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetLastPing(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_GetLastPing(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -12437,7 +12437,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetLastPing(void * jarg1, voi
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetLowestPing(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_GetLowestPing(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -12457,7 +12457,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetLowestPing(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetOccasionalPing(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetOccasionalPing(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   bool arg2 ;
   
@@ -12467,7 +12467,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetOccasionalPing(void * jar
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakPeerInterface_GetClockDifferential(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned long long SWIGSTDCALL RakPeerInterface_GetClockDifferential(void * jarg1, void * jarg2) {
   unsigned long long jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -12487,7 +12487,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakPeerInterface_GetClockDiffer
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetOfflinePingResponse__SWIG_0(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetOfflinePingResponse__SWIG_0(void * jarg1, char * jarg2, unsigned int jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -12499,7 +12499,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetOfflinePingResponse__SWIG
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetInternalID__SWIG_0(void * jarg1, void * jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetInternalID__SWIG_0(void * jarg1, void * jarg2, int jarg3) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -12521,7 +12521,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetInternalID__SWIG_0(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetInternalID__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetInternalID__SWIG_1(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -12541,7 +12541,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetInternalID__SWIG_1(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetInternalID__SWIG_2(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetInternalID__SWIG_2(void * jarg1) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress result;
@@ -12553,7 +12553,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetInternalID__SWIG_2(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetInternalID__SWIG_0(void * jarg1, void * jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetInternalID__SWIG_0(void * jarg1, void * jarg2, int jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
   int arg3 ;
@@ -12571,7 +12571,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetInternalID__SWIG_0(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetInternalID__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetInternalID__SWIG_1(void * jarg1, void * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress *argp2 ;
@@ -12587,7 +12587,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetInternalID__SWIG_1(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetExternalID(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetExternalID(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -12607,7 +12607,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetExternalID(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetMyGUID(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetMyGUID(void * jarg1) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::RakNetGUID result;
@@ -12619,7 +12619,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetMyGUID(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetMyBoundAddress__SWIG_0(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetMyBoundAddress__SWIG_0(void * jarg1, int jarg2) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   int arg2 ;
@@ -12633,7 +12633,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetMyBoundAddress__SWIG_0(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetMyBoundAddress__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetMyBoundAddress__SWIG_1(void * jarg1) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress result;
@@ -12645,7 +12645,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetMyBoundAddress__SWIG_1(
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakPeerInterface_Get64BitUniqueRandomNumber() {
+SWIGEXPORT unsigned long long SWIGSTDCALL RakPeerInterface_Get64BitUniqueRandomNumber() {
   unsigned long long jresult ;
   uint64_t result;
   
@@ -12655,7 +12655,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakPeerInterface_Get64BitUnique
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetGuidFromSystemAddress(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetGuidFromSystemAddress(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -12675,7 +12675,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetGuidFromSystemAddress(v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetSystemAddressFromGuid(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetSystemAddressFromGuid(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::RakNetGUID arg2 ;
@@ -12695,7 +12695,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetSystemAddressFromGuid(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetClientPublicKeyFromSystemAddress(void * jarg1, void * jarg2, char * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_GetClientPublicKeyFromSystemAddress(void * jarg1, void * jarg2, char * jarg3) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -12717,7 +12717,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetClientPublicKeyFr
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetTimeoutTime(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetTimeoutTime(void * jarg1, unsigned int jarg2, void * jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::TimeMS arg2 ;
   RakNet::SystemAddress arg3 ;
@@ -12735,7 +12735,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetTimeoutTime(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetTimeoutTime(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_GetTimeoutTime(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -12755,7 +12755,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetTimeoutTime(void 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetMTUSize(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_GetMTUSize(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -12775,7 +12775,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetMTUSize(void * jarg1, void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetNumberOfAddresses(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_GetNumberOfAddresses(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int result;
@@ -12787,7 +12787,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetNumberOfAddresses
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakPeerInterface_GetLocalIP(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT char * SWIGSTDCALL RakPeerInterface_GetLocalIP(void * jarg1, unsigned int jarg2) {
   char * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
@@ -12801,7 +12801,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakPeerInterface_GetLocalIP(void * jarg1, u
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IsLocalIP(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_IsLocalIP(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -12815,7 +12815,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IsLocalIP(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_AllowConnectionResponseIPMigration(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_AllowConnectionResponseIPMigration(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   bool arg2 ;
   
@@ -12825,7 +12825,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_AllowConnectionResponseIPMig
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_AdvertiseSystem__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, unsigned int jarg6) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_AdvertiseSystem__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, unsigned int jarg6) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -12847,7 +12847,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_AdvertiseSystem__SWI
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_AdvertiseSystem__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_AdvertiseSystem__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -12867,7 +12867,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_AdvertiseSystem__SWI
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetSplitMessageProgressInterval(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetSplitMessageProgressInterval(void * jarg1, int jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   int arg2 ;
   
@@ -12877,7 +12877,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetSplitMessageProgressInter
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetSplitMessageProgressInterval(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL RakPeerInterface_GetSplitMessageProgressInterval(void * jarg1) {
   int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   int result;
@@ -12889,7 +12889,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeerInterface_GetSplitMessageProgressInterv
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetUnreliableTimeout(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetUnreliableTimeout(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::TimeMS arg2 ;
   
@@ -12899,7 +12899,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetUnreliableTimeout(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SendTTL__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, int jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SendTTL__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, int jarg4, unsigned int jarg5) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned short arg3 ;
@@ -12915,7 +12915,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SendTTL__SWIG_0(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SendTTL__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SendTTL__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, int jarg4) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned short arg3 ;
@@ -12929,7 +12929,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SendTTL__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_AttachPlugin(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_AttachPlugin(void * jarg1, void * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::PluginInterface2 *arg2 = (RakNet::PluginInterface2 *) 0 ;
   
@@ -12939,7 +12939,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_AttachPlugin(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_DetachPlugin(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_DetachPlugin(void * jarg1, void * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::PluginInterface2 *arg2 = (RakNet::PluginInterface2 *) 0 ;
   
@@ -12949,7 +12949,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_DetachPlugin(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_PushBackPacket(void * jarg1, void * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_PushBackPacket(void * jarg1, void * jarg2, unsigned int jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   bool arg3 ;
@@ -12961,7 +12961,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_PushBackPacket(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_ChangeSystemAddress(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_ChangeSystemAddress(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::RakNetGUID arg2 ;
   RakNet::SystemAddress *arg3 = 0 ;
@@ -12983,7 +12983,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_ChangeSystemAddress(void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_AllocatePacket(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_AllocatePacket(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
@@ -12997,7 +12997,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_AllocatePacket(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_GetSockets(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_GetSockets(void * jarg1, void * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   DataStructures::List< RakNetSocket2 * > *arg2 = 0 ;
   
@@ -13011,7 +13011,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_GetSockets(void * jarg1, voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_WriteOutOfBandHeader(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_WriteOutOfBandHeader(void * jarg1, void * jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -13021,7 +13021,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_WriteOutOfBandHeader(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_ApplyNetworkSimulator(void * jarg1, float jarg2, unsigned short jarg3, unsigned short jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_ApplyNetworkSimulator(void * jarg1, float jarg2, unsigned short jarg3, unsigned short jarg4) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   float arg2 ;
   unsigned short arg3 ;
@@ -13035,7 +13035,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_ApplyNetworkSimulator(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetPerConnectionOutgoingBandwidthLimit(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetPerConnectionOutgoingBandwidthLimit(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
   
@@ -13045,7 +13045,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetPerConnectionOutgoingBand
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IsNetworkSimulatorActive(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_IsNetworkSimulatorActive(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   bool result;
@@ -13057,7 +13057,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_IsNetworkSimulatorAc
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetStatistics__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetStatistics__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -13079,7 +13079,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetStatistics__SWIG_0(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetStatistics__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeerInterface_GetStatistics__SWIG_1(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -13099,7 +13099,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeerInterface_GetStatistics__SWIG_1(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetStatistics__SWIG_2(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_GetStatistics__SWIG_2(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int arg2 ;
@@ -13115,7 +13115,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetStatistics__SWIG_
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetReceiveBufferSize(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_GetReceiveBufferSize(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned int result;
@@ -13127,7 +13127,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetReceiveBufferSize
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_RunUpdateCycle(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_RunUpdateCycle(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   RakNet::BitStream *arg2 = 0 ;
@@ -13145,7 +13145,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_RunUpdateCycle(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_SendOutOfBand__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, unsigned int jarg5, unsigned int jarg6) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_SendOutOfBand__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, unsigned int jarg5, unsigned int jarg6) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13167,7 +13167,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_SendOutOfBand__SWIG_
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_SendOutOfBand__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_SendOutOfBand__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, unsigned int jarg5) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13187,7 +13187,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_SendOutOfBand__SWIG_
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Send__SWIG_4(void * jarg1, unsigned char* jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_Send__SWIG_4(void * jarg1, unsigned char* jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -13221,7 +13221,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_Send__SWIG_4(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SendLoopback__SWIG_1(void * jarg1, unsigned char* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SendLoopback__SWIG_1(void * jarg1, unsigned char* jarg2, int jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -13235,7 +13235,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SendLoopback__SWIG_1(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetOfflinePingResponse__SWIG_1(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetOfflinePingResponse__SWIG_1(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   unsigned int arg3 ;
@@ -13249,7 +13249,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetOfflinePingResponse__SWIG
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_AdvertiseSystem__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, unsigned char* jarg4, int jarg5, unsigned int jarg6) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_AdvertiseSystem__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, unsigned char* jarg4, int jarg5, unsigned int jarg6) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13273,7 +13273,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_AdvertiseSystem__SWI
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_AdvertiseSystem__SWIG_3(void * jarg1, char * jarg2, unsigned short jarg3, unsigned char* jarg4, int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_AdvertiseSystem__SWIG_3(void * jarg1, char * jarg2, unsigned short jarg3, unsigned char* jarg4, int jarg5) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13295,7 +13295,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_AdvertiseSystem__SWI
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakPeerInterface_CSharpGetIncomingPasswordHelper(void * jarg1, char * jarg2, int * jarg3) {
+SWIGEXPORT char * SWIGSTDCALL RakPeerInterface_CSharpGetIncomingPasswordHelper(void * jarg1, char * jarg2, int * jarg3) {
   char * jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13311,7 +13311,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakPeerInterface_CSharpGetIncomingPasswordH
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetIncomingPassword__SWIG_1(void * jarg1, unsigned char* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_SetIncomingPassword__SWIG_1(void * jarg1, unsigned char* jarg2, int jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -13325,7 +13325,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_SetIncomingPassword__SWIG_1(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_GetIncomingPassword(void * jarg1, unsigned char* jarg2, int * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_GetIncomingPassword(void * jarg1, unsigned char* jarg2, int * jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int *arg3 = (int *) 0 ;
@@ -13339,7 +13339,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_GetIncomingPassword(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_CSharpGetOfflinePingResponseHelper(void * jarg1, unsigned char* jarg2, unsigned int * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeerInterface_CSharpGetOfflinePingResponseHelper(void * jarg1, unsigned char* jarg2, unsigned int * jarg3) {
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   unsigned int *arg3 = (unsigned int *) 0 ;
@@ -13353,7 +13353,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeerInterface_CSharpGetOfflinePingResponse
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetConnectionList(void * jarg1, void * jarg2, unsigned short * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeerInterface_GetConnectionList(void * jarg1, void * jarg2, unsigned short * jarg3) {
   unsigned int jresult ;
   RakNet::RakPeerInterface *arg1 = (RakNet::RakPeerInterface *) 0 ;
   DataStructures::List< RakNet::SystemAddress > *arg2 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
@@ -13369,7 +13369,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeerInterface_GetConnectionList(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RemoteSystemIndex_index_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RemoteSystemIndex_index_set(void * jarg1, unsigned int jarg2) {
   RakNet::RemoteSystemIndex *arg1 = (RakNet::RemoteSystemIndex *) 0 ;
   unsigned int arg2 ;
   
@@ -13379,7 +13379,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RemoteSystemIndex_index_set(void * jarg1, uns
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RemoteSystemIndex_index_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RemoteSystemIndex_index_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::RemoteSystemIndex *arg1 = (RakNet::RemoteSystemIndex *) 0 ;
   unsigned int result;
@@ -13391,7 +13391,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RemoteSystemIndex_index_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RemoteSystemIndex_next_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RemoteSystemIndex_next_set(void * jarg1, void * jarg2) {
   RakNet::RemoteSystemIndex *arg1 = (RakNet::RemoteSystemIndex *) 0 ;
   RakNet::RemoteSystemIndex *arg2 = (RakNet::RemoteSystemIndex *) 0 ;
   
@@ -13401,7 +13401,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RemoteSystemIndex_next_set(void * jarg1, void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RemoteSystemIndex_next_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RemoteSystemIndex_next_get(void * jarg1) {
   void * jresult ;
   RakNet::RemoteSystemIndex *arg1 = (RakNet::RemoteSystemIndex *) 0 ;
   RakNet::RemoteSystemIndex *result = 0 ;
@@ -13413,7 +13413,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RemoteSystemIndex_next_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RemoteSystemIndex() {
+SWIGEXPORT void * SWIGSTDCALL new_RemoteSystemIndex() {
   void * jresult ;
   RakNet::RemoteSystemIndex *result = 0 ;
   
@@ -13423,7 +13423,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RemoteSystemIndex() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RemoteSystemIndex(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RemoteSystemIndex(void * jarg1) {
   RakNet::RemoteSystemIndex *arg1 = (RakNet::RemoteSystemIndex *) 0 ;
   
   arg1 = (RakNet::RemoteSystemIndex *)jarg1; 
@@ -13431,7 +13431,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RemoteSystemIndex(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakPeer() {
+SWIGEXPORT void * SWIGSTDCALL new_RakPeer() {
   void * jresult ;
   RakNet::RakPeer *result = 0 ;
   
@@ -13441,7 +13441,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakPeer() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakPeer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakPeer(void * jarg1) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   
   arg1 = (RakNet::RakPeer *)jarg1; 
@@ -13449,7 +13449,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakPeer(void * jarg1) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Startup__SWIG_0(void * jarg1, unsigned int jarg2, void * jarg3, unsigned int jarg4, int jarg5) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_Startup__SWIG_0(void * jarg1, unsigned int jarg2, void * jarg3, unsigned int jarg4, int jarg5) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
@@ -13469,7 +13469,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Startup__SWIG_0(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Startup__SWIG_1(void * jarg1, unsigned int jarg2, void * jarg3, unsigned int jarg4) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_Startup__SWIG_1(void * jarg1, unsigned int jarg2, void * jarg3, unsigned int jarg4) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
@@ -13487,7 +13487,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Startup__SWIG_1(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_InitializeSecurity__SWIG_0(void * jarg1, char * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_InitializeSecurity__SWIG_0(void * jarg1, char * jarg2, char * jarg3, unsigned int jarg4) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13505,7 +13505,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_InitializeSecurity__SWIG_0(vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_InitializeSecurity__SWIG_1(void * jarg1, char * jarg2, char * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_InitializeSecurity__SWIG_1(void * jarg1, char * jarg2, char * jarg3) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13521,7 +13521,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_InitializeSecurity__SWIG_1(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_DisableSecurity(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_DisableSecurity(void * jarg1) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   
   arg1 = (RakNet::RakPeer *)jarg1; 
@@ -13529,7 +13529,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_DisableSecurity(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_AddToSecurityExceptionList(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_AddToSecurityExceptionList(void * jarg1, char * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -13539,7 +13539,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_AddToSecurityExceptionList(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_RemoveFromSecurityExceptionList(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_RemoveFromSecurityExceptionList(void * jarg1, char * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -13549,7 +13549,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_RemoveFromSecurityExceptionList(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IsInSecurityExceptionList(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_IsInSecurityExceptionList(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13563,7 +13563,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IsInSecurityExceptionList(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetMaximumIncomingConnections(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetMaximumIncomingConnections(void * jarg1, unsigned short jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned short arg2 ;
   
@@ -13573,7 +13573,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetMaximumIncomingConnections(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetMaximumIncomingConnections(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_GetMaximumIncomingConnections(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int result;
@@ -13585,7 +13585,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetMaximumIncomingConnections
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_RakPeer_NumberOfConnections(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL RakPeer_NumberOfConnections(void * jarg1) {
   unsigned short jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned short result;
@@ -13597,7 +13597,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_RakPeer_NumberOfConnections(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetIncomingPassword__SWIG_0(void * jarg1, char * jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetIncomingPassword__SWIG_0(void * jarg1, char * jarg2, int jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -13609,7 +13609,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetIncomingPassword__SWIG_0(void * ja
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8, unsigned int jarg9, unsigned int jarg10) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_Connect__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8, unsigned int jarg9, unsigned int jarg10) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13639,7 +13639,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_0(void * jarg1, char * j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8, unsigned int jarg9) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_Connect__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8, unsigned int jarg9) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13667,7 +13667,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_1(void * jarg1, char * j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_Connect__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13693,7 +13693,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_2(void * jarg1, char * j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_3(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_Connect__SWIG_3(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6, unsigned int jarg7) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13717,7 +13717,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_3(void * jarg1, char * j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_4(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_Connect__SWIG_4(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, void * jarg6) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13739,7 +13739,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_4(void * jarg1, char * j
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_5(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_Connect__SWIG_5(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13759,7 +13759,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_Connect__SWIG_5(void * jarg1, char * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_Shutdown__SWIG_0(void * jarg1, unsigned int jarg2, unsigned char jarg3, int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_Shutdown__SWIG_0(void * jarg1, unsigned int jarg2, unsigned char jarg3, int jarg4) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
   unsigned char arg3 ;
@@ -13773,7 +13773,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_Shutdown__SWIG_0(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_Shutdown__SWIG_1(void * jarg1, unsigned int jarg2, unsigned char jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_Shutdown__SWIG_1(void * jarg1, unsigned int jarg2, unsigned char jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
   unsigned char arg3 ;
@@ -13785,7 +13785,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_Shutdown__SWIG_1(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_Shutdown__SWIG_2(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_Shutdown__SWIG_2(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
   
@@ -13795,7 +13795,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_Shutdown__SWIG_2(void * jarg1, unsign
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IsActive(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_IsActive(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   bool result;
@@ -13807,7 +13807,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IsActive(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetNextSendReceipt(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_GetNextSendReceipt(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   uint32_t result;
@@ -13819,7 +13819,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetNextSendReceipt(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IncrementNextSendReceipt(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_IncrementNextSendReceipt(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   uint32_t result;
@@ -13831,7 +13831,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IncrementNextSendReceipt(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Send__SWIG_0(void * jarg1, char * jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8, unsigned int jarg9) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_Send__SWIG_0(void * jarg1, char * jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8, unsigned int jarg9) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13865,7 +13865,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Send__SWIG_0(void * jarg1, ch
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Send__SWIG_1(void * jarg1, char * jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_Send__SWIG_1(void * jarg1, char * jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -13897,7 +13897,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Send__SWIG_1(void * jarg1, ch
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SendLoopback__SWIG_0(void * jarg1, char * jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SendLoopback__SWIG_0(void * jarg1, char * jarg2, int jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
@@ -13909,7 +13909,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SendLoopback__SWIG_0(void * jarg1, ch
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Send__SWIG_2(void * jarg1, void * jarg2, int jarg3, int jarg4, char jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_Send__SWIG_2(void * jarg1, void * jarg2, int jarg3, int jarg4, char jarg5, void * jarg6, unsigned int jarg7, unsigned int jarg8) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -13941,7 +13941,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Send__SWIG_2(void * jarg1, vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Send__SWIG_3(void * jarg1, void * jarg2, int jarg3, int jarg4, char jarg5, void * jarg6, unsigned int jarg7) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_Send__SWIG_3(void * jarg1, void * jarg2, int jarg3, int jarg4, char jarg5, void * jarg6, unsigned int jarg7) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -13971,7 +13971,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Send__SWIG_3(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_Receive(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_Receive(void * jarg1) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::Packet *result = 0 ;
@@ -13983,7 +13983,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_Receive(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_DeallocatePacket(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_DeallocatePacket(void * jarg1, void * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   
@@ -13993,7 +13993,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_DeallocatePacket(void * jarg1, void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetMaximumNumberOfPeers(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_GetMaximumNumberOfPeers(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int result;
@@ -14005,7 +14005,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetMaximumNumberOfPeers(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_CloseConnection__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, unsigned char jarg4, int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_CloseConnection__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, unsigned char jarg4, int jarg5) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::AddressOrGUID arg2 ;
   bool arg3 ;
@@ -14027,7 +14027,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_CloseConnection__SWIG_0(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_CloseConnection__SWIG_1(void * jarg1, void * jarg2, unsigned int jarg3, unsigned char jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_CloseConnection__SWIG_1(void * jarg1, void * jarg2, unsigned int jarg3, unsigned char jarg4) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::AddressOrGUID arg2 ;
   bool arg3 ;
@@ -14047,7 +14047,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_CloseConnection__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_CloseConnection__SWIG_2(void * jarg1, void * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_CloseConnection__SWIG_2(void * jarg1, void * jarg2, unsigned int jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::AddressOrGUID arg2 ;
   bool arg3 ;
@@ -14065,7 +14065,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_CloseConnection__SWIG_2(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_CancelConnectionAttempt(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_CancelConnectionAttempt(void * jarg1, void * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress const *argp2 ;
@@ -14081,7 +14081,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_CancelConnectionAttempt(void * jarg1,
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetConnectionState(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_GetConnectionState(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -14101,7 +14101,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetConnectionState(void * jarg1, void 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetIndexFromSystemAddress(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_GetIndexFromSystemAddress(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -14121,7 +14121,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetIndexFromSystemAddress(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetSystemAddressFromIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetSystemAddressFromIndex(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
@@ -14135,7 +14135,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetSystemAddressFromIndex(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetGUIDFromIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetGUIDFromIndex(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
@@ -14149,7 +14149,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetGUIDFromIndex(void * jarg1, unsi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_GetSystemList(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_GetSystemList(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   DataStructures::List< RakNet::SystemAddress > *arg2 = 0 ;
   DataStructures::List< RakNet::RakNetGUID > *arg3 = 0 ;
@@ -14169,7 +14169,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_GetSystemList(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_AddToBanList__SWIG_0(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_AddToBanList__SWIG_0(void * jarg1, char * jarg2, unsigned int jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
   RakNet::TimeMS arg3 ;
@@ -14181,7 +14181,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_AddToBanList__SWIG_0(void * jarg1, ch
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_AddToBanList__SWIG_1(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_AddToBanList__SWIG_1(void * jarg1, char * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -14191,7 +14191,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_AddToBanList__SWIG_1(void * jarg1, ch
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_RemoveFromBanList(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_RemoveFromBanList(void * jarg1, char * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -14201,7 +14201,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_RemoveFromBanList(void * jarg1, char 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_ClearBanList(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_ClearBanList(void * jarg1) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   
   arg1 = (RakNet::RakPeer *)jarg1; 
@@ -14209,7 +14209,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_ClearBanList(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IsBanned(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_IsBanned(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -14223,7 +14223,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IsBanned(void * jarg1, char *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetLimitIPConnectionFrequency(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetLimitIPConnectionFrequency(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   bool arg2 ;
   
@@ -14233,7 +14233,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetLimitIPConnectionFrequency(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_Ping__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_Ping__SWIG_0(void * jarg1, void * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress const *argp2 ;
@@ -14249,7 +14249,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_Ping__SWIG_0(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Ping__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, unsigned int jarg4, unsigned int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_Ping__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, unsigned int jarg4, unsigned int jarg5) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -14269,7 +14269,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Ping__SWIG_1(void * jarg1, ch
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Ping__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, unsigned int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_Ping__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, unsigned int jarg4) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -14287,7 +14287,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Ping__SWIG_2(void * jarg1, ch
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetAveragePing(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_GetAveragePing(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -14307,7 +14307,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetAveragePing(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetLastPing(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_GetLastPing(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -14327,7 +14327,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetLastPing(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetLowestPing(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_GetLowestPing(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -14347,7 +14347,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetLowestPing(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetOccasionalPing(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetOccasionalPing(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   bool arg2 ;
   
@@ -14357,7 +14357,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetOccasionalPing(void * jarg1, unsig
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakPeer_GetClockDifferential(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned long long SWIGSTDCALL RakPeer_GetClockDifferential(void * jarg1, void * jarg2) {
   unsigned long long jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -14377,7 +14377,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_RakPeer_GetClockDifferential(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetOfflinePingResponse__SWIG_0(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetOfflinePingResponse__SWIG_0(void * jarg1, char * jarg2, unsigned int jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -14389,7 +14389,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetOfflinePingResponse__SWIG_0(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetInternalID__SWIG_0(void * jarg1, void * jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetInternalID__SWIG_0(void * jarg1, void * jarg2, int jarg3) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -14411,7 +14411,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetInternalID__SWIG_0(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetInternalID__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetInternalID__SWIG_1(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -14431,7 +14431,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetInternalID__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetInternalID__SWIG_2(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetInternalID__SWIG_2(void * jarg1) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress result;
@@ -14443,7 +14443,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetInternalID__SWIG_2(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetInternalID__SWIG_0(void * jarg1, void * jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetInternalID__SWIG_0(void * jarg1, void * jarg2, int jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
   int arg3 ;
@@ -14461,7 +14461,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetInternalID__SWIG_0(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetInternalID__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetInternalID__SWIG_1(void * jarg1, void * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress *argp2 ;
@@ -14477,7 +14477,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetInternalID__SWIG_1(void * jarg1, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetExternalID(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetExternalID(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -14497,7 +14497,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetExternalID(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetMyGUID(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetMyGUID(void * jarg1) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::RakNetGUID result;
@@ -14509,7 +14509,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetMyGUID(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetMyBoundAddress__SWIG_0(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetMyBoundAddress__SWIG_0(void * jarg1, int jarg2) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   int arg2 ;
@@ -14523,7 +14523,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetMyBoundAddress__SWIG_0(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetMyBoundAddress__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetMyBoundAddress__SWIG_1(void * jarg1) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress result;
@@ -14535,7 +14535,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetMyBoundAddress__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetGuidFromSystemAddress(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetGuidFromSystemAddress(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -14555,7 +14555,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetGuidFromSystemAddress(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetSystemAddressFromGuid(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetSystemAddressFromGuid(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::RakNetGUID arg2 ;
@@ -14575,7 +14575,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetSystemAddressFromGuid(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetClientPublicKeyFromSystemAddress(void * jarg1, void * jarg2, char * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_GetClientPublicKeyFromSystemAddress(void * jarg1, void * jarg2, char * jarg3) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -14597,7 +14597,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetClientPublicKeyFromSystemA
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetTimeoutTime(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetTimeoutTime(void * jarg1, unsigned int jarg2, void * jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::TimeMS arg2 ;
   RakNet::SystemAddress arg3 ;
@@ -14615,7 +14615,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetTimeoutTime(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetTimeoutTime(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_GetTimeoutTime(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -14635,7 +14635,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetTimeoutTime(void * jarg1, 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetMTUSize(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_GetMTUSize(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -14655,7 +14655,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetMTUSize(void * jarg1, void * jarg2)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetNumberOfAddresses(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_GetNumberOfAddresses(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int result;
@@ -14667,7 +14667,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetNumberOfAddresses(void * j
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakPeer_GetLocalIP(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT char * SWIGSTDCALL RakPeer_GetLocalIP(void * jarg1, unsigned int jarg2) {
   char * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
@@ -14681,7 +14681,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakPeer_GetLocalIP(void * jarg1, unsigned i
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IsLocalIP(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_IsLocalIP(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -14695,7 +14695,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IsLocalIP(void * jarg1, char 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_AllowConnectionResponseIPMigration(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_AllowConnectionResponseIPMigration(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   bool arg2 ;
   
@@ -14705,7 +14705,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_AllowConnectionResponseIPMigration(vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_AdvertiseSystem__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, unsigned int jarg6) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_AdvertiseSystem__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5, unsigned int jarg6) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -14727,7 +14727,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_AdvertiseSystem__SWIG_0(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_AdvertiseSystem__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_AdvertiseSystem__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, int jarg5) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -14747,7 +14747,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_AdvertiseSystem__SWIG_1(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetSplitMessageProgressInterval(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetSplitMessageProgressInterval(void * jarg1, int jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   int arg2 ;
   
@@ -14757,7 +14757,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetSplitMessageProgressInterval(void 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetSplitMessageProgressInterval(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL RakPeer_GetSplitMessageProgressInterval(void * jarg1) {
   int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   int result;
@@ -14769,7 +14769,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakPeer_GetSplitMessageProgressInterval(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetUnreliableTimeout(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetUnreliableTimeout(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::TimeMS arg2 ;
   
@@ -14779,7 +14779,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetUnreliableTimeout(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SendTTL__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, int jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SendTTL__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, int jarg4, unsigned int jarg5) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned short arg3 ;
@@ -14795,7 +14795,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SendTTL__SWIG_0(void * jarg1, char * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SendTTL__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SendTTL__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, int jarg4) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned short arg3 ;
@@ -14809,7 +14809,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SendTTL__SWIG_1(void * jarg1, char * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_AttachPlugin(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_AttachPlugin(void * jarg1, void * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::PluginInterface2 *arg2 = (RakNet::PluginInterface2 *) 0 ;
   
@@ -14819,7 +14819,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_AttachPlugin(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_DetachPlugin(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_DetachPlugin(void * jarg1, void * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::PluginInterface2 *arg2 = (RakNet::PluginInterface2 *) 0 ;
   
@@ -14829,7 +14829,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_DetachPlugin(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_PushBackPacket(void * jarg1, void * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_PushBackPacket(void * jarg1, void * jarg2, unsigned int jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   bool arg3 ;
@@ -14841,7 +14841,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_PushBackPacket(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_ChangeSystemAddress(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_ChangeSystemAddress(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::RakNetGUID arg2 ;
   RakNet::SystemAddress *arg3 = 0 ;
@@ -14863,7 +14863,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_ChangeSystemAddress(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_AllocatePacket(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_AllocatePacket(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
@@ -14877,7 +14877,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_AllocatePacket(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_GetSockets(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_GetSockets(void * jarg1, void * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   DataStructures::List< RakNetSocket2 * > *arg2 = 0 ;
   
@@ -14891,7 +14891,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_GetSockets(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_WriteOutOfBandHeader(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_WriteOutOfBandHeader(void * jarg1, void * jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -14901,7 +14901,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_WriteOutOfBandHeader(void * jarg1, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_ApplyNetworkSimulator(void * jarg1, float jarg2, unsigned short jarg3, unsigned short jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_ApplyNetworkSimulator(void * jarg1, float jarg2, unsigned short jarg3, unsigned short jarg4) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   float arg2 ;
   unsigned short arg3 ;
@@ -14915,7 +14915,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_ApplyNetworkSimulator(void * jarg1, f
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetPerConnectionOutgoingBandwidthLimit(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetPerConnectionOutgoingBandwidthLimit(void * jarg1, unsigned int jarg2) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
   
@@ -14925,7 +14925,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetPerConnectionOutgoingBandwidthLimi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IsNetworkSimulatorActive(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_IsNetworkSimulatorActive(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   bool result;
@@ -14937,7 +14937,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_IsNetworkSimulatorActive(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetStatistics__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetStatistics__SWIG_0(void * jarg1, void * jarg2, void * jarg3) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -14959,7 +14959,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetStatistics__SWIG_0(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetStatistics__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakPeer_GetStatistics__SWIG_1(void * jarg1, void * jarg2) {
   void * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -14979,7 +14979,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakPeer_GetStatistics__SWIG_1(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetStatistics__SWIG_2(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_GetStatistics__SWIG_2(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int arg2 ;
@@ -14995,7 +14995,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetStatistics__SWIG_2(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetReceiveBufferSize(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_GetReceiveBufferSize(void * jarg1) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned int result;
@@ -15007,7 +15007,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetReceiveBufferSize(void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_RunUpdateCycle(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_RunUpdateCycle(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   RakNet::BitStream *arg2 = 0 ;
@@ -15025,7 +15025,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_RunUpdateCycle(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_SendOutOfBand__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, unsigned int jarg5, unsigned int jarg6) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_SendOutOfBand__SWIG_0(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, unsigned int jarg5, unsigned int jarg6) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -15047,7 +15047,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_SendOutOfBand__SWIG_0(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_SendOutOfBand__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_SendOutOfBand__SWIG_1(void * jarg1, char * jarg2, unsigned short jarg3, char * jarg4, unsigned int jarg5) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -15067,7 +15067,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_SendOutOfBand__SWIG_1(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Send__SWIG_4(void * jarg1, unsigned char* jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_Send__SWIG_4(void * jarg1, unsigned char* jarg2, int jarg3, int jarg4, int jarg5, char jarg6, void * jarg7, unsigned int jarg8) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
@@ -15101,7 +15101,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_Send__SWIG_4(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SendLoopback__SWIG_1(void * jarg1, unsigned char* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SendLoopback__SWIG_1(void * jarg1, unsigned char* jarg2, int jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -15115,7 +15115,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SendLoopback__SWIG_1(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetOfflinePingResponse__SWIG_1(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetOfflinePingResponse__SWIG_1(void * jarg1, unsigned char* jarg2, unsigned int jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   unsigned int arg3 ;
@@ -15129,7 +15129,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetOfflinePingResponse__SWIG_1(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_AdvertiseSystem__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, unsigned char* jarg4, int jarg5, unsigned int jarg6) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_AdvertiseSystem__SWIG_2(void * jarg1, char * jarg2, unsigned short jarg3, unsigned char* jarg4, int jarg5, unsigned int jarg6) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -15153,7 +15153,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_AdvertiseSystem__SWIG_2(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_AdvertiseSystem__SWIG_3(void * jarg1, char * jarg2, unsigned short jarg3, unsigned char* jarg4, int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_AdvertiseSystem__SWIG_3(void * jarg1, char * jarg2, unsigned short jarg3, unsigned char* jarg4, int jarg5) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -15175,7 +15175,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_AdvertiseSystem__SWIG_3(void 
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_RakPeer_CSharpGetIncomingPasswordHelper(void * jarg1, char * jarg2, int * jarg3) {
+SWIGEXPORT char * SWIGSTDCALL RakPeer_CSharpGetIncomingPasswordHelper(void * jarg1, char * jarg2, int * jarg3) {
   char * jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -15191,7 +15191,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_RakPeer_CSharpGetIncomingPasswordHelper(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetIncomingPassword__SWIG_1(void * jarg1, unsigned char* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_SetIncomingPassword__SWIG_1(void * jarg1, unsigned char* jarg2, int jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -15205,7 +15205,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_SetIncomingPassword__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_GetIncomingPassword(void * jarg1, unsigned char* jarg2, int * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_GetIncomingPassword(void * jarg1, unsigned char* jarg2, int * jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int *arg3 = (int *) 0 ;
@@ -15219,7 +15219,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_GetIncomingPassword(void * jarg1, uns
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_CSharpGetOfflinePingResponseHelper(void * jarg1, unsigned char* jarg2, unsigned int * jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakPeer_CSharpGetOfflinePingResponseHelper(void * jarg1, unsigned char* jarg2, unsigned int * jarg3) {
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   unsigned int *arg3 = (unsigned int *) 0 ;
@@ -15233,7 +15233,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakPeer_CSharpGetOfflinePingResponseHelper(vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetConnectionList(void * jarg1, void * jarg2, unsigned short * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakPeer_GetConnectionList(void * jarg1, void * jarg2, unsigned short * jarg3) {
   unsigned int jresult ;
   RakNet::RakPeer *arg1 = (RakNet::RakPeer *) 0 ;
   DataStructures::List< RakNet::SystemAddress > *arg2 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
@@ -15249,7 +15249,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakPeer_GetConnectionList(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_PacketLogger_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL PacketLogger_GetInstance() {
   void * jresult ;
   RakNet::PacketLogger *result = 0 ;
   
@@ -15259,7 +15259,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PacketLogger_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL PacketLogger_DestroyInstance(void * jarg1) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   
   arg1 = (RakNet::PacketLogger *)jarg1; 
@@ -15267,7 +15267,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_DestroyInstance(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PacketLogger() {
+SWIGEXPORT void * SWIGSTDCALL new_PacketLogger() {
   void * jresult ;
   RakNet::PacketLogger *result = 0 ;
   
@@ -15277,7 +15277,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_PacketLogger() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PacketLogger(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_PacketLogger(void * jarg1) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   
   arg1 = (RakNet::PacketLogger *)jarg1; 
@@ -15285,7 +15285,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_PacketLogger(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_OnReliabilityLayerNotification(void * jarg1, char * jarg2, unsigned int jarg3, void * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL PacketLogger_OnReliabilityLayerNotification(void * jarg1, char * jarg2, unsigned int jarg3, void * jarg4, unsigned int jarg5) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   char *arg2 = (char *) 0 ;
   RakNet::BitSize_t arg3 ;
@@ -15307,7 +15307,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_OnReliabilityLayerNotification(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_LogHeader(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL PacketLogger_LogHeader(void * jarg1) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   
   arg1 = (RakNet::PacketLogger *)jarg1; 
@@ -15315,7 +15315,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_LogHeader(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_WriteLog(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PacketLogger_WriteLog(void * jarg1, char * jarg2) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -15325,7 +15325,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_WriteLog(void * jarg1, char * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_WriteMiscellaneous(void * jarg1, char * jarg2, char * jarg3) {
+SWIGEXPORT void SWIGSTDCALL PacketLogger_WriteMiscellaneous(void * jarg1, char * jarg2, char * jarg3) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -15337,7 +15337,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_WriteMiscellaneous(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_SetPrintID(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PacketLogger_SetPrintID(void * jarg1, unsigned int jarg2) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   bool arg2 ;
   
@@ -15347,7 +15347,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_SetPrintID(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_SetPrintAcks(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PacketLogger_SetPrintAcks(void * jarg1, unsigned int jarg2) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   bool arg2 ;
   
@@ -15357,7 +15357,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_SetPrintAcks(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_SetPrefix(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PacketLogger_SetPrefix(void * jarg1, char * jarg2) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -15367,7 +15367,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_SetPrefix(void * jarg1, char * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_SetSuffix(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PacketLogger_SetSuffix(void * jarg1, char * jarg2) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -15377,7 +15377,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_SetSuffix(void * jarg1, char * j
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_PacketLogger_BaseIDTOString(unsigned char jarg1) {
+SWIGEXPORT char * SWIGSTDCALL PacketLogger_BaseIDTOString(unsigned char jarg1) {
   char * jresult ;
   unsigned char arg1 ;
   char *result = 0 ;
@@ -15389,7 +15389,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_PacketLogger_BaseIDTOString(unsigned char j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_SetLogDirectMessages(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PacketLogger_SetLogDirectMessages(void * jarg1, unsigned int jarg2) {
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   bool arg2 ;
   
@@ -15399,7 +15399,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketLogger_SetLogDirectMessages(void * jarg
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_PacketLogger_FormatLineHelper__SWIG_0(void * jarg1, char * jarg2, char * jarg3, char * jarg4, unsigned int jarg5, unsigned int jarg6, unsigned char jarg7, unsigned int jarg8, unsigned long long jarg9, void * jarg10, void * jarg11, unsigned int jarg12, unsigned int jarg13, unsigned int jarg14, unsigned int jarg15) {
+SWIGEXPORT char * SWIGSTDCALL PacketLogger_FormatLineHelper__SWIG_0(void * jarg1, char * jarg2, char * jarg3, char * jarg4, unsigned int jarg5, unsigned int jarg6, unsigned char jarg7, unsigned int jarg8, unsigned long long jarg9, void * jarg10, void * jarg11, unsigned int jarg12, unsigned int jarg13, unsigned int jarg14, unsigned int jarg15) {
   char * jresult ;
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -15447,7 +15447,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_PacketLogger_FormatLineHelper__SWIG_0(void 
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_PacketLogger_FormatLineHelper__SWIG_1(void * jarg1, char * jarg2, char * jarg3, char * jarg4, unsigned int jarg5, unsigned int jarg6, char * jarg7, unsigned int jarg8, unsigned long long jarg9, void * jarg10, void * jarg11, unsigned int jarg12, unsigned int jarg13, unsigned int jarg14, unsigned int jarg15) {
+SWIGEXPORT char * SWIGSTDCALL PacketLogger_FormatLineHelper__SWIG_1(void * jarg1, char * jarg2, char * jarg3, char * jarg4, unsigned int jarg5, unsigned int jarg6, char * jarg7, unsigned int jarg8, unsigned long long jarg9, void * jarg10, void * jarg11, unsigned int jarg12, unsigned int jarg13, unsigned int jarg14, unsigned int jarg15) {
   char * jresult ;
   RakNet::PacketLogger *arg1 = (RakNet::PacketLogger *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -15495,7 +15495,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_PacketLogger_FormatLineHelper__SWIG_1(void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PacketFileLogger() {
+SWIGEXPORT void * SWIGSTDCALL new_PacketFileLogger() {
   void * jresult ;
   RakNet::PacketFileLogger *result = 0 ;
   
@@ -15505,7 +15505,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_PacketFileLogger() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PacketFileLogger(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_PacketFileLogger(void * jarg1) {
   RakNet::PacketFileLogger *arg1 = (RakNet::PacketFileLogger *) 0 ;
   
   arg1 = (RakNet::PacketFileLogger *)jarg1; 
@@ -15513,7 +15513,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_PacketFileLogger(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketFileLogger_StartLog(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PacketFileLogger_StartLog(void * jarg1, char * jarg2) {
   RakNet::PacketFileLogger *arg1 = (RakNet::PacketFileLogger *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -15523,7 +15523,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketFileLogger_StartLog(void * jarg1, char 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketFileLogger_WriteLog(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PacketFileLogger_WriteLog(void * jarg1, char * jarg2) {
   RakNet::PacketFileLogger *arg1 = (RakNet::PacketFileLogger *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -15533,7 +15533,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketFileLogger_WriteLog(void * jarg1, char 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NatTypeDetectionClient_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL NatTypeDetectionClient_GetInstance() {
   void * jresult ;
   RakNet::NatTypeDetectionClient *result = 0 ;
   
@@ -15543,7 +15543,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NatTypeDetectionClient_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionClient_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL NatTypeDetectionClient_DestroyInstance(void * jarg1) {
   RakNet::NatTypeDetectionClient *arg1 = (RakNet::NatTypeDetectionClient *) 0 ;
   
   arg1 = (RakNet::NatTypeDetectionClient *)jarg1; 
@@ -15551,7 +15551,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionClient_DestroyInstance(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatTypeDetectionClient() {
+SWIGEXPORT void * SWIGSTDCALL new_NatTypeDetectionClient() {
   void * jresult ;
   RakNet::NatTypeDetectionClient *result = 0 ;
   
@@ -15561,7 +15561,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatTypeDetectionClient() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatTypeDetectionClient(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NatTypeDetectionClient(void * jarg1) {
   RakNet::NatTypeDetectionClient *arg1 = (RakNet::NatTypeDetectionClient *) 0 ;
   
   arg1 = (RakNet::NatTypeDetectionClient *)jarg1; 
@@ -15569,7 +15569,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatTypeDetectionClient(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionClient_DetectNATType(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatTypeDetectionClient_DetectNATType(void * jarg1, void * jarg2) {
   RakNet::NatTypeDetectionClient *arg1 = (RakNet::NatTypeDetectionClient *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress *argp2 ;
@@ -15585,7 +15585,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionClient_DetectNATType(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionClient_OnRNS2Recv(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatTypeDetectionClient_OnRNS2Recv(void * jarg1, void * jarg2) {
   RakNet::NatTypeDetectionClient *arg1 = (RakNet::NatTypeDetectionClient *) 0 ;
   RNS2RecvStruct *arg2 = (RNS2RecvStruct *) 0 ;
   
@@ -15595,7 +15595,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionClient_OnRNS2Recv(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionClient_DeallocRNS2RecvStruct(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL NatTypeDetectionClient_DeallocRNS2RecvStruct(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   RakNet::NatTypeDetectionClient *arg1 = (RakNet::NatTypeDetectionClient *) 0 ;
   RNS2RecvStruct *arg2 = (RNS2RecvStruct *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -15609,7 +15609,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionClient_DeallocRNS2RecvStruct(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NatTypeDetectionClient_AllocRNS2RecvStruct(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL NatTypeDetectionClient_AllocRNS2RecvStruct(void * jarg1, char * jarg2, unsigned int jarg3) {
   void * jresult ;
   RakNet::NatTypeDetectionClient *arg1 = (RakNet::NatTypeDetectionClient *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -15625,7 +15625,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NatTypeDetectionClient_AllocRNS2RecvStruct(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PunchthroughConfiguration() {
+SWIGEXPORT void * SWIGSTDCALL new_PunchthroughConfiguration() {
   void * jresult ;
   RakNet::PunchthroughConfiguration *result = 0 ;
   
@@ -15635,7 +15635,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_PunchthroughConfiguration() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_TIME_BETWEEN_PUNCH_ATTEMPTS_INTERNAL_set(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_TIME_BETWEEN_PUNCH_ATTEMPTS_INTERNAL_set(void * jarg1, unsigned long long jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   RakNet::Time arg2 ;
   
@@ -15645,7 +15645,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_TIME_BETWEEN_PUNCH_
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_PunchthroughConfiguration_TIME_BETWEEN_PUNCH_ATTEMPTS_INTERNAL_get(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL PunchthroughConfiguration_TIME_BETWEEN_PUNCH_ATTEMPTS_INTERNAL_get(void * jarg1) {
   unsigned long long jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   RakNet::Time result;
@@ -15657,7 +15657,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_PunchthroughConfiguration_TIME_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_TIME_BETWEEN_PUNCH_ATTEMPTS_EXTERNAL_set(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_TIME_BETWEEN_PUNCH_ATTEMPTS_EXTERNAL_set(void * jarg1, unsigned long long jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   RakNet::Time arg2 ;
   
@@ -15667,7 +15667,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_TIME_BETWEEN_PUNCH_
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_PunchthroughConfiguration_TIME_BETWEEN_PUNCH_ATTEMPTS_EXTERNAL_get(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL PunchthroughConfiguration_TIME_BETWEEN_PUNCH_ATTEMPTS_EXTERNAL_get(void * jarg1) {
   unsigned long long jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   RakNet::Time result;
@@ -15679,7 +15679,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_PunchthroughConfiguration_TIME_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_UDP_SENDS_PER_PORT_INTERNAL_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_UDP_SENDS_PER_PORT_INTERNAL_set(void * jarg1, int jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int arg2 ;
   
@@ -15689,7 +15689,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_UDP_SENDS_PER_PORT_
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_UDP_SENDS_PER_PORT_INTERNAL_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL PunchthroughConfiguration_UDP_SENDS_PER_PORT_INTERNAL_get(void * jarg1) {
   int jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int result;
@@ -15701,7 +15701,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_UDP_SENDS_PER_PORT_I
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_UDP_SENDS_PER_PORT_EXTERNAL_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_UDP_SENDS_PER_PORT_EXTERNAL_set(void * jarg1, int jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int arg2 ;
   
@@ -15711,7 +15711,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_UDP_SENDS_PER_PORT_
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_UDP_SENDS_PER_PORT_EXTERNAL_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL PunchthroughConfiguration_UDP_SENDS_PER_PORT_EXTERNAL_get(void * jarg1) {
   int jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int result;
@@ -15723,7 +15723,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_UDP_SENDS_PER_PORT_E
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_INTERNAL_IP_WAIT_AFTER_ATTEMPTS_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_INTERNAL_IP_WAIT_AFTER_ATTEMPTS_set(void * jarg1, int jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int arg2 ;
   
@@ -15733,7 +15733,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_INTERNAL_IP_WAIT_AF
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_INTERNAL_IP_WAIT_AFTER_ATTEMPTS_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL PunchthroughConfiguration_INTERNAL_IP_WAIT_AFTER_ATTEMPTS_get(void * jarg1) {
   int jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int result;
@@ -15745,7 +15745,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_INTERNAL_IP_WAIT_AFT
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_MAX_PREDICTIVE_PORT_RANGE_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_MAX_PREDICTIVE_PORT_RANGE_set(void * jarg1, int jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int arg2 ;
   
@@ -15755,7 +15755,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_MAX_PREDICTIVE_PORT
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_MAX_PREDICTIVE_PORT_RANGE_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL PunchthroughConfiguration_MAX_PREDICTIVE_PORT_RANGE_get(void * jarg1) {
   int jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int result;
@@ -15767,7 +15767,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_MAX_PREDICTIVE_PORT_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_AFTER_FIRST_TTL_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_EXTERNAL_IP_WAIT_AFTER_FIRST_TTL_set(void * jarg1, int jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int arg2 ;
   
@@ -15777,7 +15777,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_AF
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_AFTER_FIRST_TTL_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL PunchthroughConfiguration_EXTERNAL_IP_WAIT_AFTER_FIRST_TTL_get(void * jarg1) {
   int jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int result;
@@ -15789,7 +15789,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_AFT
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_BETWEEN_PORTS_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_EXTERNAL_IP_WAIT_BETWEEN_PORTS_set(void * jarg1, int jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int arg2 ;
   
@@ -15799,7 +15799,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_BE
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_BETWEEN_PORTS_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL PunchthroughConfiguration_EXTERNAL_IP_WAIT_BETWEEN_PORTS_get(void * jarg1) {
   int jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int result;
@@ -15811,7 +15811,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_BET
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_AFTER_ALL_ATTEMPTS_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_EXTERNAL_IP_WAIT_AFTER_ALL_ATTEMPTS_set(void * jarg1, int jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int arg2 ;
   
@@ -15821,7 +15821,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_AF
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_AFTER_ALL_ATTEMPTS_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL PunchthroughConfiguration_EXTERNAL_IP_WAIT_AFTER_ALL_ATTEMPTS_get(void * jarg1) {
   int jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int result;
@@ -15833,7 +15833,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_EXTERNAL_IP_WAIT_AFT
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_MAXIMUM_NUMBER_OF_INTERNAL_IDS_TO_CHECK_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_MAXIMUM_NUMBER_OF_INTERNAL_IDS_TO_CHECK_set(void * jarg1, int jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int arg2 ;
   
@@ -15843,7 +15843,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_MAXIMUM_NUMBER_OF_I
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_MAXIMUM_NUMBER_OF_INTERNAL_IDS_TO_CHECK_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL PunchthroughConfiguration_MAXIMUM_NUMBER_OF_INTERNAL_IDS_TO_CHECK_get(void * jarg1) {
   int jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   int result;
@@ -15855,7 +15855,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_PunchthroughConfiguration_MAXIMUM_NUMBER_OF_IN
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_retryOnFailure_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL PunchthroughConfiguration_retryOnFailure_set(void * jarg1, unsigned int jarg2) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   bool arg2 ;
   
@@ -15865,7 +15865,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PunchthroughConfiguration_retryOnFailure_set(
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PunchthroughConfiguration_retryOnFailure_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL PunchthroughConfiguration_retryOnFailure_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   bool result;
@@ -15877,7 +15877,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_PunchthroughConfiguration_retryOnFail
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PunchthroughConfiguration(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_PunchthroughConfiguration(void * jarg1) {
   RakNet::PunchthroughConfiguration *arg1 = (RakNet::PunchthroughConfiguration *) 0 ;
   
   arg1 = (RakNet::PunchthroughConfiguration *)jarg1; 
@@ -15885,7 +15885,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_PunchthroughConfiguration(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughDebugInterface() {
+SWIGEXPORT void * SWIGSTDCALL new_NatPunchthroughDebugInterface() {
   void * jresult ;
   RakNet::NatPunchthroughDebugInterface *result = 0 ;
   
@@ -15895,7 +15895,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughDebugInterface() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughDebugInterface(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NatPunchthroughDebugInterface(void * jarg1) {
   RakNet::NatPunchthroughDebugInterface *arg1 = (RakNet::NatPunchthroughDebugInterface *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughDebugInterface *)jarg1; 
@@ -15903,7 +15903,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughDebugInterface(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_OnClientMessage(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughDebugInterface_OnClientMessage(void * jarg1, char * jarg2) {
   RakNet::NatPunchthroughDebugInterface *arg1 = (RakNet::NatPunchthroughDebugInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -15913,7 +15913,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_OnClientMessage
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_director_connect(void *objarg, SwigDirector_NatPunchthroughDebugInterface::SWIG_Callback0_t callback0) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughDebugInterface_director_connect(void *objarg, SwigDirector_NatPunchthroughDebugInterface::SWIG_Callback0_t callback0) {
   RakNet::NatPunchthroughDebugInterface *obj = (RakNet::NatPunchthroughDebugInterface *)objarg;
   SwigDirector_NatPunchthroughDebugInterface *director = dynamic_cast<SwigDirector_NatPunchthroughDebugInterface *>(obj);
   if (director) {
@@ -15922,7 +15922,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_director_connec
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_Printf_OnClientMessage(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughDebugInterface_Printf_OnClientMessage(void * jarg1, char * jarg2) {
   RakNet::NatPunchthroughDebugInterface_Printf *arg1 = (RakNet::NatPunchthroughDebugInterface_Printf *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -15932,7 +15932,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_Printf_OnClient
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughDebugInterface_Printf() {
+SWIGEXPORT void * SWIGSTDCALL new_NatPunchthroughDebugInterface_Printf() {
   void * jresult ;
   RakNet::NatPunchthroughDebugInterface_Printf *result = 0 ;
   
@@ -15942,7 +15942,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughDebugInterface_Printf() 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughDebugInterface_Printf(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NatPunchthroughDebugInterface_Printf(void * jarg1) {
   RakNet::NatPunchthroughDebugInterface_Printf *arg1 = (RakNet::NatPunchthroughDebugInterface_Printf *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughDebugInterface_Printf *)jarg1; 
@@ -15950,7 +15950,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughDebugInterface_Printf(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_PacketLogger_pl_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughDebugInterface_PacketLogger_pl_set(void * jarg1, void * jarg2) {
   RakNet::NatPunchthroughDebugInterface_PacketLogger *arg1 = (RakNet::NatPunchthroughDebugInterface_PacketLogger *) 0 ;
   RakNet::PacketLogger *arg2 = (RakNet::PacketLogger *) 0 ;
   
@@ -15960,7 +15960,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_PacketLogger_pl
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_PacketLogger_pl_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL NatPunchthroughDebugInterface_PacketLogger_pl_get(void * jarg1) {
   void * jresult ;
   RakNet::NatPunchthroughDebugInterface_PacketLogger *arg1 = (RakNet::NatPunchthroughDebugInterface_PacketLogger *) 0 ;
   RakNet::PacketLogger *result = 0 ;
@@ -15972,7 +15972,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_PacketLogger_
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughDebugInterface_PacketLogger() {
+SWIGEXPORT void * SWIGSTDCALL new_NatPunchthroughDebugInterface_PacketLogger() {
   void * jresult ;
   RakNet::NatPunchthroughDebugInterface_PacketLogger *result = 0 ;
   
@@ -15982,7 +15982,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughDebugInterface_PacketLog
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughDebugInterface_PacketLogger(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NatPunchthroughDebugInterface_PacketLogger(void * jarg1) {
   RakNet::NatPunchthroughDebugInterface_PacketLogger *arg1 = (RakNet::NatPunchthroughDebugInterface_PacketLogger *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughDebugInterface_PacketLogger *)jarg1; 
@@ -15990,7 +15990,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughDebugInterface_PacketLo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_PacketLogger_OnClientMessage(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughDebugInterface_PacketLogger_OnClientMessage(void * jarg1, char * jarg2) {
   RakNet::NatPunchthroughDebugInterface_PacketLogger *arg1 = (RakNet::NatPunchthroughDebugInterface_PacketLogger *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -16000,7 +16000,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_PacketLogger_On
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughClient_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL NatPunchthroughClient_GetInstance() {
   void * jresult ;
   RakNet::NatPunchthroughClient *result = 0 ;
   
@@ -16010,7 +16010,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughClient_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughClient_DestroyInstance(void * jarg1) {
   RakNet::NatPunchthroughClient *arg1 = (RakNet::NatPunchthroughClient *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughClient *)jarg1; 
@@ -16018,7 +16018,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_DestroyInstance(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughClient() {
+SWIGEXPORT void * SWIGSTDCALL new_NatPunchthroughClient() {
   void * jresult ;
   RakNet::NatPunchthroughClient *result = 0 ;
   
@@ -16028,7 +16028,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughClient() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughClient(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NatPunchthroughClient(void * jarg1) {
   RakNet::NatPunchthroughClient *arg1 = (RakNet::NatPunchthroughClient *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughClient *)jarg1; 
@@ -16036,7 +16036,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughClient(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_FindRouterPortStride(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughClient_FindRouterPortStride(void * jarg1, void * jarg2) {
   RakNet::NatPunchthroughClient *arg1 = (RakNet::NatPunchthroughClient *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   
@@ -16050,7 +16050,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_FindRouterPortStride(vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NatPunchthroughClient_OpenNAT(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL NatPunchthroughClient_OpenNAT(void * jarg1, void * jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::NatPunchthroughClient *arg1 = (RakNet::NatPunchthroughClient *) 0 ;
   RakNet::RakNetGUID arg2 ;
@@ -16076,7 +16076,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NatPunchthroughClient_OpenNAT(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughClient_GetPunchthroughConfiguration(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL NatPunchthroughClient_GetPunchthroughConfiguration(void * jarg1) {
   void * jresult ;
   RakNet::NatPunchthroughClient *arg1 = (RakNet::NatPunchthroughClient *) 0 ;
   RakNet::PunchthroughConfiguration *result = 0 ;
@@ -16088,7 +16088,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughClient_GetPunchthroughConfig
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_SetDebugInterface(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughClient_SetDebugInterface(void * jarg1, void * jarg2) {
   RakNet::NatPunchthroughClient *arg1 = (RakNet::NatPunchthroughClient *) 0 ;
   RakNet::NatPunchthroughDebugInterface *arg2 = (RakNet::NatPunchthroughDebugInterface *) 0 ;
   
@@ -16098,7 +16098,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_SetDebugInterface(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_GetUPNPPortMappings(void * jarg1, char * jarg2, char * jarg3, void * jarg4) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughClient_GetUPNPPortMappings(void * jarg1, char * jarg2, char * jarg3, void * jarg4) {
   RakNet::NatPunchthroughClient *arg1 = (RakNet::NatPunchthroughClient *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -16116,7 +16116,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_GetUPNPPortMappings(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughClient_Clear(void * jarg1) {
   RakNet::NatPunchthroughClient *arg1 = (RakNet::NatPunchthroughClient *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughClient *)jarg1; 
@@ -16124,7 +16124,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_sp_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughClient_sp_set(void * jarg1, void * jarg2) {
   RakNet::NatPunchthroughClient *arg1 = (RakNet::NatPunchthroughClient *) 0 ;
   RakNet::NatPunchthroughClient::SendPing *arg2 = (RakNet::NatPunchthroughClient::SendPing *) 0 ;
   
@@ -16134,7 +16134,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughClient_sp_set(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughClient_sp_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL NatPunchthroughClient_sp_get(void * jarg1) {
   void * jresult ;
   RakNet::NatPunchthroughClient *arg1 = (RakNet::NatPunchthroughClient *) 0 ;
   RakNet::NatPunchthroughClient::SendPing *result = 0 ;
@@ -16146,7 +16146,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughClient_sp_get(void * jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Router2DebugInterface() {
+SWIGEXPORT void * SWIGSTDCALL new_Router2DebugInterface() {
   void * jresult ;
   RakNet::Router2DebugInterface *result = 0 ;
   
@@ -16156,7 +16156,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Router2DebugInterface() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Router2DebugInterface(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_Router2DebugInterface(void * jarg1) {
   RakNet::Router2DebugInterface *arg1 = (RakNet::Router2DebugInterface *) 0 ;
   
   arg1 = (RakNet::Router2DebugInterface *)jarg1; 
@@ -16164,7 +16164,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Router2DebugInterface(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Router2DebugInterface_ShowFailure(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Router2DebugInterface_ShowFailure(void * jarg1, char * jarg2) {
   RakNet::Router2DebugInterface *arg1 = (RakNet::Router2DebugInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -16174,7 +16174,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Router2DebugInterface_ShowFailure(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Router2DebugInterface_ShowDiagnostic(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Router2DebugInterface_ShowDiagnostic(void * jarg1, char * jarg2) {
   RakNet::Router2DebugInterface *arg1 = (RakNet::Router2DebugInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -16184,7 +16184,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Router2DebugInterface_ShowDiagnostic(void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Router2_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL Router2_GetInstance() {
   void * jresult ;
   RakNet::Router2 *result = 0 ;
   
@@ -16194,7 +16194,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Router2_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Router2_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL Router2_DestroyInstance(void * jarg1) {
   RakNet::Router2 *arg1 = (RakNet::Router2 *) 0 ;
   
   arg1 = (RakNet::Router2 *)jarg1; 
@@ -16202,7 +16202,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Router2_DestroyInstance(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Router2() {
+SWIGEXPORT void * SWIGSTDCALL new_Router2() {
   void * jresult ;
   RakNet::Router2 *result = 0 ;
   
@@ -16212,7 +16212,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Router2() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Router2(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_Router2(void * jarg1) {
   RakNet::Router2 *arg1 = (RakNet::Router2 *) 0 ;
   
   arg1 = (RakNet::Router2 *)jarg1; 
@@ -16220,7 +16220,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Router2(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Router2_SetSocketFamily(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL Router2_SetSocketFamily(void * jarg1, unsigned short jarg2) {
   RakNet::Router2 *arg1 = (RakNet::Router2 *) 0 ;
   unsigned short arg2 ;
   
@@ -16230,7 +16230,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Router2_SetSocketFamily(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Router2_EstablishRouting(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Router2_EstablishRouting(void * jarg1, void * jarg2) {
   RakNet::Router2 *arg1 = (RakNet::Router2 *) 0 ;
   RakNet::RakNetGUID arg2 ;
   RakNet::RakNetGUID *argp2 ;
@@ -16246,7 +16246,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Router2_EstablishRouting(void * jarg1, void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Router2_SetMaximumForwardingRequests(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL Router2_SetMaximumForwardingRequests(void * jarg1, int jarg2) {
   RakNet::Router2 *arg1 = (RakNet::Router2 *) 0 ;
   int arg2 ;
   
@@ -16256,7 +16256,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Router2_SetMaximumForwardingRequests(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Router2_SetDebugInterface(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Router2_SetDebugInterface(void * jarg1, void * jarg2) {
   RakNet::Router2 *arg1 = (RakNet::Router2 *) 0 ;
   RakNet::Router2DebugInterface *arg2 = (RakNet::Router2DebugInterface *) 0 ;
   
@@ -16266,7 +16266,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Router2_SetDebugInterface(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Router2_GetDebugInterface(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL Router2_GetDebugInterface(void * jarg1) {
   void * jresult ;
   RakNet::Router2 *arg1 = (RakNet::Router2 *) 0 ;
   RakNet::Router2DebugInterface *result = 0 ;
@@ -16278,7 +16278,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Router2_GetDebugInterface(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Router2_GetConnectionRequestIndex(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL Router2_GetConnectionRequestIndex(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::Router2 *arg1 = (RakNet::Router2 *) 0 ;
   RakNet::RakNetGUID arg2 ;
@@ -16298,7 +16298,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Router2_GetConnectionRequestIndex(voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPProxyClientResultHandler() {
+SWIGEXPORT void * SWIGSTDCALL new_UDPProxyClientResultHandler() {
   void * jresult ;
   RakNet::UDPProxyClientResultHandler *result = 0 ;
   
@@ -16308,7 +16308,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPProxyClientResultHandler() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPProxyClientResultHandler(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_UDPProxyClientResultHandler(void * jarg1) {
   RakNet::UDPProxyClientResultHandler *arg1 = (RakNet::UDPProxyClientResultHandler *) 0 ;
   
   arg1 = (RakNet::UDPProxyClientResultHandler *)jarg1; 
@@ -16316,7 +16316,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPProxyClientResultHandler(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnForwardingSuccess(void * jarg1, char * jarg2, unsigned short jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyClientResultHandler_OnForwardingSuccess(void * jarg1, char * jarg2, unsigned short jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8) {
   RakNet::UDPProxyClientResultHandler *arg1 = (RakNet::UDPProxyClientResultHandler *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned short arg3 ;
@@ -16362,7 +16362,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnForwardingSucce
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnForwardingNotification(void * jarg1, char * jarg2, unsigned short jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyClientResultHandler_OnForwardingNotification(void * jarg1, char * jarg2, unsigned short jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8) {
   RakNet::UDPProxyClientResultHandler *arg1 = (RakNet::UDPProxyClientResultHandler *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned short arg3 ;
@@ -16408,7 +16408,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnForwardingNotif
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnNoServersOnline(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyClientResultHandler_OnNoServersOnline(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
   RakNet::UDPProxyClientResultHandler *arg1 = (RakNet::UDPProxyClientResultHandler *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress arg3 ;
@@ -16450,7 +16450,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnNoServersOnline
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnRecipientNotConnected(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyClientResultHandler_OnRecipientNotConnected(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
   RakNet::UDPProxyClientResultHandler *arg1 = (RakNet::UDPProxyClientResultHandler *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress arg3 ;
@@ -16492,7 +16492,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnRecipientNotCon
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnAllServersBusy(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyClientResultHandler_OnAllServersBusy(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6) {
   RakNet::UDPProxyClientResultHandler *arg1 = (RakNet::UDPProxyClientResultHandler *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress arg3 ;
@@ -16534,7 +16534,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnAllServersBusy(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnForwardingInProgress(void * jarg1, char * jarg2, unsigned short jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyClientResultHandler_OnForwardingInProgress(void * jarg1, char * jarg2, unsigned short jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8) {
   RakNet::UDPProxyClientResultHandler *arg1 = (RakNet::UDPProxyClientResultHandler *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned short arg3 ;
@@ -16580,7 +16580,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_OnForwardingInPro
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_director_connect(void *objarg, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback0_t callback0, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback1_t callback1, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback2_t callback2, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback3_t callback3, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback4_t callback4, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback5_t callback5) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyClientResultHandler_director_connect(void *objarg, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback0_t callback0, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback1_t callback1, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback2_t callback2, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback3_t callback3, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback4_t callback4, SwigDirector_UDPProxyClientResultHandler::SWIG_Callback5_t callback5) {
   RakNet::UDPProxyClientResultHandler *obj = (RakNet::UDPProxyClientResultHandler *)objarg;
   SwigDirector_UDPProxyClientResultHandler *director = dynamic_cast<SwigDirector_UDPProxyClientResultHandler *>(obj);
   if (director) {
@@ -16589,7 +16589,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClientResultHandler_director_connect(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UDPProxyClient_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL UDPProxyClient_GetInstance() {
   void * jresult ;
   RakNet::UDPProxyClient *result = 0 ;
   
@@ -16599,7 +16599,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UDPProxyClient_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClient_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyClient_DestroyInstance(void * jarg1) {
   RakNet::UDPProxyClient *arg1 = (RakNet::UDPProxyClient *) 0 ;
   
   arg1 = (RakNet::UDPProxyClient *)jarg1; 
@@ -16607,7 +16607,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClient_DestroyInstance(void * jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPProxyClient() {
+SWIGEXPORT void * SWIGSTDCALL new_UDPProxyClient() {
   void * jresult ;
   RakNet::UDPProxyClient *result = 0 ;
   
@@ -16617,7 +16617,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPProxyClient() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPProxyClient(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_UDPProxyClient(void * jarg1) {
   RakNet::UDPProxyClient *arg1 = (RakNet::UDPProxyClient *) 0 ;
   
   arg1 = (RakNet::UDPProxyClient *)jarg1; 
@@ -16625,7 +16625,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPProxyClient(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClient_SetResultHandler(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyClient_SetResultHandler(void * jarg1, void * jarg2) {
   RakNet::UDPProxyClient *arg1 = (RakNet::UDPProxyClient *) 0 ;
   RakNet::UDPProxyClientResultHandler *arg2 = (RakNet::UDPProxyClientResultHandler *) 0 ;
   
@@ -16635,7 +16635,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyClient_SetResultHandler(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UDPProxyClient_RequestForwarding__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int jarg5, void * jarg6) {
+SWIGEXPORT unsigned int SWIGSTDCALL UDPProxyClient_RequestForwarding__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int jarg5, void * jarg6) {
   unsigned int jresult ;
   RakNet::UDPProxyClient *arg1 = (RakNet::UDPProxyClient *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -16675,7 +16675,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UDPProxyClient_RequestForwarding__SWI
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UDPProxyClient_RequestForwarding__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL UDPProxyClient_RequestForwarding__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int jarg5) {
   unsigned int jresult ;
   RakNet::UDPProxyClient *arg1 = (RakNet::UDPProxyClient *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -16713,7 +16713,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UDPProxyClient_RequestForwarding__SWI
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UDPProxyClient_RequestForwarding__SWIG_2(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int jarg5, void * jarg6) {
+SWIGEXPORT unsigned int SWIGSTDCALL UDPProxyClient_RequestForwarding__SWIG_2(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int jarg5, void * jarg6) {
   unsigned int jresult ;
   RakNet::UDPProxyClient *arg1 = (RakNet::UDPProxyClient *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -16753,7 +16753,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UDPProxyClient_RequestForwarding__SWI
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UDPProxyClient_RequestForwarding__SWIG_3(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL UDPProxyClient_RequestForwarding__SWIG_3(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int jarg5) {
   unsigned int jresult ;
   RakNet::UDPProxyClient *arg1 = (RakNet::UDPProxyClient *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -16791,7 +16791,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UDPProxyClient_RequestForwarding__SWI
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FullyConnectedMesh2_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL FullyConnectedMesh2_GetInstance() {
   void * jresult ;
   RakNet::FullyConnectedMesh2 *result = 0 ;
   
@@ -16801,7 +16801,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FullyConnectedMesh2_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_DestroyInstance(void * jarg1) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   
   arg1 = (RakNet::FullyConnectedMesh2 *)jarg1; 
@@ -16809,7 +16809,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_DestroyInstance(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FullyConnectedMesh2() {
+SWIGEXPORT void * SWIGSTDCALL new_FullyConnectedMesh2() {
   void * jresult ;
   RakNet::FullyConnectedMesh2 *result = 0 ;
   
@@ -16819,7 +16819,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FullyConnectedMesh2() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FullyConnectedMesh2(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_FullyConnectedMesh2(void * jarg1) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   
   arg1 = (RakNet::FullyConnectedMesh2 *)jarg1; 
@@ -16827,7 +16827,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FullyConnectedMesh2(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_SetConnectOnNewRemoteConnection(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_SetConnectOnNewRemoteConnection(void * jarg1, unsigned int jarg2, void * jarg3) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   bool arg2 ;
   RakNet::RakString arg3 ;
@@ -16845,7 +16845,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_SetConnectOnNewRemoteConn
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FullyConnectedMesh2_GetConnectedHost(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FullyConnectedMesh2_GetConnectedHost(void * jarg1) {
   void * jresult ;
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::RakNetGUID result;
@@ -16857,7 +16857,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FullyConnectedMesh2_GetConnectedHost(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FullyConnectedMesh2_GetConnectedHostAddr(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FullyConnectedMesh2_GetConnectedHostAddr(void * jarg1) {
   void * jresult ;
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::SystemAddress result;
@@ -16869,7 +16869,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FullyConnectedMesh2_GetConnectedHostAddr(vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FullyConnectedMesh2_GetHostSystem(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FullyConnectedMesh2_GetHostSystem(void * jarg1) {
   void * jresult ;
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::RakNetGUID result;
@@ -16881,7 +16881,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FullyConnectedMesh2_GetHostSystem(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FullyConnectedMesh2_IsHostSystem(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FullyConnectedMesh2_IsHostSystem(void * jarg1) {
   unsigned int jresult ;
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   bool result;
@@ -16893,7 +16893,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FullyConnectedMesh2_IsHostSystem(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetHostOrder(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_GetHostOrder(void * jarg1, void * jarg2) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   DataStructures::List< RakNet::RakNetGUID > *arg2 = 0 ;
   
@@ -16907,7 +16907,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetHostOrder(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FullyConnectedMesh2_IsConnectedHost(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FullyConnectedMesh2_IsConnectedHost(void * jarg1) {
   unsigned int jresult ;
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   bool result;
@@ -16919,7 +16919,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FullyConnectedMesh2_IsConnectedHost(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_SetAutoparticipateConnections(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_SetAutoparticipateConnections(void * jarg1, unsigned int jarg2) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   bool arg2 ;
   
@@ -16929,7 +16929,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_SetAutoparticipateConnect
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_ResetHostCalculation(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_ResetHostCalculation(void * jarg1) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   
   arg1 = (RakNet::FullyConnectedMesh2 *)jarg1; 
@@ -16937,7 +16937,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_ResetHostCalculation(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_AddParticipant(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_AddParticipant(void * jarg1, void * jarg2) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::RakNetGUID arg2 ;
   RakNet::RakNetGUID *argp2 ;
@@ -16953,7 +16953,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_AddParticipant(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetParticipantList(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_GetParticipantList(void * jarg1, void * jarg2) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   DataStructures::List< RakNet::RakNetGUID > *arg2 = 0 ;
   
@@ -16967,7 +16967,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetParticipantList(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FullyConnectedMesh2_HasParticipant(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL FullyConnectedMesh2_HasParticipant(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::RakNetGUID arg2 ;
@@ -16987,7 +16987,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FullyConnectedMesh2_HasParticipant(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_ConnectToRemoteNewIncomingConnections(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_ConnectToRemoteNewIncomingConnections(void * jarg1, void * jarg2) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   
@@ -16997,7 +16997,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_ConnectToRemoteNewIncomin
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_Clear(void * jarg1) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   
   arg1 = (RakNet::FullyConnectedMesh2 *)jarg1; 
@@ -17005,7 +17005,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FullyConnectedMesh2_GetParticipantCount__SWIG_0(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FullyConnectedMesh2_GetParticipantCount__SWIG_0(void * jarg1) {
   unsigned int jresult ;
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   unsigned int result;
@@ -17017,7 +17017,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FullyConnectedMesh2_GetParticipantCou
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetParticipantCount__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_GetParticipantCount__SWIG_1(void * jarg1, void * jarg2) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   unsigned int *arg2 = (unsigned int *) 0 ;
   
@@ -17027,7 +17027,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetParticipantCount__SWIG
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_StartVerifiedJoin(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_StartVerifiedJoin(void * jarg1, void * jarg2) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::RakNetGUID arg2 ;
   RakNet::RakNetGUID *argp2 ;
@@ -17043,7 +17043,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_StartVerifiedJoin(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_RespondOnVerifiedJoinCapable(void * jarg1, void * jarg2, unsigned int jarg3, void * jarg4) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_RespondOnVerifiedJoinCapable(void * jarg1, void * jarg2, unsigned int jarg3, void * jarg4) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   bool arg3 ;
@@ -17057,7 +17057,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_RespondOnVerifiedJoinCapa
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetVerifiedJoinRequiredProcessingList(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_GetVerifiedJoinRequiredProcessingList(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::RakNetGUID arg2 ;
   DataStructures::List< RakNet::SystemAddress > *arg3 = 0 ;
@@ -17091,7 +17091,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetVerifiedJoinRequiredPr
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetVerifiedJoinAcceptedAdditionalData(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_GetVerifiedJoinAcceptedAdditionalData(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   bool *arg3 = (bool *) 0 ;
@@ -17111,7 +17111,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetVerifiedJoinAcceptedAd
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetVerifiedJoinRejectedAdditionalData(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_GetVerifiedJoinRejectedAdditionalData(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   RakNet::BitStream *arg3 = (RakNet::BitStream *) 0 ;
@@ -17123,7 +17123,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_GetVerifiedJoinRejectedAd
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_WriteVJCUserData(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_WriteVJCUserData(void * jarg1, void * jarg2) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -17133,7 +17133,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_WriteVJCUserData(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_SkipToVJCUserData(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_SkipToVJCUserData(void * jarg1) {
   RakNet::BitStream *arg1 = (RakNet::BitStream *) 0 ;
   
   arg1 = (RakNet::BitStream *)jarg1; 
@@ -17141,7 +17141,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_SkipToVJCUserData(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_WriteVJSUserData(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL FullyConnectedMesh2_WriteVJSUserData(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   RakNet::RakNetGUID arg3 ;
@@ -17159,7 +17159,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FullyConnectedMesh2_WriteVJSUserData(void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FullyConnectedMesh2_GetTotalConnectionCount(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FullyConnectedMesh2_GetTotalConnectionCount(void * jarg1) {
   unsigned int jresult ;
   RakNet::FullyConnectedMesh2 *arg1 = (RakNet::FullyConnectedMesh2 *) 0 ;
   unsigned int result;
@@ -17171,7 +17171,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FullyConnectedMesh2_GetTotalConnectio
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_ReadyEvent_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL ReadyEvent_GetInstance() {
   void * jresult ;
   RakNet::ReadyEvent *result = 0 ;
   
@@ -17181,7 +17181,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ReadyEvent_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ReadyEvent_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL ReadyEvent_DestroyInstance(void * jarg1) {
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   
   arg1 = (RakNet::ReadyEvent *)jarg1; 
@@ -17189,7 +17189,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ReadyEvent_DestroyInstance(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ReadyEvent() {
+SWIGEXPORT void * SWIGSTDCALL new_ReadyEvent() {
   void * jresult ;
   RakNet::ReadyEvent *result = 0 ;
   
@@ -17199,7 +17199,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_ReadyEvent() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ReadyEvent(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_ReadyEvent(void * jarg1) {
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   
   arg1 = (RakNet::ReadyEvent *)jarg1; 
@@ -17207,7 +17207,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_ReadyEvent(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_SetEvent(void * jarg1, int jarg2, unsigned int jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_SetEvent(void * jarg1, int jarg2, unsigned int jarg3) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17223,7 +17223,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_SetEvent(void * jarg1, int
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ReadyEvent_ForceCompletion(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL ReadyEvent_ForceCompletion(void * jarg1, int jarg2) {
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
   
@@ -17233,7 +17233,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ReadyEvent_ForceCompletion(void * jarg1, int 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_DeleteEvent(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_DeleteEvent(void * jarg1, int jarg2) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17247,7 +17247,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_DeleteEvent(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_IsEventSet(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_IsEventSet(void * jarg1, int jarg2) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17261,7 +17261,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_IsEventSet(void * jarg1, i
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_IsEventCompletionProcessing(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_IsEventCompletionProcessing(void * jarg1, int jarg2) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17275,7 +17275,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_IsEventCompletionProcessin
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_IsEventCompleted(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_IsEventCompleted(void * jarg1, int jarg2) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17289,7 +17289,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_IsEventCompleted(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_HasEvent(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_HasEvent(void * jarg1, int jarg2) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17303,7 +17303,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_HasEvent(void * jarg1, int
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_GetEventListSize(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_GetEventListSize(void * jarg1) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   unsigned int result;
@@ -17315,7 +17315,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_GetEventListSize(void * ja
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_ReadyEvent_GetEventAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT int SWIGSTDCALL ReadyEvent_GetEventAtIndex(void * jarg1, unsigned int jarg2) {
   int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   unsigned int arg2 ;
@@ -17329,7 +17329,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ReadyEvent_GetEventAtIndex(void * jarg1, unsig
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_AddToWaitList(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_AddToWaitList(void * jarg1, int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17351,7 +17351,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_AddToWaitList(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_RemoveFromWaitList(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_RemoveFromWaitList(void * jarg1, int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17373,7 +17373,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_RemoveFromWaitList(void * 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_IsInWaitList(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_IsInWaitList(void * jarg1, int jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17395,7 +17395,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_IsInWaitList(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_GetRemoteWaitListSize(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL ReadyEvent_GetRemoteWaitListSize(void * jarg1, int jarg2) {
   unsigned int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17409,7 +17409,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ReadyEvent_GetRemoteWaitListSize(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_ReadyEvent_GetFromWaitListAtIndex(void * jarg1, int jarg2, unsigned int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL ReadyEvent_GetFromWaitListAtIndex(void * jarg1, int jarg2, unsigned int jarg3) {
   void * jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17425,7 +17425,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ReadyEvent_GetFromWaitListAtIndex(void * ja
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_ReadyEvent_GetReadyStatus(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT int SWIGSTDCALL ReadyEvent_GetReadyStatus(void * jarg1, int jarg2, void * jarg3) {
   int jresult ;
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   int arg2 ;
@@ -17447,7 +17447,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ReadyEvent_GetReadyStatus(void * jarg1, int ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ReadyEvent_SetSendChannel(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void SWIGSTDCALL ReadyEvent_SetSendChannel(void * jarg1, unsigned char jarg2) {
   RakNet::ReadyEvent *arg1 = (RakNet::ReadyEvent *) 0 ;
   unsigned char arg2 ;
   
@@ -17457,7 +17457,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ReadyEvent_SetSendChannel(void * jarg1, unsig
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_ReadyEvent_RemoteSystemCompByGuid(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL ReadyEvent_RemoteSystemCompByGuid(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::RakNetGUID *arg1 = 0 ;
   RakNet::ReadyEvent::RemoteSystem *arg2 = 0 ;
@@ -17479,7 +17479,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ReadyEvent_RemoteSystemCompByGuid(void * jarg1
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_ALLOW_JOIN_ANY_AVAILABLE_TEAM_get() {
+SWIGEXPORT int SWIGSTDCALL ALLOW_JOIN_ANY_AVAILABLE_TEAM_get() {
   int jresult ;
   int result;
   
@@ -17489,7 +17489,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ALLOW_JOIN_ANY_AVAILABLE_TEAM_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_ALLOW_JOIN_SPECIFIC_TEAM_get() {
+SWIGEXPORT int SWIGSTDCALL ALLOW_JOIN_SPECIFIC_TEAM_get() {
   int jresult ;
   int result;
   
@@ -17499,7 +17499,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ALLOW_JOIN_SPECIFIC_TEAM_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_ALLOW_JOIN_REBALANCING_get() {
+SWIGEXPORT int SWIGSTDCALL ALLOW_JOIN_REBALANCING_get() {
   int jresult ;
   int result;
   
@@ -17509,7 +17509,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ALLOW_JOIN_REBALANCING_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TeamSelection__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_TeamSelection__SWIG_0() {
   void * jresult ;
   RakNet::TeamSelection *result = 0 ;
   
@@ -17519,7 +17519,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TeamSelection__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TeamSelection__SWIG_1(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_TeamSelection__SWIG_1(int jarg1) {
   void * jresult ;
   RakNet::JoinTeamType arg1 ;
   RakNet::TeamSelection *result = 0 ;
@@ -17531,7 +17531,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TeamSelection__SWIG_1(int jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TeamSelection__SWIG_2(int jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL new_TeamSelection__SWIG_2(int jarg1, void * jarg2) {
   void * jresult ;
   RakNet::JoinTeamType arg1 ;
   RakNet::TM_Team *arg2 = (RakNet::TM_Team *) 0 ;
@@ -17545,7 +17545,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TeamSelection__SWIG_2(int jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TeamSelection__SWIG_3(int jarg1, unsigned char jarg2) {
+SWIGEXPORT void * SWIGSTDCALL new_TeamSelection__SWIG_3(int jarg1, unsigned char jarg2) {
   void * jresult ;
   RakNet::JoinTeamType arg1 ;
   RakNet::NoTeamId arg2 ;
@@ -17559,7 +17559,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TeamSelection__SWIG_3(int jarg1, unsign
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TeamSelection_joinTeamType_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL TeamSelection_joinTeamType_set(void * jarg1, int jarg2) {
   RakNet::TeamSelection *arg1 = (RakNet::TeamSelection *) 0 ;
   RakNet::JoinTeamType arg2 ;
   
@@ -17569,7 +17569,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TeamSelection_joinTeamType_set(void * jarg1, 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_TeamSelection_joinTeamType_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL TeamSelection_joinTeamType_get(void * jarg1) {
   int jresult ;
   RakNet::TeamSelection *arg1 = (RakNet::TeamSelection *) 0 ;
   RakNet::JoinTeamType result;
@@ -17581,7 +17581,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_TeamSelection_joinTeamType_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TeamSelection_AnyAvailable() {
+SWIGEXPORT void * SWIGSTDCALL TeamSelection_AnyAvailable() {
   void * jresult ;
   RakNet::TeamSelection result;
   
@@ -17591,7 +17591,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TeamSelection_AnyAvailable() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TeamSelection_SpecificTeam(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TeamSelection_SpecificTeam(void * jarg1) {
   void * jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::TeamSelection result;
@@ -17603,7 +17603,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TeamSelection_SpecificTeam(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TeamSelection_NoTeam(unsigned char jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TeamSelection_NoTeam(unsigned char jarg1) {
   void * jresult ;
   RakNet::NoTeamId arg1 ;
   RakNet::TeamSelection result;
@@ -17615,7 +17615,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TeamSelection_NoTeam(unsigned char jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TeamSelection(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_TeamSelection(void * jarg1) {
   RakNet::TeamSelection *arg1 = (RakNet::TeamSelection *) 0 ;
   
   arg1 = (RakNet::TeamSelection *)jarg1; 
@@ -17623,7 +17623,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_TeamSelection(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL TM_TeamMember_GetInstance() {
   void * jresult ;
   RakNet::TM_TeamMember *result = 0 ;
   
@@ -17633,7 +17633,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL TM_TeamMember_DestroyInstance(void * jarg1) {
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   
   arg1 = (RakNet::TM_TeamMember *)jarg1; 
@@ -17641,7 +17641,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_DestroyInstance(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TM_TeamMember() {
+SWIGEXPORT void * SWIGSTDCALL new_TM_TeamMember() {
   void * jresult ;
   RakNet::TM_TeamMember *result = 0 ;
   
@@ -17651,7 +17651,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TM_TeamMember() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TM_TeamMember(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_TM_TeamMember(void * jarg1) {
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   
   arg1 = (RakNet::TM_TeamMember *)jarg1; 
@@ -17659,7 +17659,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_TM_TeamMember(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_RequestTeam(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_RequestTeam(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TeamSelection arg2 ;
@@ -17679,7 +17679,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_RequestTeam(void * jarg
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_RequestTeamSwitch(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_RequestTeamSwitch(void * jarg1, void * jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TM_Team *arg2 = (RakNet::TM_Team *) 0 ;
@@ -17695,7 +17695,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_RequestTeamSwitch(void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetRequestedTeam(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TM_TeamMember_GetRequestedTeam(void * jarg1) {
   void * jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TeamSelection result;
@@ -17707,7 +17707,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetRequestedTeam(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_GetRequestedSpecificTeams(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_TeamMember_GetRequestedSpecificTeams(void * jarg1, void * jarg2) {
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   DataStructures::List< RakNet::TM_Team * > *arg2 = 0 ;
   
@@ -17721,7 +17721,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_GetRequestedSpecificTeams(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_HasRequestedTeam(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_HasRequestedTeam(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TM_Team *arg2 = (RakNet::TM_Team *) 0 ;
@@ -17735,7 +17735,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_HasRequestedTeam(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_GetRequestedTeamIndex(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_GetRequestedTeamIndex(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TM_Team *arg2 = (RakNet::TM_Team *) 0 ;
@@ -17749,7 +17749,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_GetRequestedTeamIndex(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_GetRequestedTeamCount(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_GetRequestedTeamCount(void * jarg1) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   unsigned int result;
@@ -17761,7 +17761,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_GetRequestedTeamCount(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_CancelTeamRequest(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_CancelTeamRequest(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TM_Team *arg2 = (RakNet::TM_Team *) 0 ;
@@ -17775,7 +17775,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_CancelTeamRequest(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_LeaveTeam(void * jarg1, void * jarg2, unsigned char jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_LeaveTeam(void * jarg1, void * jarg2, unsigned char jarg3) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TM_Team *arg2 = (RakNet::TM_Team *) 0 ;
@@ -17791,7 +17791,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_LeaveTeam(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_LeaveAllTeams(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_LeaveAllTeams(void * jarg1, unsigned char jarg2) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::NoTeamId arg2 ;
@@ -17805,7 +17805,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_LeaveAllTeams(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetCurrentTeam(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TM_TeamMember_GetCurrentTeam(void * jarg1) {
   void * jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TM_Team *result = 0 ;
@@ -17817,7 +17817,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetCurrentTeam(void * jarg1) 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_GetCurrentTeamCount(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_GetCurrentTeamCount(void * jarg1) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   unsigned int result;
@@ -17829,7 +17829,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_GetCurrentTeamCount(voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetCurrentTeamByIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL TM_TeamMember_GetCurrentTeamByIndex(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   unsigned int arg2 ;
@@ -17843,7 +17843,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetCurrentTeamByIndex(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_GetCurrentTeams(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_TeamMember_GetCurrentTeams(void * jarg1, void * jarg2) {
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   DataStructures::List< RakNet::TM_Team * > *arg2 = 0 ;
   
@@ -17857,7 +17857,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_GetCurrentTeams(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_GetLastTeams(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_TeamMember_GetLastTeams(void * jarg1, void * jarg2) {
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   DataStructures::List< RakNet::TM_Team * > *arg2 = 0 ;
   
@@ -17871,7 +17871,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_GetLastTeams(void * jarg1, void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_IsOnTeam(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_IsOnTeam(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TM_Team *arg2 = (RakNet::TM_Team *) 0 ;
@@ -17885,7 +17885,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_IsOnTeam(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_TM_TeamMember_GetNetworkID(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL TM_TeamMember_GetNetworkID(void * jarg1) {
   unsigned long long jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::NetworkID result;
@@ -17897,7 +17897,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_TM_TeamMember_GetNetworkID(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetTM_World(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TM_TeamMember_GetTM_World(void * jarg1) {
   void * jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TM_World *result = 0 ;
@@ -17909,7 +17909,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetTM_World(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_SerializeConstruction(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_TeamMember_SerializeConstruction(void * jarg1, void * jarg2) {
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -17919,7 +17919,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_SerializeConstruction(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_DeserializeConstruction(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_DeserializeConstruction(void * jarg1, void * jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::TeamManager *arg2 = (RakNet::TeamManager *) 0 ;
@@ -17935,7 +17935,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_DeserializeConstruction
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_SetOwner(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_TeamMember_SetOwner(void * jarg1, void * jarg2) {
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   void *arg2 = (void *) 0 ;
   
@@ -17945,7 +17945,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_TeamMember_SetOwner(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetOwner(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TM_TeamMember_GetOwner(void * jarg1) {
   void * jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   void *result = 0 ;
@@ -17957,7 +17957,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_TeamMember_GetOwner(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned char SWIGSTDCALL CSharp_TM_TeamMember_GetNoTeamId(void * jarg1) {
+SWIGEXPORT unsigned char SWIGSTDCALL TM_TeamMember_GetNoTeamId(void * jarg1) {
   unsigned char jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::NoTeamId result;
@@ -17969,7 +17969,7 @@ SWIGEXPORT unsigned char SWIGSTDCALL CSharp_TM_TeamMember_GetNoTeamId(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_GetWorldIndex(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_TeamMember_GetWorldIndex(void * jarg1) {
   unsigned int jresult ;
   RakNet::TM_TeamMember *arg1 = (RakNet::TM_TeamMember *) 0 ;
   unsigned int result;
@@ -17981,7 +17981,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_TeamMember_GetWorldIndex(void * ja
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_TM_TeamMember_ToUint32(unsigned long long jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL TM_TeamMember_ToUint32(unsigned long long jarg1) {
   unsigned long jresult ;
   RakNet::NetworkID *arg1 = 0 ;
   RakNet::NetworkID temp1 ;
@@ -17995,7 +17995,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_TM_TeamMember_ToUint32(unsigned long
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_Team_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL TM_Team_GetInstance() {
   void * jresult ;
   RakNet::TM_Team *result = 0 ;
   
@@ -18005,7 +18005,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_Team_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_Team_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL TM_Team_DestroyInstance(void * jarg1) {
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   
   arg1 = (RakNet::TM_Team *)jarg1; 
@@ -18013,7 +18013,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_Team_DestroyInstance(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TM_Team() {
+SWIGEXPORT void * SWIGSTDCALL new_TM_Team() {
   void * jresult ;
   RakNet::TM_Team *result = 0 ;
   
@@ -18023,7 +18023,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TM_Team() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TM_Team(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_TM_Team(void * jarg1) {
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   
   arg1 = (RakNet::TM_Team *)jarg1; 
@@ -18031,7 +18031,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_TM_Team(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_SetMemberLimit(void * jarg1, unsigned short jarg2, unsigned char jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_Team_SetMemberLimit(void * jarg1, unsigned short jarg2, unsigned char jarg3) {
   unsigned int jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::TeamMemberLimit arg2 ;
@@ -18047,7 +18047,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_SetMemberLimit(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_TM_Team_GetMemberLimit(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL TM_Team_GetMemberLimit(void * jarg1) {
   unsigned short jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::TeamMemberLimit result;
@@ -18059,7 +18059,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_TM_Team_GetMemberLimit(void * jarg1
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_TM_Team_GetMemberLimitSetting(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL TM_Team_GetMemberLimitSetting(void * jarg1) {
   unsigned short jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::TeamMemberLimit result;
@@ -18071,7 +18071,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_TM_Team_GetMemberLimitSetting(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_SetJoinPermissions(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_Team_SetJoinPermissions(void * jarg1, unsigned char jarg2) {
   unsigned int jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::JoinPermissions arg2 ;
@@ -18085,7 +18085,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_SetJoinPermissions(void * jar
 }
 
 
-SWIGEXPORT unsigned char SWIGSTDCALL CSharp_TM_Team_GetJoinPermissions(void * jarg1) {
+SWIGEXPORT unsigned char SWIGSTDCALL TM_Team_GetJoinPermissions(void * jarg1) {
   unsigned char jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::JoinPermissions result;
@@ -18097,7 +18097,7 @@ SWIGEXPORT unsigned char SWIGSTDCALL CSharp_TM_Team_GetJoinPermissions(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_Team_LeaveTeam(void * jarg1, void * jarg2, unsigned char jarg3) {
+SWIGEXPORT void SWIGSTDCALL TM_Team_LeaveTeam(void * jarg1, void * jarg2, unsigned char jarg3) {
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::TM_TeamMember *arg2 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::NoTeamId arg3 ;
@@ -18109,7 +18109,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_Team_LeaveTeam(void * jarg1, void * jarg2,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_GetBalancingApplies(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_Team_GetBalancingApplies(void * jarg1) {
   unsigned int jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   bool result;
@@ -18121,7 +18121,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_GetBalancingApplies(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_Team_GetTeamMembers(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_Team_GetTeamMembers(void * jarg1, void * jarg2) {
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   DataStructures::List< RakNet::TM_TeamMember * > *arg2 = 0 ;
   
@@ -18135,7 +18135,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_Team_GetTeamMembers(void * jarg1, void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_GetTeamMembersCount(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_Team_GetTeamMembersCount(void * jarg1) {
   unsigned int jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   unsigned int result;
@@ -18147,7 +18147,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_GetTeamMembersCount(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_Team_GetTeamMemberByIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL TM_Team_GetTeamMemberByIndex(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   unsigned int arg2 ;
@@ -18161,7 +18161,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_Team_GetTeamMemberByIndex(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_TM_Team_GetNetworkID(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL TM_Team_GetNetworkID(void * jarg1) {
   unsigned long long jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::NetworkID result;
@@ -18173,7 +18173,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_TM_Team_GetNetworkID(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_Team_GetTM_World(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TM_Team_GetTM_World(void * jarg1) {
   void * jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::TM_World *result = 0 ;
@@ -18185,7 +18185,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_Team_GetTM_World(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_Team_SerializeConstruction(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_Team_SerializeConstruction(void * jarg1, void * jarg2) {
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -18195,7 +18195,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_Team_SerializeConstruction(void * jarg1, v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_DeserializeConstruction(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_Team_DeserializeConstruction(void * jarg1, void * jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   RakNet::TeamManager *arg2 = (RakNet::TeamManager *) 0 ;
@@ -18211,7 +18211,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_DeserializeConstruction(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_Team_SetOwner(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_Team_SetOwner(void * jarg1, void * jarg2) {
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   void *arg2 = (void *) 0 ;
   
@@ -18221,7 +18221,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_Team_SetOwner(void * jarg1, void * jarg2) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_Team_GetOwner(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TM_Team_GetOwner(void * jarg1) {
   void * jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   void *result = 0 ;
@@ -18233,7 +18233,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_Team_GetOwner(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_GetWorldIndex(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_Team_GetWorldIndex(void * jarg1) {
   unsigned int jresult ;
   RakNet::TM_Team *arg1 = (RakNet::TM_Team *) 0 ;
   unsigned int result;
@@ -18245,7 +18245,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_Team_GetWorldIndex(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_TM_Team_ToUint32(unsigned long long jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL TM_Team_ToUint32(unsigned long long jarg1) {
   unsigned long jresult ;
   RakNet::NetworkID *arg1 = 0 ;
   RakNet::NetworkID temp1 ;
@@ -18259,7 +18259,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_TM_Team_ToUint32(unsigned long long 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TM_World() {
+SWIGEXPORT void * SWIGSTDCALL new_TM_World() {
   void * jresult ;
   RakNet::TM_World *result = 0 ;
   
@@ -18269,7 +18269,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TM_World() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TM_World(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_TM_World(void * jarg1) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   
   arg1 = (RakNet::TM_World *)jarg1; 
@@ -18277,7 +18277,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_TM_World(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetTeamManager(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TM_World_GetTeamManager(void * jarg1) {
   void * jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::TeamManager *result = 0 ;
@@ -18289,7 +18289,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetTeamManager(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_AddParticipant(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_World_AddParticipant(void * jarg1, void * jarg2) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::RakNetGUID arg2 ;
   RakNet::RakNetGUID *argp2 ;
@@ -18305,7 +18305,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_AddParticipant(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_RemoveParticipant(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_World_RemoveParticipant(void * jarg1, void * jarg2) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::RakNetGUID arg2 ;
   RakNet::RakNetGUID *argp2 ;
@@ -18321,7 +18321,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_RemoveParticipant(void * jarg1, void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_SetAutoManageConnections(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_World_SetAutoManageConnections(void * jarg1, unsigned int jarg2) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   bool arg2 ;
   
@@ -18331,7 +18331,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_SetAutoManageConnections(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_GetParticipantList(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_World_GetParticipantList(void * jarg1, void * jarg2) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   DataStructures::List< RakNet::RakNetGUID > *arg2 = 0 ;
   
@@ -18345,7 +18345,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_GetParticipantList(void * jarg1, voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_ReferenceTeam(void * jarg1, void * jarg2, unsigned long long jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL TM_World_ReferenceTeam(void * jarg1, void * jarg2, unsigned long long jarg3, unsigned int jarg4) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::TM_Team *arg2 = (RakNet::TM_Team *) 0 ;
   RakNet::NetworkID arg3 ;
@@ -18359,7 +18359,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_ReferenceTeam(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_DereferenceTeam(void * jarg1, void * jarg2, unsigned char jarg3) {
+SWIGEXPORT void SWIGSTDCALL TM_World_DereferenceTeam(void * jarg1, void * jarg2, unsigned char jarg3) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::TM_Team *arg2 = (RakNet::TM_Team *) 0 ;
   RakNet::NoTeamId arg3 ;
@@ -18371,7 +18371,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_DereferenceTeam(void * jarg1, void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_GetTeamCount(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_World_GetTeamCount(void * jarg1) {
   unsigned int jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   unsigned int result;
@@ -18383,7 +18383,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_GetTeamCount(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetTeamByIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL TM_World_GetTeamByIndex(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   unsigned int arg2 ;
@@ -18397,7 +18397,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetTeamByIndex(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetTeamByNetworkID(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void * SWIGSTDCALL TM_World_GetTeamByNetworkID(void * jarg1, unsigned long long jarg2) {
   void * jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::NetworkID arg2 ;
@@ -18411,7 +18411,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetTeamByNetworkID(void * jarg1, u
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_GetTeamIndex(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_World_GetTeamIndex(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::TM_Team *arg2 = (RakNet::TM_Team *) 0 ;
@@ -18425,7 +18425,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_GetTeamIndex(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_ReferenceTeamMember(void * jarg1, void * jarg2, unsigned long long jarg3) {
+SWIGEXPORT void SWIGSTDCALL TM_World_ReferenceTeamMember(void * jarg1, void * jarg2, unsigned long long jarg3) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::TM_TeamMember *arg2 = (RakNet::TM_TeamMember *) 0 ;
   RakNet::NetworkID arg3 ;
@@ -18437,7 +18437,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_ReferenceTeamMember(void * jarg1, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_DereferenceTeamMember(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_World_DereferenceTeamMember(void * jarg1, void * jarg2) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::TM_TeamMember *arg2 = (RakNet::TM_TeamMember *) 0 ;
   
@@ -18447,7 +18447,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_DereferenceTeamMember(void * jarg1, 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_GetTeamMemberCount(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_World_GetTeamMemberCount(void * jarg1) {
   unsigned int jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   unsigned int result;
@@ -18459,7 +18459,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_GetTeamMemberCount(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetTeamMemberByIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL TM_World_GetTeamMemberByIndex(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   unsigned int arg2 ;
@@ -18473,7 +18473,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetTeamMemberByIndex(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_TM_World_GetTeamMemberIDByIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT unsigned long long SWIGSTDCALL TM_World_GetTeamMemberIDByIndex(void * jarg1, unsigned int jarg2) {
   unsigned long long jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   unsigned int arg2 ;
@@ -18487,7 +18487,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_TM_World_GetTeamMemberIDByIndex
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetTeamMemberByNetworkID(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void * SWIGSTDCALL TM_World_GetTeamMemberByNetworkID(void * jarg1, unsigned long long jarg2) {
   void * jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::NetworkID arg2 ;
@@ -18501,7 +18501,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetTeamMemberByNetworkID(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_GetTeamMemberIndex(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_World_GetTeamMemberIndex(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::TM_TeamMember *arg2 = (RakNet::TM_TeamMember *) 0 ;
@@ -18515,7 +18515,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_GetTeamMemberIndex(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_SetBalanceTeams(void * jarg1, unsigned int jarg2, unsigned char jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_World_SetBalanceTeams(void * jarg1, unsigned int jarg2, unsigned char jarg3) {
   unsigned int jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   bool arg2 ;
@@ -18531,7 +18531,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_SetBalanceTeams(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_GetBalanceTeams(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL TM_World_GetBalanceTeams(void * jarg1) {
   unsigned int jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   bool result;
@@ -18543,7 +18543,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TM_World_GetBalanceTeams(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_SetHost(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TM_World_SetHost(void * jarg1, void * jarg2) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::RakNetGUID arg2 ;
   RakNet::RakNetGUID *argp2 ;
@@ -18559,7 +18559,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_SetHost(void * jarg1, void * jarg2) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetHost(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TM_World_GetHost(void * jarg1) {
   void * jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::RakNetGUID result;
@@ -18571,7 +18571,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TM_World_GetHost(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned char SWIGSTDCALL CSharp_TM_World_GetWorldId(void * jarg1) {
+SWIGEXPORT unsigned char SWIGSTDCALL TM_World_GetWorldId(void * jarg1) {
   unsigned char jresult ;
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   RakNet::WorldId result;
@@ -18583,7 +18583,7 @@ SWIGEXPORT unsigned char SWIGSTDCALL CSharp_TM_World_GetWorldId(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL TM_World_Clear(void * jarg1) {
   RakNet::TM_World *arg1 = (RakNet::TM_World *) 0 ;
   
   arg1 = (RakNet::TM_World *)jarg1; 
@@ -18591,7 +18591,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TM_World_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_TM_World_JoinRequestHelperComp(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL TM_World_JoinRequestHelperComp(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::TM_World::JoinRequestHelper *arg1 = 0 ;
   RakNet::TM_World::JoinRequestHelper *arg2 = 0 ;
@@ -18613,7 +18613,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_TM_World_JoinRequestHelperComp(void * jarg1, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TeamManager_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL TeamManager_GetInstance() {
   void * jresult ;
   RakNet::TeamManager *result = 0 ;
   
@@ -18623,7 +18623,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TeamManager_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL TeamManager_DestroyInstance(void * jarg1) {
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   
   arg1 = (RakNet::TeamManager *)jarg1; 
@@ -18631,7 +18631,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_DestroyInstance(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_TeamManager() {
+SWIGEXPORT void * SWIGSTDCALL new_TeamManager() {
   void * jresult ;
   RakNet::TeamManager *result = 0 ;
   
@@ -18641,7 +18641,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TeamManager() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TeamManager(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_TeamManager(void * jarg1) {
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   
   arg1 = (RakNet::TeamManager *)jarg1; 
@@ -18649,7 +18649,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_TeamManager(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TeamManager_AddWorld(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void * SWIGSTDCALL TeamManager_AddWorld(void * jarg1, unsigned char jarg2) {
   void * jresult ;
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   RakNet::WorldId arg2 ;
@@ -18663,7 +18663,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TeamManager_AddWorld(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_RemoveWorld(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void SWIGSTDCALL TeamManager_RemoveWorld(void * jarg1, unsigned char jarg2) {
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   RakNet::WorldId arg2 ;
   
@@ -18673,7 +18673,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_RemoveWorld(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TeamManager_GetWorldCount(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL TeamManager_GetWorldCount(void * jarg1) {
   unsigned int jresult ;
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   unsigned int result;
@@ -18685,7 +18685,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TeamManager_GetWorldCount(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TeamManager_GetWorldAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL TeamManager_GetWorldAtIndex(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   unsigned int arg2 ;
@@ -18699,7 +18699,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TeamManager_GetWorldAtIndex(void * jarg1, u
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TeamManager_GetWorldWithId(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void * SWIGSTDCALL TeamManager_GetWorldWithId(void * jarg1, unsigned char jarg2) {
   void * jresult ;
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   RakNet::WorldId arg2 ;
@@ -18713,7 +18713,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TeamManager_GetWorldWithId(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_SetAutoManageConnections(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL TeamManager_SetAutoManageConnections(void * jarg1, unsigned int jarg2) {
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   bool arg2 ;
   
@@ -18723,7 +18723,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_SetAutoManageConnections(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_SetTopology(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL TeamManager_SetTopology(void * jarg1, int jarg2) {
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   RakNet::TMTopology arg2 ;
   
@@ -18733,7 +18733,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_SetTopology(void * jarg1, int jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_DecomposeTeamFull(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8, void * jarg9) {
+SWIGEXPORT void SWIGSTDCALL TeamManager_DecomposeTeamFull(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8, void * jarg9) {
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   RakNet::TM_World **arg3 = (RakNet::TM_World **) 0 ;
@@ -18773,7 +18773,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_DecomposeTeamFull(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_DecomposeTeamLocked(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8, void * jarg9) {
+SWIGEXPORT void SWIGSTDCALL TeamManager_DecomposeTeamLocked(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7, void * jarg8, void * jarg9) {
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   RakNet::TM_World **arg3 = (RakNet::TM_World **) 0 ;
@@ -18813,7 +18813,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_DecomposeTeamLocked(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL TeamManager_Clear(void * jarg1) {
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   
   arg1 = (RakNet::TeamManager *)jarg1; 
@@ -18821,7 +18821,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_DecodeTeamAssigned(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT void SWIGSTDCALL TeamManager_DecodeTeamAssigned(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   RakNet::TM_World **arg3 = (RakNet::TM_World **) 0 ;
@@ -18835,7 +18835,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_DecodeTeamAssigned(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_DecodeTeamCancelled(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
+SWIGEXPORT void SWIGSTDCALL TeamManager_DecodeTeamCancelled(void * jarg1, void * jarg2, void * jarg3, void * jarg4, void * jarg5) {
   RakNet::TeamManager *arg1 = (RakNet::TeamManager *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   RakNet::TM_World **arg3 = (RakNet::TM_World **) 0 ;
@@ -18851,7 +18851,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TeamManager_DecodeTeamCancelled(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughServerDebugInterface(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NatPunchthroughServerDebugInterface(void * jarg1) {
   RakNet::NatPunchthroughServerDebugInterface *arg1 = (RakNet::NatPunchthroughServerDebugInterface *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughServerDebugInterface *)jarg1; 
@@ -18859,7 +18859,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughServerDebugInterface(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_OnServerMessage(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughServerDebugInterface_OnServerMessage(void * jarg1, char * jarg2) {
   RakNet::NatPunchthroughServerDebugInterface *arg1 = (RakNet::NatPunchthroughServerDebugInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -18869,7 +18869,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_OnServerM
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_Printf_OnServerMessage(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughServerDebugInterface_Printf_OnServerMessage(void * jarg1, char * jarg2) {
   RakNet::NatPunchthroughServerDebugInterface_Printf *arg1 = (RakNet::NatPunchthroughServerDebugInterface_Printf *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -18879,7 +18879,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_Printf_On
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughServerDebugInterface_Printf() {
+SWIGEXPORT void * SWIGSTDCALL new_NatPunchthroughServerDebugInterface_Printf() {
   void * jresult ;
   RakNet::NatPunchthroughServerDebugInterface_Printf *result = 0 ;
   
@@ -18889,7 +18889,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughServerDebugInterface_Pri
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughServerDebugInterface_Printf(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NatPunchthroughServerDebugInterface_Printf(void * jarg1) {
   RakNet::NatPunchthroughServerDebugInterface_Printf *arg1 = (RakNet::NatPunchthroughServerDebugInterface_Printf *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughServerDebugInterface_Printf *)jarg1; 
@@ -18897,7 +18897,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughServerDebugInterface_Pr
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_PacketLogger_pl_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughServerDebugInterface_PacketLogger_pl_set(void * jarg1, void * jarg2) {
   RakNet::NatPunchthroughServerDebugInterface_PacketLogger *arg1 = (RakNet::NatPunchthroughServerDebugInterface_PacketLogger *) 0 ;
   RakNet::PacketLogger *arg2 = (RakNet::PacketLogger *) 0 ;
   
@@ -18907,7 +18907,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_PacketLog
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_PacketLogger_pl_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL NatPunchthroughServerDebugInterface_PacketLogger_pl_get(void * jarg1) {
   void * jresult ;
   RakNet::NatPunchthroughServerDebugInterface_PacketLogger *arg1 = (RakNet::NatPunchthroughServerDebugInterface_PacketLogger *) 0 ;
   RakNet::PacketLogger *result = 0 ;
@@ -18919,7 +18919,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_PacketL
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughServerDebugInterface_PacketLogger() {
+SWIGEXPORT void * SWIGSTDCALL new_NatPunchthroughServerDebugInterface_PacketLogger() {
   void * jresult ;
   RakNet::NatPunchthroughServerDebugInterface_PacketLogger *result = 0 ;
   
@@ -18929,7 +18929,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughServerDebugInterface_Pac
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughServerDebugInterface_PacketLogger(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NatPunchthroughServerDebugInterface_PacketLogger(void * jarg1) {
   RakNet::NatPunchthroughServerDebugInterface_PacketLogger *arg1 = (RakNet::NatPunchthroughServerDebugInterface_PacketLogger *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughServerDebugInterface_PacketLogger *)jarg1; 
@@ -18937,7 +18937,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughServerDebugInterface_Pa
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_PacketLogger_OnServerMessage(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughServerDebugInterface_PacketLogger_OnServerMessage(void * jarg1, char * jarg2) {
   RakNet::NatPunchthroughServerDebugInterface_PacketLogger *arg1 = (RakNet::NatPunchthroughServerDebugInterface_PacketLogger *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -18947,7 +18947,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_PacketLog
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughServer_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL NatPunchthroughServer_GetInstance() {
   void * jresult ;
   RakNet::NatPunchthroughServer *result = 0 ;
   
@@ -18957,7 +18957,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NatPunchthroughServer_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServer_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughServer_DestroyInstance(void * jarg1) {
   RakNet::NatPunchthroughServer *arg1 = (RakNet::NatPunchthroughServer *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughServer *)jarg1; 
@@ -18965,7 +18965,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServer_DestroyInstance(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughServer() {
+SWIGEXPORT void * SWIGSTDCALL new_NatPunchthroughServer() {
   void * jresult ;
   RakNet::NatPunchthroughServer *result = 0 ;
   
@@ -18975,7 +18975,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatPunchthroughServer() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughServer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NatPunchthroughServer(void * jarg1) {
   RakNet::NatPunchthroughServer *arg1 = (RakNet::NatPunchthroughServer *) 0 ;
   
   arg1 = (RakNet::NatPunchthroughServer *)jarg1; 
@@ -18983,7 +18983,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatPunchthroughServer(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServer_SetDebugInterface(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughServer_SetDebugInterface(void * jarg1, void * jarg2) {
   RakNet::NatPunchthroughServer *arg1 = (RakNet::NatPunchthroughServer *) 0 ;
   RakNet::NatPunchthroughServerDebugInterface *arg2 = (RakNet::NatPunchthroughServerDebugInterface *) 0 ;
   
@@ -18993,7 +18993,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServer_SetDebugInterface(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServer_lastUpdate_set(void * jarg1, unsigned long long jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatPunchthroughServer_lastUpdate_set(void * jarg1, unsigned long long jarg2) {
   RakNet::NatPunchthroughServer *arg1 = (RakNet::NatPunchthroughServer *) 0 ;
   RakNet::Time arg2 ;
   
@@ -19003,7 +19003,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatPunchthroughServer_lastUpdate_set(void * j
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_NatPunchthroughServer_lastUpdate_get(void * jarg1) {
+SWIGEXPORT unsigned long long SWIGSTDCALL NatPunchthroughServer_lastUpdate_get(void * jarg1) {
   unsigned long long jresult ;
   RakNet::NatPunchthroughServer *arg1 = (RakNet::NatPunchthroughServer *) 0 ;
   RakNet::Time result;
@@ -19015,7 +19015,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_NatPunchthroughServer_lastUpdat
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPForwarder() {
+SWIGEXPORT void * SWIGSTDCALL new_UDPForwarder() {
   void * jresult ;
   RakNet::UDPForwarder *result = 0 ;
   
@@ -19025,7 +19025,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPForwarder() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPForwarder(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_UDPForwarder(void * jarg1) {
   RakNet::UDPForwarder *arg1 = (RakNet::UDPForwarder *) 0 ;
   
   arg1 = (RakNet::UDPForwarder *)jarg1; 
@@ -19033,7 +19033,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPForwarder(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPForwarder_Startup(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL UDPForwarder_Startup(void * jarg1) {
   RakNet::UDPForwarder *arg1 = (RakNet::UDPForwarder *) 0 ;
   
   arg1 = (RakNet::UDPForwarder *)jarg1; 
@@ -19041,7 +19041,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPForwarder_Startup(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPForwarder_Shutdown(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL UDPForwarder_Shutdown(void * jarg1) {
   RakNet::UDPForwarder *arg1 = (RakNet::UDPForwarder *) 0 ;
   
   arg1 = (RakNet::UDPForwarder *)jarg1; 
@@ -19049,7 +19049,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPForwarder_Shutdown(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPForwarder_SetMaxForwardEntries(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL UDPForwarder_SetMaxForwardEntries(void * jarg1, unsigned short jarg2) {
   RakNet::UDPForwarder *arg1 = (RakNet::UDPForwarder *) 0 ;
   unsigned short arg2 ;
   
@@ -19059,7 +19059,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPForwarder_SetMaxForwardEntries(void * jarg
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_UDPForwarder_GetMaxForwardEntries(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL UDPForwarder_GetMaxForwardEntries(void * jarg1) {
   int jresult ;
   RakNet::UDPForwarder *arg1 = (RakNet::UDPForwarder *) 0 ;
   int result;
@@ -19071,7 +19071,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_UDPForwarder_GetMaxForwardEntries(void * jarg1
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_UDPForwarder_GetUsedForwardEntries(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL UDPForwarder_GetUsedForwardEntries(void * jarg1) {
   int jresult ;
   RakNet::UDPForwarder *arg1 = (RakNet::UDPForwarder *) 0 ;
   int result;
@@ -19083,7 +19083,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_UDPForwarder_GetUsedForwardEntries(void * jarg
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_UDPForwarder_StartForwarding(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned short jarg6, unsigned short * jarg7, int * jarg8) {
+SWIGEXPORT int SWIGSTDCALL UDPForwarder_StartForwarding(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned short jarg6, unsigned short * jarg7, int * jarg8) {
   int jresult ;
   RakNet::UDPForwarder *arg1 = (RakNet::UDPForwarder *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -19121,7 +19121,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_UDPForwarder_StartForwarding(void * jarg1, voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPForwarder_StopForwarding(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL UDPForwarder_StopForwarding(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::UDPForwarder *arg1 = (RakNet::UDPForwarder *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress arg3 ;
@@ -19145,7 +19145,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPForwarder_StopForwarding(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPProxyServerResultHandler() {
+SWIGEXPORT void * SWIGSTDCALL new_UDPProxyServerResultHandler() {
   void * jresult ;
   RakNet::UDPProxyServerResultHandler *result = 0 ;
   
@@ -19155,7 +19155,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPProxyServerResultHandler() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPProxyServerResultHandler(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_UDPProxyServerResultHandler(void * jarg1) {
   RakNet::UDPProxyServerResultHandler *arg1 = (RakNet::UDPProxyServerResultHandler *) 0 ;
   
   arg1 = (RakNet::UDPProxyServerResultHandler *)jarg1; 
@@ -19163,7 +19163,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPProxyServerResultHandler(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServerResultHandler_OnLoginSuccess(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyServerResultHandler_OnLoginSuccess(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::UDPProxyServerResultHandler *arg1 = (RakNet::UDPProxyServerResultHandler *) 0 ;
   RakNet::RakString arg2 ;
   RakNet::UDPProxyServer *arg3 = (RakNet::UDPProxyServer *) 0 ;
@@ -19181,7 +19181,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServerResultHandler_OnLoginSuccess(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServerResultHandler_OnAlreadyLoggedIn(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyServerResultHandler_OnAlreadyLoggedIn(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::UDPProxyServerResultHandler *arg1 = (RakNet::UDPProxyServerResultHandler *) 0 ;
   RakNet::RakString arg2 ;
   RakNet::UDPProxyServer *arg3 = (RakNet::UDPProxyServer *) 0 ;
@@ -19199,7 +19199,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServerResultHandler_OnAlreadyLoggedIn
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServerResultHandler_OnNoPasswordSet(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyServerResultHandler_OnNoPasswordSet(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::UDPProxyServerResultHandler *arg1 = (RakNet::UDPProxyServerResultHandler *) 0 ;
   RakNet::RakString arg2 ;
   RakNet::UDPProxyServer *arg3 = (RakNet::UDPProxyServer *) 0 ;
@@ -19217,7 +19217,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServerResultHandler_OnNoPasswordSet(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServerResultHandler_OnWrongPassword(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyServerResultHandler_OnWrongPassword(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::UDPProxyServerResultHandler *arg1 = (RakNet::UDPProxyServerResultHandler *) 0 ;
   RakNet::RakString arg2 ;
   RakNet::UDPProxyServer *arg3 = (RakNet::UDPProxyServer *) 0 ;
@@ -19235,7 +19235,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServerResultHandler_OnWrongPassword(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServerResultHandler_director_connect(void *objarg, SwigDirector_UDPProxyServerResultHandler::SWIG_Callback0_t callback0, SwigDirector_UDPProxyServerResultHandler::SWIG_Callback1_t callback1, SwigDirector_UDPProxyServerResultHandler::SWIG_Callback2_t callback2, SwigDirector_UDPProxyServerResultHandler::SWIG_Callback3_t callback3) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyServerResultHandler_director_connect(void *objarg, SwigDirector_UDPProxyServerResultHandler::SWIG_Callback0_t callback0, SwigDirector_UDPProxyServerResultHandler::SWIG_Callback1_t callback1, SwigDirector_UDPProxyServerResultHandler::SWIG_Callback2_t callback2, SwigDirector_UDPProxyServerResultHandler::SWIG_Callback3_t callback3) {
   RakNet::UDPProxyServerResultHandler *obj = (RakNet::UDPProxyServerResultHandler *)objarg;
   SwigDirector_UDPProxyServerResultHandler *director = dynamic_cast<SwigDirector_UDPProxyServerResultHandler *>(obj);
   if (director) {
@@ -19244,7 +19244,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServerResultHandler_director_connect(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UDPProxyServer_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL UDPProxyServer_GetInstance() {
   void * jresult ;
   RakNet::UDPProxyServer *result = 0 ;
   
@@ -19254,7 +19254,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UDPProxyServer_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServer_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyServer_DestroyInstance(void * jarg1) {
   RakNet::UDPProxyServer *arg1 = (RakNet::UDPProxyServer *) 0 ;
   
   arg1 = (RakNet::UDPProxyServer *)jarg1; 
@@ -19262,7 +19262,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServer_DestroyInstance(void * jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPProxyServer() {
+SWIGEXPORT void * SWIGSTDCALL new_UDPProxyServer() {
   void * jresult ;
   RakNet::UDPProxyServer *result = 0 ;
   
@@ -19272,7 +19272,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPProxyServer() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPProxyServer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_UDPProxyServer(void * jarg1) {
   RakNet::UDPProxyServer *arg1 = (RakNet::UDPProxyServer *) 0 ;
   
   arg1 = (RakNet::UDPProxyServer *)jarg1; 
@@ -19280,7 +19280,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPProxyServer(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServer_SetSocketFamily(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyServer_SetSocketFamily(void * jarg1, unsigned short jarg2) {
   RakNet::UDPProxyServer *arg1 = (RakNet::UDPProxyServer *) 0 ;
   unsigned short arg2 ;
   
@@ -19290,7 +19290,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServer_SetSocketFamily(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServer_SetResultHandler(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyServer_SetResultHandler(void * jarg1, void * jarg2) {
   RakNet::UDPProxyServer *arg1 = (RakNet::UDPProxyServer *) 0 ;
   RakNet::UDPProxyServerResultHandler *arg2 = (RakNet::UDPProxyServerResultHandler *) 0 ;
   
@@ -19300,7 +19300,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServer_SetResultHandler(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UDPProxyServer_LoginToCoordinator(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL UDPProxyServer_LoginToCoordinator(void * jarg1, void * jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::UDPProxyServer *arg1 = (RakNet::UDPProxyServer *) 0 ;
   RakNet::RakString arg2 ;
@@ -19328,7 +19328,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UDPProxyServer_LoginToCoordinator(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServer_SetServerPublicIP(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyServer_SetServerPublicIP(void * jarg1, void * jarg2) {
   RakNet::UDPProxyServer *arg1 = (RakNet::UDPProxyServer *) 0 ;
   RakNet::RakString arg2 ;
   RakNet::RakString *argp2 ;
@@ -19344,7 +19344,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServer_SetServerPublicIP(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServer_udpForwarder_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyServer_udpForwarder_set(void * jarg1, void * jarg2) {
   RakNet::UDPProxyServer *arg1 = (RakNet::UDPProxyServer *) 0 ;
   RakNet::UDPForwarder *arg2 = (RakNet::UDPForwarder *) 0 ;
   
@@ -19354,7 +19354,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyServer_udpForwarder_set(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UDPProxyServer_udpForwarder_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL UDPProxyServer_udpForwarder_get(void * jarg1) {
   void * jresult ;
   RakNet::UDPProxyServer *arg1 = (RakNet::UDPProxyServer *) 0 ;
   RakNet::UDPForwarder *result = 0 ;
@@ -19366,7 +19366,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UDPProxyServer_udpForwarder_get(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UDPProxyCoordinator_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL UDPProxyCoordinator_GetInstance() {
   void * jresult ;
   RakNet::UDPProxyCoordinator *result = 0 ;
   
@@ -19376,7 +19376,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UDPProxyCoordinator_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyCoordinator_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyCoordinator_DestroyInstance(void * jarg1) {
   RakNet::UDPProxyCoordinator *arg1 = (RakNet::UDPProxyCoordinator *) 0 ;
   
   arg1 = (RakNet::UDPProxyCoordinator *)jarg1; 
@@ -19384,7 +19384,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyCoordinator_DestroyInstance(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPProxyCoordinator() {
+SWIGEXPORT void * SWIGSTDCALL new_UDPProxyCoordinator() {
   void * jresult ;
   RakNet::UDPProxyCoordinator *result = 0 ;
   
@@ -19394,7 +19394,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_UDPProxyCoordinator() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPProxyCoordinator(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_UDPProxyCoordinator(void * jarg1) {
   RakNet::UDPProxyCoordinator *arg1 = (RakNet::UDPProxyCoordinator *) 0 ;
   
   arg1 = (RakNet::UDPProxyCoordinator *)jarg1; 
@@ -19402,7 +19402,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_UDPProxyCoordinator(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyCoordinator_SetRemoteLoginPassword(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL UDPProxyCoordinator_SetRemoteLoginPassword(void * jarg1, void * jarg2) {
   RakNet::UDPProxyCoordinator *arg1 = (RakNet::UDPProxyCoordinator *) 0 ;
   RakNet::RakString arg2 ;
   RakNet::RakString *argp2 ;
@@ -19418,7 +19418,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UDPProxyCoordinator_SetRemoteLoginPassword(vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NatTypeDetectionServer_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL NatTypeDetectionServer_GetInstance() {
   void * jresult ;
   RakNet::NatTypeDetectionServer *result = 0 ;
   
@@ -19428,7 +19428,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NatTypeDetectionServer_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionServer_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL NatTypeDetectionServer_DestroyInstance(void * jarg1) {
   RakNet::NatTypeDetectionServer *arg1 = (RakNet::NatTypeDetectionServer *) 0 ;
   
   arg1 = (RakNet::NatTypeDetectionServer *)jarg1; 
@@ -19436,7 +19436,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionServer_DestroyInstance(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatTypeDetectionServer() {
+SWIGEXPORT void * SWIGSTDCALL new_NatTypeDetectionServer() {
   void * jresult ;
   RakNet::NatTypeDetectionServer *result = 0 ;
   
@@ -19446,7 +19446,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NatTypeDetectionServer() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatTypeDetectionServer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_NatTypeDetectionServer(void * jarg1) {
   RakNet::NatTypeDetectionServer *arg1 = (RakNet::NatTypeDetectionServer *) 0 ;
   
   arg1 = (RakNet::NatTypeDetectionServer *)jarg1; 
@@ -19454,7 +19454,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_NatTypeDetectionServer(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionServer_Startup(void * jarg1, char * jarg2, char * jarg3, char * jarg4) {
+SWIGEXPORT void SWIGSTDCALL NatTypeDetectionServer_Startup(void * jarg1, char * jarg2, char * jarg3, char * jarg4) {
   RakNet::NatTypeDetectionServer *arg1 = (RakNet::NatTypeDetectionServer *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -19468,7 +19468,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionServer_Startup(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionServer_Shutdown(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL NatTypeDetectionServer_Shutdown(void * jarg1) {
   RakNet::NatTypeDetectionServer *arg1 = (RakNet::NatTypeDetectionServer *) 0 ;
   
   arg1 = (RakNet::NatTypeDetectionServer *)jarg1; 
@@ -19476,7 +19476,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionServer_Shutdown(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionServer_OnRNS2Recv(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL NatTypeDetectionServer_OnRNS2Recv(void * jarg1, void * jarg2) {
   RakNet::NatTypeDetectionServer *arg1 = (RakNet::NatTypeDetectionServer *) 0 ;
   RNS2RecvStruct *arg2 = (RNS2RecvStruct *) 0 ;
   
@@ -19486,7 +19486,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionServer_OnRNS2Recv(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionServer_DeallocRNS2RecvStruct(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL NatTypeDetectionServer_DeallocRNS2RecvStruct(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   RakNet::NatTypeDetectionServer *arg1 = (RakNet::NatTypeDetectionServer *) 0 ;
   RNS2RecvStruct *arg2 = (RNS2RecvStruct *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -19500,7 +19500,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NatTypeDetectionServer_DeallocRNS2RecvStruct(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_NatTypeDetectionServer_AllocRNS2RecvStruct(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL NatTypeDetectionServer_AllocRNS2RecvStruct(void * jarg1, char * jarg2, unsigned int jarg3) {
   void * jresult ;
   RakNet::NatTypeDetectionServer *arg1 = (RakNet::NatTypeDetectionServer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -19516,7 +19516,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NatTypeDetectionServer_AllocRNS2RecvStruct(
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__TABLE_BPLUS_TREE_ORDER_get() {
+SWIGEXPORT int SWIGSTDCALL _TABLE_BPLUS_TREE_ORDER_get() {
   int jresult ;
   int result;
   
@@ -19526,7 +19526,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__TABLE_BPLUS_TREE_ORDER_get() {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp__TABLE_MAX_COLUMN_NAME_LENGTH_get() {
+SWIGEXPORT int SWIGSTDCALL _TABLE_MAX_COLUMN_NAME_LENGTH_get() {
   int jresult ;
   int result;
   
@@ -19536,7 +19536,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp__TABLE_MAX_COLUMN_NAME_LENGTH_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Table() {
+SWIGEXPORT void * SWIGSTDCALL new_Table() {
   void * jresult ;
   DataStructures::Table *result = 0 ;
   
@@ -19546,7 +19546,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Table() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Table(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_Table(void * jarg1) {
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   
   arg1 = (DataStructures::Table *)jarg1; 
@@ -19554,7 +19554,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_Table(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_AddColumn(void * jarg1, char * jarg2, int jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_AddColumn(void * jarg1, char * jarg2, int jarg3) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   char *arg2 ;
@@ -19570,7 +19570,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_AddColumn(void * jarg1, char * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Table_RemoveColumn(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL Table_RemoveColumn(void * jarg1, unsigned int jarg2) {
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
   
@@ -19580,7 +19580,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Table_RemoveColumn(void * jarg1, unsigned int
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_Table_ColumnName(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT char * SWIGSTDCALL Table_ColumnName(void * jarg1, unsigned int jarg2) {
   char * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19594,7 +19594,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_Table_ColumnName(void * jarg1, unsigned int
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_Table_GetColumnType(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT int SWIGSTDCALL Table_GetColumnType(void * jarg1, unsigned int jarg2) {
   int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19608,7 +19608,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Table_GetColumnType(void * jarg1, unsigned int
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_GetColumnCount(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_GetColumnCount(void * jarg1) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int result;
@@ -19620,7 +19620,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_GetColumnCount(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_GetRowCount(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_GetRowCount(void * jarg1) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int result;
@@ -19632,7 +19632,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_GetRowCount(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Table_AddRow__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL Table_AddRow__SWIG_0(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19646,7 +19646,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Table_AddRow__SWIG_0(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Table_AddRow__SWIG_1(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT void * SWIGSTDCALL Table_AddRow__SWIG_1(void * jarg1, unsigned int jarg2, void * jarg3) {
   void * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19666,7 +19666,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Table_AddRow__SWIG_1(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Table_AddRow__SWIG_2(void * jarg1, unsigned int jarg2, void * jarg3, unsigned int jarg4) {
+SWIGEXPORT void * SWIGSTDCALL Table_AddRow__SWIG_2(void * jarg1, unsigned int jarg2, void * jarg3, unsigned int jarg4) {
   void * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19688,7 +19688,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Table_AddRow__SWIG_2(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Table_AddRow__SWIG_3(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT void * SWIGSTDCALL Table_AddRow__SWIG_3(void * jarg1, unsigned int jarg2, void * jarg3) {
   void * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19708,7 +19708,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Table_AddRow__SWIG_3(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_RemoveRow(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_RemoveRow(void * jarg1, unsigned int jarg2) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19722,7 +19722,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_RemoveRow(void * jarg1, unsigne
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Table_RemoveRows(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL Table_RemoveRows(void * jarg1, void * jarg2) {
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   DataStructures::Table *arg2 = (DataStructures::Table *) 0 ;
   
@@ -19732,7 +19732,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Table_RemoveRows(void * jarg1, void * jarg2) 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCell__SWIG_0(void * jarg1, unsigned int jarg2, unsigned int jarg3, int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_UpdateCell__SWIG_0(void * jarg1, unsigned int jarg2, unsigned int jarg3, int jarg4) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19750,7 +19750,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCell__SWIG_0(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCell__SWIG_1(void * jarg1, unsigned int jarg2, unsigned int jarg3, char * jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_UpdateCell__SWIG_1(void * jarg1, unsigned int jarg2, unsigned int jarg3, char * jarg4) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19768,7 +19768,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCell__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCellByIndex__SWIG_0(void * jarg1, unsigned int jarg2, unsigned int jarg3, int jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_UpdateCellByIndex__SWIG_0(void * jarg1, unsigned int jarg2, unsigned int jarg3, int jarg4) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19786,7 +19786,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCellByIndex__SWIG_0(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCellByIndex__SWIG_1(void * jarg1, unsigned int jarg2, unsigned int jarg3, char * jarg4) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_UpdateCellByIndex__SWIG_1(void * jarg1, unsigned int jarg2, unsigned int jarg3, char * jarg4) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19804,7 +19804,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCellByIndex__SWIG_1(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Table_GetCellValueByIndex(void * jarg1, unsigned int jarg2, unsigned int jarg3, int * jarg4) {
+SWIGEXPORT void SWIGSTDCALL Table_GetCellValueByIndex(void * jarg1, unsigned int jarg2, unsigned int jarg3, int * jarg4) {
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
   unsigned int arg3 ;
@@ -19818,7 +19818,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Table_GetCellValueByIndex(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Table_GetRowByID(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL Table_GetRowByID(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19832,7 +19832,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Table_GetRowByID(void * jarg1, unsigned int
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Table_GetRowByIndex(void * jarg1, unsigned int jarg2, int * jarg3) {
+SWIGEXPORT void * SWIGSTDCALL Table_GetRowByIndex(void * jarg1, unsigned int jarg2, int * jarg3) {
   void * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19848,7 +19848,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Table_GetRowByIndex(void * jarg1, unsigned 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Table_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL Table_Clear(void * jarg1) {
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   
   arg1 = (DataStructures::Table *)jarg1; 
@@ -19856,7 +19856,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Table_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Table_GetColumns(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL Table_GetColumns(void * jarg1) {
   void * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   DataStructures::List< ColumnDescriptor > *result = 0 ;
@@ -19868,7 +19868,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Table_GetColumns(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Table_GetRows(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL Table_GetRows(void * jarg1) {
   void * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   DataStructures::BPlusTree< unsigned int,Row *,16 > *result = 0 ;
@@ -19880,7 +19880,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Table_GetRows(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_GetAvailableRowId(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_GetAvailableRowId(void * jarg1) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int result;
@@ -19892,7 +19892,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_GetAvailableRowId(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Table_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL Table_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   DataStructures::Table *arg2 = 0 ;
@@ -19910,7 +19910,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Table_CopyData(void * jarg1, void * jarg2) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_Table_GetListHeadHelper(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL Table_GetListHeadHelper(void * jarg1) {
   void * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   DataStructures::Page< unsigned int,Row *,16 > *result = 0 ;
@@ -19922,7 +19922,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Table_GetListHeadHelper(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Table_SortTableHelper(void * jarg1, void * jarg2, unsigned int jarg3, void * jarg4) {
+SWIGEXPORT void SWIGSTDCALL Table_SortTableHelper(void * jarg1, void * jarg2, unsigned int jarg3, void * jarg4) {
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   DataStructures::List< SortQuery > *arg2 = (DataStructures::List< SortQuery > *) 0 ;
   unsigned int arg3 ;
@@ -19936,7 +19936,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Table_SortTableHelper(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Table_GetCellValueByIndexHelper__SWIG_0(void * jarg1, unsigned int jarg2, unsigned int jarg3, unsigned char* jarg4, int * jarg5) {
+SWIGEXPORT void SWIGSTDCALL Table_GetCellValueByIndexHelper__SWIG_0(void * jarg1, unsigned int jarg2, unsigned int jarg3, unsigned char* jarg4, int * jarg5) {
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
   unsigned int arg3 ;
@@ -19954,7 +19954,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Table_GetCellValueByIndexHelper__SWIG_0(void 
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_Table_GetCellValueByIndexHelper__SWIG_1(void * jarg1, unsigned int jarg2, unsigned int jarg3, char * jarg4) {
+SWIGEXPORT char * SWIGSTDCALL Table_GetCellValueByIndexHelper__SWIG_1(void * jarg1, unsigned int jarg2, unsigned int jarg3, char * jarg4) {
   char * jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -19972,7 +19972,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_Table_GetCellValueByIndexHelper__SWIG_1(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Table_PrintColumnHeaders(void * jarg1, unsigned char* jarg2, int jarg3, char jarg4) {
+SWIGEXPORT void SWIGSTDCALL Table_PrintColumnHeaders(void * jarg1, unsigned char* jarg2, int jarg3, char jarg4) {
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -19988,7 +19988,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Table_PrintColumnHeaders(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Table_PrintRow(void * jarg1, unsigned char* jarg2, int jarg3, char jarg4, unsigned int jarg5, void * jarg6) {
+SWIGEXPORT void SWIGSTDCALL Table_PrintRow(void * jarg1, unsigned char* jarg2, int jarg3, char jarg4, unsigned int jarg5, void * jarg6) {
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -20008,7 +20008,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Table_PrintRow(void * jarg1, unsigned char* j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Table_QueryTableHelper(void * jarg1, unsigned int* jarg2, unsigned int jarg3, void * jarg4, unsigned int jarg5, unsigned int* jarg6, unsigned int jarg7, void * jarg8) {
+SWIGEXPORT void SWIGSTDCALL Table_QueryTableHelper(void * jarg1, unsigned int* jarg2, unsigned int jarg3, void * jarg4, unsigned int jarg5, unsigned int* jarg6, unsigned int jarg7, void * jarg8) {
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int *arg2 = (unsigned int *) 0 ;
   unsigned int arg3 ;
@@ -20034,7 +20034,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Table_QueryTableHelper(void * jarg1, unsigned
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCell__SWIG_2(void * jarg1, unsigned int jarg2, unsigned int jarg3, int jarg4, unsigned char* jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_UpdateCell__SWIG_2(void * jarg1, unsigned int jarg2, unsigned int jarg3, int jarg4, unsigned char* jarg5) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -20056,7 +20056,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCell__SWIG_2(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCellByIndex__SWIG_2(void * jarg1, unsigned int jarg2, unsigned int jarg3, int jarg4, unsigned char* jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_UpdateCellByIndex__SWIG_2(void * jarg1, unsigned int jarg2, unsigned int jarg3, int jarg4, unsigned char* jarg5) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   unsigned int arg2 ;
@@ -20078,7 +20078,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_UpdateCellByIndex__SWIG_2(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_ColumnIndexHelper(void * jarg1, char * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL Table_ColumnIndexHelper(void * jarg1, char * jarg2) {
   unsigned int jresult ;
   DataStructures::Table *arg1 = (DataStructures::Table *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -20092,7 +20092,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Table_ColumnIndexHelper(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListTransferCBInterface() {
+SWIGEXPORT void * SWIGSTDCALL new_FileListTransferCBInterface() {
   void * jresult ;
   RakNet::FileListTransferCBInterface *result = 0 ;
   
@@ -20102,7 +20102,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListTransferCBInterface() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileListTransferCBInterface(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_FileListTransferCBInterface(void * jarg1) {
   RakNet::FileListTransferCBInterface *arg1 = (RakNet::FileListTransferCBInterface *) 0 ;
   
   arg1 = (RakNet::FileListTransferCBInterface *)jarg1; 
@@ -20110,7 +20110,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileListTransferCBInterface(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransferCBInterface_OnFile(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListTransferCBInterface_OnFile(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::FileListTransferCBInterface *arg1 = (RakNet::FileListTransferCBInterface *) 0 ;
   OnFileStruct *arg2 = (OnFileStruct *) 0 ;
@@ -20124,7 +20124,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransferCBInterface_OnFile(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransferCBInterface_OnFileProgress(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListTransferCBInterface_OnFileProgress(void * jarg1, void * jarg2) {
   RakNet::FileListTransferCBInterface *arg1 = (RakNet::FileListTransferCBInterface *) 0 ;
   FileProgressStruct *arg2 = (FileProgressStruct *) 0 ;
   
@@ -20134,7 +20134,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransferCBInterface_OnFileProgress(vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransferCBInterface_Update(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListTransferCBInterface_Update(void * jarg1) {
   unsigned int jresult ;
   RakNet::FileListTransferCBInterface *arg1 = (RakNet::FileListTransferCBInterface *) 0 ;
   bool result;
@@ -20146,7 +20146,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransferCBInterface_Update(vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransferCBInterface_UpdateSwigExplicitFileListTransferCBInterface(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListTransferCBInterface_UpdateSwigExplicitFileListTransferCBInterface(void * jarg1) {
   unsigned int jresult ;
   RakNet::FileListTransferCBInterface *arg1 = (RakNet::FileListTransferCBInterface *) 0 ;
   bool result;
@@ -20158,7 +20158,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransferCBInterface_UpdateSwi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransferCBInterface_OnDownloadComplete(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListTransferCBInterface_OnDownloadComplete(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::FileListTransferCBInterface *arg1 = (RakNet::FileListTransferCBInterface *) 0 ;
   DownloadCompleteStruct *arg2 = (DownloadCompleteStruct *) 0 ;
@@ -20172,7 +20172,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransferCBInterface_OnDownloa
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransferCBInterface_OnDownloadCompleteSwigExplicitFileListTransferCBInterface(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListTransferCBInterface_OnDownloadCompleteSwigExplicitFileListTransferCBInterface(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::FileListTransferCBInterface *arg1 = (RakNet::FileListTransferCBInterface *) 0 ;
   DownloadCompleteStruct *arg2 = (DownloadCompleteStruct *) 0 ;
@@ -20186,7 +20186,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransferCBInterface_OnDownloa
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransferCBInterface_OnDereference(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FileListTransferCBInterface_OnDereference(void * jarg1) {
   RakNet::FileListTransferCBInterface *arg1 = (RakNet::FileListTransferCBInterface *) 0 ;
   
   arg1 = (RakNet::FileListTransferCBInterface *)jarg1; 
@@ -20194,7 +20194,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransferCBInterface_OnDereference(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransferCBInterface_OnDereferenceSwigExplicitFileListTransferCBInterface(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FileListTransferCBInterface_OnDereferenceSwigExplicitFileListTransferCBInterface(void * jarg1) {
   RakNet::FileListTransferCBInterface *arg1 = (RakNet::FileListTransferCBInterface *) 0 ;
   
   arg1 = (RakNet::FileListTransferCBInterface *)jarg1; 
@@ -20202,7 +20202,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransferCBInterface_OnDereferenceSwig
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransferCBInterface_director_connect(void *objarg, SwigDirector_FileListTransferCBInterface::SWIG_Callback0_t callback0, SwigDirector_FileListTransferCBInterface::SWIG_Callback1_t callback1, SwigDirector_FileListTransferCBInterface::SWIG_Callback2_t callback2, SwigDirector_FileListTransferCBInterface::SWIG_Callback3_t callback3, SwigDirector_FileListTransferCBInterface::SWIG_Callback4_t callback4) {
+SWIGEXPORT void SWIGSTDCALL FileListTransferCBInterface_director_connect(void *objarg, SwigDirector_FileListTransferCBInterface::SWIG_Callback0_t callback0, SwigDirector_FileListTransferCBInterface::SWIG_Callback1_t callback1, SwigDirector_FileListTransferCBInterface::SWIG_Callback2_t callback2, SwigDirector_FileListTransferCBInterface::SWIG_Callback3_t callback3, SwigDirector_FileListTransferCBInterface::SWIG_Callback4_t callback4) {
   RakNet::FileListTransferCBInterface *obj = (RakNet::FileListTransferCBInterface *)objarg;
   SwigDirector_FileListTransferCBInterface *director = dynamic_cast<SwigDirector_FileListTransferCBInterface *>(obj);
   if (director) {
@@ -20211,7 +20211,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransferCBInterface_director_connect(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_IncrementalReadInterface() {
+SWIGEXPORT void * SWIGSTDCALL new_IncrementalReadInterface() {
   void * jresult ;
   RakNet::IncrementalReadInterface *result = 0 ;
   
@@ -20221,7 +20221,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_IncrementalReadInterface() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_IncrementalReadInterface(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_IncrementalReadInterface(void * jarg1) {
   RakNet::IncrementalReadInterface *arg1 = (RakNet::IncrementalReadInterface *) 0 ;
   
   arg1 = (RakNet::IncrementalReadInterface *)jarg1; 
@@ -20229,7 +20229,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_IncrementalReadInterface(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IncrementalReadInterface_GetFilePart(void * jarg1, char * jarg2, unsigned int jarg3, unsigned int jarg4, unsigned char* jarg5, void * jarg6) {
+SWIGEXPORT unsigned int SWIGSTDCALL IncrementalReadInterface_GetFilePart(void * jarg1, char * jarg2, unsigned int jarg3, unsigned int jarg4, unsigned char* jarg5, void * jarg6) {
   unsigned int jresult ;
   RakNet::IncrementalReadInterface *arg1 = (RakNet::IncrementalReadInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -20259,7 +20259,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IncrementalReadInterface_GetFilePart(
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListNodeContext__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_FileListNodeContext__SWIG_0() {
   void * jresult ;
   FileListNodeContext *result = 0 ;
   
@@ -20269,7 +20269,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListNodeContext__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListNodeContext__SWIG_1(unsigned char jarg1, unsigned int jarg2, unsigned int jarg3, unsigned int jarg4) {
+SWIGEXPORT void * SWIGSTDCALL new_FileListNodeContext__SWIG_1(unsigned char jarg1, unsigned int jarg2, unsigned int jarg3, unsigned int jarg4) {
   void * jresult ;
   unsigned char arg1 ;
   uint32_t arg2 ;
@@ -20287,7 +20287,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListNodeContext__SWIG_1(unsigned ch
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileListNodeContext(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_FileListNodeContext(void * jarg1) {
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   
   arg1 = (FileListNodeContext *)jarg1; 
@@ -20295,7 +20295,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileListNodeContext(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_op_set(void * jarg1, unsigned char jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNodeContext_op_set(void * jarg1, unsigned char jarg2) {
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   unsigned char arg2 ;
   
@@ -20305,7 +20305,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_op_set(void * jarg1, unsi
 }
 
 
-SWIGEXPORT unsigned char SWIGSTDCALL CSharp_FileListNodeContext_op_get(void * jarg1) {
+SWIGEXPORT unsigned char SWIGSTDCALL FileListNodeContext_op_get(void * jarg1) {
   unsigned char jresult ;
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   unsigned char result;
@@ -20317,7 +20317,7 @@ SWIGEXPORT unsigned char SWIGSTDCALL CSharp_FileListNodeContext_op_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData1_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNodeContext_flnc_extraData1_set(void * jarg1, unsigned int jarg2) {
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   uint32_t arg2 ;
   
@@ -20327,7 +20327,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData1_set(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData1_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListNodeContext_flnc_extraData1_get(void * jarg1) {
   unsigned int jresult ;
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   uint32_t result;
@@ -20339,7 +20339,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData1_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData2_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNodeContext_flnc_extraData2_set(void * jarg1, unsigned int jarg2) {
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   uint32_t arg2 ;
   
@@ -20349,7 +20349,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData2_set(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData2_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListNodeContext_flnc_extraData2_get(void * jarg1) {
   unsigned int jresult ;
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   uint32_t result;
@@ -20361,7 +20361,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData2_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData3_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNodeContext_flnc_extraData3_set(void * jarg1, unsigned int jarg2) {
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   uint32_t arg2 ;
   
@@ -20371,7 +20371,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData3_set(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData3_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListNodeContext_flnc_extraData3_get(void * jarg1) {
   unsigned int jresult ;
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   uint32_t result;
@@ -20383,7 +20383,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNodeContext_flnc_extraData3_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_dataPtr_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNodeContext_dataPtr_set(void * jarg1, void * jarg2) {
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   void *arg2 = (void *) 0 ;
   
@@ -20393,7 +20393,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_dataPtr_set(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileListNodeContext_dataPtr_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FileListNodeContext_dataPtr_get(void * jarg1) {
   void * jresult ;
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   void *result = 0 ;
@@ -20405,7 +20405,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileListNodeContext_dataPtr_get(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_dataLength_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNodeContext_dataLength_set(void * jarg1, unsigned int jarg2) {
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   unsigned int arg2 ;
   
@@ -20415,7 +20415,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNodeContext_dataLength_set(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNodeContext_dataLength_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListNodeContext_dataLength_get(void * jarg1) {
   unsigned int jresult ;
   FileListNodeContext *arg1 = (FileListNodeContext *) 0 ;
   unsigned int result;
@@ -20427,7 +20427,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNodeContext_dataLength_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_filename_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNode_filename_set(void * jarg1, void * jarg2) {
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   RakNet::RakString *arg2 = (RakNet::RakString *) 0 ;
   
@@ -20437,7 +20437,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_filename_set(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileListNode_filename_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FileListNode_filename_get(void * jarg1) {
   void * jresult ;
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   RakNet::RakString *result = 0 ;
@@ -20449,7 +20449,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileListNode_filename_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_fullPathToFile_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNode_fullPathToFile_set(void * jarg1, void * jarg2) {
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   RakNet::RakString *arg2 = (RakNet::RakString *) 0 ;
   
@@ -20459,7 +20459,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_fullPathToFile_set(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileListNode_fullPathToFile_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FileListNode_fullPathToFile_get(void * jarg1) {
   void * jresult ;
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   RakNet::RakString *result = 0 ;
@@ -20471,7 +20471,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileListNode_fullPathToFile_get(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_data_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNode_data_set(void * jarg1, char * jarg2) {
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -20489,7 +20489,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_data_set(void * jarg1, char * ja
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_FileListNode_data_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL FileListNode_data_get(void * jarg1) {
   char * jresult ;
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   char *result = 0 ;
@@ -20501,7 +20501,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_FileListNode_data_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_dataLengthBytes_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNode_dataLengthBytes_set(void * jarg1, unsigned int jarg2) {
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   RakNet::BitSize_t arg2 ;
   
@@ -20511,7 +20511,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_dataLengthBytes_set(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNode_dataLengthBytes_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListNode_dataLengthBytes_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   RakNet::BitSize_t result;
@@ -20523,7 +20523,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNode_dataLengthBytes_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_fileLengthBytes_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNode_fileLengthBytes_set(void * jarg1, unsigned int jarg2) {
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   unsigned int arg2 ;
   
@@ -20533,7 +20533,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_fileLengthBytes_set(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNode_fileLengthBytes_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListNode_fileLengthBytes_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   unsigned int result;
@@ -20545,7 +20545,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNode_fileLengthBytes_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_context_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNode_context_set(void * jarg1, void * jarg2) {
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   FileListNodeContext *arg2 = (FileListNodeContext *) 0 ;
   
@@ -20555,7 +20555,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_context_set(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileListNode_context_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FileListNode_context_get(void * jarg1) {
   void * jresult ;
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   FileListNodeContext *result = 0 ;
@@ -20567,7 +20567,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileListNode_context_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_isAReference_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListNode_isAReference_set(void * jarg1, unsigned int jarg2) {
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   bool arg2 ;
   
@@ -20577,7 +20577,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_isAReference_set(void * jarg1, u
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNode_isAReference_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListNode_isAReference_get(void * jarg1) {
   unsigned int jresult ;
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   bool result;
@@ -20589,7 +20589,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListNode_isAReference_get(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListNode() {
+SWIGEXPORT void * SWIGSTDCALL new_FileListNode() {
   void * jresult ;
   RakNet::FileListNode *result = 0 ;
   
@@ -20599,7 +20599,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListNode() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_SetData(void * jarg1, unsigned char* jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL FileListNode_SetData(void * jarg1, unsigned char* jarg2, int jarg3) {
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   unsigned char *arg2 = (unsigned char *) 0 ;
   int arg3 ;
@@ -20613,7 +20613,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListNode_SetData(void * jarg1, unsigned c
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileListNode(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_FileListNode(void * jarg1) {
   RakNet::FileListNode *arg1 = (RakNet::FileListNode *) 0 ;
   
   arg1 = (RakNet::FileListNode *)jarg1; 
@@ -20621,7 +20621,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileListNode(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileListProgress_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL FileListProgress_GetInstance() {
   void * jresult ;
   RakNet::FileListProgress *result = 0 ;
   
@@ -20631,7 +20631,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileListProgress_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FileListProgress_DestroyInstance(void * jarg1) {
   RakNet::FileListProgress *arg1 = (RakNet::FileListProgress *) 0 ;
   
   arg1 = (RakNet::FileListProgress *)jarg1; 
@@ -20639,7 +20639,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_DestroyInstance(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListProgress() {
+SWIGEXPORT void * SWIGSTDCALL new_FileListProgress() {
   void * jresult ;
   RakNet::FileListProgress *result = 0 ;
   
@@ -20649,7 +20649,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListProgress() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileListProgress(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_FileListProgress(void * jarg1) {
   RakNet::FileListProgress *arg1 = (RakNet::FileListProgress *) 0 ;
   
   arg1 = (RakNet::FileListProgress *)jarg1; 
@@ -20657,7 +20657,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileListProgress(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnAddFilesFromDirectoryStarted(void * jarg1, void * jarg2, char * jarg3) {
+SWIGEXPORT void SWIGSTDCALL FileListProgress_OnAddFilesFromDirectoryStarted(void * jarg1, void * jarg2, char * jarg3) {
   RakNet::FileListProgress *arg1 = (RakNet::FileListProgress *) 0 ;
   RakNet::FileList *arg2 = (RakNet::FileList *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -20669,7 +20669,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnAddFilesFromDirectoryStart
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnDirectory(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL FileListProgress_OnDirectory(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   RakNet::FileListProgress *arg1 = (RakNet::FileListProgress *) 0 ;
   RakNet::FileList *arg2 = (RakNet::FileList *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -20683,7 +20683,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnDirectory(void * jarg1, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnFile(void * jarg1, void * jarg2, char * jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL FileListProgress_OnFile(void * jarg1, void * jarg2, char * jarg3, char * jarg4, unsigned int jarg5) {
   RakNet::FileListProgress *arg1 = (RakNet::FileListProgress *) 0 ;
   RakNet::FileList *arg2 = (RakNet::FileList *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -20699,7 +20699,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnFile(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnFilePush(void * jarg1, char * jarg2, unsigned int jarg3, unsigned int jarg4, unsigned int jarg5, unsigned int jarg6, void * jarg7, unsigned short jarg8) {
+SWIGEXPORT void SWIGSTDCALL FileListProgress_OnFilePush(void * jarg1, char * jarg2, unsigned int jarg3, unsigned int jarg4, unsigned int jarg5, unsigned int jarg6, void * jarg7, unsigned short jarg8) {
   RakNet::FileListProgress *arg1 = (RakNet::FileListProgress *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -20727,7 +20727,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnFilePush(void * jarg1, cha
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnFilePushesComplete(void * jarg1, void * jarg2, unsigned short jarg3) {
+SWIGEXPORT void SWIGSTDCALL FileListProgress_OnFilePushesComplete(void * jarg1, void * jarg2, unsigned short jarg3) {
   RakNet::FileListProgress *arg1 = (RakNet::FileListProgress *) 0 ;
   RakNet::SystemAddress arg2 ;
   unsigned short arg3 ;
@@ -20745,7 +20745,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnFilePushesComplete(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnSendAborted(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListProgress_OnSendAborted(void * jarg1, void * jarg2) {
   RakNet::FileListProgress *arg1 = (RakNet::FileListProgress *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress *argp2 ;
@@ -20761,7 +20761,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListProgress_OnSendAborted(void * jarg1, 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FLP_Printf_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL FLP_Printf_GetInstance() {
   void * jresult ;
   RakNet::FLP_Printf *result = 0 ;
   
@@ -20771,7 +20771,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FLP_Printf_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FLP_Printf_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FLP_Printf_DestroyInstance(void * jarg1) {
   RakNet::FLP_Printf *arg1 = (RakNet::FLP_Printf *) 0 ;
   
   arg1 = (RakNet::FLP_Printf *)jarg1; 
@@ -20779,7 +20779,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FLP_Printf_DestroyInstance(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FLP_Printf() {
+SWIGEXPORT void * SWIGSTDCALL new_FLP_Printf() {
   void * jresult ;
   RakNet::FLP_Printf *result = 0 ;
   
@@ -20789,7 +20789,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FLP_Printf() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FLP_Printf(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_FLP_Printf(void * jarg1) {
   RakNet::FLP_Printf *arg1 = (RakNet::FLP_Printf *) 0 ;
   
   arg1 = (RakNet::FLP_Printf *)jarg1; 
@@ -20797,7 +20797,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FLP_Printf(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FLP_Printf_OnAddFilesFromDirectoryStarted(void * jarg1, void * jarg2, char * jarg3) {
+SWIGEXPORT void SWIGSTDCALL FLP_Printf_OnAddFilesFromDirectoryStarted(void * jarg1, void * jarg2, char * jarg3) {
   RakNet::FLP_Printf *arg1 = (RakNet::FLP_Printf *) 0 ;
   RakNet::FileList *arg2 = (RakNet::FileList *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -20809,7 +20809,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FLP_Printf_OnAddFilesFromDirectoryStarted(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FLP_Printf_OnDirectory(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL FLP_Printf_OnDirectory(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   RakNet::FLP_Printf *arg1 = (RakNet::FLP_Printf *) 0 ;
   RakNet::FileList *arg2 = (RakNet::FileList *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -20823,7 +20823,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FLP_Printf_OnDirectory(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FLP_Printf_OnFilePushesComplete(void * jarg1, void * jarg2, unsigned short jarg3) {
+SWIGEXPORT void SWIGSTDCALL FLP_Printf_OnFilePushesComplete(void * jarg1, void * jarg2, unsigned short jarg3) {
   RakNet::FLP_Printf *arg1 = (RakNet::FLP_Printf *) 0 ;
   RakNet::SystemAddress arg2 ;
   unsigned short arg3 ;
@@ -20841,7 +20841,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FLP_Printf_OnFilePushesComplete(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FLP_Printf_OnSendAborted(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FLP_Printf_OnSendAborted(void * jarg1, void * jarg2) {
   RakNet::FLP_Printf *arg1 = (RakNet::FLP_Printf *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress *argp2 ;
@@ -20857,7 +20857,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FLP_Printf_OnSendAborted(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileList_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL FileList_GetInstance() {
   void * jresult ;
   RakNet::FileList *result = 0 ;
   
@@ -20867,7 +20867,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileList_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FileList_DestroyInstance(void * jarg1) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   
   arg1 = (RakNet::FileList *)jarg1; 
@@ -20875,7 +20875,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_DestroyInstance(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileList() {
+SWIGEXPORT void * SWIGSTDCALL new_FileList() {
   void * jresult ;
   RakNet::FileList *result = 0 ;
   
@@ -20885,7 +20885,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileList() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileList(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_FileList(void * jarg1) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   
   arg1 = (RakNet::FileList *)jarg1; 
@@ -20893,7 +20893,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileList(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_AddFilesFromDirectory(void * jarg1, char * jarg2, char * jarg3, unsigned int jarg4, unsigned int jarg5, unsigned int jarg6, void * jarg7) {
+SWIGEXPORT void SWIGSTDCALL FileList_AddFilesFromDirectory(void * jarg1, char * jarg2, char * jarg3, unsigned int jarg4, unsigned int jarg5, unsigned int jarg6, void * jarg7) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -20919,7 +20919,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_AddFilesFromDirectory(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FileList_Clear(void * jarg1) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   
   arg1 = (RakNet::FileList *)jarg1; 
@@ -20927,7 +20927,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_Serialize(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileList_Serialize(void * jarg1, void * jarg2) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
   
@@ -20937,7 +20937,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_Serialize(void * jarg1, void * jarg2
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileList_Deserialize(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileList_Deserialize(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   RakNet::BitStream *arg2 = (RakNet::BitStream *) 0 ;
@@ -20951,7 +20951,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileList_Deserialize(void * jarg1, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_ListMissingOrChangedFiles(void * jarg1, char * jarg2, void * jarg3, unsigned int jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL FileList_ListMissingOrChangedFiles(void * jarg1, char * jarg2, void * jarg3, unsigned int jarg4, unsigned int jarg5) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   char *arg2 = (char *) 0 ;
   RakNet::FileList *arg3 = (RakNet::FileList *) 0 ;
@@ -20967,7 +20967,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_ListMissingOrChangedFiles(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_GetDeltaToCurrent(void * jarg1, void * jarg2, void * jarg3, char * jarg4, char * jarg5) {
+SWIGEXPORT void SWIGSTDCALL FileList_GetDeltaToCurrent(void * jarg1, void * jarg2, void * jarg3, char * jarg4, char * jarg5) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   RakNet::FileList *arg2 = (RakNet::FileList *) 0 ;
   RakNet::FileList *arg3 = (RakNet::FileList *) 0 ;
@@ -20983,7 +20983,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_GetDeltaToCurrent(void * jarg1, void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_PopulateDataFromDisk(void * jarg1, char * jarg2, unsigned int jarg3, unsigned int jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL FileList_PopulateDataFromDisk(void * jarg1, char * jarg2, unsigned int jarg3, unsigned int jarg4, unsigned int jarg5) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   char *arg2 = (char *) 0 ;
   bool arg3 ;
@@ -20999,7 +20999,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_PopulateDataFromDisk(void * jarg1, c
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_FlagFilesAsReferences(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FileList_FlagFilesAsReferences(void * jarg1) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   
   arg1 = (RakNet::FileList *)jarg1; 
@@ -21007,7 +21007,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_FlagFilesAsReferences(void * jarg1) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_WriteDataToDisk(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileList_WriteDataToDisk(void * jarg1, char * jarg2) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -21017,7 +21017,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_WriteDataToDisk(void * jarg1, char *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_AddFile__SWIG_0(void * jarg1, char * jarg2, char * jarg3, void * jarg4) {
+SWIGEXPORT void SWIGSTDCALL FileList_AddFile__SWIG_0(void * jarg1, char * jarg2, char * jarg3, void * jarg4) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -21037,7 +21037,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_AddFile__SWIG_0(void * jarg1, char *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_DeleteFiles(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileList_DeleteFiles(void * jarg1, char * jarg2) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -21047,7 +21047,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_DeleteFiles(void * jarg1, char * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_AddCallback(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileList_AddCallback(void * jarg1, void * jarg2) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   RakNet::FileListProgress *arg2 = (RakNet::FileListProgress *) 0 ;
   
@@ -21057,7 +21057,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_AddCallback(void * jarg1, void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_RemoveCallback(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileList_RemoveCallback(void * jarg1, void * jarg2) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   RakNet::FileListProgress *arg2 = (RakNet::FileListProgress *) 0 ;
   
@@ -21067,7 +21067,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_RemoveCallback(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_ClearCallbacks(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FileList_ClearCallbacks(void * jarg1) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   
   arg1 = (RakNet::FileList *)jarg1; 
@@ -21075,7 +21075,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_ClearCallbacks(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_fileList_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileList_fileList_set(void * jarg1, void * jarg2) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   DataStructures::List< RakNet::FileListNode > *arg2 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   
@@ -21085,7 +21085,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_fileList_set(void * jarg1, void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileList_fileList_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL FileList_fileList_get(void * jarg1) {
   void * jresult ;
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   DataStructures::List< RakNet::FileListNode > *result = 0 ;
@@ -21097,7 +21097,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileList_fileList_get(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileList_FixEndingSlash(char * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileList_FixEndingSlash(char * jarg1) {
   unsigned int jresult ;
   char *arg1 = (char *) 0 ;
   bool result;
@@ -21109,7 +21109,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileList_FixEndingSlash(char * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_AddFile__SWIG_1(void * jarg1, char * jarg2, char * jarg3, unsigned char* jarg4, unsigned int jarg5, unsigned int jarg6, void * jarg7, unsigned int jarg8) {
+SWIGEXPORT void SWIGSTDCALL FileList_AddFile__SWIG_1(void * jarg1, char * jarg2, char * jarg3, unsigned char* jarg4, unsigned int jarg5, unsigned int jarg6, void * jarg7, unsigned int jarg8) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -21139,7 +21139,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_AddFile__SWIG_1(void * jarg1, char *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileList_AddFile__SWIG_2(void * jarg1, char * jarg2, char * jarg3, unsigned char* jarg4, unsigned int jarg5, unsigned int jarg6, void * jarg7) {
+SWIGEXPORT void SWIGSTDCALL FileList_AddFile__SWIG_2(void * jarg1, char * jarg2, char * jarg3, unsigned char* jarg4, unsigned int jarg5, unsigned int jarg6, void * jarg7) {
   RakNet::FileList *arg1 = (RakNet::FileList *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -21167,7 +21167,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileList_AddFile__SWIG_2(void * jarg1, char *
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_REMOTE_MAX_TEXT_INPUT_get() {
+SWIGEXPORT int SWIGSTDCALL REMOTE_MAX_TEXT_INPUT_get() {
   int jresult ;
   int result;
   
@@ -21177,7 +21177,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_REMOTE_MAX_TEXT_INPUT_get() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_TransportInterface(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_TransportInterface(void * jarg1) {
   RakNet::TransportInterface *arg1 = (RakNet::TransportInterface *) 0 ;
   
   arg1 = (RakNet::TransportInterface *)jarg1; 
@@ -21185,7 +21185,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_TransportInterface(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TransportInterface_Start(void * jarg1, unsigned short jarg2, unsigned int jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL TransportInterface_Start(void * jarg1, unsigned short jarg2, unsigned int jarg3) {
   unsigned int jresult ;
   RakNet::TransportInterface *arg1 = (RakNet::TransportInterface *) 0 ;
   unsigned short arg2 ;
@@ -21201,7 +21201,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_TransportInterface_Start(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TransportInterface_Stop(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL TransportInterface_Stop(void * jarg1) {
   RakNet::TransportInterface *arg1 = (RakNet::TransportInterface *) 0 ;
   
   arg1 = (RakNet::TransportInterface *)jarg1; 
@@ -21209,7 +21209,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TransportInterface_Stop(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TransportInterface_CloseConnection(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TransportInterface_CloseConnection(void * jarg1, void * jarg2) {
   RakNet::TransportInterface *arg1 = (RakNet::TransportInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress *argp2 ;
@@ -21225,7 +21225,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TransportInterface_CloseConnection(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TransportInterface_Receive(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TransportInterface_Receive(void * jarg1) {
   void * jresult ;
   RakNet::TransportInterface *arg1 = (RakNet::TransportInterface *) 0 ;
   RakNet::Packet *result = 0 ;
@@ -21237,7 +21237,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TransportInterface_Receive(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TransportInterface_DeallocatePacket(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL TransportInterface_DeallocatePacket(void * jarg1, void * jarg2) {
   RakNet::TransportInterface *arg1 = (RakNet::TransportInterface *) 0 ;
   RakNet::Packet *arg2 = (RakNet::Packet *) 0 ;
   
@@ -21247,7 +21247,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TransportInterface_DeallocatePacket(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TransportInterface_HasNewIncomingConnection(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TransportInterface_HasNewIncomingConnection(void * jarg1) {
   void * jresult ;
   RakNet::TransportInterface *arg1 = (RakNet::TransportInterface *) 0 ;
   RakNet::SystemAddress result;
@@ -21259,7 +21259,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TransportInterface_HasNewIncomingConnection
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TransportInterface_HasLostConnection(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TransportInterface_HasLostConnection(void * jarg1) {
   void * jresult ;
   RakNet::TransportInterface *arg1 = (RakNet::TransportInterface *) 0 ;
   RakNet::SystemAddress result;
@@ -21271,7 +21271,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TransportInterface_HasLostConnection(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_TransportInterface_GetCommandParser(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL TransportInterface_GetCommandParser(void * jarg1) {
   void * jresult ;
   RakNet::TransportInterface *arg1 = (RakNet::TransportInterface *) 0 ;
   RakNet::CommandParserInterface *result = 0 ;
@@ -21283,7 +21283,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TransportInterface_GetCommandParser(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_TransportInterface_Send(void * jarg1, void * jarg2, unsigned char* jarg3) {
+SWIGEXPORT void SWIGSTDCALL TransportInterface_Send(void * jarg1, void * jarg2, unsigned char* jarg3) {
   RakNet::TransportInterface *arg1 = (RakNet::TransportInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
   unsigned char *arg3 = (unsigned char *) 0 ;
@@ -21303,7 +21303,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TransportInterface_Send(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CommandParserInterface(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_CommandParserInterface(void * jarg1) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   
   arg1 = (RakNet::CommandParserInterface *)jarg1; 
@@ -21311,7 +21311,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CommandParserInterface(void * jarg1) {
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CommandParserInterface_GetName(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CommandParserInterface_GetName(void * jarg1) {
   char * jresult ;
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   char *result = 0 ;
@@ -21323,7 +21323,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CommandParserInterface_GetName(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_OnNewIncomingConnection(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_OnNewIncomingConnection(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   RakNet::TransportInterface *arg3 = (RakNet::TransportInterface *) 0 ;
@@ -21339,7 +21339,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_OnNewIncomingConnectio
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_OnConnectionLost(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_OnConnectionLost(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   RakNet::TransportInterface *arg3 = (RakNet::TransportInterface *) 0 ;
@@ -21355,7 +21355,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_OnConnectionLost(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_SendHelp(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_SendHelp(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   RakNet::TransportInterface *arg2 = (RakNet::TransportInterface *) 0 ;
   RakNet::SystemAddress *arg3 = 0 ;
@@ -21371,7 +21371,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_SendHelp(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CommandParserInterface_OnCommand(void * jarg1, char * jarg2, unsigned int jarg3, char ** jarg4, void * jarg5, void * jarg6, char * jarg7) {
+SWIGEXPORT unsigned int SWIGSTDCALL CommandParserInterface_OnCommand(void * jarg1, char * jarg2, unsigned int jarg3, char ** jarg4, void * jarg5, void * jarg6, char * jarg7) {
   unsigned int jresult ;
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -21401,7 +21401,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_CommandParserInterface_OnCommand(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_OnTransportChange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_OnTransportChange(void * jarg1, void * jarg2) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   RakNet::TransportInterface *arg2 = (RakNet::TransportInterface *) 0 ;
   
@@ -21411,7 +21411,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_OnTransportChange(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_SendCommandList(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_SendCommandList(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   RakNet::TransportInterface *arg2 = (RakNet::TransportInterface *) 0 ;
   RakNet::SystemAddress *arg3 = 0 ;
@@ -21427,7 +21427,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_SendCommandList(void *
 }
 
 
-SWIGEXPORT unsigned char SWIGSTDCALL CSharp_CommandParserInterface_VARIABLE_NUMBER_OF_PARAMETERS_get() {
+SWIGEXPORT unsigned char SWIGSTDCALL CommandParserInterface_VARIABLE_NUMBER_OF_PARAMETERS_get() {
   unsigned char jresult ;
   unsigned char result;
   
@@ -21437,7 +21437,7 @@ SWIGEXPORT unsigned char SWIGSTDCALL CSharp_CommandParserInterface_VARIABLE_NUMB
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_RegisterCommand(void * jarg1, unsigned char jarg2, char * jarg3, char * jarg4) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_RegisterCommand(void * jarg1, unsigned char jarg2, char * jarg3, char * jarg4) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   unsigned char arg2 ;
   char *arg3 = (char *) 0 ;
@@ -21451,7 +21451,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_RegisterCommand(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_ReturnResult__SWIG_0(void * jarg1, unsigned int jarg2, char * jarg3, void * jarg4, void * jarg5) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_ReturnResult__SWIG_0(void * jarg1, unsigned int jarg2, char * jarg3, void * jarg4, void * jarg5) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -21471,7 +21471,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_ReturnResult__SWIG_0(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_ReturnResult__SWIG_1(void * jarg1, char * jarg2, char * jarg3, void * jarg4, void * jarg5) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_ReturnResult__SWIG_1(void * jarg1, char * jarg2, char * jarg3, void * jarg4, void * jarg5) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -21491,7 +21491,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_ReturnResult__SWIG_1(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_ReturnResult__SWIG_2(void * jarg1, void * jarg2, char * jarg3, void * jarg4, void * jarg5) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_ReturnResult__SWIG_2(void * jarg1, void * jarg2, char * jarg3, void * jarg4, void * jarg5) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   RakNet::SystemAddress arg2 ;
   char *arg3 = (char *) 0 ;
@@ -21517,7 +21517,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_ReturnResult__SWIG_2(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_ReturnResult__SWIG_3(void * jarg1, int jarg2, char * jarg3, void * jarg4, void * jarg5) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_ReturnResult__SWIG_3(void * jarg1, int jarg2, char * jarg3, void * jarg4, void * jarg5) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -21537,7 +21537,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_ReturnResult__SWIG_3(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_ReturnResult__SWIG_4(void * jarg1, char * jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT void SWIGSTDCALL CommandParserInterface_ReturnResult__SWIG_4(void * jarg1, char * jarg2, void * jarg3, void * jarg4) {
   RakNet::CommandParserInterface *arg1 = (RakNet::CommandParserInterface *) 0 ;
   char *arg2 = (char *) 0 ;
   RakNet::TransportInterface *arg3 = (RakNet::TransportInterface *) 0 ;
@@ -21555,7 +21555,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CommandParserInterface_ReturnResult__SWIG_4(v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_LogCommandParser_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL LogCommandParser_GetInstance() {
   void * jresult ;
   RakNet::LogCommandParser *result = 0 ;
   
@@ -21565,7 +21565,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_LogCommandParser_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL LogCommandParser_DestroyInstance(void * jarg1) {
   RakNet::LogCommandParser *arg1 = (RakNet::LogCommandParser *) 0 ;
   
   arg1 = (RakNet::LogCommandParser *)jarg1; 
@@ -21573,7 +21573,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_DestroyInstance(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_LogCommandParser() {
+SWIGEXPORT void * SWIGSTDCALL new_LogCommandParser() {
   void * jresult ;
   RakNet::LogCommandParser *result = 0 ;
   
@@ -21583,7 +21583,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_LogCommandParser() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_LogCommandParser(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_LogCommandParser(void * jarg1) {
   RakNet::LogCommandParser *arg1 = (RakNet::LogCommandParser *) 0 ;
   
   arg1 = (RakNet::LogCommandParser *)jarg1; 
@@ -21591,7 +21591,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_LogCommandParser(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LogCommandParser_OnCommand(void * jarg1, char * jarg2, unsigned int jarg3, char ** jarg4, void * jarg5, void * jarg6, char * jarg7) {
+SWIGEXPORT unsigned int SWIGSTDCALL LogCommandParser_OnCommand(void * jarg1, char * jarg2, unsigned int jarg3, char ** jarg4, void * jarg5, void * jarg6, char * jarg7) {
   unsigned int jresult ;
   RakNet::LogCommandParser *arg1 = (RakNet::LogCommandParser *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -21621,7 +21621,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LogCommandParser_OnCommand(void * jar
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_LogCommandParser_GetName(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL LogCommandParser_GetName(void * jarg1) {
   char * jresult ;
   RakNet::LogCommandParser *arg1 = (RakNet::LogCommandParser *) 0 ;
   char *result = 0 ;
@@ -21633,7 +21633,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_LogCommandParser_GetName(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_SendHelp(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL LogCommandParser_SendHelp(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::LogCommandParser *arg1 = (RakNet::LogCommandParser *) 0 ;
   RakNet::TransportInterface *arg2 = (RakNet::TransportInterface *) 0 ;
   RakNet::SystemAddress *arg3 = 0 ;
@@ -21649,7 +21649,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_SendHelp(void * jarg1, void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_AddChannel(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL LogCommandParser_AddChannel(void * jarg1, char * jarg2) {
   RakNet::LogCommandParser *arg1 = (RakNet::LogCommandParser *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -21659,7 +21659,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_AddChannel(void * jarg1, cha
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_WriteLog(void * jarg1, char * jarg2, char * jarg3) {
+SWIGEXPORT void SWIGSTDCALL LogCommandParser_WriteLog(void * jarg1, char * jarg2, char * jarg3) {
   RakNet::LogCommandParser *arg1 = (RakNet::LogCommandParser *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -21672,7 +21672,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_WriteLog(void * jarg1, char 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_OnNewIncomingConnection(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL LogCommandParser_OnNewIncomingConnection(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::LogCommandParser *arg1 = (RakNet::LogCommandParser *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   RakNet::TransportInterface *arg3 = (RakNet::TransportInterface *) 0 ;
@@ -21688,7 +21688,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_OnNewIncomingConnection(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_OnConnectionLost(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL LogCommandParser_OnConnectionLost(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::LogCommandParser *arg1 = (RakNet::LogCommandParser *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   RakNet::TransportInterface *arg3 = (RakNet::TransportInterface *) 0 ;
@@ -21704,7 +21704,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_OnConnectionLost(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_OnTransportChange(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL LogCommandParser_OnTransportChange(void * jarg1, void * jarg2) {
   RakNet::LogCommandParser *arg1 = (RakNet::LogCommandParser *) 0 ;
   RakNet::TransportInterface *arg2 = (RakNet::TransportInterface *) 0 ;
   
@@ -21714,7 +21714,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_LogCommandParser_OnTransportChange(void * jar
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_MESSAGE_FILTER_MAX_MESSAGE_ID_get() {
+SWIGEXPORT int SWIGSTDCALL MESSAGE_FILTER_MAX_MESSAGE_ID_get() {
   int jresult ;
   int result;
   
@@ -21724,7 +21724,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_MESSAGE_FILTER_MAX_MESSAGE_ID_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_MessageFilter_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL MessageFilter_GetInstance() {
   void * jresult ;
   RakNet::MessageFilter *result = 0 ;
   
@@ -21734,7 +21734,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_MessageFilter_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL MessageFilter_DestroyInstance(void * jarg1) {
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   
   arg1 = (RakNet::MessageFilter *)jarg1; 
@@ -21742,7 +21742,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_DestroyInstance(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_MessageFilter() {
+SWIGEXPORT void * SWIGSTDCALL new_MessageFilter() {
   void * jresult ;
   RakNet::MessageFilter *result = 0 ;
   
@@ -21752,7 +21752,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_MessageFilter() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_MessageFilter(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_MessageFilter(void * jarg1) {
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   
   arg1 = (RakNet::MessageFilter *)jarg1; 
@@ -21760,7 +21760,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_MessageFilter(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetAutoAddNewConnectionsToFilter(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL MessageFilter_SetAutoAddNewConnectionsToFilter(void * jarg1, int jarg2) {
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   int arg2 ;
   
@@ -21770,7 +21770,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetAutoAddNewConnectionsToFilte
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetAllowMessageID(void * jarg1, unsigned int jarg2, int jarg3, int jarg4, int jarg5) {
+SWIGEXPORT void SWIGSTDCALL MessageFilter_SetAllowMessageID(void * jarg1, unsigned int jarg2, int jarg3, int jarg4, int jarg5) {
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   bool arg2 ;
   int arg3 ;
@@ -21786,7 +21786,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetAllowMessageID(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetAllowRPC4(void * jarg1, unsigned int jarg2, char * jarg3, int jarg4) {
+SWIGEXPORT void SWIGSTDCALL MessageFilter_SetAllowRPC4(void * jarg1, unsigned int jarg2, char * jarg3, int jarg4) {
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -21800,7 +21800,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetAllowRPC4(void * jarg1, unsi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetActionOnDisallowedMessage(void * jarg1, unsigned int jarg2, unsigned int jarg3, unsigned int jarg4, int jarg5) {
+SWIGEXPORT void SWIGSTDCALL MessageFilter_SetActionOnDisallowedMessage(void * jarg1, unsigned int jarg2, unsigned int jarg3, unsigned int jarg4, int jarg5) {
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   bool arg2 ;
   bool arg3 ;
@@ -21816,7 +21816,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetActionOnDisallowedMessage(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetFilterMaxTime(void * jarg1, int jarg2, unsigned int jarg3, unsigned int jarg4, int jarg5) {
+SWIGEXPORT void SWIGSTDCALL MessageFilter_SetFilterMaxTime(void * jarg1, int jarg2, unsigned int jarg3, unsigned int jarg4, int jarg5) {
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   int arg2 ;
   bool arg3 ;
@@ -21832,7 +21832,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetFilterMaxTime(void * jarg1, 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_MessageFilter_GetSystemFilterSet(void * jarg1, void * jarg2) {
+SWIGEXPORT int SWIGSTDCALL MessageFilter_GetSystemFilterSet(void * jarg1, void * jarg2) {
   int jresult ;
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   RakNet::AddressOrGUID arg2 ;
@@ -21852,7 +21852,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_MessageFilter_GetSystemFilterSet(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetSystemFilterSet(void * jarg1, void * jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL MessageFilter_SetSystemFilterSet(void * jarg1, void * jarg2, int jarg3) {
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   RakNet::AddressOrGUID arg2 ;
   int arg3 ;
@@ -21870,7 +21870,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_SetSystemFilterSet(void * jarg1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_MessageFilter_GetSystemCount(void * jarg1, int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL MessageFilter_GetSystemCount(void * jarg1, int jarg2) {
   unsigned int jresult ;
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   int arg2 ;
@@ -21884,7 +21884,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_MessageFilter_GetSystemCount(void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_MessageFilter_GetFilterSetCount(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL MessageFilter_GetFilterSetCount(void * jarg1) {
   unsigned int jresult ;
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   unsigned int result;
@@ -21896,7 +21896,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_MessageFilter_GetFilterSetCount(void 
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_MessageFilter_GetFilterSetIDByIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT int SWIGSTDCALL MessageFilter_GetFilterSetIDByIndex(void * jarg1, unsigned int jarg2) {
   int jresult ;
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   unsigned int arg2 ;
@@ -21910,7 +21910,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_MessageFilter_GetFilterSetIDByIndex(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_DeleteFilterSet(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL MessageFilter_DeleteFilterSet(void * jarg1, int jarg2) {
   RakNet::MessageFilter *arg1 = (RakNet::MessageFilter *) 0 ;
   int arg2 ;
   
@@ -21920,7 +21920,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_MessageFilter_DeleteFilterSet(void * jarg1, i
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_DirectoryDeltaTransfer_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL DirectoryDeltaTransfer_GetInstance() {
   void * jresult ;
   RakNet::DirectoryDeltaTransfer *result = 0 ;
   
@@ -21930,7 +21930,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_DirectoryDeltaTransfer_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL DirectoryDeltaTransfer_DestroyInstance(void * jarg1) {
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   
   arg1 = (RakNet::DirectoryDeltaTransfer *)jarg1; 
@@ -21938,7 +21938,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_DestroyInstance(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_DirectoryDeltaTransfer() {
+SWIGEXPORT void * SWIGSTDCALL new_DirectoryDeltaTransfer() {
   void * jresult ;
   RakNet::DirectoryDeltaTransfer *result = 0 ;
   
@@ -21948,7 +21948,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_DirectoryDeltaTransfer() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_DirectoryDeltaTransfer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_DirectoryDeltaTransfer(void * jarg1) {
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   
   arg1 = (RakNet::DirectoryDeltaTransfer *)jarg1; 
@@ -21956,7 +21956,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_DirectoryDeltaTransfer(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_SetFileListTransferPlugin(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL DirectoryDeltaTransfer_SetFileListTransferPlugin(void * jarg1, void * jarg2) {
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   RakNet::FileListTransfer *arg2 = (RakNet::FileListTransfer *) 0 ;
   
@@ -21966,7 +21966,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_SetFileListTransferPlu
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_SetApplicationDirectory(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL DirectoryDeltaTransfer_SetApplicationDirectory(void * jarg1, char * jarg2) {
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -21976,7 +21976,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_SetApplicationDirector
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_SetUploadSendParameters(void * jarg1, int jarg2, char jarg3) {
+SWIGEXPORT void SWIGSTDCALL DirectoryDeltaTransfer_SetUploadSendParameters(void * jarg1, int jarg2, char jarg3) {
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   PacketPriority arg2 ;
   char arg3 ;
@@ -21988,7 +21988,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_SetUploadSendParameter
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_AddUploadsFromSubdirectory(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL DirectoryDeltaTransfer_AddUploadsFromSubdirectory(void * jarg1, char * jarg2) {
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -21998,7 +21998,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_AddUploadsFromSubdirec
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_DirectoryDeltaTransfer_DownloadFromSubdirectory__SWIG_0(void * jarg1, char * jarg2, char * jarg3, unsigned int jarg4, void * jarg5, void * jarg6, int jarg7, char jarg8, void * jarg9) {
+SWIGEXPORT unsigned short SWIGSTDCALL DirectoryDeltaTransfer_DownloadFromSubdirectory__SWIG_0(void * jarg1, char * jarg2, char * jarg3, unsigned int jarg4, void * jarg5, void * jarg6, int jarg7, char jarg8, void * jarg9) {
   unsigned short jresult ;
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -22032,7 +22032,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_DirectoryDeltaTransfer_DownloadFrom
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_DirectoryDeltaTransfer_DownloadFromSubdirectory__SWIG_1(void * jarg1, void * jarg2, char * jarg3, char * jarg4, unsigned int jarg5, void * jarg6, void * jarg7, int jarg8, char jarg9, void * jarg10) {
+SWIGEXPORT unsigned short SWIGSTDCALL DirectoryDeltaTransfer_DownloadFromSubdirectory__SWIG_1(void * jarg1, void * jarg2, char * jarg3, char * jarg4, unsigned int jarg5, void * jarg6, void * jarg7, int jarg8, char jarg9, void * jarg10) {
   unsigned short jresult ;
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   RakNet::FileList *arg2 = 0 ;
@@ -22072,7 +22072,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_DirectoryDeltaTransfer_DownloadFrom
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_GenerateHashes(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL DirectoryDeltaTransfer_GenerateHashes(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   RakNet::FileList *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -22090,7 +22090,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_GenerateHashes(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_ClearUploads(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL DirectoryDeltaTransfer_ClearUploads(void * jarg1) {
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   
   arg1 = (RakNet::DirectoryDeltaTransfer *)jarg1; 
@@ -22098,7 +22098,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_ClearUploads(void * ja
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DirectoryDeltaTransfer_GetNumberOfFilesForUpload(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL DirectoryDeltaTransfer_GetNumberOfFilesForUpload(void * jarg1) {
   unsigned int jresult ;
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   unsigned int result;
@@ -22110,7 +22110,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DirectoryDeltaTransfer_GetNumberOfFil
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_SetDownloadRequestIncrementalReadInterface(void * jarg1, void * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL DirectoryDeltaTransfer_SetDownloadRequestIncrementalReadInterface(void * jarg1, void * jarg2, unsigned int jarg3) {
   RakNet::DirectoryDeltaTransfer *arg1 = (RakNet::DirectoryDeltaTransfer *) 0 ;
   RakNet::IncrementalReadInterface *arg2 = (RakNet::IncrementalReadInterface *) 0 ;
   unsigned int arg3 ;
@@ -22122,7 +22122,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_DirectoryDeltaTransfer_SetDownloadRequestIncr
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_FileListTransfer_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL FileListTransfer_GetInstance() {
   void * jresult ;
   RakNet::FileListTransfer *result = 0 ;
   
@@ -22132,7 +22132,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_FileListTransfer_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_DestroyInstance(void * jarg1) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   
   arg1 = (RakNet::FileListTransfer *)jarg1; 
@@ -22140,7 +22140,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_DestroyInstance(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListTransfer() {
+SWIGEXPORT void * SWIGSTDCALL new_FileListTransfer() {
   void * jresult ;
   RakNet::FileListTransfer *result = 0 ;
   
@@ -22150,7 +22150,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_FileListTransfer() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileListTransfer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_FileListTransfer(void * jarg1) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   
   arg1 = (RakNet::FileListTransfer *)jarg1; 
@@ -22158,7 +22158,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_FileListTransfer(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_StartIncrementalReadThreads__SWIG_0(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_StartIncrementalReadThreads__SWIG_0(void * jarg1, int jarg2, int jarg3) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -22170,7 +22170,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_StartIncrementalReadThreads_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_StartIncrementalReadThreads__SWIG_1(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_StartIncrementalReadThreads__SWIG_1(void * jarg1, int jarg2) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   int arg2 ;
   
@@ -22180,7 +22180,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_StartIncrementalReadThreads_
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_FileListTransfer_SetupReceive(void * jarg1, void * jarg2, unsigned int jarg3, void * jarg4) {
+SWIGEXPORT unsigned short SWIGSTDCALL FileListTransfer_SetupReceive(void * jarg1, void * jarg2, unsigned int jarg3, void * jarg4) {
   unsigned short jresult ;
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   RakNet::FileListTransferCBInterface *arg2 = (RakNet::FileListTransferCBInterface *) 0 ;
@@ -22204,7 +22204,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_FileListTransfer_SetupReceive(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_Send__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned short jarg5, int jarg6, char jarg7, void * jarg8, unsigned int jarg9) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_Send__SWIG_0(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned short jarg5, int jarg6, char jarg7, void * jarg8, unsigned int jarg9) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   RakNet::FileList *arg2 = (RakNet::FileList *) 0 ;
   RakNet::RakPeerInterface *arg3 = (RakNet::RakPeerInterface *) 0 ;
@@ -22234,7 +22234,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_Send__SWIG_0(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_Send__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned short jarg5, int jarg6, char jarg7, void * jarg8) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_Send__SWIG_1(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned short jarg5, int jarg6, char jarg7, void * jarg8) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   RakNet::FileList *arg2 = (RakNet::FileList *) 0 ;
   RakNet::RakPeerInterface *arg3 = (RakNet::RakPeerInterface *) 0 ;
@@ -22262,7 +22262,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_Send__SWIG_1(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_Send__SWIG_2(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned short jarg5, int jarg6, char jarg7) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_Send__SWIG_2(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned short jarg5, int jarg6, char jarg7) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   RakNet::FileList *arg2 = (RakNet::FileList *) 0 ;
   RakNet::RakPeerInterface *arg3 = (RakNet::RakPeerInterface *) 0 ;
@@ -22288,7 +22288,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_Send__SWIG_2(void * jarg1, v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransfer_GetPendingFilesToAddress(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListTransfer_GetPendingFilesToAddress(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   RakNet::SystemAddress arg2 ;
@@ -22308,7 +22308,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransfer_GetPendingFilesToAdd
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_CancelReceive(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_CancelReceive(void * jarg1, unsigned short jarg2) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   unsigned short arg2 ;
   
@@ -22318,7 +22318,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_CancelReceive(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_RemoveReceiver(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_RemoveReceiver(void * jarg1, void * jarg2) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   RakNet::SystemAddress arg2 ;
   RakNet::SystemAddress *argp2 ;
@@ -22334,7 +22334,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_RemoveReceiver(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransfer_IsHandlerActive(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL FileListTransfer_IsHandlerActive(void * jarg1, unsigned short jarg2) {
   unsigned int jresult ;
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   unsigned short arg2 ;
@@ -22348,7 +22348,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_FileListTransfer_IsHandlerActive(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_AddCallback(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_AddCallback(void * jarg1, void * jarg2) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   RakNet::FileListProgress *arg2 = (RakNet::FileListProgress *) 0 ;
   
@@ -22358,7 +22358,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_AddCallback(void * jarg1, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_RemoveCallback(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_RemoveCallback(void * jarg1, void * jarg2) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   RakNet::FileListProgress *arg2 = (RakNet::FileListProgress *) 0 ;
   
@@ -22368,7 +22368,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_RemoveCallback(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_ClearCallbacks(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL FileListTransfer_ClearCallbacks(void * jarg1) {
   RakNet::FileListTransfer *arg1 = (RakNet::FileListTransfer *) 0 ;
   
   arg1 = (RakNet::FileListTransfer *)jarg1; 
@@ -22376,7 +22376,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_FileListTransfer_ClearCallbacks(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ThreadsafePacketLogger() {
+SWIGEXPORT void * SWIGSTDCALL new_ThreadsafePacketLogger() {
   void * jresult ;
   RakNet::ThreadsafePacketLogger *result = 0 ;
   
@@ -22386,7 +22386,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_ThreadsafePacketLogger() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ThreadsafePacketLogger(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_ThreadsafePacketLogger(void * jarg1) {
   RakNet::ThreadsafePacketLogger *arg1 = (RakNet::ThreadsafePacketLogger *) 0 ;
   
   arg1 = (RakNet::ThreadsafePacketLogger *)jarg1; 
@@ -22394,7 +22394,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_ThreadsafePacketLogger(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_PacketConsoleLogger() {
+SWIGEXPORT void * SWIGSTDCALL new_PacketConsoleLogger() {
   void * jresult ;
   RakNet::PacketConsoleLogger *result = 0 ;
   
@@ -22404,7 +22404,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_PacketConsoleLogger() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketConsoleLogger_SetLogCommandParser(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PacketConsoleLogger_SetLogCommandParser(void * jarg1, void * jarg2) {
   RakNet::PacketConsoleLogger *arg1 = (RakNet::PacketConsoleLogger *) 0 ;
   RakNet::LogCommandParser *arg2 = (RakNet::LogCommandParser *) 0 ;
   
@@ -22414,7 +22414,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketConsoleLogger_SetLogCommandParser(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_PacketConsoleLogger_WriteLog(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL PacketConsoleLogger_WriteLog(void * jarg1, char * jarg2) {
   RakNet::PacketConsoleLogger *arg1 = (RakNet::PacketConsoleLogger *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -22424,7 +22424,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PacketConsoleLogger_WriteLog(void * jarg1, ch
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_PacketConsoleLogger(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_PacketConsoleLogger(void * jarg1) {
   RakNet::PacketConsoleLogger *arg1 = (RakNet::PacketConsoleLogger *) 0 ;
   
   arg1 = (RakNet::PacketConsoleLogger *)jarg1; 
@@ -22432,7 +22432,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_PacketConsoleLogger(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_ConnectionGraph2_GetInstance() {
+SWIGEXPORT void * SWIGSTDCALL ConnectionGraph2_GetInstance() {
   void * jresult ;
   RakNet::ConnectionGraph2 *result = 0 ;
   
@@ -22442,7 +22442,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ConnectionGraph2_GetInstance() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ConnectionGraph2_DestroyInstance(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL ConnectionGraph2_DestroyInstance(void * jarg1) {
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   
   arg1 = (RakNet::ConnectionGraph2 *)jarg1; 
@@ -22450,7 +22450,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ConnectionGraph2_DestroyInstance(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_ConnectionGraph2() {
+SWIGEXPORT void * SWIGSTDCALL new_ConnectionGraph2() {
   void * jresult ;
   RakNet::ConnectionGraph2 *result = 0 ;
   
@@ -22460,7 +22460,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_ConnectionGraph2() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_ConnectionGraph2(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_ConnectionGraph2(void * jarg1) {
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   
   arg1 = (RakNet::ConnectionGraph2 *)jarg1; 
@@ -22468,7 +22468,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_ConnectionGraph2(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ConnectionGraph2_GetConnectionListForRemoteSystem(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int * jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL ConnectionGraph2_GetConnectionListForRemoteSystem(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int * jarg5) {
   unsigned int jresult ;
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   RakNet::RakNetGUID arg2 ;
@@ -22494,7 +22494,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ConnectionGraph2_GetConnectionListFor
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ConnectionGraph2_ConnectionExists(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL ConnectionGraph2_ConnectionExists(void * jarg1, void * jarg2, void * jarg3) {
   unsigned int jresult ;
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   RakNet::RakNetGUID arg2 ;
@@ -22522,7 +22522,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ConnectionGraph2_ConnectionExists(voi
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_ConnectionGraph2_GetPingBetweenSystems(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT unsigned short SWIGSTDCALL ConnectionGraph2_GetPingBetweenSystems(void * jarg1, void * jarg2, void * jarg3) {
   unsigned short jresult ;
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   RakNet::RakNetGUID arg2 ;
@@ -22550,7 +22550,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_ConnectionGraph2_GetPingBetweenSyst
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_ConnectionGraph2_GetLowestAveragePingSystem(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL ConnectionGraph2_GetLowestAveragePingSystem(void * jarg1) {
   void * jresult ;
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   RakNet::RakNetGUID result;
@@ -22562,7 +22562,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ConnectionGraph2_GetLowestAveragePingSystem
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ConnectionGraph2_SetAutoProcessNewConnections(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL ConnectionGraph2_SetAutoProcessNewConnections(void * jarg1, unsigned int jarg2) {
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   bool arg2 ;
   
@@ -22572,7 +22572,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ConnectionGraph2_SetAutoProcessNewConnections
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ConnectionGraph2_GetAutoProcessNewConnections(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL ConnectionGraph2_GetAutoProcessNewConnections(void * jarg1) {
   unsigned int jresult ;
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   bool result;
@@ -22584,7 +22584,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ConnectionGraph2_GetAutoProcessNewCon
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ConnectionGraph2_AddParticipant(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL ConnectionGraph2_AddParticipant(void * jarg1, void * jarg2, void * jarg3) {
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   RakNet::RakNetGUID arg3 ;
@@ -22606,7 +22606,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ConnectionGraph2_AddParticipant(void * jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ConnectionGraph2_GetConnectionListForRemoteSystemHelper(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int * jarg5) {
+SWIGEXPORT unsigned int SWIGSTDCALL ConnectionGraph2_GetConnectionListForRemoteSystemHelper(void * jarg1, void * jarg2, void * jarg3, void * jarg4, unsigned int * jarg5) {
   unsigned int jresult ;
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   RakNet::RakNetGUID arg2 ;
@@ -22632,7 +22632,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ConnectionGraph2_GetConnectionListFor
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ConnectionGraph2_GetParticipantListHelper(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL ConnectionGraph2_GetParticipantListHelper(void * jarg1, void * jarg2) {
   RakNet::ConnectionGraph2 *arg1 = (RakNet::ConnectionGraph2 *) 0 ;
   DataStructures::List< RakNet::RakNetGUID > *arg2 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   
@@ -22642,7 +22642,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ConnectionGraph2_GetParticipantListHelper(voi
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_GetTime() {
+SWIGEXPORT unsigned long long SWIGSTDCALL GetTime() {
   unsigned long long jresult ;
   RakNet::Time result;
   
@@ -22652,7 +22652,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_GetTime() {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GetTimeMS() {
+SWIGEXPORT unsigned int SWIGSTDCALL GetTimeMS() {
   unsigned int jresult ;
   RakNet::TimeMS result;
   
@@ -22662,7 +22662,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GetTimeMS() {
 }
 
 
-SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_GetTimeUS() {
+SWIGEXPORT unsigned long long SWIGSTDCALL GetTimeUS() {
   unsigned long long jresult ;
   RakNet::TimeUS result;
   
@@ -22672,7 +22672,7 @@ SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_GetTimeUS() {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GreaterThan(unsigned long long jarg1, unsigned long long jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL GreaterThan(unsigned long long jarg1, unsigned long long jarg2) {
   unsigned int jresult ;
   RakNet::Time arg1 ;
   RakNet::Time arg2 ;
@@ -22686,7 +22686,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GreaterThan(unsigned long long jarg1,
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LessThan(unsigned long long jarg1, unsigned long long jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL LessThan(unsigned long long jarg1, unsigned long long jarg2) {
   unsigned int jresult ;
   RakNet::Time arg1 ;
   RakNet::Time arg2 ;
@@ -22700,7 +22700,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_LessThan(unsigned long long jarg1, un
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListRakNetGUID__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListRakNetGUID__SWIG_0() {
   void * jresult ;
   DataStructures::List< RakNet::RakNetGUID > *result = 0 ;
   
@@ -22710,7 +22710,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListRakNetGUID__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListRakNetGUID(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListRakNetGUID(void * jarg1) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   
   arg1 = (DataStructures::List< RakNet::RakNetGUID > *)jarg1; 
@@ -22718,7 +22718,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListRakNetGUID(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListRakNetGUID__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListRakNetGUID__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< RakNet::RakNetGUID > *arg1 = 0 ;
   DataStructures::List< RakNet::RakNetGUID > *result = 0 ;
@@ -22734,7 +22734,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListRakNetGUID__SWIG_1(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakNetGUID_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListRakNetGUID_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   DataStructures::List< RakNet::RakNetGUID > *arg2 = 0 ;
@@ -22752,7 +22752,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakNetGUID_CopyData(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakNetGUID_Get(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListRakNetGUID_Get(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   unsigned int arg2 ;
@@ -22766,7 +22766,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakNetGUID_Get(void * jarg1, unsi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -22784,7 +22784,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Push(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakNetGUID_Pop(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListRakNetGUID_Pop(void * jarg1) {
   void * jresult ;
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   RakNet::RakNetGUID *result = 0 ;
@@ -22796,7 +22796,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakNetGUID_Pop(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   unsigned int arg3 ;
@@ -22816,7 +22816,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Insert__SWIG_0(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -22834,7 +22834,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Insert__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   RakNet::RakNetGUID arg3 ;
@@ -22862,7 +22862,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Replace__SWIG_0(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Replace__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_Replace__SWIG_1(void * jarg1, void * jarg2) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
   
@@ -22876,7 +22876,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Replace__SWIG_1(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   unsigned int arg2 ;
   
@@ -22886,7 +22886,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_RemoveAtIndex(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   unsigned int arg2 ;
   
@@ -22896,7 +22896,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_RemoveAtIndexFast(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   unsigned int arg2 ;
   
@@ -22906,7 +22906,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_RemoveFromEnd__SWIG_0(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   
   arg1 = (DataStructures::List< RakNet::RakNetGUID > *)jarg1; 
@@ -22914,7 +22914,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_RemoveFromEnd__SWIG_1(vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListRakNetGUID_GetIndexOf(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListRakNetGUID_GetIndexOf(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   RakNet::RakNetGUID *arg2 = 0 ;
@@ -22932,7 +22932,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListRakNetGUID_GetIndexOf(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListRakNetGUID_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListRakNetGUID_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   unsigned int result;
@@ -22944,7 +22944,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListRakNetGUID_Size(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -22958,7 +22958,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Clear(void * jarg1, unsi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -22972,7 +22972,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Preallocate(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakNetGUID_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< RakNet::RakNetGUID > *arg1 = (DataStructures::List< RakNet::RakNetGUID > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -22984,7 +22984,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakNetGUID_Compress(void * jarg1, c
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListSystemAddress__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListSystemAddress__SWIG_0() {
   void * jresult ;
   DataStructures::List< RakNet::SystemAddress > *result = 0 ;
   
@@ -22994,7 +22994,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListSystemAddress__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListSystemAddress(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListSystemAddress(void * jarg1) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   
   arg1 = (DataStructures::List< RakNet::SystemAddress > *)jarg1; 
@@ -23002,7 +23002,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListSystemAddress(void * jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListSystemAddress__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListSystemAddress__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< RakNet::SystemAddress > *arg1 = 0 ;
   DataStructures::List< RakNet::SystemAddress > *result = 0 ;
@@ -23018,7 +23018,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListSystemAddress__SWIG_1(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSystemAddress_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListSystemAddress_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   DataStructures::List< RakNet::SystemAddress > *arg2 = 0 ;
@@ -23036,7 +23036,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSystemAddress_CopyData(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSystemAddress_Get(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListSystemAddress_Get(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   unsigned int arg2 ;
@@ -23050,7 +23050,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSystemAddress_Get(void * jarg1, u
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -23068,7 +23068,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Push(void * jarg1, vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSystemAddress_Pop(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListSystemAddress_Pop(void * jarg1) {
   void * jresult ;
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   RakNet::SystemAddress *result = 0 ;
@@ -23080,7 +23080,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSystemAddress_Pop(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   unsigned int arg3 ;
@@ -23100,7 +23100,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Insert__SWIG_0(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -23118,7 +23118,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Insert__SWIG_1(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   RakNet::SystemAddress arg3 ;
@@ -23146,7 +23146,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Replace__SWIG_0(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Replace__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_Replace__SWIG_1(void * jarg1, void * jarg2) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
   
@@ -23160,7 +23160,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Replace__SWIG_1(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   unsigned int arg2 ;
   
@@ -23170,7 +23170,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_RemoveAtIndex(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   unsigned int arg2 ;
   
@@ -23180,7 +23180,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_RemoveAtIndexFast(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   unsigned int arg2 ;
   
@@ -23190,7 +23190,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_RemoveFromEnd__SWIG_0
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   
   arg1 = (DataStructures::List< RakNet::SystemAddress > *)jarg1; 
@@ -23198,7 +23198,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_RemoveFromEnd__SWIG_1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListSystemAddress_GetIndexOf(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListSystemAddress_GetIndexOf(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   RakNet::SystemAddress *arg2 = 0 ;
@@ -23216,7 +23216,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListSystemAddress_GetIndexOf(vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListSystemAddress_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListSystemAddress_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   unsigned int result;
@@ -23228,7 +23228,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListSystemAddress_Size(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -23242,7 +23242,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Clear(void * jarg1, u
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -23256,7 +23256,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Preallocate(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSystemAddress_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< RakNet::SystemAddress > *arg1 = (DataStructures::List< RakNet::SystemAddress > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -23268,7 +23268,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSystemAddress_Compress(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListRakString__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListRakString__SWIG_0() {
   void * jresult ;
   DataStructures::List< RakNet::RakString > *result = 0 ;
   
@@ -23278,7 +23278,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListRakString__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListRakString(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListRakString(void * jarg1) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   
   arg1 = (DataStructures::List< RakNet::RakString > *)jarg1; 
@@ -23286,7 +23286,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListRakString(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListRakString__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListRakString__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< RakNet::RakString > *arg1 = 0 ;
   DataStructures::List< RakNet::RakString > *result = 0 ;
@@ -23302,7 +23302,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListRakString__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakString_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListRakString_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   DataStructures::List< RakNet::RakString > *arg2 = 0 ;
@@ -23320,7 +23320,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakString_CopyData(void * jarg1, 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakString_Get(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListRakString_Get(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   unsigned int arg2 ;
@@ -23334,7 +23334,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakString_Get(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -23352,7 +23352,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Push(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakString_Pop(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListRakString_Pop(void * jarg1) {
   void * jresult ;
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   RakNet::RakString *result = 0 ;
@@ -23364,7 +23364,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListRakString_Pop(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   unsigned int arg3 ;
@@ -23384,7 +23384,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Insert__SWIG_0(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -23402,7 +23402,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Insert__SWIG_1(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   RakNet::RakString arg3 ;
@@ -23430,7 +23430,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Replace__SWIG_0(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Replace__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_Replace__SWIG_1(void * jarg1, void * jarg2) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   RakNet::RakString *arg2 = 0 ;
   
@@ -23444,7 +23444,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Replace__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   unsigned int arg2 ;
   
@@ -23454,7 +23454,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_RemoveAtIndex(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   unsigned int arg2 ;
   
@@ -23464,7 +23464,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_RemoveAtIndexFast(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   unsigned int arg2 ;
   
@@ -23474,7 +23474,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_RemoveFromEnd__SWIG_0(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   
   arg1 = (DataStructures::List< RakNet::RakString > *)jarg1; 
@@ -23482,7 +23482,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_RemoveFromEnd__SWIG_1(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListRakString_GetIndexOf(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListRakString_GetIndexOf(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   RakNet::RakString *arg2 = 0 ;
@@ -23500,7 +23500,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListRakString_GetIndexOf(void *
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListRakString_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListRakString_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   unsigned int result;
@@ -23512,7 +23512,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListRakString_Size(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -23526,7 +23526,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Clear(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -23540,7 +23540,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Preallocate(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListRakString_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< RakNet::RakString > *arg1 = (DataStructures::List< RakNet::RakString > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -23552,7 +23552,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListRakString_Compress(void * jarg1, ch
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListCell__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListCell__SWIG_0() {
   void * jresult ;
   DataStructures::List< Cell > *result = 0 ;
   
@@ -23562,7 +23562,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListCell__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListCell(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListCell(void * jarg1) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   
   arg1 = (DataStructures::List< Cell > *)jarg1; 
@@ -23570,7 +23570,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListCell(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListCell__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListCell__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< Cell > *arg1 = 0 ;
   DataStructures::List< Cell > *result = 0 ;
@@ -23586,7 +23586,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListCell__SWIG_1(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCell_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListCell_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   DataStructures::List< Cell > *arg2 = 0 ;
@@ -23604,7 +23604,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCell_CopyData(void * jarg1, void 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCell_Get(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListCell_Get(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   unsigned int arg2 ;
@@ -23618,7 +23618,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCell_Get(void * jarg1, unsigned i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   Cell *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -23636,7 +23636,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Push(void * jarg1, void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCell_Pop(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListCell_Pop(void * jarg1) {
   void * jresult ;
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   Cell *result = 0 ;
@@ -23648,7 +23648,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCell_Pop(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   Cell *arg2 = 0 ;
   unsigned int arg3 ;
@@ -23668,7 +23668,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Insert__SWIG_0(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   Cell *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -23686,7 +23686,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Insert__SWIG_1(void * jarg1, v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   Cell *arg2 = 0 ;
   Cell arg3 ;
@@ -23714,7 +23714,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Replace__SWIG_0(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Replace__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_Replace__SWIG_1(void * jarg1, void * jarg2) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   Cell *arg2 = 0 ;
   
@@ -23728,7 +23728,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Replace__SWIG_1(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   unsigned int arg2 ;
   
@@ -23738,7 +23738,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_RemoveAtIndex(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   unsigned int arg2 ;
   
@@ -23748,7 +23748,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_RemoveAtIndexFast(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   unsigned int arg2 ;
   
@@ -23758,7 +23758,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_RemoveFromEnd__SWIG_0(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   
   arg1 = (DataStructures::List< Cell > *)jarg1; 
@@ -23766,7 +23766,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_RemoveFromEnd__SWIG_1(void * j
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListCell_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListCell_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   unsigned int result;
@@ -23778,7 +23778,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListCell_Size(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -23792,7 +23792,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Clear(void * jarg1, unsigned i
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -23806,7 +23806,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Preallocate(void * jarg1, unsi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCell_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< Cell > *arg1 = (DataStructures::List< Cell > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -23818,7 +23818,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCell_Compress(void * jarg1, char * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListColumnDescriptor__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListColumnDescriptor__SWIG_0() {
   void * jresult ;
   DataStructures::List< ColumnDescriptor > *result = 0 ;
   
@@ -23828,7 +23828,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListColumnDescriptor__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListColumnDescriptor(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListColumnDescriptor(void * jarg1) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   
   arg1 = (DataStructures::List< ColumnDescriptor > *)jarg1; 
@@ -23836,7 +23836,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListColumnDescriptor(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListColumnDescriptor__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListColumnDescriptor__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< ColumnDescriptor > *arg1 = 0 ;
   DataStructures::List< ColumnDescriptor > *result = 0 ;
@@ -23852,7 +23852,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListColumnDescriptor__SWIG_1(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListColumnDescriptor_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListColumnDescriptor_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   DataStructures::List< ColumnDescriptor > *arg2 = 0 ;
@@ -23870,7 +23870,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListColumnDescriptor_CopyData(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Get(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListColumnDescriptor_Get(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   unsigned int arg2 ;
@@ -23884,7 +23884,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Get(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   ColumnDescriptor *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -23902,7 +23902,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Push(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Pop(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListColumnDescriptor_Pop(void * jarg1) {
   void * jresult ;
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   ColumnDescriptor *result = 0 ;
@@ -23914,7 +23914,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Pop(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   ColumnDescriptor *arg2 = 0 ;
   unsigned int arg3 ;
@@ -23934,7 +23934,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Insert__SWIG_0(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   ColumnDescriptor *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -23952,7 +23952,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Insert__SWIG_1(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   ColumnDescriptor *arg2 = 0 ;
   ColumnDescriptor arg3 ;
@@ -23980,7 +23980,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Replace__SWIG_0(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Replace__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_Replace__SWIG_1(void * jarg1, void * jarg2) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   ColumnDescriptor *arg2 = 0 ;
   
@@ -23994,7 +23994,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Replace__SWIG_1(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   unsigned int arg2 ;
   
@@ -24004,7 +24004,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_RemoveAtIndex(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   unsigned int arg2 ;
   
@@ -24014,7 +24014,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_RemoveAtIndexFast(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   unsigned int arg2 ;
   
@@ -24024,7 +24024,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_RemoveFromEnd__SWI
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   
   arg1 = (DataStructures::List< ColumnDescriptor > *)jarg1; 
@@ -24032,7 +24032,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_RemoveFromEnd__SWI
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListColumnDescriptor_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   unsigned int result;
@@ -24044,7 +24044,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Size(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -24058,7 +24058,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Clear(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -24072,7 +24072,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Preallocate(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListColumnDescriptor_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< ColumnDescriptor > *arg1 = (DataStructures::List< ColumnDescriptor > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -24084,7 +24084,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListColumnDescriptor_Compress(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListTableRow__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListTableRow__SWIG_0() {
   void * jresult ;
   DataStructures::List< Row > *result = 0 ;
   
@@ -24094,7 +24094,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListTableRow__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListTableRow(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListTableRow(void * jarg1) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   
   arg1 = (DataStructures::List< Row > *)jarg1; 
@@ -24102,7 +24102,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListTableRow(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListTableRow__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListTableRow__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< Row > *arg1 = 0 ;
   DataStructures::List< Row > *result = 0 ;
@@ -24118,7 +24118,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListTableRow__SWIG_1(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListTableRow_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListTableRow_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   DataStructures::List< Row > *arg2 = 0 ;
@@ -24136,7 +24136,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListTableRow_CopyData(void * jarg1, v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListTableRow_Get(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListTableRow_Get(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   unsigned int arg2 ;
@@ -24150,7 +24150,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListTableRow_Get(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   Row *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -24168,7 +24168,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Push(void * jarg1, void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListTableRow_Pop(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListTableRow_Pop(void * jarg1) {
   void * jresult ;
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   Row *result = 0 ;
@@ -24180,7 +24180,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListTableRow_Pop(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   Row *arg2 = 0 ;
   unsigned int arg3 ;
@@ -24200,7 +24200,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Insert__SWIG_0(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   Row *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -24218,7 +24218,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Insert__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   Row *arg2 = 0 ;
   Row arg3 ;
@@ -24246,7 +24246,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Replace__SWIG_0(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Replace__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_Replace__SWIG_1(void * jarg1, void * jarg2) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   Row *arg2 = 0 ;
   
@@ -24260,7 +24260,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Replace__SWIG_1(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   unsigned int arg2 ;
   
@@ -24270,7 +24270,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_RemoveAtIndex(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   unsigned int arg2 ;
   
@@ -24280,7 +24280,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_RemoveAtIndexFast(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   unsigned int arg2 ;
   
@@ -24290,7 +24290,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_RemoveFromEnd__SWIG_0(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   
   arg1 = (DataStructures::List< Row > *)jarg1; 
@@ -24298,7 +24298,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_RemoveFromEnd__SWIG_1(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListTableRow_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListTableRow_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   unsigned int result;
@@ -24310,7 +24310,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListTableRow_Size(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -24324,7 +24324,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Clear(void * jarg1, unsign
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -24338,7 +24338,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Preallocate(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListTableRow_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< Row > *arg1 = (DataStructures::List< Row > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -24350,7 +24350,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListTableRow_Compress(void * jarg1, cha
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListFileListNode__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListFileListNode__SWIG_0() {
   void * jresult ;
   DataStructures::List< RakNet::FileListNode > *result = 0 ;
   
@@ -24360,7 +24360,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListFileListNode__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListFileListNode(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListFileListNode(void * jarg1) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   
   arg1 = (DataStructures::List< RakNet::FileListNode > *)jarg1; 
@@ -24368,7 +24368,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListFileListNode(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListFileListNode__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListFileListNode__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< RakNet::FileListNode > *arg1 = 0 ;
   DataStructures::List< RakNet::FileListNode > *result = 0 ;
@@ -24384,7 +24384,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListFileListNode__SWIG_1(void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFileListNode_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListFileListNode_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   DataStructures::List< RakNet::FileListNode > *arg2 = 0 ;
@@ -24402,7 +24402,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFileListNode_CopyData(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFileListNode_Get(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListFileListNode_Get(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   unsigned int arg2 ;
@@ -24416,7 +24416,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFileListNode_Get(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   RakNet::FileListNode *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -24434,7 +24434,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Push(void * jarg1, voi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFileListNode_Pop(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListFileListNode_Pop(void * jarg1) {
   void * jresult ;
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   RakNet::FileListNode *result = 0 ;
@@ -24446,7 +24446,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFileListNode_Pop(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   RakNet::FileListNode *arg2 = 0 ;
   unsigned int arg3 ;
@@ -24466,7 +24466,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Insert__SWIG_0(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   RakNet::FileListNode *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -24484,7 +24484,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Insert__SWIG_1(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   RakNet::FileListNode *arg2 = 0 ;
   SwigValueWrapper< RakNet::FileListNode > arg3 ;
@@ -24512,7 +24512,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Replace__SWIG_0(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Replace__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_Replace__SWIG_1(void * jarg1, void * jarg2) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   RakNet::FileListNode *arg2 = 0 ;
   
@@ -24526,7 +24526,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Replace__SWIG_1(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   unsigned int arg2 ;
   
@@ -24536,7 +24536,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_RemoveAtIndex(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   unsigned int arg2 ;
   
@@ -24546,7 +24546,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_RemoveAtIndexFast(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   unsigned int arg2 ;
   
@@ -24556,7 +24556,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_RemoveFromEnd__SWIG_0(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   
   arg1 = (DataStructures::List< RakNet::FileListNode > *)jarg1; 
@@ -24564,7 +24564,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_RemoveFromEnd__SWIG_1(
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListFileListNode_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListFileListNode_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   unsigned int result;
@@ -24576,7 +24576,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListFileListNode_Size(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -24590,7 +24590,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Clear(void * jarg1, un
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -24604,7 +24604,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Preallocate(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFileListNode_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< RakNet::FileListNode > *arg1 = (DataStructures::List< RakNet::FileListNode > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -24616,7 +24616,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFileListNode_Compress(void * jarg1,
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListFilterQuery__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListFilterQuery__SWIG_0() {
   void * jresult ;
   DataStructures::List< FilterQuery > *result = 0 ;
   
@@ -24626,7 +24626,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListFilterQuery__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListFilterQuery(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListFilterQuery(void * jarg1) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   
   arg1 = (DataStructures::List< FilterQuery > *)jarg1; 
@@ -24634,7 +24634,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListFilterQuery(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListFilterQuery__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListFilterQuery__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< FilterQuery > *arg1 = 0 ;
   DataStructures::List< FilterQuery > *result = 0 ;
@@ -24650,7 +24650,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListFilterQuery__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFilterQuery_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListFilterQuery_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   DataStructures::List< FilterQuery > *arg2 = 0 ;
@@ -24668,7 +24668,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFilterQuery_CopyData(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFilterQuery_Get(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListFilterQuery_Get(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   unsigned int arg2 ;
@@ -24682,7 +24682,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFilterQuery_Get(void * jarg1, uns
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   FilterQuery *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -24700,7 +24700,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Push(void * jarg1, void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFilterQuery_Pop(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListFilterQuery_Pop(void * jarg1) {
   void * jresult ;
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   FilterQuery *result = 0 ;
@@ -24712,7 +24712,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListFilterQuery_Pop(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   FilterQuery *arg2 = 0 ;
   unsigned int arg3 ;
@@ -24732,7 +24732,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Insert__SWIG_0(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   FilterQuery *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -24750,7 +24750,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Insert__SWIG_1(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   FilterQuery *arg2 = 0 ;
   FilterQuery arg3 ;
@@ -24778,7 +24778,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Replace__SWIG_0(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Replace__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_Replace__SWIG_1(void * jarg1, void * jarg2) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   FilterQuery *arg2 = 0 ;
   
@@ -24792,7 +24792,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Replace__SWIG_1(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   unsigned int arg2 ;
   
@@ -24802,7 +24802,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_RemoveAtIndex(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   unsigned int arg2 ;
   
@@ -24812,7 +24812,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_RemoveAtIndexFast(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   unsigned int arg2 ;
   
@@ -24822,7 +24822,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_RemoveFromEnd__SWIG_0(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   
   arg1 = (DataStructures::List< FilterQuery > *)jarg1; 
@@ -24830,7 +24830,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_RemoveFromEnd__SWIG_1(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListFilterQuery_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListFilterQuery_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   unsigned int result;
@@ -24842,7 +24842,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListFilterQuery_Size(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -24856,7 +24856,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Clear(void * jarg1, uns
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -24870,7 +24870,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Preallocate(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListFilterQuery_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< FilterQuery > *arg1 = (DataStructures::List< FilterQuery > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -24882,7 +24882,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListFilterQuery_Compress(void * jarg1, 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListSortQuery__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListSortQuery__SWIG_0() {
   void * jresult ;
   DataStructures::List< SortQuery > *result = 0 ;
   
@@ -24892,7 +24892,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListSortQuery__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListSortQuery(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListSortQuery(void * jarg1) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   
   arg1 = (DataStructures::List< SortQuery > *)jarg1; 
@@ -24900,7 +24900,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListSortQuery(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListSortQuery__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListSortQuery__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< SortQuery > *arg1 = 0 ;
   DataStructures::List< SortQuery > *result = 0 ;
@@ -24916,7 +24916,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListSortQuery__SWIG_1(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSortQuery_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListSortQuery_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   DataStructures::List< SortQuery > *arg2 = 0 ;
@@ -24934,7 +24934,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSortQuery_CopyData(void * jarg1, 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSortQuery_Get(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListSortQuery_Get(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   unsigned int arg2 ;
@@ -24948,7 +24948,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSortQuery_Get(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   SortQuery *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -24966,7 +24966,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Push(void * jarg1, void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSortQuery_Pop(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListSortQuery_Pop(void * jarg1) {
   void * jresult ;
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   SortQuery *result = 0 ;
@@ -24978,7 +24978,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListSortQuery_Pop(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   SortQuery *arg2 = 0 ;
   unsigned int arg3 ;
@@ -24998,7 +24998,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Insert__SWIG_0(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   SortQuery *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -25016,7 +25016,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Insert__SWIG_1(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   SortQuery *arg2 = 0 ;
   SortQuery arg3 ;
@@ -25044,7 +25044,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Replace__SWIG_0(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Replace__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_Replace__SWIG_1(void * jarg1, void * jarg2) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   SortQuery *arg2 = 0 ;
   
@@ -25058,7 +25058,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Replace__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   unsigned int arg2 ;
   
@@ -25068,7 +25068,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_RemoveAtIndex(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   unsigned int arg2 ;
   
@@ -25078,7 +25078,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_RemoveAtIndexFast(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   unsigned int arg2 ;
   
@@ -25088,7 +25088,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_RemoveFromEnd__SWIG_0(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   
   arg1 = (DataStructures::List< SortQuery > *)jarg1; 
@@ -25096,7 +25096,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_RemoveFromEnd__SWIG_1(voi
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListSortQuery_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListSortQuery_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   unsigned int result;
@@ -25108,7 +25108,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListSortQuery_Size(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -25122,7 +25122,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Clear(void * jarg1, unsig
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -25136,7 +25136,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Preallocate(void * jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListSortQuery_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< SortQuery > *arg1 = (DataStructures::List< SortQuery > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -25148,7 +25148,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListSortQuery_Compress(void * jarg1, ch
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListCellPointer__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListCellPointer__SWIG_0() {
   void * jresult ;
   DataStructures::List< Cell * > *result = 0 ;
   
@@ -25158,7 +25158,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListCellPointer__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListCellPointer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListCellPointer(void * jarg1) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   
   arg1 = (DataStructures::List< Cell * > *)jarg1; 
@@ -25166,7 +25166,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListCellPointer(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListCellPointer__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListCellPointer__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< Cell * > *arg1 = 0 ;
   DataStructures::List< Cell * > *result = 0 ;
@@ -25182,7 +25182,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListCellPointer__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCellPointer_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListCellPointer_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   DataStructures::List< Cell * > *arg2 = 0 ;
@@ -25200,7 +25200,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCellPointer_CopyData(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_Push(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   Cell **arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -25216,7 +25216,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Push(void * jarg1, void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_Insert__SWIG_0(void * jarg1, void * jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   Cell **arg2 = 0 ;
   unsigned int arg3 ;
@@ -25234,7 +25234,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Insert__SWIG_0(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_Insert__SWIG_1(void * jarg1, void * jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   Cell **arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -25250,7 +25250,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Insert__SWIG_1(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_Replace__SWIG_0(void * jarg1, void * jarg2, void * jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   Cell **arg2 = 0 ;
   Cell *arg3 = (Cell *) (Cell *)0 ;
@@ -25270,7 +25270,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Replace__SWIG_0(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Replace__SWIG_1(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_Replace__SWIG_1(void * jarg1, void * jarg2) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   Cell **arg2 = 0 ;
   Cell *temp2 = 0 ;
@@ -25282,7 +25282,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Replace__SWIG_1(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   unsigned int arg2 ;
   
@@ -25292,7 +25292,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_RemoveAtIndex(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   unsigned int arg2 ;
   
@@ -25302,7 +25302,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_RemoveAtIndexFast(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   unsigned int arg2 ;
   
@@ -25312,7 +25312,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_RemoveFromEnd__SWIG_0(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   
   arg1 = (DataStructures::List< Cell * > *)jarg1; 
@@ -25320,7 +25320,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_RemoveFromEnd__SWIG_1(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListCellPointer_GetIndexOf(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListCellPointer_GetIndexOf(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   Cell **arg2 = 0 ;
@@ -25336,7 +25336,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListCellPointer_GetIndexOf(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListCellPointer_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListCellPointer_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   unsigned int result;
@@ -25348,7 +25348,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListCellPointer_Size(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -25362,7 +25362,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Clear(void * jarg1, uns
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -25376,7 +25376,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Preallocate(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListCellPointer_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -25388,7 +25388,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListCellPointer_Compress(void * jarg1, 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCellPointer_GetHelper(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListCellPointer_GetHelper(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   unsigned int arg2 ;
@@ -25402,7 +25402,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCellPointer_GetHelper(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCellPointer_PopHelper(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListCellPointer_PopHelper(void * jarg1) {
   void * jresult ;
   DataStructures::List< Cell * > *arg1 = (DataStructures::List< Cell * > *) 0 ;
   Cell *result = 0 ;
@@ -25414,7 +25414,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListCellPointer_PopHelper(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnsignedShortPointer() {
+SWIGEXPORT void * SWIGSTDCALL new_UnsignedShortPointer() {
   void * jresult ;
   UnsignedShortPointer *result = 0 ;
   
@@ -25424,7 +25424,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnsignedShortPointer() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnsignedShortPointer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_UnsignedShortPointer(void * jarg1) {
   UnsignedShortPointer *arg1 = (UnsignedShortPointer *) 0 ;
   
   arg1 = (UnsignedShortPointer *)jarg1; 
@@ -25432,7 +25432,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnsignedShortPointer(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UnsignedShortPointer_assign(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL UnsignedShortPointer_assign(void * jarg1, unsigned short jarg2) {
   UnsignedShortPointer *arg1 = (UnsignedShortPointer *) 0 ;
   unsigned short arg2 ;
   
@@ -25442,7 +25442,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UnsignedShortPointer_assign(void * jarg1, uns
 }
 
 
-SWIGEXPORT unsigned short SWIGSTDCALL CSharp_UnsignedShortPointer_value(void * jarg1) {
+SWIGEXPORT unsigned short SWIGSTDCALL UnsignedShortPointer_value(void * jarg1) {
   unsigned short jresult ;
   UnsignedShortPointer *arg1 = (UnsignedShortPointer *) 0 ;
   unsigned short result;
@@ -25454,7 +25454,7 @@ SWIGEXPORT unsigned short SWIGSTDCALL CSharp_UnsignedShortPointer_value(void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnsignedShortPointer_cast(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL UnsignedShortPointer_cast(void * jarg1) {
   void * jresult ;
   UnsignedShortPointer *arg1 = (UnsignedShortPointer *) 0 ;
   unsigned short *result = 0 ;
@@ -25466,7 +25466,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnsignedShortPointer_cast(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnsignedShortPointer_frompointer(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL UnsignedShortPointer_frompointer(void * jarg1) {
   void * jresult ;
   unsigned short *arg1 = (unsigned short *) 0 ;
   UnsignedShortPointer *result = 0 ;
@@ -25478,7 +25478,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnsignedShortPointer_frompointer(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListUnsignedShort__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListUnsignedShort__SWIG_0() {
   void * jresult ;
   DataStructures::List< unsigned short > *result = 0 ;
   
@@ -25488,7 +25488,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListUnsignedShort__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListUnsignedShort(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListUnsignedShort(void * jarg1) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   
   arg1 = (DataStructures::List< unsigned short > *)jarg1; 
@@ -25496,7 +25496,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListUnsignedShort(void * jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListUnsignedShort__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListUnsignedShort__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< unsigned short > *arg1 = 0 ;
   DataStructures::List< unsigned short > *result = 0 ;
@@ -25512,7 +25512,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListUnsignedShort__SWIG_1(void * 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedShort_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListUnsignedShort_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   DataStructures::List< unsigned short > *arg2 = 0 ;
@@ -25530,7 +25530,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedShort_CopyData(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedShort_GetHelper(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListUnsignedShort_GetHelper(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned int arg2 ;
@@ -25544,7 +25544,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedShort_GetHelper(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Push(void * jarg1, unsigned short jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_Push(void * jarg1, unsigned short jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned short *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -25560,7 +25560,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Push(void * jarg1, un
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedShort_PopHelper(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListUnsignedShort_PopHelper(void * jarg1) {
   void * jresult ;
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned short *result = 0 ;
@@ -25572,7 +25572,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedShort_PopHelper(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Insert__SWIG_0(void * jarg1, unsigned short jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_Insert__SWIG_0(void * jarg1, unsigned short jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned short *arg2 = 0 ;
   unsigned int arg3 ;
@@ -25590,7 +25590,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Insert__SWIG_0(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Insert__SWIG_1(void * jarg1, unsigned short jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_Insert__SWIG_1(void * jarg1, unsigned short jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned short *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -25606,7 +25606,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Insert__SWIG_1(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Replace__SWIG_0(void * jarg1, unsigned short jarg2, unsigned short jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_Replace__SWIG_0(void * jarg1, unsigned short jarg2, unsigned short jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned short *arg2 = 0 ;
   unsigned short arg3 ;
@@ -25626,7 +25626,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Replace__SWIG_0(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Replace__SWIG_1(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_Replace__SWIG_1(void * jarg1, unsigned short jarg2) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned short *arg2 = 0 ;
   unsigned short temp2 ;
@@ -25638,7 +25638,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Replace__SWIG_1(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned int arg2 ;
   
@@ -25648,7 +25648,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_RemoveAtIndex(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned int arg2 ;
   
@@ -25658,7 +25658,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_RemoveAtIndexFast(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned int arg2 ;
   
@@ -25668,7 +25668,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_RemoveFromEnd__SWIG_0
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   
   arg1 = (DataStructures::List< unsigned short > *)jarg1; 
@@ -25676,7 +25676,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_RemoveFromEnd__SWIG_1
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListUnsignedShort_GetIndexOf(void * jarg1, unsigned short jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListUnsignedShort_GetIndexOf(void * jarg1, unsigned short jarg2) {
   unsigned int jresult ;
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned short *arg2 = 0 ;
@@ -25692,7 +25692,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListUnsignedShort_GetIndexOf(vo
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListUnsignedShort_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListUnsignedShort_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned int result;
@@ -25704,7 +25704,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListUnsignedShort_Size(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -25718,7 +25718,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Clear(void * jarg1, u
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -25732,7 +25732,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Preallocate(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedShort_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< unsigned short > *arg1 = (DataStructures::List< unsigned short > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -25744,7 +25744,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedShort_Compress(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnsignedIntPointer() {
+SWIGEXPORT void * SWIGSTDCALL new_UnsignedIntPointer() {
   void * jresult ;
   UnsignedIntPointer *result = 0 ;
   
@@ -25754,7 +25754,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_UnsignedIntPointer() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnsignedIntPointer(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_UnsignedIntPointer(void * jarg1) {
   UnsignedIntPointer *arg1 = (UnsignedIntPointer *) 0 ;
   
   arg1 = (UnsignedIntPointer *)jarg1; 
@@ -25762,7 +25762,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_UnsignedIntPointer(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_UnsignedIntPointer_assign(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL UnsignedIntPointer_assign(void * jarg1, unsigned int jarg2) {
   UnsignedIntPointer *arg1 = (UnsignedIntPointer *) 0 ;
   unsigned int arg2 ;
   
@@ -25772,7 +25772,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UnsignedIntPointer_assign(void * jarg1, unsig
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnsignedIntPointer_value(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL UnsignedIntPointer_value(void * jarg1) {
   unsigned int jresult ;
   UnsignedIntPointer *arg1 = (UnsignedIntPointer *) 0 ;
   unsigned int result;
@@ -25784,7 +25784,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UnsignedIntPointer_value(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnsignedIntPointer_cast(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL UnsignedIntPointer_cast(void * jarg1) {
   void * jresult ;
   UnsignedIntPointer *arg1 = (UnsignedIntPointer *) 0 ;
   unsigned int *result = 0 ;
@@ -25796,7 +25796,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnsignedIntPointer_cast(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UnsignedIntPointer_frompointer(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL UnsignedIntPointer_frompointer(void * jarg1) {
   void * jresult ;
   unsigned int *arg1 = (unsigned int *) 0 ;
   UnsignedIntPointer *result = 0 ;
@@ -25808,7 +25808,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UnsignedIntPointer_frompointer(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListUnsignedInt__SWIG_0() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListUnsignedInt__SWIG_0() {
   void * jresult ;
   DataStructures::List< unsigned int > *result = 0 ;
   
@@ -25818,7 +25818,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListUnsignedInt__SWIG_0() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListUnsignedInt(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetListUnsignedInt(void * jarg1) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   
   arg1 = (DataStructures::List< unsigned int > *)jarg1; 
@@ -25826,7 +25826,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetListUnsignedInt(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListUnsignedInt__SWIG_1(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetListUnsignedInt__SWIG_1(void * jarg1) {
   void * jresult ;
   DataStructures::List< unsigned int > *arg1 = 0 ;
   DataStructures::List< unsigned int > *result = 0 ;
@@ -25842,7 +25842,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetListUnsignedInt__SWIG_1(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedInt_CopyData(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListUnsignedInt_CopyData(void * jarg1, void * jarg2) {
   void * jresult ;
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   DataStructures::List< unsigned int > *arg2 = 0 ;
@@ -25860,7 +25860,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedInt_CopyData(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedInt_GetHelper(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListUnsignedInt_GetHelper(void * jarg1, unsigned int jarg2) {
   void * jresult ;
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int arg2 ;
@@ -25874,7 +25874,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedInt_GetHelper(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Push(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_Push(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -25890,7 +25890,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Push(void * jarg1, unsi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedInt_PopHelper(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetListUnsignedInt_PopHelper(void * jarg1) {
   void * jresult ;
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int *result = 0 ;
@@ -25902,7 +25902,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetListUnsignedInt_PopHelper(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Insert__SWIG_0(void * jarg1, unsigned int jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_Insert__SWIG_0(void * jarg1, unsigned int jarg2, unsigned int jarg3, char * jarg4, unsigned int jarg5) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int *arg2 = 0 ;
   unsigned int arg3 ;
@@ -25920,7 +25920,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Insert__SWIG_0(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Insert__SWIG_1(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_Insert__SWIG_1(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int *arg2 = 0 ;
   char *arg3 = (char *) 0 ;
@@ -25936,7 +25936,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Insert__SWIG_1(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Replace__SWIG_0(void * jarg1, unsigned int jarg2, unsigned int jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_Replace__SWIG_0(void * jarg1, unsigned int jarg2, unsigned int jarg3, unsigned int jarg4, char * jarg5, unsigned int jarg6) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int *arg2 = 0 ;
   unsigned int arg3 ;
@@ -25956,7 +25956,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Replace__SWIG_0(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Replace__SWIG_1(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_Replace__SWIG_1(void * jarg1, unsigned int jarg2) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int *arg2 = 0 ;
   unsigned int temp2 ;
@@ -25968,7 +25968,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Replace__SWIG_1(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_RemoveAtIndex(void * jarg1, unsigned int jarg2) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int arg2 ;
   
@@ -25978,7 +25978,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_RemoveAtIndex(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_RemoveAtIndexFast(void * jarg1, unsigned int jarg2) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int arg2 ;
   
@@ -25988,7 +25988,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_RemoveAtIndexFast(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_RemoveFromEnd__SWIG_0(void * jarg1, unsigned int jarg2) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int arg2 ;
   
@@ -25998,7 +25998,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_RemoveFromEnd__SWIG_0(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_RemoveFromEnd__SWIG_1(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_RemoveFromEnd__SWIG_1(void * jarg1) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   
   arg1 = (DataStructures::List< unsigned int > *)jarg1; 
@@ -26006,7 +26006,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_RemoveFromEnd__SWIG_1(v
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListUnsignedInt_GetIndexOf(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListUnsignedInt_GetIndexOf(void * jarg1, unsigned int jarg2) {
   unsigned int jresult ;
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int *arg2 = 0 ;
@@ -26022,7 +26022,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListUnsignedInt_GetIndexOf(void
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListUnsignedInt_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetListUnsignedInt_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int result;
@@ -26034,7 +26034,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetListUnsignedInt_Size(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_Clear(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   bool arg2 ;
   char *arg3 = (char *) 0 ;
@@ -26048,7 +26048,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Clear(void * jarg1, uns
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_Preallocate(void * jarg1, unsigned int jarg2, char * jarg3, unsigned int jarg4) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   unsigned int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -26062,7 +26062,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Preallocate(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
+SWIGEXPORT void SWIGSTDCALL RakNetListUnsignedInt_Compress(void * jarg1, char * jarg2, unsigned int jarg3) {
   DataStructures::List< unsigned int > *arg1 = (DataStructures::List< unsigned int > *) 0 ;
   char *arg2 = (char *) 0 ;
   unsigned int arg3 ;
@@ -26074,7 +26074,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetListUnsignedInt_Compress(void * jarg1, 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetPageRow_isLeaf_set(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetPageRow_isLeaf_set(void * jarg1, unsigned int jarg2) {
   DataStructures::Page< unsigned int,Row *,16 > *arg1 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   bool arg2 ;
   
@@ -26084,7 +26084,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetPageRow_isLeaf_set(void * jarg1, unsign
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetPageRow_isLeaf_get(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetPageRow_isLeaf_get(void * jarg1) {
   unsigned int jresult ;
   DataStructures::Page< unsigned int,Row *,16 > *arg1 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   bool result;
@@ -26096,7 +26096,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetPageRow_isLeaf_get(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetPageRow_size_set(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetPageRow_size_set(void * jarg1, int jarg2) {
   DataStructures::Page< unsigned int,Row *,16 > *arg1 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   int arg2 ;
   
@@ -26106,7 +26106,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetPageRow_size_set(void * jarg1, int jarg
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_RakNetPageRow_size_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL RakNetPageRow_size_get(void * jarg1) {
   int jresult ;
   DataStructures::Page< unsigned int,Row *,16 > *arg1 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   int result;
@@ -26118,7 +26118,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_RakNetPageRow_size_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetPageRow_next_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetPageRow_next_set(void * jarg1, void * jarg2) {
   DataStructures::Page< unsigned int,Row *,16 > *arg1 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   DataStructures::Page< unsigned int,Row *,16 > *arg2 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   
@@ -26128,7 +26128,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetPageRow_next_set(void * jarg1, void * j
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetPageRow_next_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetPageRow_next_get(void * jarg1) {
   void * jresult ;
   DataStructures::Page< unsigned int,Row *,16 > *arg1 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   DataStructures::Page< unsigned int,Row *,16 > *result = 0 ;
@@ -26140,7 +26140,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetPageRow_next_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetPageRow_previous_set(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetPageRow_previous_set(void * jarg1, void * jarg2) {
   DataStructures::Page< unsigned int,Row *,16 > *arg1 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   DataStructures::Page< unsigned int,Row *,16 > *arg2 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   
@@ -26150,7 +26150,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetPageRow_previous_set(void * jarg1, void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetPageRow_previous_get(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetPageRow_previous_get(void * jarg1) {
   void * jresult ;
   DataStructures::Page< unsigned int,Row *,16 > *arg1 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   DataStructures::Page< unsigned int,Row *,16 > *result = 0 ;
@@ -26162,7 +26162,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetPageRow_previous_get(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetPageRow() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetPageRow() {
   void * jresult ;
   DataStructures::Page< unsigned int,Row *,16 > *result = 0 ;
   
@@ -26172,7 +26172,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetPageRow() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetPageRow(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetPageRow(void * jarg1) {
   DataStructures::Page< unsigned int,Row *,16 > *arg1 = (DataStructures::Page< unsigned int,Row *,16 > *) 0 ;
   
   arg1 = (DataStructures::Page< unsigned int,Row *,16 > *)jarg1; 
@@ -26180,7 +26180,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetPageRow(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetBPlusTreeRow() {
+SWIGEXPORT void * SWIGSTDCALL new_RakNetBPlusTreeRow() {
   void * jresult ;
   DataStructures::BPlusTree< unsigned int,Row *,16 > *result = 0 ;
   
@@ -26190,7 +26190,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_RakNetBPlusTreeRow() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetBPlusTreeRow(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL delete_RakNetBPlusTreeRow(void * jarg1) {
   DataStructures::BPlusTree< unsigned int,Row *,16 > *arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *) 0 ;
   
   arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *)jarg1; 
@@ -26198,7 +26198,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_RakNetBPlusTreeRow(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetBPlusTreeRow_SetPoolPageSize(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL RakNetBPlusTreeRow_SetPoolPageSize(void * jarg1, int jarg2) {
   DataStructures::BPlusTree< unsigned int,Row *,16 > *arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *) 0 ;
   int arg2 ;
   
@@ -26208,7 +26208,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetBPlusTreeRow_SetPoolPageSize(void * jar
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetBPlusTreeRow_Insert(void * jarg1, unsigned int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetBPlusTreeRow_Insert(void * jarg1, unsigned int jarg2, void * jarg3) {
   unsigned int jresult ;
   DataStructures::BPlusTree< unsigned int,Row *,16 > *arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *) 0 ;
   unsigned int arg2 ;
@@ -26226,7 +26226,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetBPlusTreeRow_Insert(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetBPlusTreeRow_Clear(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetBPlusTreeRow_Clear(void * jarg1) {
   DataStructures::BPlusTree< unsigned int,Row *,16 > *arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *) 0 ;
   
   arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *)jarg1; 
@@ -26234,7 +26234,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetBPlusTreeRow_Clear(void * jarg1) {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetBPlusTreeRow_Size(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetBPlusTreeRow_Size(void * jarg1) {
   unsigned int jresult ;
   DataStructures::BPlusTree< unsigned int,Row *,16 > *arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *) 0 ;
   unsigned int result;
@@ -26246,7 +26246,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetBPlusTreeRow_Size(void * jarg1)
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetBPlusTreeRow_IsEmpty(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL RakNetBPlusTreeRow_IsEmpty(void * jarg1) {
   unsigned int jresult ;
   DataStructures::BPlusTree< unsigned int,Row *,16 > *arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *) 0 ;
   bool result;
@@ -26258,7 +26258,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_RakNetBPlusTreeRow_IsEmpty(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetBPlusTreeRow_GetListHead(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetBPlusTreeRow_GetListHead(void * jarg1) {
   void * jresult ;
   DataStructures::BPlusTree< unsigned int,Row *,16 > *arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *) 0 ;
   DataStructures::Page< unsigned int,Row *,16 > *result = 0 ;
@@ -26270,7 +26270,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetBPlusTreeRow_GetListHead(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetBPlusTreeRow_GetDataHead(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL RakNetBPlusTreeRow_GetDataHead(void * jarg1) {
   void * jresult ;
   DataStructures::BPlusTree< unsigned int,Row *,16 > *arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *) 0 ;
   Row *result = 0 ;
@@ -26282,7 +26282,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_RakNetBPlusTreeRow_GetDataHead(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetBPlusTreeRow_PrintLeaves(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetBPlusTreeRow_PrintLeaves(void * jarg1) {
   DataStructures::BPlusTree< unsigned int,Row *,16 > *arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *) 0 ;
   
   arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *)jarg1; 
@@ -26290,7 +26290,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetBPlusTreeRow_PrintLeaves(void * jarg1) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_RakNetBPlusTreeRow_PrintGraph(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL RakNetBPlusTreeRow_PrintGraph(void * jarg1) {
   DataStructures::BPlusTree< unsigned int,Row *,16 > *arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *) 0 ;
   
   arg1 = (DataStructures::BPlusTree< unsigned int,Row *,16 > *)jarg1; 
@@ -26298,107 +26298,107 @@ SWIGEXPORT void SWIGSTDCALL CSharp_RakNetBPlusTreeRow_PrintGraph(void * jarg1) {
 }
 
 
-SWIGEXPORT RakNet::RakPeerInterface * SWIGSTDCALL CSharp_RakPeer_SWIGUpcast(RakNet::RakPeer *jarg1) {
+SWIGEXPORT RakNet::RakPeerInterface * SWIGSTDCALL RakPeer_SWIGUpcast(RakNet::RakPeer *jarg1) {
     return (RakNet::RakPeerInterface *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_PacketLogger_SWIGUpcast(RakNet::PacketLogger *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL PacketLogger_SWIGUpcast(RakNet::PacketLogger *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PacketLogger * SWIGSTDCALL CSharp_PacketFileLogger_SWIGUpcast(RakNet::PacketFileLogger *jarg1) {
+SWIGEXPORT RakNet::PacketLogger * SWIGSTDCALL PacketFileLogger_SWIGUpcast(RakNet::PacketFileLogger *jarg1) {
     return (RakNet::PacketLogger *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_NatTypeDetectionClient_SWIGUpcast(RakNet::NatTypeDetectionClient *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL NatTypeDetectionClient_SWIGUpcast(RakNet::NatTypeDetectionClient *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::NatPunchthroughDebugInterface * SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_Printf_SWIGUpcast(RakNet::NatPunchthroughDebugInterface_Printf *jarg1) {
+SWIGEXPORT RakNet::NatPunchthroughDebugInterface * SWIGSTDCALL NatPunchthroughDebugInterface_Printf_SWIGUpcast(RakNet::NatPunchthroughDebugInterface_Printf *jarg1) {
     return (RakNet::NatPunchthroughDebugInterface *)jarg1;
 }
 
-SWIGEXPORT RakNet::NatPunchthroughDebugInterface * SWIGSTDCALL CSharp_NatPunchthroughDebugInterface_PacketLogger_SWIGUpcast(RakNet::NatPunchthroughDebugInterface_PacketLogger *jarg1) {
+SWIGEXPORT RakNet::NatPunchthroughDebugInterface * SWIGSTDCALL NatPunchthroughDebugInterface_PacketLogger_SWIGUpcast(RakNet::NatPunchthroughDebugInterface_PacketLogger *jarg1) {
     return (RakNet::NatPunchthroughDebugInterface *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_NatPunchthroughClient_SWIGUpcast(RakNet::NatPunchthroughClient *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL NatPunchthroughClient_SWIGUpcast(RakNet::NatPunchthroughClient *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_Router2_SWIGUpcast(RakNet::Router2 *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL Router2_SWIGUpcast(RakNet::Router2 *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_UDPProxyClient_SWIGUpcast(RakNet::UDPProxyClient *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL UDPProxyClient_SWIGUpcast(RakNet::UDPProxyClient *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_FullyConnectedMesh2_SWIGUpcast(RakNet::FullyConnectedMesh2 *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL FullyConnectedMesh2_SWIGUpcast(RakNet::FullyConnectedMesh2 *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_ReadyEvent_SWIGUpcast(RakNet::ReadyEvent *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL ReadyEvent_SWIGUpcast(RakNet::ReadyEvent *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_TeamManager_SWIGUpcast(RakNet::TeamManager *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL TeamManager_SWIGUpcast(RakNet::TeamManager *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::NatPunchthroughServerDebugInterface * SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_Printf_SWIGUpcast(RakNet::NatPunchthroughServerDebugInterface_Printf *jarg1) {
+SWIGEXPORT RakNet::NatPunchthroughServerDebugInterface * SWIGSTDCALL NatPunchthroughServerDebugInterface_Printf_SWIGUpcast(RakNet::NatPunchthroughServerDebugInterface_Printf *jarg1) {
     return (RakNet::NatPunchthroughServerDebugInterface *)jarg1;
 }
 
-SWIGEXPORT RakNet::NatPunchthroughServerDebugInterface * SWIGSTDCALL CSharp_NatPunchthroughServerDebugInterface_PacketLogger_SWIGUpcast(RakNet::NatPunchthroughServerDebugInterface_PacketLogger *jarg1) {
+SWIGEXPORT RakNet::NatPunchthroughServerDebugInterface * SWIGSTDCALL NatPunchthroughServerDebugInterface_PacketLogger_SWIGUpcast(RakNet::NatPunchthroughServerDebugInterface_PacketLogger *jarg1) {
     return (RakNet::NatPunchthroughServerDebugInterface *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_NatPunchthroughServer_SWIGUpcast(RakNet::NatPunchthroughServer *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL NatPunchthroughServer_SWIGUpcast(RakNet::NatPunchthroughServer *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_UDPProxyServer_SWIGUpcast(RakNet::UDPProxyServer *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL UDPProxyServer_SWIGUpcast(RakNet::UDPProxyServer *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_UDPProxyCoordinator_SWIGUpcast(RakNet::UDPProxyCoordinator *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL UDPProxyCoordinator_SWIGUpcast(RakNet::UDPProxyCoordinator *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_NatTypeDetectionServer_SWIGUpcast(RakNet::NatTypeDetectionServer *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL NatTypeDetectionServer_SWIGUpcast(RakNet::NatTypeDetectionServer *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::FileListProgress * SWIGSTDCALL CSharp_FLP_Printf_SWIGUpcast(RakNet::FLP_Printf *jarg1) {
+SWIGEXPORT RakNet::FileListProgress * SWIGSTDCALL FLP_Printf_SWIGUpcast(RakNet::FLP_Printf *jarg1) {
     return (RakNet::FileListProgress *)jarg1;
 }
 
-SWIGEXPORT RakNet::CommandParserInterface * SWIGSTDCALL CSharp_LogCommandParser_SWIGUpcast(RakNet::LogCommandParser *jarg1) {
+SWIGEXPORT RakNet::CommandParserInterface * SWIGSTDCALL LogCommandParser_SWIGUpcast(RakNet::LogCommandParser *jarg1) {
     return (RakNet::CommandParserInterface *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_MessageFilter_SWIGUpcast(RakNet::MessageFilter *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL MessageFilter_SWIGUpcast(RakNet::MessageFilter *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_DirectoryDeltaTransfer_SWIGUpcast(RakNet::DirectoryDeltaTransfer *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL DirectoryDeltaTransfer_SWIGUpcast(RakNet::DirectoryDeltaTransfer *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_FileListTransfer_SWIGUpcast(RakNet::FileListTransfer *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL FileListTransfer_SWIGUpcast(RakNet::FileListTransfer *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 
-SWIGEXPORT RakNet::PacketLogger * SWIGSTDCALL CSharp_ThreadsafePacketLogger_SWIGUpcast(RakNet::ThreadsafePacketLogger *jarg1) {
+SWIGEXPORT RakNet::PacketLogger * SWIGSTDCALL ThreadsafePacketLogger_SWIGUpcast(RakNet::ThreadsafePacketLogger *jarg1) {
     return (RakNet::PacketLogger *)jarg1;
 }
 
-SWIGEXPORT RakNet::PacketLogger * SWIGSTDCALL CSharp_PacketConsoleLogger_SWIGUpcast(RakNet::PacketConsoleLogger *jarg1) {
+SWIGEXPORT RakNet::PacketLogger * SWIGSTDCALL PacketConsoleLogger_SWIGUpcast(RakNet::PacketConsoleLogger *jarg1) {
     return (RakNet::PacketLogger *)jarg1;
 }
 
-SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL CSharp_ConnectionGraph2_SWIGUpcast(RakNet::ConnectionGraph2 *jarg1) {
+SWIGEXPORT RakNet::PluginInterface2 * SWIGSTDCALL ConnectionGraph2_SWIGUpcast(RakNet::ConnectionGraph2 *jarg1) {
     return (RakNet::PluginInterface2 *)jarg1;
 }
 

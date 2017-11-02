@@ -158,6 +158,7 @@ void UdpConnection::InitServerSocket(RakPeerInterface * server, SystemAddress ad
 	m_IsServer = true;
 	m_SystemAddress = address;
 	m_Socket = server;
+	OnConnected();
 }
 
 

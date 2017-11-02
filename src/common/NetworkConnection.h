@@ -25,8 +25,8 @@ public:
 	void Reset();
 	void OnRevcMessage();
 public:
-	void WirteByte(byte data);
-	void WirteByte(char data);
+	void WriteByte(byte data);
+	void WriteByte(char data);
 	void WriteShort(short data);
 	void WriteUShort(ushort data);
 	void WriteInt(int data);

@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="..\src\channelserver\ChannelServer.h" />
     <ClInclude Include="..\src\channelserver\Client.h" />
+    <ClInclude Include="..\src\channelserver\MessageType.h" />
     <ClInclude Include="..\src\channelserver\pch.h" />
     <ClInclude Include="..\src\channelserver\Room.h" />
     <ClInclude Include="stdafx.h" />
