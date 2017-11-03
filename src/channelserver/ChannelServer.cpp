@@ -99,7 +99,7 @@ ChannelRoom * ChannelServer::GetRoom(int state, bool check_full)
 			return room;
 		}
 	}
-	return CreateNewRoom();
+	return NULL;
 }
 
 ChannelRoom * ChannelServer::CreateNewRoom()

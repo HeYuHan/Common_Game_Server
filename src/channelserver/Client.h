@@ -2,6 +2,10 @@
 #ifndef __CHANNELCLIENT_H__
 #define __CHANNELCLIENT_H__
 #include <UdpConnection.h>
+#include <Timer.h>
+#include <common.h>
+#define SORT_TO_CLIENT(__sort__) (short)(__sort__ + 1)
+#define SORT_TO_SERVER(__sort__) (short)(__sort__ - 1)
 typedef enum 
 {
 	MachineGun = 1,
@@ -33,7 +37,6 @@ class CharacterInfo
 public:
 	char Name[64];
 	int MaxHP;
-	int KillNumber;
 	short WeaponCount;
 };
 class ChannelClient:public NetworkStream,public UdpConnection
@@ -44,19 +47,23 @@ public:
 	virtual void OnConnected();
 	virtual void OnDisconnected();
 	virtual void OnMessage();
+	virtual void Update(float time);
 public:
 	
-	unsigned int uid;
+	uint uid;
+	uint m_RoomID;
 	GameState m_GameState;
 	CharacterInfo m_CharacterInfo;
 	int m_HP;
 	unsigned int m_RoomID;
 	WeaponInfo m_WeaponList[WeaponCount-1];
+	Timer m_UpdateTimer;
 
 private:
 	void ReadCharacterInfo();
 	void ReadyGameEnter();
 	void ParseJoinGame();
+	void WriteCharacterInfo(ChannelClient* c);
 
 };
 

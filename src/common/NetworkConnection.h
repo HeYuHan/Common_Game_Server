@@ -21,12 +21,11 @@ public:
 	NetworkStream(int send_buff_size = 1024 * 512, int read_buff_size = 1024 * 512);
 	~NetworkStream();
 	virtual void OnMessage()=0;
-	virtual void Update();
 	void Reset();
 	void OnRevcMessage();
 public:
 	void WriteByte(byte data);
-	void WriteByte(char data);
+	void WriteChar(char data);
 	void WriteShort(short data);
 	void WriteUShort(ushort data);
 	void WriteInt(int data);
@@ -76,7 +75,7 @@ class NetworkConnection
 public:
 	NetworkConnection();
 	~NetworkConnection();
-	virtual void Update() = 0;
+	virtual void Update(float time) = 0;
 	virtual int Read(void* data, int size) = 0;
 	virtual int Send(void* data, int size) = 0;
 	virtual void OnConnected() = 0;

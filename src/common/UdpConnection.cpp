@@ -13,10 +13,14 @@ static unsigned char GetPacketIdentifier(RakNet::Packet *p)
 		return (unsigned char)p->data[0];
 }
 UdpConnection::UdpConnection():
+	m_Connected(false),
+	m_KeepAliveLostCount(0),
+	m_KeepAliveTime(0),
 	m_IsServer(false),
 	m_Socket(NULL),
 	m_SystemAddress(UNASSIGNED_SYSTEM_ADDRESS),
 	m_MessagePacket(NULL)
+
 {
 	m_Type = UDP_SOCKET;
 }
@@ -25,7 +29,7 @@ UdpConnection::~UdpConnection()
 {
 }
 
-void UdpConnection::Update()
+void UdpConnection::Update(float time)
 {
 	if (NULL == m_Socket || m_IsServer)return;
 	for (m_MessagePacket = m_Socket->Receive(); m_MessagePacket; m_Socket->DeallocatePacket(m_MessagePacket), m_MessagePacket = m_Socket->Receive())
@@ -90,10 +94,14 @@ void UdpConnection::Update()
 			printf("My external address is %s\n", m_Socket->GetExternalID(m_MessagePacket->systemAddress).ToString(true));
 			m_SystemAddress = m_MessagePacket->systemAddress;
 			OnConnected();
+			m_Connected = true;
 			break;
 		case ID_CONNECTED_PING:
 		case ID_UNCONNECTED_PING:
 			printf("Ping from %s\n", m_MessagePacket->systemAddress.ToString(true));
+			break;
+		case KEEP_ALIVE_MSG:
+			m_KeepAliveLostCount = 0;
 			break;
 		default:
 			// It's a client, so just show the message
@@ -102,6 +110,26 @@ void UdpConnection::Update()
 			break;
 		}
 	}
+#ifndef _DEBUG
+	if (m_Connected)
+	{
+		if (m_KeepAliveLostCount > 10)
+		{
+			DisConnect();
+			return;
+		}
+		m_KeepAliveTime += time;
+		if (m_KeepAliveTime > 0.5f)
+		{
+			m_KeepAliveTime = 0;
+			m_KeepAliveLostCount++;
+			KeepAlive();
+		}
+	}
+
+#endif // !_DEBUG
+
+
 }
 
 int UdpConnection::Read(void * data, int size)
@@ -132,6 +160,9 @@ int UdpConnection::Send(void * data, int size)
 
 bool UdpConnection::Connect(const char * ip, int port)
 {
+	m_KeepAliveLostCount = 0;
+	m_KeepAliveTime = 0;
+	m_Connected = false;
 	m_IsServer = false;
 	m_Socket= RakPeerInterface::GetInstance();
 	m_Socket->AllowConnectionResponseIPMigration(false);
@@ -155,6 +186,9 @@ bool UdpConnection::Connect(const char * ip, int port)
 
 void UdpConnection::InitServerSocket(RakPeerInterface * server, SystemAddress address)
 {
+	m_KeepAliveLostCount = 0;
+	m_KeepAliveTime = 0;
+	m_Connected = true;
 	m_IsServer = true;
 	m_SystemAddress = address;
 	m_Socket = server;
@@ -170,14 +204,22 @@ void UdpConnection::OnServerMessage(Packet* p)
 
 void UdpConnection::DisConnect()
 {
+	m_Connected = false;
 	m_Socket->CloseConnection(m_SystemAddress, false);
 	if (!m_IsServer)
 	{
 		m_Socket->Shutdown(300);
 		RakPeerInterface::DestroyInstance(m_Socket);
-		m_SystemAddress = UNASSIGNED_SYSTEM_ADDRESS;
-		m_Socket = NULL;
+		
 	}
+	m_SystemAddress = UNASSIGNED_SYSTEM_ADDRESS;
+	m_Socket = NULL;
 	OnDisconnected();
 	
+}
+
+void UdpConnection::KeepAlive()
+{
+	char msg = KEEP_ALIVE_MSG;
+	m_Socket->Send(&msg, 1, HIGH_PRIORITY, UNRELIABLE, 0, m_IsServer ? m_SystemAddress : RakNet::UNASSIGNED_SYSTEM_ADDRESS, false);
 }

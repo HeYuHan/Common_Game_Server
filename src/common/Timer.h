@@ -13,11 +13,13 @@ public:
 	~Timer();
 	void Init(struct event_base *base, float time, TimerCallBack call_back, void* arg, bool loop = false);
 	void Begin();
+	void Stop();
 private:
 	static void timeout_cb(evutil_socket_t fd, short event, void *arg);
 public:
 	timeval m_LastTime;
 	bool m_Loop;
+	bool m_Stop;
 	float m_Time;
 	void* m_Arg;
 	TimerCallBack m_CallBack;

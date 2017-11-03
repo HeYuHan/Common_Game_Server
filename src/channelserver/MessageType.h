@@ -20,6 +20,9 @@ enum ServerMessage
 	SM_WEAPON_SORT,
 	SM_CAN_ENTER_GAME,
 	SM_REPONSE_JOIN_GAME,
+	SM_ROOM_INFO,
+	SM_ROOM_ENTER,
+	SM_ROOM_LEAVE,
 	SM_CHARACTER_JOIN,
 	SM_SYNC_TRANSFROM,
 	SM_SHOOT,
@@ -34,6 +37,11 @@ enum ServerMessage
 	SM_SUPPLY_CHANGE,					// 补给改变
 	SM_ADD_NEW_WEAPON,          //添加新的武器
 };
+typedef enum 
+{
+	ERROR_NONE=0,
+	ERROR_CREATE_ROOM,
+}ChannelError;
 struct PlayerSkillState
 {
 public:

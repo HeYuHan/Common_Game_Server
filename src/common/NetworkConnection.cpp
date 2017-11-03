@@ -61,14 +61,6 @@ void NetworkStream::OnRevcMessage()
 	}
 }
 
-void NetworkStream::Update()
-{
-	if (NULL != connection)
-	{
-		connection->Update();
-	}
-}
-
 void NetworkStream::Reset()
 {
 	write_position = write_buff;
@@ -88,7 +80,7 @@ void NetworkStream::WriteByte(byte data)
 {
 	WriteData(&data, sizeof(byte));
 }
-void NetworkStream::WriteByte(char data)
+void NetworkStream::WriteChar(char data)
 {
 	WriteData(&data, sizeof(char));
 }

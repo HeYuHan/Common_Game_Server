@@ -18,6 +18,7 @@ Timer::~Timer()
 
 void Timer::Init( event_base *base, float time, TimerCallBack call_back, void * arg, bool loop)
 {
+	m_Stop = true;
 	m_Loop = loop;
 	m_Base = base;
 	m_Time = time;
@@ -28,6 +29,7 @@ void Timer::Init( event_base *base, float time, TimerCallBack call_back, void * 
 void Timer::Begin()
 {
 	if (NULL == m_Base)return;
+	m_Stop = false;
 	evtimer_assign(&m_TimeOut, m_Base, timeout_cb, this);
 	evutil_timerclear(&m_Tv);
 	long sec = (long)m_Time;
@@ -38,10 +40,15 @@ void Timer::Begin()
 	event_add(&m_TimeOut, &m_Tv);
 }
 
+void Timer::Stop()
+{
+	m_Stop = true;
+}
+
 void Timer::timeout_cb(evutil_socket_t fd, short event, void * arg)
 {
 	Timer *t = static_cast<Timer*>(arg);
-	if (t)
+	if (t && !t->m_Stop)
 	{
 		timeval current;
 		evutil_gettimeofday(&current, NULL);
