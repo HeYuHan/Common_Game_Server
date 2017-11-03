@@ -34,8 +34,11 @@ void ChannelServer::OnUdpClientDisconnected(Packet* p)
 	UdpClientIterator it = m_UdpClientMap.find(p->guid.g);
 	if (it != m_UdpClientMap.end())
 	{
-		it->second->OnDisconnected();
-		m_ClientPool.Free(it->second->uid);
+		ChannelClient* c = it->second;
+		c->OnDisconnected();
+		m_ClientPool.Free(c->uid);
+		
+		
 	}
 }
 
@@ -43,6 +46,7 @@ void ChannelServer::OnUdpAccept(Packet* p)
 {
 	ChannelClient *c = m_ClientPool.Allocate();
 	c->InitServerSocket(m_Socket, p->systemAddress);
+	c->m_ConnectionID = p->guid.g;
 	m_UdpClientMap.insert(UdpClientMapPair(p->guid.g, c));
 	log_debug("new client connect %s", p->systemAddress.ToString());
 }
@@ -94,7 +98,7 @@ ChannelRoom * ChannelServer::GetRoom(int state, bool check_full)
 	for (it = m_RoomList.begin(); it != m_RoomList.end(); it++) 
 	{
 		ChannelRoom* room = *it;
-		if ((!check_full ||(check_full && room->IsFull())) && (room->m_State & state)>0)
+		if ((!check_full ||(check_full && !room->IsFull())) && (room->m_State & state)>0)
 		{
 			return room;
 		}
@@ -118,6 +122,23 @@ void ChannelServer::FreeRoom(ChannelRoom * room)
 	if (room)
 	{
 		room->Clean();
+	}
+}
+
+void ChannelServer::RemoveClient(ChannelClient * c)
+{
+	UdpClientIterator iter = m_UdpClientMap.find(c->m_ConnectionID);
+	if (iter != m_UdpClientMap.end())
+	{
+		m_UdpClientMap.erase(iter);
+	}
+	if (c->m_GameState == GAME_STATE_IN_ROOM)
+	{
+		ChannelRoom* room = m_RoomPool.Get(c->m_RoomID);
+		if (room)
+		{
+			room->ClientLeave(c);
+		}
 	}
 }
 

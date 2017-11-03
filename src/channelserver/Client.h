@@ -21,7 +21,9 @@ typedef enum
 {
 	GAME_STATE_NONE,
 	GAME_STATE_SYNC_INFO,
-	GAME_STATE_READY_INGAME
+	GAME_STATE_IN_ROOM,
+	GAME_STATE_LOADING_GAME,
+	GAME_STATE_IN_GAME,
 }GameState;
 class WeaponInfo
 {
@@ -51,11 +53,11 @@ public:
 public:
 	
 	uint uid;
+	uint64_t m_ConnectionID;
 	uint m_RoomID;
 	GameState m_GameState;
 	CharacterInfo m_CharacterInfo;
 	int m_HP;
-	unsigned int m_RoomID;
 	WeaponInfo m_WeaponList[WeaponCount-1];
 	Timer m_UpdateTimer;
 

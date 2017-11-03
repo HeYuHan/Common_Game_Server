@@ -43,6 +43,7 @@ public:
 	ChannelRoom* GetRoom(int state,bool check_full=true);
 	ChannelRoom* CreateNewRoom();
 	void FreeRoom(ChannelRoom* room);
+	void RemoveClient(ChannelClient* c);
 public:
 	ChannelConfig m_Config;
 	ObjectPool<ChannelClient> m_ClientPool;

@@ -10,6 +10,7 @@ static void ClientUpdate(float time, void* arg)
 }
 ChannelClient::ChannelClient():
 	uid(0),
+	m_ConnectionID(0),
 	m_RoomID(0),
 	m_GameState(GAME_STATE_NONE)
 {
@@ -35,6 +36,7 @@ void ChannelClient::OnConnected()
 void ChannelClient::OnDisconnected()
 {
 	m_UpdateTimer.Stop();
+	gChannelServer.RemoveClient(this);
 }
 
 
@@ -47,37 +49,8 @@ void ChannelClient::OnMessage()
 	case CM_PLAYER_INFO:
 		ReadCharacterInfo();
 		break;
-	case CM_SHOOT:
-		//ParseShoot();
-		//BroadCastMessage((byte)SM_SHOOT,false);
-		break;
-	case CM_SYNC_TRANSFROM:
-		//ParseTransfromData();
-		//BroadCastMessage(ServerMessage.SM_SYNC_TRANSFROM);
-		break;
 	case CM_REQUEST_JOIN_GAME:
 		ParseJoinGame();
-		break;
-	case CM_HIT_CHARACTER:
-		//ParseHitCharacter();
-		break;
-	case CM_USE_SKILL_WEAPON:
-		//ParseUseSkillWeapon();
-		break;
-	case CM_JOYSTICK:
-		//BroadCastMessage((byte)SM_JOYSTICK, false);
-		break;
-	case CM_RESURRECTION:
-		//ParseResurrection();
-		break;
-	case CM_SUPPLY_CHANGE:
-		//ParseGetSupplyObj();
-		break;
-	case CM_ADD_NEW_WEAPON:
-		//ParseNewWeapon();
-		break;
-	default:
-		//if (connection)connection->DisConnect();
 		break;
 	}
 }
@@ -109,7 +82,6 @@ void ChannelClient::ReadCharacterInfo()
 
 void ChannelClient::ReadyGameEnter()
 {
-	m_GameState = GAME_STATE_READY_INGAME;
 	BeginWrite();
 	WriteByte(SM_CAN_ENTER_GAME);
 	EndWrite();
@@ -124,6 +96,7 @@ void ChannelClient::ParseJoinGame()
 	WriteByte((room == NULL ? ERROR_CREATE_ROOM : ERROR_NONE));
 	if (room)
 	{
+		m_GameState = GAME_STATE_IN_ROOM;
 		m_RoomID = room->uid;
 		WriteInt(room->uid);
 		WriteByte(room->m_MaxClient);
@@ -147,7 +120,19 @@ void ChannelClient::ParseJoinGame()
 		}
 	}
 	EndWrite();
-	if (room&&room->IsFull())room->StartGame();
+	if (room)
+	{
+		if (room->m_State == ROOM_STATE_PLAYING)
+		{
+			BeginWrite();
+			WriteByte(SM_GAME_LOGADING);
+			EndWrite();
+		}
+		else if (room->IsFull())
+		{
+			room->StartGame();
+		}
+	}
 }
 
 void ChannelClient::WriteCharacterInfo(ChannelClient* c)
