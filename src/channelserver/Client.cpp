@@ -12,7 +12,8 @@ ChannelClient::ChannelClient():
 	uid(0),
 	m_ConnectionID(0),
 	m_RoomID(0),
-	m_GameState(GAME_STATE_NONE)
+	m_GameState(GAME_STATE_NONE),
+	m_IsRoomHost(false)
 {
 	connection = this;
 	stream = this;
@@ -24,10 +25,7 @@ ChannelClient::~ChannelClient()
 
 void ChannelClient::OnConnected()
 {
-	m_RoomID = 0;
-	m_GameState = GAME_STATE_SYNC_INFO;
-	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.05f,ClientUpdate, this, true);
-	m_UpdateTimer.Begin();
+	Init();
 	BeginWrite();
 	WriteInt(uid);
 	EndWrite();
@@ -52,11 +50,25 @@ void ChannelClient::OnMessage()
 	case CM_REQUEST_JOIN_GAME:
 		ParseJoinGame();
 		break;
+	case CM_ROOM_START_GAME:
+		ParseStartGame();
+		break;
+	case CM_READY_IN_GAME:
+		ParseGameReady();
+		break;
 	}
 }
 void ChannelClient::Update(float time)
 {
 	UdpConnection::Update(time);
+}
+void ChannelClient::Init()
+{
+	m_RoomID = 0;
+	m_GameState = GAME_STATE_SYNC_INFO;
+	m_IsRoomHost = false;
+	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.05f, ClientUpdate, this, true);
+	m_UpdateTimer.Begin();
 }
 void ChannelClient::ReadCharacterInfo()
 {
@@ -90,7 +102,11 @@ void ChannelClient::ReadyGameEnter()
 void ChannelClient::ParseJoinGame()
 {
 	ChannelRoom* room = gChannelServer.GetRoom(ROOM_STATE_WAIT_OR_PLAYING);
-	if (!room)room = gChannelServer.CreateNewRoom();
+	if (!room) {
+		room = gChannelServer.CreateNewRoom();
+		m_IsRoomHost = room != NULL;
+	}
+
 	BeginWrite();
 	WriteByte(SM_ROOM_INFO);
 	WriteByte((room == NULL ? ERROR_CREATE_ROOM : ERROR_NONE));
@@ -108,12 +124,14 @@ void ChannelClient::ParseJoinGame()
 			ChannelClient *client = *iterClient;
 			WriteInt(client->uid);
 			WriteString(client->m_CharacterInfo.Name);
+			WriteBool(client->m_IsRoomHost);
 			if (client->uid != uid)
 			{
 				client->BeginWrite();
 				client->WriteByte(SM_ROOM_ENTER);
 				client->WriteInt(uid);
 				client->WriteString(m_CharacterInfo.Name);
+				client->WriteBool(m_IsRoomHost);
 				client->EndWrite();
 			}
 
@@ -122,13 +140,48 @@ void ChannelClient::ParseJoinGame()
 	EndWrite();
 	if (room)
 	{
-		if (room->m_State == ROOM_STATE_PLAYING)
+		if (room->m_RoomState == ROOM_STATE_PLAYING)
 		{
-			BeginWrite();
-			WriteByte(SM_GAME_LOGADING);
-			EndWrite();
+			room->ClientLoading(this);
+			room->ClientJoinInGame(this);
 		}
 		else if (room->IsFull())
+		{
+			room->StartGame();
+		}
+	}
+}
+
+void ChannelClient::ParseGameReady()
+{
+	m_GameState = GAME_STATE_IN_GAME;
+	ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
+	if (room)
+	{
+		FOR_EACH_LIST(ChannelClient, room->m_ClientList, Client)
+		{
+			ChannelClient *client = *iterClient;
+			client->BeginWrite();
+			client->WriteByte(SM_INGAME_ROOM_INFO);
+			client->WriteByte(room->m_ClientList.size());
+			room->WriteAllClientInfo(client);
+			client->EndWrite();
+		}
+	}
+	else
+	{
+		log_error("get room error uid:%d", uid);
+		DisConnect();
+	}
+	
+}
+
+void ChannelClient::ParseStartGame()
+{
+	if (m_IsRoomHost)
+	{
+		ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
+		if (room&&room->m_RoomState == ROOM_STATE_WAIT)
 		{
 			room->StartGame();
 		}
@@ -139,12 +192,12 @@ void ChannelClient::WriteCharacterInfo(ChannelClient* c)
 {
 	WriteInt(c->uid);
 	WriteString(c->m_CharacterInfo.Name);
-	//WriteInt(c->m_CharacterInfo.MaxHP);
-	//WriteShort(c->m_CharacterInfo.WeaponCount);
-	//for (int i = 0; i < c->m_CharacterInfo.WeaponCount; i++)
-	//{
-	//	WeaponInfo &weapon = c->m_WeaponList[i];
-	//	WriteByte((byte)weapon.Type);
-	//	WriteShort(SORT_TO_CLIENT(i));
-	//}
+	WriteInt(c->m_CharacterInfo.MaxHP);
+	WriteShort(c->m_CharacterInfo.WeaponCount);
+	for (int i = 0; i < c->m_CharacterInfo.WeaponCount; i++)
+	{
+		WeaponInfo &weapon = c->m_WeaponList[i];
+		WriteByte((byte)weapon.Type);
+		WriteShort(SORT_TO_CLIENT(i));
+	}
 }

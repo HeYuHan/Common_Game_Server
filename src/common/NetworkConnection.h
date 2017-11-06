@@ -24,6 +24,7 @@ public:
 	void Reset();
 	void OnRevcMessage();
 public:
+	void WriteBool(bool b);
 	void WriteByte(byte data);
 	void WriteChar(char data);
 	void WriteShort(short data);

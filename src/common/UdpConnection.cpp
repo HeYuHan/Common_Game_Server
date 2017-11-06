@@ -204,6 +204,7 @@ void UdpConnection::OnServerMessage(Packet* p)
 
 void UdpConnection::DisConnect()
 {
+	if (m_Socket == NULL)return;
 	m_Connected = false;
 	m_Socket->CloseConnection(m_SystemAddress, false);
 	if (!m_IsServer)

@@ -51,20 +51,24 @@ public:
 	virtual void OnMessage();
 	virtual void Update(float time);
 public:
-	
 	uint uid;
 	uint64_t m_ConnectionID;
 	uint m_RoomID;
 	GameState m_GameState;
 	CharacterInfo m_CharacterInfo;
+	bool m_IsRoomHost;
 	int m_HP;
 	WeaponInfo m_WeaponList[WeaponCount-1];
 	Timer m_UpdateTimer;
 
 private:
+	void Init();
 	void ReadCharacterInfo();
 	void ReadyGameEnter();
 	void ParseJoinGame();
+	void ParseGameReady();
+	void ParseStartGame();
+public:
 	void WriteCharacterInfo(ChannelClient* c);
 
 };

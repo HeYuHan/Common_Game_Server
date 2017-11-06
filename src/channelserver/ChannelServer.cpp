@@ -98,7 +98,7 @@ ChannelRoom * ChannelServer::GetRoom(int state, bool check_full)
 	for (it = m_RoomList.begin(); it != m_RoomList.end(); it++) 
 	{
 		ChannelRoom* room = *it;
-		if ((!check_full ||(check_full && !room->IsFull())) && (room->m_State & state)>0)
+		if ((!check_full ||(check_full && !room->IsFull())) && (room->m_RoomState & state)>0)
 		{
 			return room;
 		}
@@ -108,9 +108,21 @@ ChannelRoom * ChannelServer::GetRoom(int state, bool check_full)
 
 ChannelRoom * ChannelServer::CreateNewRoom()
 {
+	RoomIterator it;
+	for (it = m_RoomList.begin(); it != m_RoomList.end(); it++)
+	{
+		ChannelRoom* room = *it;
+		if (room->m_RoomState== ROOM_STATE_IDLE)
+		{
+			log_debug("%s\n", "create new room in cache");
+			room->Init();
+			return room;
+		}
+	}
 	ChannelRoom* room = m_RoomPool.Allocate();
 	if (room)
 	{
+		log_debug("%s\n", "create new room in memory");
 		room->Init();
 		m_RoomList.push_back(room);
 	}
@@ -132,13 +144,10 @@ void ChannelServer::RemoveClient(ChannelClient * c)
 	{
 		m_UdpClientMap.erase(iter);
 	}
-	if (c->m_GameState == GAME_STATE_IN_ROOM)
+	ChannelRoom* room = m_RoomPool.Get(c->m_RoomID);
+	if (room)
 	{
-		ChannelRoom* room = m_RoomPool.Get(c->m_RoomID);
-		if (room)
-		{
-			room->ClientLeave(c);
-		}
+		room->ClientLeave(c);
 	}
 }
 

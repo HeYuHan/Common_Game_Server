@@ -37,10 +37,9 @@ typedef unsigned long int ulong;
 typedef unsigned short int ushort;
 typedef unsigned int uint;
 #define FOR_EACH_LIST(__TYPE__,__LIST__,__ITER__) \
-	std::vector<##__TYPE__*>::iterator iter##__ITER__; \
-	for( iter##__ITER__ =  ##__LIST__.begin(); iter##__ITER__ != ##__LIST__.end(); iter##__ITER__++)
-#define LIST_HAVE_ITEM(__LIST__,__ITEM__) \
-	(##__LIST__.find(##__ITEM__) != ##__LIST__.end())
+	std::vector<__TYPE__*>::iterator iter##__ITER__; \
+	for( iter##__ITER__ =  __LIST__.begin(); iter##__ITER__ != __LIST__.end(); iter##__ITER__++)
+
 
 void ThreadSleep(unsigned int s);
 

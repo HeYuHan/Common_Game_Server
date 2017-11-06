@@ -74,6 +74,12 @@ void NetworkStream::Reset()
 
 
 
+void NetworkStream::WriteBool(bool b)
+{
+	byte value = b ? 1 : 0;
+	WriteByte(value);
+}
+
 //////////////////////////////////////////////////////////////
 //write data
 void NetworkStream::WriteByte(byte data)

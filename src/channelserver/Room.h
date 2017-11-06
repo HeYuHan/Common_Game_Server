@@ -12,8 +12,7 @@ typedef enum
 {
 	ROOM_STATE_IDLE = 1 << 1,
 	ROOM_STATE_WAIT = 1 << 2,
-	ROOM_STATE_LOADING = 1 << 3,
-	ROOM_STATE_PLAYING = 1 << 4,
+	ROOM_STATE_PLAYING = 1 << 3,
 	ROOM_STATE_WAIT_OR_PLAYING = ROOM_STATE_WAIT | ROOM_STATE_PLAYING,
 
 }RoomState;
@@ -28,10 +27,12 @@ public:
 	bool IsFull();
 	void ClientLeave(ChannelClient* c);
 	void StartGame();
-
+	void WriteAllClientInfo(ChannelClient* stream);
+	void ClientLoading(ChannelClient* c);
+	void ClientJoinInGame(ChannelClient* c);
 public:
 	uint uid;
-	RoomState m_State;
+	RoomState m_RoomState;
 	std::vector<ChannelClient*> m_ClientList;
 	byte m_MaxClient;
 	Timer m_UpdateTimer;

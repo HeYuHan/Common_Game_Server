@@ -1,5 +1,6 @@
 #pragma once
 #include "common.h"
+#include "log.h"
 
 template<class T>
 class ObjectPool
@@ -178,7 +179,7 @@ void ObjectPool<T>::Free(uint uid)
 
 		if (!data_allocate[obj - data_array])
 		{
-			//log_write(LOG_ERROR, "ObjectPool dup free uid = %d", uid);
+			log_error("ObjectPool dup free uid = %d", uid);
 			return;
 		}
 
