@@ -9,6 +9,12 @@ static void RoomUpdate(float time, void* arg)
 	ChannelRoom *room = (ChannelRoom*)arg;
 	room->Update(time);
 }
+static void CleanCharacterIngameInfo(CharacterInGameInfo &info)
+{
+	info.uid = 0;
+	info.m_HP = 0;
+	info.WeaponCount = 0;
+}
 ChannelRoom::ChannelRoom():
 	uid(0),
 	m_RoomState(ROOM_STATE_IDLE),
@@ -22,6 +28,10 @@ ChannelRoom::~ChannelRoom()
 
 void ChannelRoom::Init()
 {
+	for (int i = 0; i < MAX_CLIENT; i++)
+	{
+		CleanCharacterIngameInfo(m_CharacterInfoArray[i]);
+	}
 	m_RoomState = ROOM_STATE_WAIT;
 	m_ClientList.clear();
 	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.02f, RoomUpdate, this,true);
@@ -41,6 +51,21 @@ void ChannelRoom::Update(float time)
 bool ChannelRoom::IsFull()
 {
 	return m_MaxClient == m_ClientList.size();
+}
+
+void ChannelRoom::ClientEnter(ChannelClient * c)
+{
+	m_ClientList.push_back(c);
+	for (int i = 0; i < MAX_CLIENT; i++)
+	{
+		if (m_CharacterInfoArray[i].uid == 0)
+		{
+			c->m_RoomID = uid;
+			c->m_InGameInfo = &m_CharacterInfoArray[i];
+			c->m_InGameInfo->uid = c->uid;
+			break;
+		}
+	}
 }
 
 void ChannelRoom::ClientLoading(ChannelClient * c)
@@ -80,6 +105,11 @@ void ChannelRoom::ClientLeave(ChannelClient * c)
 {
 	if (c->m_RoomID == uid)
 	{
+		if (c->m_InGameInfo)
+		{
+			//CleanCharacterIngameInfo(*(c->m_InGameInfo));
+			c->m_InGameInfo = NULL;
+		}
 		ClientIterator iter;
 		for (iter = m_ClientList.begin(); iter != m_ClientList.end();)
 		{

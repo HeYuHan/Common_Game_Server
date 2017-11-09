@@ -2,7 +2,8 @@
 #ifndef __CHANNEL_ROOM_H__
 #include <vector>
 #include<Timer.h>
-#include<common.h>
+#include "ClientInfo.h"
+#define MAX_CLIENT 10
 class ChannelClient;
 typedef enum
 {
@@ -25,6 +26,7 @@ public:
 	void Clean();
 	void Update(float time);
 	bool IsFull();
+	void ClientEnter(ChannelClient* c);
 	void ClientLeave(ChannelClient* c);
 	void StartGame();
 	void WriteAllClientInfo(ChannelClient* stream);
@@ -36,6 +38,7 @@ public:
 	std::vector<ChannelClient*> m_ClientList;
 	byte m_MaxClient;
 	Timer m_UpdateTimer;
+	CharacterInGameInfo m_CharacterInfoArray[MAX_CLIENT];
 };
 
 

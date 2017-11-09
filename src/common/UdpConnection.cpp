@@ -47,7 +47,7 @@ void UdpConnection::Update(float time)
 			break;
 		case ID_ALREADY_CONNECTED:
 			// Connection lost normally
-			//printf("ID_ALREADY_CONNECTED with guid %" PRINTF_64_BIT_MODIFIER "u\n", m_MessagePacket->guid);
+			printf("ID_ALREADY_CONNECTED\n");
 			break;
 		case ID_INCOMPATIBLE_PROTOCOL_VERSION:
 			printf("ID_INCOMPATIBLE_PROTOCOL_VERSION\n");

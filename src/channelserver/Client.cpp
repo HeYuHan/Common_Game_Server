@@ -13,6 +13,7 @@ ChannelClient::ChannelClient():
 	m_ConnectionID(0),
 	m_RoomID(0),
 	m_GameState(GAME_STATE_NONE),
+	m_InGameInfo(NULL),
 	m_IsRoomHost(false)
 {
 	connection = this;
@@ -56,6 +57,9 @@ void ChannelClient::OnMessage()
 	case CM_READY_IN_GAME:
 		ParseGameReady();
 		break;
+	case CM_INGAME_MOVE_DATA:
+		ParseMoveData();
+		break;
 	}
 }
 void ChannelClient::Update(float time)
@@ -67,6 +71,7 @@ void ChannelClient::Init()
 	m_RoomID = 0;
 	m_GameState = GAME_STATE_SYNC_INFO;
 	m_IsRoomHost = false;
+	m_InGameInfo = NULL;
 	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.05f, ClientUpdate, this, true);
 	m_UpdateTimer.Begin();
 }
@@ -74,20 +79,6 @@ void ChannelClient::ReadCharacterInfo()
 {
 	ReadString(m_CharacterInfo.Name, sizeof(m_CharacterInfo.Name));
 	ReadInt(m_CharacterInfo.MaxHP);
-	ReadShort(m_CharacterInfo.WeaponCount);
-	m_HP = m_CharacterInfo.MaxHP;
-
-	for (int i = 0; i < m_CharacterInfo.WeaponCount; i++)
-	{
-		WeaponInfo &info = m_WeaponList[i];
-		byte type;
-		ReadByte(type);
-		info.Type = (WeaponType)type;
-		ReadFloat(info.AttackRange);
-		ReadFloat(info.Damage);
-		ReadFloat(info.FireTime);
-		ReadFloat(info.ReloadTime);
-	}
 	ReadyGameEnter();
 
 }
@@ -113,10 +104,9 @@ void ChannelClient::ParseJoinGame()
 	if (room)
 	{
 		m_GameState = GAME_STATE_IN_ROOM;
-		m_RoomID = room->uid;
-		WriteInt(room->uid);
+		room->ClientEnter(this);
+		WriteInt(m_RoomID);
 		WriteByte(room->m_MaxClient);
-		room->m_ClientList.push_back(this);
 		byte room_client_count = room->m_ClientList.size();
 		WriteByte(room_client_count);
 		FOR_EACH_LIST(ChannelClient,room->m_ClientList, Client)
@@ -188,15 +178,41 @@ void ChannelClient::ParseStartGame()
 	}
 }
 
+void ChannelClient::ParseMoveData()
+{
+	ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
+	if (room)
+	{
+		FOR_EACH_LIST(ChannelClient, room->m_ClientList, Client)
+		{
+			ChannelClient *client = *iterClient;
+			if (client->m_GameState == GAME_STATE_IN_GAME)
+			{
+				client->BeginWrite();
+				client->WriteByte(SM_INGAME_MOVE_DATA);
+				client->WriteInt(uid);
+				client->WriteData(read_position, read_end - read_position);
+				client->EndWrite();
+			}
+
+		}
+	}
+	else
+	{
+		log_error("get room error uid:%d", uid);
+		DisConnect();
+	}
+}
+
 void ChannelClient::WriteCharacterInfo(ChannelClient* c)
 {
 	WriteInt(c->uid);
 	WriteString(c->m_CharacterInfo.Name);
 	WriteInt(c->m_CharacterInfo.MaxHP);
-	WriteShort(c->m_CharacterInfo.WeaponCount);
-	for (int i = 0; i < c->m_CharacterInfo.WeaponCount; i++)
+	WriteShort(c->m_InGameInfo->WeaponCount);
+	for (int i = 0; i < c->m_InGameInfo->WeaponCount; i++)
 	{
-		WeaponInfo &weapon = c->m_WeaponList[i];
+		WeaponInfo &weapon = c->m_InGameInfo->m_WeaponList[i];
 		WriteByte((byte)weapon.Type);
 		WriteShort(SORT_TO_CLIENT(i));
 	}

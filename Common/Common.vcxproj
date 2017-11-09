@@ -136,6 +136,7 @@
     <ClInclude Include="..\src\common\Timer.h" />
     <ClInclude Include="..\src\common\UdpConnection.h" />
     <ClInclude Include="..\src\common\UdpListener.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\common\BaseServer.cpp" />

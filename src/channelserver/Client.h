@@ -3,20 +3,10 @@
 #define __CHANNELCLIENT_H__
 #include <UdpConnection.h>
 #include <Timer.h>
-#include <common.h>
+#include "ClientInfo.h"
 #define SORT_TO_CLIENT(__sort__) (short)(__sort__ + 1)
 #define SORT_TO_SERVER(__sort__) (short)(__sort__ - 1)
-typedef enum 
-{
-	MachineGun = 1,
-	PlasmaGun,
-	JetFlame,
-	LightShield,
-	FireWhirlwind,
-	Missile,
-	OrdinaryGun,
-	WeaponCount
-}WeaponType;
+
 typedef enum
 {
 	GAME_STATE_NONE,
@@ -25,22 +15,8 @@ typedef enum
 	GAME_STATE_LOADING_GAME,
 	GAME_STATE_IN_GAME,
 }GameState;
-class WeaponInfo
-{
-public:
-	WeaponType Type;
-	float AttackRange;
-	float Damage;
-	float FireTime;
-	float ReloadTime;
-};
-class CharacterInfo
-{
-public:
-	char Name[64];
-	int MaxHP;
-	short WeaponCount;
-};
+
+
 class ChannelClient:public NetworkStream,public UdpConnection
 {
 public:
@@ -56,9 +32,8 @@ public:
 	uint m_RoomID;
 	GameState m_GameState;
 	CharacterInfo m_CharacterInfo;
+	CharacterInGameInfo *m_InGameInfo;
 	bool m_IsRoomHost;
-	int m_HP;
-	WeaponInfo m_WeaponList[WeaponCount-1];
 	Timer m_UpdateTimer;
 
 private:
@@ -68,6 +43,7 @@ private:
 	void ParseJoinGame();
 	void ParseGameReady();
 	void ParseStartGame();
+	void ParseMoveData();
 public:
 	void WriteCharacterInfo(ChannelClient* c);
 
