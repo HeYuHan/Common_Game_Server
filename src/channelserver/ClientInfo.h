@@ -4,7 +4,7 @@
 #include <common.h>
 typedef enum
 {
-	OrdinaryGun=1,
+	MachineGun=1,
 	Missile,
 	JetFlame,
 	WeaponCount
@@ -30,6 +30,9 @@ struct CharacterInGameInfo
 public:
 	WeaponInfo m_WeaponList[WeaponCount - 1];
 	short WeaponCount;
+	float m_Experience;
+	float m_Score;
+	int m_KillCount;
 	int m_HP;
 	uint uid;
 };

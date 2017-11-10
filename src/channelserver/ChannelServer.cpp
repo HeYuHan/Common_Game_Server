@@ -51,6 +51,16 @@ void ChannelServer::OnUdpAccept(Packet* p)
 	log_debug("new client connect %s", p->systemAddress.ToString());
 }
 
+void ChannelServer::OnKeepAlive(Packet * p)
+{
+	UdpClientIterator it = m_UdpClientMap.find(p->guid.g);
+	if (it != m_UdpClientMap.end())
+	{
+		it->second->m_MessagePacket = p;
+		it->second->OnKeepAlive();
+	}
+}
+
 bool ChannelServer::Init()
 {
 	if (!BaseServer::Init())

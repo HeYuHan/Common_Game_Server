@@ -13,9 +13,6 @@ static unsigned char GetPacketIdentifier(RakNet::Packet *p)
 		return (unsigned char)p->data[0];
 }
 UdpConnection::UdpConnection():
-	m_Connected(false),
-	m_KeepAliveLostCount(0),
-	m_KeepAliveTime(0),
 	m_IsServer(false),
 	m_Socket(NULL),
 	m_SystemAddress(UNASSIGNED_SYSTEM_ADDRESS),
@@ -94,14 +91,12 @@ void UdpConnection::Update(float time)
 			printf("My external address is %s\n", m_Socket->GetExternalID(m_MessagePacket->systemAddress).ToString(true));
 			m_SystemAddress = m_MessagePacket->systemAddress;
 			OnConnected();
-			m_Connected = true;
 			break;
 		case ID_CONNECTED_PING:
 		case ID_UNCONNECTED_PING:
 			printf("Ping from %s\n", m_MessagePacket->systemAddress.ToString(true));
 			break;
 		case KEEP_ALIVE_MSG:
-			m_KeepAliveLostCount = 0;
 			break;
 		default:
 			// It's a client, so just show the message
@@ -110,24 +105,6 @@ void UdpConnection::Update(float time)
 			break;
 		}
 	}
-#ifndef _DEBUG
-	if (m_Connected)
-	{
-		if (m_KeepAliveLostCount > 10)
-		{
-			DisConnect();
-			return;
-		}
-		m_KeepAliveTime += time;
-		if (m_KeepAliveTime > 0.5f)
-		{
-			m_KeepAliveTime = 0;
-			m_KeepAliveLostCount++;
-			KeepAlive();
-		}
-	}
-
-#endif // !_DEBUG
 
 
 }
@@ -160,9 +137,6 @@ int UdpConnection::Send(void * data, int size)
 
 bool UdpConnection::Connect(const char * ip, int port)
 {
-	m_KeepAliveLostCount = 0;
-	m_KeepAliveTime = 0;
-	m_Connected = false;
 	m_IsServer = false;
 	m_Socket= RakPeerInterface::GetInstance();
 	m_Socket->AllowConnectionResponseIPMigration(false);
@@ -186,9 +160,6 @@ bool UdpConnection::Connect(const char * ip, int port)
 
 void UdpConnection::InitServerSocket(RakPeerInterface * server, SystemAddress address)
 {
-	m_KeepAliveLostCount = 0;
-	m_KeepAliveTime = 0;
-	m_Connected = true;
 	m_IsServer = true;
 	m_SystemAddress = address;
 	m_Socket = server;
@@ -202,10 +173,9 @@ void UdpConnection::OnServerMessage(Packet* p)
 	if (stream)stream->OnRevcMessage();
 }
 
-void UdpConnection::DisConnect()
+void UdpConnection::Disconnect()
 {
 	if (m_Socket == NULL)return;
-	m_Connected = false;
 	m_Socket->CloseConnection(m_SystemAddress, false);
 	if (!m_IsServer)
 	{

@@ -13,8 +13,11 @@ ChannelClient::ChannelClient():
 	m_ConnectionID(0),
 	m_RoomID(0),
 	m_GameState(GAME_STATE_NONE),
+	m_NetState(NET_STATE_NONE),
 	m_InGameInfo(NULL),
-	m_IsRoomHost(false)
+	m_IsRoomHost(false),
+	m_Proto(PROTOCOL_NONE),
+	m_KeepAliveTime(0)
 {
 	connection = this;
 	stream = this;
@@ -34,6 +37,7 @@ void ChannelClient::OnConnected()
 
 void ChannelClient::OnDisconnected()
 {
+	m_NetState = NET_STATE_DISCONNECTED;
 	m_UpdateTimer.Stop();
 	gChannelServer.RemoveClient(this);
 }
@@ -41,6 +45,12 @@ void ChannelClient::OnDisconnected()
 
 void ChannelClient::OnMessage()
 {
+	if (m_NetState == NET_STATE_VERIFY_PROTOCOL)
+	{
+		m_NetState = NET_STATE_CONNECTED;
+		ReadByte(m_Proto);
+		return;
+	}
 	byte type;
 	ReadByte(type);
 	switch (type)
@@ -60,16 +70,35 @@ void ChannelClient::OnMessage()
 	case CM_INGAME_MOVE_DATA:
 		ParseMoveData();
 		break;
+	case CM_INGAME_SHOOT:
+		ParseShoot();
+		break;
 	}
+	OnKeepAlive();
 }
 void ChannelClient::Update(float time)
 {
 	UdpConnection::Update(time);
+	if ((m_Proto & PROTOCOL_KEEPALIVE) > 0)
+	{
+		m_KeepAliveTime += time;
+		if (m_KeepAliveTime > KEEP_ALIVE_TIME)
+		{
+			Disconnect();
+		}
+	}
+}
+void ChannelClient::OnKeepAlive()
+{
+	m_KeepAliveTime = 0;
 }
 void ChannelClient::Init()
 {
 	m_RoomID = 0;
 	m_GameState = GAME_STATE_SYNC_INFO;
+	m_NetState = NET_STATE_VERIFY_PROTOCOL;
+	m_Proto = PROTOCOL_NONE;
+	m_KeepAliveTime = 0;
 	m_IsRoomHost = false;
 	m_InGameInfo = NULL;
 	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.05f, ClientUpdate, this, true);
@@ -133,11 +162,11 @@ void ChannelClient::ParseJoinGame()
 		if (room->m_RoomState == ROOM_STATE_PLAYING)
 		{
 			room->ClientLoading(this);
-			room->ClientJoinInGame(this);
+			//room->ClientJoinInGame(this);
 		}
 		else if (room->IsFull())
 		{
-			room->StartGame();
+			room->LoadingGame();
 		}
 	}
 }
@@ -148,20 +177,22 @@ void ChannelClient::ParseGameReady()
 	ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
 	if (room)
 	{
-		FOR_EACH_LIST(ChannelClient, room->m_ClientList, Client)
+		
+		BeginWrite();
+		WriteByte(SM_INGAME_ROOM_INFO);
+		WriteByte(room->m_ClientList.size());
+		room->WriteAllClientInfo(this);
+		EndWrite();
+		if (room->m_RoomState == ROOM_STATE_PLAYING)
 		{
-			ChannelClient *client = *iterClient;
-			client->BeginWrite();
-			client->WriteByte(SM_INGAME_ROOM_INFO);
-			client->WriteByte(room->m_ClientList.size());
-			room->WriteAllClientInfo(client);
-			client->EndWrite();
+			room->ClientJoinInGame(this);
+			Brith();
 		}
 	}
 	else
 	{
 		log_error("get room error uid:%d", uid);
-		DisConnect();
+		Disconnect();
 	}
 	
 }
@@ -173,7 +204,7 @@ void ChannelClient::ParseStartGame()
 		ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
 		if (room&&room->m_RoomState == ROOM_STATE_WAIT)
 		{
-			room->StartGame();
+			room->LoadingGame();
 		}
 	}
 }
@@ -200,8 +231,37 @@ void ChannelClient::ParseMoveData()
 	else
 	{
 		log_error("get room error uid:%d", uid);
-		DisConnect();
+		Disconnect();
 	}
+}
+
+void ChannelClient::ParseShoot()
+{
+	ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
+	if (room)
+	{
+		FOR_EACH_LIST(ChannelClient, room->m_ClientList, Client)
+		{
+			ChannelClient *client = *iterClient;
+			if (uid != client->uid)
+			{
+				client->BeginWrite();
+				client->WriteByte(SM_INGAME_SHOOT);
+				client->WriteInt(uid);
+				client->WriteData(read_position, read_end - read_position);
+				client->EndWrite();
+			}
+		}
+	}
+	
+}
+
+void ChannelClient::Brith()
+{
+	BeginWrite();
+	WriteByte(SM_INGAME_BRITH);
+	WriteInt(uid);
+	EndWrite();
 }
 
 void ChannelClient::WriteCharacterInfo(ChannelClient* c)
@@ -214,6 +274,6 @@ void ChannelClient::WriteCharacterInfo(ChannelClient* c)
 	{
 		WeaponInfo &weapon = c->m_InGameInfo->m_WeaponList[i];
 		WriteByte((byte)weapon.Type);
-		WriteShort(SORT_TO_CLIENT(i));
+		WriteByte(SORT_TO_CLIENT(i));
 	}
 }

@@ -11,10 +11,6 @@ typedef enum
 {
 	READERROR = 0, WRITEERROR = 1
 }NETERR;
-typedef enum
-{
-	NET_NONE=0,NET_CONNECTED,NET_DISCONNECTED
-}NetState;
 class NetworkStream
 {
 public:
@@ -81,7 +77,7 @@ public:
 	virtual int Send(void* data, int size) = 0;
 	virtual void OnConnected() = 0;
 	virtual void OnDisconnected() = 0;
-	virtual void DisConnect()=0;
+	virtual void Disconnect()=0;
 public:
 	NetworkStream* stream;
 	SocketType m_Type;

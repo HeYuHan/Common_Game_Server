@@ -4,6 +4,7 @@
 #include<Timer.h>
 #include "ClientInfo.h"
 #define MAX_CLIENT 10
+#define LOADING_WAIT_TIME 1
 class ChannelClient;
 typedef enum
 {
@@ -13,7 +14,9 @@ typedef enum
 {
 	ROOM_STATE_IDLE = 1 << 1,
 	ROOM_STATE_WAIT = 1 << 2,
-	ROOM_STATE_PLAYING = 1 << 3,
+	ROOM_STATE_LOADING = 1 << 3,
+	ROOM_STATE_PLAYING = 1 << 4,
+	
 	ROOM_STATE_WAIT_OR_PLAYING = ROOM_STATE_WAIT | ROOM_STATE_PLAYING,
 
 }RoomState;
@@ -28,6 +31,7 @@ public:
 	bool IsFull();
 	void ClientEnter(ChannelClient* c);
 	void ClientLeave(ChannelClient* c);
+	void LoadingGame();
 	void StartGame();
 	void WriteAllClientInfo(ChannelClient* stream);
 	void ClientLoading(ChannelClient* c);
@@ -37,6 +41,7 @@ public:
 	RoomState m_RoomState;
 	std::vector<ChannelClient*> m_ClientList;
 	byte m_MaxClient;
+	float m_LoadingTime;
 	Timer m_UpdateTimer;
 	CharacterInGameInfo m_CharacterInfoArray[MAX_CLIENT];
 };

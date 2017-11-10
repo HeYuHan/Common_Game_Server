@@ -1,7 +1,9 @@
 #pragma once
 #ifndef __COMMON__H_
 #define __COMMON__H_
-
+#define GAME_MSG 254
+#define KEEP_ALIVE_MSG 253
+#define KEEP_ALIVE_TIME 5.0f
 
 //lib
 #if _WIN32

@@ -1,4 +1,5 @@
 #include "UdpListener.h"
+#include "common.h"
 static unsigned char GetPacketIdentifier(RakNet::Packet *p)
 {
 	if (p == 0)
@@ -101,8 +102,10 @@ void UdpListener::Update()
 			OnUdpClientDisconnected(m_MessagePacket);
 			printf("ID_CONNECTION_LOST from %s\n", m_MessagePacket->systemAddress.ToString(true));;
 			break;
-
-		default:
+		case KEEP_ALIVE_MSG:
+			OnKeepAlive(m_MessagePacket);
+			break;
+		case GAME_MSG:
 			// The server knows the static data of all clients, so we can prefix the message
 			// With the name data
 			//printf("%s\n", m_MessagePacket->data);

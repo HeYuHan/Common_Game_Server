@@ -57,7 +57,7 @@ void NetworkStream::OnRevcMessage()
 	}
 	catch (...)
 	{
-		if (connection)connection->DisConnect();
+		if (connection)connection->Disconnect();
 	}
 }
 
@@ -156,7 +156,7 @@ void NetworkStream::EndWrite()
 	int data_len = write_end - write_position - head_len;
 	if (connection->m_Type == UDP_SOCKET)
 	{
-		write_position[0] = 254;
+		write_position[0] = GAME_MSG;
 		memcpy(write_position+1, &data_len, 4);
 	}
 	else

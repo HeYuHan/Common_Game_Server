@@ -37,6 +37,7 @@ public:
 	virtual void OnUdpClientMessage(Packet* p);
 	virtual void OnUdpClientDisconnected(Packet* p);
 	virtual void OnUdpAccept(Packet* p);
+	virtual void OnKeepAlive(Packet* p);
 	virtual bool Init();
 	virtual int Run();
 	void Update(float time);

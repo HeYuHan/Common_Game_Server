@@ -32,6 +32,7 @@ void ChannelRoom::Init()
 	{
 		CleanCharacterIngameInfo(m_CharacterInfoArray[i]);
 	}
+	m_LoadingTime = 0;
 	m_RoomState = ROOM_STATE_WAIT;
 	m_ClientList.clear();
 	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.02f, RoomUpdate, this,true);
@@ -46,6 +47,15 @@ void ChannelRoom::Clean()
 
 void ChannelRoom::Update(float time)
 {
+	if (m_RoomState == ROOM_STATE_LOADING)
+	{
+		m_LoadingTime += time;
+		if (m_LoadingTime >= LOADING_WAIT_TIME)
+		{
+			
+			StartGame();
+		}
+	}
 }
 
 bool ChannelRoom::IsFull()
@@ -63,6 +73,11 @@ void ChannelRoom::ClientEnter(ChannelClient * c)
 			c->m_RoomID = uid;
 			c->m_InGameInfo = &m_CharacterInfoArray[i];
 			c->m_InGameInfo->uid = c->uid;
+			c->m_InGameInfo->WeaponCount = WeaponType::WeaponCount - 1;
+			for (int j = WeaponType::MachineGun; j < WeaponType::WeaponCount; j++)
+			{
+				c->m_InGameInfo->m_WeaponList[j - 1].Type = (WeaponType)j;
+			}
 			break;
 		}
 	}
@@ -70,7 +85,7 @@ void ChannelRoom::ClientEnter(ChannelClient * c)
 
 void ChannelRoom::ClientLoading(ChannelClient * c)
 {
-	m_RoomState = ROOM_STATE_PLAYING;
+	
 	c->m_GameState = GAME_STATE_LOADING_GAME;
 	c->BeginWrite();
 	c->WriteByte(SM_GAME_LOGADING);
@@ -137,6 +152,20 @@ void ChannelRoom::ClientLeave(ChannelClient * c)
 
 void ChannelRoom::StartGame()
 {
+	m_RoomState = ROOM_STATE_PLAYING;
+	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
+	{
+		ChannelClient *client = *iterClient;
+		if (client->m_GameState == GAME_STATE_IN_GAME)
+		{
+			client->Brith();
+		}
+	}
+}
+
+void ChannelRoom::LoadingGame()
+{
+	m_RoomState = ROOM_STATE_LOADING;
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
 		ClientLoading(*iterClient);

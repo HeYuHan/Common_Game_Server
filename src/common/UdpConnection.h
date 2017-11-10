@@ -8,7 +8,7 @@
 #include <BitStream.h>
 #include <PacketLogger.h>
 #include <RakNetTypes.h>
-#define KEEP_ALIVE_MSG 253
+
 using namespace RakNet;
 class UdpConnection :public NetworkConnection
 {
@@ -21,12 +21,8 @@ public:
 	bool Connect(const char* ip, int port);
 	void InitServerSocket(RakPeerInterface* server, SystemAddress address);
 	void OnServerMessage(Packet* p);
-	void DisConnect();
+	void Disconnect();
 	void KeepAlive();
-private:
-	bool m_Connected;
-	int m_KeepAliveLostCount;
-	float m_KeepAliveTime;
 public:
 	
 	bool m_IsServer;
