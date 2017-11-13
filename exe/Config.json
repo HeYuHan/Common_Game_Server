@@ -1,0 +1,34 @@
+{
+    "m_InfoList": [
+        {
+            "Type": 1,
+            "ID": 1,
+            "Damage": 50,
+            "AttackTime": 0.3,
+            "Ammunition": 50,
+            "ReloadTime": 3,
+            "Tracker": false,
+            "TypeName": ""
+        },
+        {
+            "Type": 2,
+            "ID": 2,
+            "Damage": 0.0,
+            "AttackTime": 500,
+            "Ammunition": 1,
+            "ReloadTime": 10,
+            "Tracker": true,
+            "TypeName": ""
+        },
+        {
+            "Type": 3,
+            "ID": 3,
+            "Damage": 30,
+            "AttackTime": 0.1,
+            "Ammunition": 50,
+            "ReloadTime": 10,
+            "Tracker": false,
+            "TypeName": ""
+        }
+    ]
+}

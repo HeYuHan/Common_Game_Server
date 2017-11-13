@@ -4,19 +4,20 @@
 #include <common.h>
 typedef enum
 {
-	MachineGun=1,
+	WeaponNone=0,
+	MachineGun,
 	Missile,
 	JetFlame,
 	WeaponCount
 }WeaponType;
-class WeaponInfo
+struct WeaponInfo
 {
-public:
 	WeaponType Type;
-	float AttackRange;
-	float Damage;
-	float FireTime;
+	int Damage;
+	float AttackTime;
+	int Ammunition;
 	float ReloadTime;
+	bool Tracker;
 };
 class CharacterInfo
 {
@@ -27,7 +28,6 @@ public:
 };
 struct CharacterInGameInfo
 {
-public:
 	WeaponInfo m_WeaponList[WeaponCount - 1];
 	short m_WeaponCount;
 	int m_Experience;

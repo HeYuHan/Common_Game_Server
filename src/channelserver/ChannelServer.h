@@ -10,6 +10,7 @@
 
 #include <objectpool.h>
 #include <UdpListener.h>
+#include "ClientInfo.h"
 #include<vector>
 using namespace RakNet;
 class ChannelRoom;
@@ -27,6 +28,7 @@ struct ChannelConfig
 	int port;
 	int max_client;
 	int max_room;
+	WeaponInfo m_WeaponList[WeaponType::WeaponCount - 1];
 public:
 	ChannelConfig();
 };
@@ -46,6 +48,7 @@ public:
 	ChannelRoom* CreateNewRoom();
 	void FreeRoom(ChannelRoom* room);
 	void RemoveClient(ChannelClient* c);
+	bool GetWeaponInfo(WeaponInfo &info,WeaponType type);
 public:
 	ChannelConfig m_Config;
 	ObjectPool<ChannelClient> m_ClientPool;

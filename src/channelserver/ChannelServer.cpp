@@ -2,6 +2,8 @@
 #include "ChannelServer.h"
 #include "Client.h"
 #include "Room.h"
+#include <FileReader.h>
+#include <json/json.h>
 #include <log.h>
 ChannelServer gChannelServer;
 Timer m_UpdateTimer;
@@ -80,7 +82,33 @@ bool ChannelServer::Init()
 	{
 		return false;
 	}
-
+	//parse weapon config
+	Json::Value root;
+	bool ret = ReadJson(root, m_Config.weapon_config_path);
+	Json::Value weapon_list;
+	ret = ret && !(weapon_list = root["m_InfoList"]).isNull();
+	ret = ret && weapon_list.isArray() && weapon_list.size() == WeaponType::WeaponCount - 1;
+	if (ret)
+	{
+		int index = 0;
+		for (Json::ValueIterator it = weapon_list.begin(); it != weapon_list.end(); it++, index++)
+		{
+			Json::Value config = *it;
+			WeaponInfo* info = &m_Config.m_WeaponList[index];
+			info->Type = (WeaponType)(config["Damage"].asInt());
+			info->Damage = (config["Damage"].asInt());
+			info->AttackTime = config["AttackTime"].asDouble();
+			info->Ammunition = config["Ammunition"].asInt();
+			info->ReloadTime = config["ReloadTime"].asDouble();
+			info->Tracker = config["Tracker"].asBool();
+		}
+	}
+	else
+	{
+		log_error("parse weapon config error path:%s", m_Config.weapon_config_path);
+		return false;
+	}
+	
 	return true;
 }
 
@@ -161,6 +189,12 @@ void ChannelServer::RemoveClient(ChannelClient * c)
 	}
 }
 
+bool ChannelServer::GetWeaponInfo(WeaponInfo & info, WeaponType type)
+{
+	return false;
+}
+
+
 ChannelConfig::ChannelConfig():
 	port(9530),
 	max_client(512),
@@ -168,6 +202,6 @@ ChannelConfig::ChannelConfig():
 {
 	strcpy(ip, "127.0.0.1");
 	strcpy(pwd, "channel");
-	strcpy(weapon_config_path, "weapon/config.json");
-	
+	strcpy(weapon_config_path, "./Config.json");
+	memset(&m_WeaponList, 0, sizeof(m_WeaponList));
 }

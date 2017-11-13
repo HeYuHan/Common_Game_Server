@@ -9,6 +9,7 @@ CFLAGS = -c -fPIC
 CFLAGS += -I.
 CFLAGS += -I./$(RAKNET_SOURCE_DIR)/Source
 
+
 ifdef RELEASE
 	CFLAGS += -Wall -Werror -g -O2
 else
@@ -23,8 +24,8 @@ LOG_LIB = /usr/local/lib/liblog4cpp.a
 RAKNET_LIB = ../../3rd/RakNet/Lib/libraknet.a
 
 TARGET = ../lib/libcommon.a
-SOURCES = $(wildcard *.cpp)
-OBJS    = $(RAKNET_LIB) $(patsubst %.cpp,objs/%.o,$(SOURCES)) 
+SOURCES = $(wildcard *.cpp) $(wildcard json/*.cpp)
+OBJS    = $(RAKNET_LIB) $(patsubst %.cpp,objs/%.o,$(SOURCES))
 
 
 default : $(TARGET)
@@ -54,7 +55,7 @@ objs/%.o: %.cpp
 	$(CC) $(CFLAGS) -o $@ $<
 
 clean :
-	rm -f $(TARGET) objs/*.o
+	rm -f $(TARGET) objs/*.o objs/json/*.o
 
 deps: $(EVENT_SOURCE_DIR)/configure $(LOG4CPP_SOURCE_DIR)/configure
 	$(MAKE) -C $(LOG4CPP_SOURCE_DIR)
@@ -69,6 +70,6 @@ $(TARGET) : $(TEMP) $(OBJS)
 	$(AR) -x $(EVENT_LIB_EXT)
 	$(AR) -x $(LOG_LIB)
 
-	$(AR) rcs $@ $(OBJS) *.o
+	$(AR) rcs $@ $(OBJS) *.o 
 	rm -f *.o
 	

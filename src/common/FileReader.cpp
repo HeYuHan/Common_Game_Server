@@ -8,7 +8,7 @@ std::string ReadText(const std::string & path)
 	return std::string();
 }
 
-bool ReadJson(Json::Value &root, const std::string & path)
+bool ReadJson(Json::Value &root, const char* path)
 {
 	ifstream file_in(path,ios::in | ios::binary);
 	if (file_in.is_open())

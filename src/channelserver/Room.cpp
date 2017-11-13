@@ -9,12 +9,6 @@ static void RoomUpdate(float time, void* arg)
 	ChannelRoom *room = (ChannelRoom*)arg;
 	room->Update(time);
 }
-static void CleanCharacterIngameInfo(CharacterInGameInfo &info)
-{
-	info.uid = 0;
-	info.m_HP = 0;
-	info.m_WeaponCount = 0;
-}
 ChannelRoom::ChannelRoom():
 	uid(0),
 	m_RoomState(ROOM_STATE_IDLE),
@@ -28,10 +22,7 @@ ChannelRoom::~ChannelRoom()
 
 void ChannelRoom::Init()
 {
-	for (int i = 0; i < MAX_CLIENT; i++)
-	{
-		CleanCharacterIngameInfo(m_CharacterInfoArray[i]);
-	}
+	memset(&m_CharacterInfoArray, 0, sizeof(m_CharacterInfoArray));
 	m_LoadingTime = 0;
 	m_RoomState = ROOM_STATE_WAIT;
 	m_GameTime = 0;
