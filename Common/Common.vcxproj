@@ -69,7 +69,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)3rd\log4cpp\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rd\pthread\include;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)3rd\RakNet\Source</IncludePath>
+    <IncludePath>$(SolutionDir)3rd\log4cpp\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rd\pthread\include;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)3rd\RakNet\Source;$(SolutionDir)src\common</IncludePath>
     <TargetExt>.lib</TargetExt>
     <TargetName>libcommon_d</TargetName>
     <OutDir>$(SolutionDir)lib\</OutDir>
@@ -126,6 +126,16 @@
   <ItemGroup>
     <ClInclude Include="..\src\common\BaseServer.h" />
     <ClInclude Include="..\src\common\common.h" />
+    <ClInclude Include="..\src\common\FileReader.h" />
+    <ClInclude Include="..\src\common\json\autolink.h" />
+    <ClInclude Include="..\src\common\json\config.h" />
+    <ClInclude Include="..\src\common\json\features.h" />
+    <ClInclude Include="..\src\common\json\forwards.h" />
+    <ClInclude Include="..\src\common\json\json.h" />
+    <ClInclude Include="..\src\common\json\json_batchallocator.h" />
+    <ClInclude Include="..\src\common\json\reader.h" />
+    <ClInclude Include="..\src\common\json\value.h" />
+    <ClInclude Include="..\src\common\json\writer.h" />
     <ClInclude Include="..\src\common\linux\getopt.h" />
     <ClInclude Include="..\src\common\log.h" />
     <ClInclude Include="..\src\common\NetworkConnection.h" />
@@ -141,6 +151,10 @@
   <ItemGroup>
     <ClCompile Include="..\src\common\BaseServer.cpp" />
     <ClCompile Include="..\src\common\common.cpp" />
+    <ClCompile Include="..\src\common\FileReader.cpp" />
+    <ClCompile Include="..\src\common\json\json_reader.cpp" />
+    <ClCompile Include="..\src\common\json\json_value.cpp" />
+    <ClCompile Include="..\src\common\json\json_writer.cpp" />
     <ClCompile Include="..\src\common\linux\getopt.cpp" />
     <ClCompile Include="..\src\common\log.cpp" />
     <ClCompile Include="..\src\common\NetworkConnection.cpp" />
@@ -150,6 +164,11 @@
     <ClCompile Include="..\src\common\Timer.cpp" />
     <ClCompile Include="..\src\common\UdpConnection.cpp" />
     <ClCompile Include="..\src\common\UdpListener.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\common\json\json_internalarray.inl" />
+    <None Include="..\src\common\json\json_internalmap.inl" />
+    <None Include="..\src\common\json\json_valueiterator.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

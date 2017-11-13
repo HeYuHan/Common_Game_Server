@@ -168,4 +168,6 @@ ChannelConfig::ChannelConfig():
 {
 	strcpy(ip, "127.0.0.1");
 	strcpy(pwd, "channel");
+	strcpy(weapon_config_path, "weapon/config.json");
+	
 }

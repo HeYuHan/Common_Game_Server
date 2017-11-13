@@ -13,7 +13,7 @@ static void CleanCharacterIngameInfo(CharacterInGameInfo &info)
 {
 	info.uid = 0;
 	info.m_HP = 0;
-	info.WeaponCount = 0;
+	info.m_WeaponCount = 0;
 }
 ChannelRoom::ChannelRoom():
 	uid(0),
@@ -34,6 +34,8 @@ void ChannelRoom::Init()
 	}
 	m_LoadingTime = 0;
 	m_RoomState = ROOM_STATE_WAIT;
+	m_GameTime = 0;
+	m_LastGameTime = 0;
 	m_ClientList.clear();
 	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.02f, RoomUpdate, this,true);
 	m_UpdateTimer.Begin();
@@ -56,6 +58,15 @@ void ChannelRoom::Update(float time)
 			StartGame();
 		}
 	}
+	if (m_RoomState == ROOM_STATE_PLAYING)
+	{
+		m_GameTime += time;
+		if (m_GameTime - m_LastGameTime >= 1)
+		{
+			
+			BroadCastGameTime();
+		}
+	}
 }
 
 bool ChannelRoom::IsFull()
@@ -73,7 +84,7 @@ void ChannelRoom::ClientEnter(ChannelClient * c)
 			c->m_RoomID = uid;
 			c->m_InGameInfo = &m_CharacterInfoArray[i];
 			c->m_InGameInfo->uid = c->uid;
-			c->m_InGameInfo->WeaponCount = WeaponType::WeaponCount - 1;
+			c->m_InGameInfo->m_WeaponCount = WeaponType::WeaponCount - 1;
 			for (int j = WeaponType::MachineGun; j < WeaponType::WeaponCount; j++)
 			{
 				c->m_InGameInfo->m_WeaponList[j - 1].Type = (WeaponType)j;
@@ -83,6 +94,8 @@ void ChannelRoom::ClientEnter(ChannelClient * c)
 	}
 }
 
+
+
 void ChannelRoom::ClientLoading(ChannelClient * c)
 {
 	
@@ -90,6 +103,22 @@ void ChannelRoom::ClientLoading(ChannelClient * c)
 	c->BeginWrite();
 	c->WriteByte(SM_GAME_LOGADING);
 	c->EndWrite();
+}
+
+void ChannelRoom::BroadCastGameTime()
+{
+	m_LastGameTime = m_GameTime;
+	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
+	{
+		ChannelClient *client = *iterClient;
+		if (client->m_GameState == GAME_STATE_IN_GAME)
+		{
+			client->BeginWrite();
+			client->WriteByte(SM_INGAME_GAME_TIME);
+			client->WriteFloat(m_GameTime);
+			client->EndWrite();
+		}
+	}
 }
 
 void ChannelRoom::ClientJoinInGame(ChannelClient * c)
@@ -101,21 +130,29 @@ void ChannelRoom::ClientJoinInGame(ChannelClient * c)
 		{
 			client->BeginWrite();
 			client->WriteByte(SM_INGAME_JOIN);
-			client->WriteCharacterInfo(c);
+			ChannelClient::WriteCharacterInfo(client,c);
 			client->EndWrite();
 		}
 	}
 }
 
-void ChannelRoom::WriteAllClientInfo(ChannelClient * stream)
+void ChannelRoom::WriteAllClientInfo(NetworkStream * stream)
 {
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
 		ChannelClient *client = *iterClient;
-		stream->WriteCharacterInfo(client);
+		ChannelClient::WriteCharacterInfo(stream, client);
+		ChannelClient::WriteIngameState(stream, client, INGAME_STATE_CHANGE_ALL);
 	}
 }
-
+void ChannelRoom::WriteAllClientState(NetworkStream * stream, byte state)
+{
+	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
+	{
+		ChannelClient *client = *iterClient;
+		ChannelClient::WriteIngameState(stream, client, state);
+	}
+}
 void ChannelRoom::ClientLeave(ChannelClient * c)
 {
 	if (c->m_RoomID == uid)

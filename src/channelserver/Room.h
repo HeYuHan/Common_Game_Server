@@ -6,6 +6,7 @@
 #define MAX_CLIENT 10
 #define LOADING_WAIT_TIME 1
 class ChannelClient;
+class NetworkStream;
 typedef enum
 {
 
@@ -33,15 +34,19 @@ public:
 	void ClientLeave(ChannelClient* c);
 	void LoadingGame();
 	void StartGame();
-	void WriteAllClientInfo(ChannelClient* stream);
+	void WriteAllClientInfo(NetworkStream* stream);
+	void WriteAllClientState(NetworkStream* stream,byte state);
 	void ClientLoading(ChannelClient* c);
 	void ClientJoinInGame(ChannelClient* c);
+	void BroadCastGameTime();
 public:
 	uint uid;
 	RoomState m_RoomState;
 	std::vector<ChannelClient*> m_ClientList;
 	byte m_MaxClient;
 	float m_LoadingTime;
+	float m_GameTime;
+	float m_LastGameTime;
 	Timer m_UpdateTimer;
 	CharacterInGameInfo m_CharacterInfoArray[MAX_CLIENT];
 };

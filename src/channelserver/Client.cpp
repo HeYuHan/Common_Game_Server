@@ -264,16 +264,71 @@ void ChannelClient::Brith()
 	EndWrite();
 }
 
-void ChannelClient::WriteCharacterInfo(ChannelClient* c)
+void ChannelClient::InGameStateChange(byte state)
 {
-	WriteInt(c->uid);
-	WriteString(c->m_CharacterInfo.Name);
-	WriteInt(c->m_CharacterInfo.MaxHP);
-	WriteShort(c->m_InGameInfo->WeaponCount);
-	for (int i = 0; i < c->m_InGameInfo->WeaponCount; i++)
+	ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
+	if (room)
+	{
+		FOR_EACH_LIST(ChannelClient, room->m_ClientList, Client)
+		{
+			ChannelClient *client = *iterClient;
+			if (client->m_GameState == GAME_STATE_IN_GAME)
+			{
+				client->BeginWrite();
+				client->WriteByte(SM_INGAME_STATE_CHANGE);
+				client->WriteInt(uid);
+				WriteIngameState(client, this, INGAME_STATE_CHANGE_ALL);
+				client->EndWrite();
+			}
+		}
+	}
+}
+
+//void ChannelClient::WriteCharacterInfo(ChannelClient* c)
+//{
+//	WriteInt(c->uid);
+//	WriteString(c->m_CharacterInfo.Name);
+//	WriteInt(c->m_CharacterInfo.MaxHP);
+//	WriteShort(c->m_InGameInfo->WeaponCount);
+//	for (int i = 0; i < c->m_InGameInfo->WeaponCount; i++)
+//	{
+//		WeaponInfo &weapon = c->m_InGameInfo->m_WeaponList[i];
+//		WriteByte((byte)weapon.Type);
+//		WriteByte(SORT_TO_CLIENT(i));
+//	}
+//}
+
+void ChannelClient::WriteCharacterInfo(NetworkStream * stream, ChannelClient * c)
+{
+	stream->WriteInt(c->uid);
+	stream->WriteString(c->m_CharacterInfo.Name);
+	stream->WriteInt(c->m_CharacterInfo.MaxHP);
+	stream->WriteShort(c->m_InGameInfo->m_WeaponCount);
+	for (int i = 0; i < c->m_InGameInfo->m_WeaponCount; i++)
 	{
 		WeaponInfo &weapon = c->m_InGameInfo->m_WeaponList[i];
-		WriteByte((byte)weapon.Type);
-		WriteByte(SORT_TO_CLIENT(i));
+		stream->WriteByte((byte)weapon.Type);
+		stream->WriteByte(SORT_TO_CLIENT(i));
+	}
+}
+
+void ChannelClient::WriteIngameState(NetworkStream* stream,ChannelClient * c, byte state)
+{
+	stream->WriteByte(state);
+	if ((state & INGAME_STATE_CHANGE_HEALTH) > 0)
+	{
+		stream->WriteInt(c->m_InGameInfo->m_HP);
+	}
+	if ((state & INGAME_STATE_CHANGE_EXP) > 0)
+	{
+		stream->WriteInt(c->m_InGameInfo->m_Experience);
+	}
+	if ((state & INGMAE_STATE_CHANGE_SCORE) > 0)
+	{
+		stream->WriteInt(c->m_InGameInfo->m_Score);
+	}
+	if ((state & INGMAE_STATE_CHANGE_KILLCOUNT) > 0)
+	{
+		stream->WriteInt(c->m_InGameInfo->m_KillCount);
 	}
 }

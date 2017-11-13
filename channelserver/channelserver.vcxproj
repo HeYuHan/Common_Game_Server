@@ -71,7 +71,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)3rd\log4cpp\include;$(SolutionDir)3rd\RakNet\Source;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)src\common\linux;$(SolutionDir)src\common\;$(SolutionDir)3rd\pthread\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)3rd\log4cpp\include;$(SolutionDir)3rd\RakNet\Source;$(SolutionDir)3rd\libevent\WIN32-Code;$(SolutionDir)3rd\libevent\include;$(SolutionDir)src\common\linux;$(SolutionDir)src\common\;$(SolutionDir)3rd\pthread\include;$(SolutionDir)src\common;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)exe</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -1,7 +1,8 @@
 #include "ChannelServer.h"
 #include <getopt.h>
 #include <log.h>
-
+#include <json/json.h>
+using namespace Json;
 enum
 {
 	channel_ip = 0x100,
@@ -10,7 +11,8 @@ enum
 	max_client,
 	max_room,
 	log_path,
-	log_name
+	log_name,
+	weapon_path,
 };
 struct option long_options[]=
 {
@@ -20,7 +22,8 @@ struct option long_options[]=
 	{"port",1,0,channel_port },
 	{"password",1,0,password },
 	{"max_client",1,0,max_client },
-	{"max_room",1,0,max_room }
+	{"max_room",1,0,max_room },
+	{"weapon_path",1,0,weapon_path },
 };
 
 int main(int argc,char **argv)
@@ -36,6 +39,9 @@ int main(int argc,char **argv)
 			strcpy(gLogger.name, optarg);
 		case log_path:
 			strcpy(gLogger.fileName, optarg);
+			break;
+		case weapon_path:
+			strcpy(gChannelServer.m_Config.weapon_config_path, optarg);
 			break;
 		case channel_ip:
 			strcpy(gChannelServer.m_Config.ip, optarg);

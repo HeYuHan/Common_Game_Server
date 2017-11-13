@@ -23,6 +23,7 @@ struct ChannelConfig
 {
 	char ip[64];
 	char pwd[64];
+	char weapon_config_path[64];
 	int port;
 	int max_client;
 	int max_room;

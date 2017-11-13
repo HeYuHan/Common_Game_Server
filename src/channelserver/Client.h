@@ -30,6 +30,15 @@ typedef enum
 	PROTOCOL_DEBUGCLIENT=1<<2,
 }ConnectionProtocol;
 
+typedef enum
+{
+	INGAME_STATE_CHANGE_HEALTH = 1 << 1,
+	INGAME_STATE_CHANGE_EXP = 1 << 2,
+	INGMAE_STATE_CHANGE_SCORE = 1 << 3,
+	INGMAE_STATE_CHANGE_KILLCOUNT = 1 << 4,
+	INGAME_STATE_CHANGE_ALL = INGAME_STATE_CHANGE_HEALTH | INGAME_STATE_CHANGE_EXP | INGMAE_STATE_CHANGE_SCORE | INGMAE_STATE_CHANGE_KILLCOUNT
+}ClinetInGameState;
+
 class ChannelClient:public NetworkStream,public UdpConnection
 {
 public:
@@ -64,8 +73,10 @@ private:
 	void ParseShoot();
 public:
 	void Brith();
-public:
-	void WriteCharacterInfo(ChannelClient* c);
+	void InGameStateChange(byte state);
+	//void WriteCharacterInfo(ChannelClient* c);
+	static void WriteCharacterInfo(NetworkStream* stream, ChannelClient* c);
+	static void WriteIngameState(NetworkStream* stream,ChannelClient* c, byte state);
 
 };
 

@@ -29,9 +29,9 @@ struct CharacterInGameInfo
 {
 public:
 	WeaponInfo m_WeaponList[WeaponCount - 1];
-	short WeaponCount;
-	float m_Experience;
-	float m_Score;
+	short m_WeaponCount;
+	int m_Experience;
+	int m_Score;
 	int m_KillCount;
 	int m_HP;
 	uint uid;
