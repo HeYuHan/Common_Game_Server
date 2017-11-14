@@ -95,7 +95,7 @@ bool ChannelServer::Init()
 		{
 			Json::Value config = *it;
 			WeaponInfo* info = &m_Config.m_WeaponList[index];
-			info->Type = (WeaponType)(config["Damage"].asInt());
+			info->Type = (WeaponType)(config["Type"].asInt());
 			info->Damage = (config["Damage"].asInt());
 			info->AttackTime = config["AttackTime"].asDouble();
 			info->Ammunition = config["Ammunition"].asInt();
@@ -108,7 +108,6 @@ bool ChannelServer::Init()
 		log_error("parse weapon config error path:%s", m_Config.weapon_config_path);
 		return false;
 	}
-	
 	return true;
 }
 
@@ -191,6 +190,14 @@ void ChannelServer::RemoveClient(ChannelClient * c)
 
 bool ChannelServer::GetWeaponInfo(WeaponInfo & info, WeaponType type)
 {
+	for (int i = 0; i < WeaponCount - 1; i++)
+	{
+		if (m_Config.m_WeaponList[i].Type == type)
+		{
+			info = m_Config.m_WeaponList[i];
+			return true;
+		}
+	}
 	return false;
 }
 

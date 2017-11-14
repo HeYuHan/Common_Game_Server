@@ -61,7 +61,8 @@ public:
 	byte m_Proto;
 	float m_KeepAliveTime;
 	Timer m_UpdateTimer;
-
+private:
+	WeaponInfo* GetWeapon(byte sort);
 private:
 	void Init();
 	void ReadCharacterInfo();
@@ -71,6 +72,7 @@ private:
 	void ParseStartGame();
 	void ParseMoveData();
 	void ParseShoot();
+	void ParseHitCharacter();
 public:
 	void Brith();
 	void InGameStateChange(byte state);

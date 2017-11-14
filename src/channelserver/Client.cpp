@@ -73,6 +73,9 @@ void ChannelClient::OnMessage()
 	case CM_INGAME_SHOOT:
 		ParseShoot();
 		break;
+	case CM_INGAME_HIT_CHARACTER:
+		ParseHitCharacter();
+		break;
 	}
 	OnKeepAlive();
 }
@@ -91,6 +94,16 @@ void ChannelClient::Update(float time)
 void ChannelClient::OnKeepAlive()
 {
 	m_KeepAliveTime = 0;
+}
+WeaponInfo * ChannelClient::GetWeapon(byte sort)
+{
+	sort = SORT_TO_SERVER(sort);
+	if (m_InGameInfo&&sort >= 0 && sort < m_InGameInfo->m_WeaponCount)
+	{
+		return &m_InGameInfo->m_WeaponList[sort];
+
+	}
+	return nullptr;
 }
 void ChannelClient::Init()
 {
@@ -173,6 +186,7 @@ void ChannelClient::ParseJoinGame()
 
 void ChannelClient::ParseGameReady()
 {
+	if (m_GameState != GAME_STATE_LOADING_GAME)return;
 	m_GameState = GAME_STATE_IN_GAME;
 	ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
 	if (room)
@@ -256,11 +270,18 @@ void ChannelClient::ParseShoot()
 	
 }
 
+void ChannelClient::ParseHitCharacter()
+{
+
+}
+
 void ChannelClient::Brith()
 {
+	m_InGameInfo->m_HP = m_CharacterInfo.MaxHP;
 	BeginWrite();
 	WriteByte(SM_INGAME_BRITH);
 	WriteInt(uid);
+	WriteInt(m_InGameInfo->m_HP);
 	EndWrite();
 }
 

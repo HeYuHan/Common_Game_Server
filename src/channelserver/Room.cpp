@@ -72,13 +72,13 @@ void ChannelRoom::ClientEnter(ChannelClient * c)
 	{
 		if (m_CharacterInfoArray[i].uid == 0)
 		{
-			c->m_RoomID = uid;
 			c->m_InGameInfo = &m_CharacterInfoArray[i];
+			c->m_RoomID = uid;
 			c->m_InGameInfo->uid = c->uid;
-			c->m_InGameInfo->m_WeaponCount = WeaponType::WeaponCount - 1;
+			c->m_InGameInfo->m_WeaponCount = WeaponCount - 1;
 			for (int j = WeaponType::MachineGun; j < WeaponType::WeaponCount; j++)
 			{
-				c->m_InGameInfo->m_WeaponList[j - 1].Type = (WeaponType)j;
+				gChannelServer.GetWeaponInfo(c->m_InGameInfo->m_WeaponList[j - 1], (WeaponType)j);
 			}
 			break;
 		}

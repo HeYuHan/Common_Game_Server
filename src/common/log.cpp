@@ -9,7 +9,7 @@ Logger::Logger():
 }
 Logger::~Logger()
 {
-	logger->shutdown();
+	if(NULL != logger)logger->shutdown();
 	logger = NULL;
 }
 

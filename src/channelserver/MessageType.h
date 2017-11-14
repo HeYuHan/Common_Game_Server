@@ -8,6 +8,7 @@ enum ClientMessage
 	CM_READY_IN_GAME,
 	CM_INGAME_MOVE_DATA,
 	CM_INGAME_SHOOT,
+	CM_INGAME_HIT_CHARACTER,
         //Ìí¼ÓÐÂµÄÎäÆ÷
 };
 enum ServerMessage
