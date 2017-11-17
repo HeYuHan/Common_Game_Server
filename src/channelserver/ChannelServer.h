@@ -7,14 +7,17 @@
 #include <unordered_map>
 #endif
 #include <BaseServer.h>
-
+#include "ClientInfo.h"
+#include <Vector3.h>
 #include <objectpool.h>
 #include <UdpListener.h>
-#include "ClientInfo.h"
 #include<vector>
+#include <Timer.h>
+#define MAX_DROP_POINT_COUNT 20
 using namespace RakNet;
 class ChannelRoom;
 class ChannelClient;
+class Timer;
 typedef std::vector<ChannelClient*>::iterator ClientIterator;
 typedef std::vector<ChannelRoom*>::iterator RoomIterator;
 typedef std::pair<uint64, ChannelClient*> UdpClientMapPair;
@@ -24,11 +27,11 @@ struct ChannelConfig
 {
 	char ip[64];
 	char pwd[64];
-	char weapon_config_path[64];
+	char data_config_path[64];
 	int port;
 	int max_client;
 	int max_room;
-	WeaponInfo m_WeaponList[WeaponType::WeaponCount - 1];
+	int max_drop_item;
 public:
 	ChannelConfig();
 };
@@ -49,15 +52,24 @@ public:
 	void FreeRoom(ChannelRoom* room);
 	void RemoveClient(ChannelClient* c);
 	bool GetWeaponInfo(WeaponInfo &info,WeaponType type);
+	bool GetSkillInfo(SkillInfo &info, SkillType type);
+	bool RandomBrithPos(Vector3 &v3);
+	bool RandomDropPos(Vector3 &v3);
 public:
 	ChannelConfig m_Config;
 	ObjectPool<ChannelClient> m_ClientPool;
 	ObjectPool<ChannelRoom> m_RoomPool;
+	ObjectPool<DropItemInfo>m_DropItemPool;
 	std::vector<ChannelRoom*> m_RoomList;
 	
 private:
 	UdpClientMap m_UdpClientMap;
-	
+	Timer m_UpdateTimer;
+public:
+	DropItemRefreshInfo gDropRefreshItems[DROP_ITEM_COUNT-1];
+	Vector3 gDropRefreshPoints[MAX_DROP_POINT_COUNT];
+	int gDropRefreshPointsCount;
+	SkillInfo gSkillInfos[DROP_ITEM_COUNT - 1];
 };
 extern ChannelServer gChannelServer;
 

@@ -2,6 +2,7 @@
 #ifndef __NETWORKCONNECTION_H__
 #define __NETWORKCONNECTION_H__
 #include "common.h"
+#include "Vector3.h"
 class NetworkConnection;
 typedef enum
 {
@@ -32,6 +33,8 @@ public:
 	void WriteULong(ulong data);
 	void WriteString(const char* str);
 	void WriteData(const void* data, int count);
+	void WriteVector3(Vector3 &v3);
+	void WriteShortQuaternion(Quaternion &rot);
 	void BeginWrite();
 	void EndWrite();
 	//////////////////////////////////////////////////////////////
@@ -48,6 +51,8 @@ public:
 	void ReadULong(ulong &data);
 	int ReadString(char* str, int size);
 	void ReadData(void* data, int count);
+	void ReadVector3(Vector3 &v3);
+	void ReadShortQuaternion(Quaternion &rot);
 public:
 	NetworkConnection* connection;
 protected:

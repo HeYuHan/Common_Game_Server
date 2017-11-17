@@ -38,7 +38,12 @@ void ChannelClient::OnConnected()
 void ChannelClient::OnDisconnected()
 {
 	m_NetState = NET_STATE_DISCONNECTED;
+	m_GameState = GAME_STATE_NONE;
 	m_UpdateTimer.Stop();
+	if (m_OwnerRoom)
+	{
+		m_OwnerRoom->ClientLeave(this);
+	}
 	gChannelServer.RemoveClient(this);
 }
 
@@ -76,18 +81,87 @@ void ChannelClient::OnMessage()
 	case CM_INGAME_HIT_CHARACTER:
 		ParseHitCharacter();
 		break;
+	case CM_INGAME_GET_DROP_ITEM:
+		ParseGetDropItem();
+		break;
 	}
 	OnKeepAlive();
 }
 void ChannelClient::Update(float time)
 {
 	UdpConnection::Update(time);
+
+	switch (m_GameState)
+	{
+	case GAME_STATE_IN_GAME:
+		IngameUpdate(time);
+		break;
+	default:
+		break;
+	}
 	if ((m_Proto & PROTOCOL_KEEPALIVE) > 0)
 	{
 		m_KeepAliveTime += time;
 		if (m_KeepAliveTime > KEEP_ALIVE_TIME)
 		{
 			Disconnect();
+		}
+	}
+	
+}
+void ChannelClient::IngameUpdate(float time)
+{
+	if (m_InGameInfo->m_Dead)
+	{
+		if (m_InGameInfo->m_BrithTime > 0)
+		{
+			m_InGameInfo->m_BrithTime -= time;
+			if (m_InGameInfo->m_BrithTime <= 0)
+			{
+				Brith();
+			}
+		}
+	}
+	for (int i = 0; i < DROP_ITEM_COUNT - 1; i++)
+	{
+		SkillInfo &info = m_InGameInfo->m_SkillList[i];
+		if (info.m_Enabled)
+		{
+			info.m_UsingTime -= time;
+			switch (info.m_Type)
+			{
+			case DROP_ITEM_SHIELD:
+			{
+				if (info.m_UsingTime <= 0 || info.m_UseCount <= 0)
+				{
+					info.m_Enabled = false;
+					info.m_CoolingTime = info.m_CoolDown;
+					m_OwnerRoom->BroadCastSkillChange(uid, &info);
+				}
+				break;
+			}
+			case DROP_ITEM_PLASMA:
+			{
+				if (info.m_UsingTime <= 0)
+				{
+					info.m_Enabled = false;
+					info.m_CoolingTime = info.m_CoolDown;
+					m_OwnerRoom->BroadCastSkillChange(uid, &info);
+				}
+				break;
+			}
+				
+			default:
+				break;
+			}
+		}
+		else if(info.m_CoolingTime>0)
+		{
+			info.m_CoolingTime -= time;
+			if (info.m_CoolingTime <= 0)
+			{
+				info.m_CoolingTime = 0;
+			}
 		}
 	}
 }
@@ -103,7 +177,7 @@ WeaponInfo * ChannelClient::GetWeapon(byte sort)
 		return &m_InGameInfo->m_WeaponList[sort];
 
 	}
-	return nullptr;
+	return NULL;
 }
 void ChannelClient::Init()
 {
@@ -114,6 +188,10 @@ void ChannelClient::Init()
 	m_KeepAliveTime = 0;
 	m_IsRoomHost = false;
 	m_InGameInfo = NULL;
+	m_OwnerRoom = NULL;
+	gChannelServer.RandomBrithPos(m_Position);
+	m_Velocity = Vector3(0, 0, 0);
+	m_Rotation = Quaternion(0, 0, 0, 1);
 	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.05f, ClientUpdate, this, true);
 	m_UpdateTimer.Begin();
 }
@@ -145,6 +223,7 @@ void ChannelClient::ParseJoinGame()
 	WriteByte((room == NULL ? ERROR_CREATE_ROOM : ERROR_NONE));
 	if (room)
 	{
+		m_OwnerRoom = room;
 		m_GameState = GAME_STATE_IN_ROOM;
 		room->ClientEnter(this);
 		WriteInt(m_RoomID);
@@ -188,24 +267,23 @@ void ChannelClient::ParseGameReady()
 {
 	if (m_GameState != GAME_STATE_LOADING_GAME)return;
 	m_GameState = GAME_STATE_IN_GAME;
-	ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
-	if (room)
+	if (m_OwnerRoom)
 	{
 		
 		BeginWrite();
 		WriteByte(SM_INGAME_ROOM_INFO);
-		WriteByte(room->m_ClientList.size());
-		room->WriteAllClientInfo(this);
+		WriteByte(m_OwnerRoom->m_ClientList.size());
+		m_OwnerRoom->WriteAllClientInfo(this);
 		EndWrite();
-		if (room->m_RoomState == ROOM_STATE_PLAYING)
+		if (m_OwnerRoom->m_RoomState == ROOM_STATE_PLAYING)
 		{
-			room->ClientJoinInGame(this);
+			m_OwnerRoom->ClientJoinInGame(this);
 			Brith();
 		}
 	}
 	else
 	{
-		log_error("get room error uid:%d", uid);
+		log_error("m_OwnerRoom is null uid:%d", uid);
 		Disconnect();
 	}
 	
@@ -215,20 +293,36 @@ void ChannelClient::ParseStartGame()
 {
 	if (m_IsRoomHost)
 	{
-		ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
-		if (room&&room->m_RoomState == ROOM_STATE_WAIT)
+		if (m_OwnerRoom&&m_OwnerRoom->m_RoomState == ROOM_STATE_WAIT)
 		{
-			room->LoadingGame();
+			m_OwnerRoom->LoadingGame();
 		}
 	}
 }
 
 void ChannelClient::ParseMoveData()
 {
-	ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
-	if (room)
+	if (m_OwnerRoom)
 	{
-		FOR_EACH_LIST(ChannelClient, room->m_ClientList, Client)
+		byte delta = 0;
+		byte flag = 0;
+
+		ReadByte(delta);
+		ReadByte(flag);
+
+		if ((flag & SYNC_TRANSFROM_POSITION) > 0)
+		{
+			ReadVector3(m_Position);
+		}
+		if ((flag & SYNC_TRANSFROM_ROTATION) > 0)
+		{
+			ReadShortQuaternion(m_Rotation);
+		}
+		if ((flag & SYNC_TRANSFROM_VELOCITY) > 0)
+		{
+			ReadVector3(m_Velocity);
+		}
+		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
 		{
 			ChannelClient *client = *iterClient;
 			if (client->m_GameState == GAME_STATE_IN_GAME)
@@ -236,7 +330,20 @@ void ChannelClient::ParseMoveData()
 				client->BeginWrite();
 				client->WriteByte(SM_INGAME_MOVE_DATA);
 				client->WriteInt(uid);
-				client->WriteData(read_position, read_end - read_position);
+				client->WriteByte(delta);
+				client->WriteByte(flag);
+				if ((flag & SYNC_TRANSFROM_POSITION) > 0)
+				{
+					client->WriteVector3(m_Position);
+				}
+				if ((flag & SYNC_TRANSFROM_ROTATION) > 0)
+				{
+					client->WriteShortQuaternion(m_Rotation);
+				}
+				if ((flag & SYNC_TRANSFROM_VELOCITY) > 0)
+				{
+					client->WriteVector3(m_Velocity);
+				}
 				client->EndWrite();
 			}
 
@@ -244,17 +351,16 @@ void ChannelClient::ParseMoveData()
 	}
 	else
 	{
-		log_error("get room error uid:%d", uid);
+		log_error("m_OwnerRoom is null uid:%d", uid);
 		Disconnect();
 	}
 }
 
 void ChannelClient::ParseShoot()
 {
-	ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
-	if (room)
+	if (m_OwnerRoom)
 	{
-		FOR_EACH_LIST(ChannelClient, room->m_ClientList, Client)
+		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
 		{
 			ChannelClient *client = *iterClient;
 			if (uid != client->uid)
@@ -267,30 +373,141 @@ void ChannelClient::ParseShoot()
 			}
 		}
 	}
-	
+	else
+	{
+		log_error("m_OwnerRoom is null uid:%d", uid);
+		Disconnect();
+	}
 }
 
 void ChannelClient::ParseHitCharacter()
 {
+	int hit_uid = 0;
+	byte sort = 0;
+	ReadInt(hit_uid);
+	ReadByte(sort);
+	ChannelClient* c = gChannelServer.m_ClientPool.Get(hit_uid);
+	WeaponInfo* weapon = GetWeapon(sort);
+	if (c && weapon)
+	{
+		if (c->m_InGameInfo->m_Dead)return;
+		c->m_InGameInfo->m_HP -= weapon->Damage;
+		if (c->m_InGameInfo->m_HP <= 0)
+		{
+			c->Dead();
+			m_InGameInfo->m_KillCount += 1;
+			InGameStateChange(INGMAE_STATE_CHANGE_KILLCOUNT);
+		}
+		else
+		{
+			c->InGameStateChange(INGAME_STATE_CHANGE_HEALTH);
+		}
+	}
+}
 
+void ChannelClient::ParseGetDropItem()
+{
+	int uid = 0;
+	ReadInt(uid);
+	DropItemInfo* info = gChannelServer.m_DropItemPool.Get(uid);
+	if (info)
+	{
+		m_OwnerRoom->BroadCastGetSkill(uid, info->m_Type);
+		m_OwnerRoom->RemoveDropItem(info);
+	}
+}
+
+void ChannelClient::ParseUseSkill()
+{
+	byte type;
+	ReadByte(type);
+	if (type > 0 && type < DROP_ITEM_COUNT)
+	{
+		SkillInfo skill = m_InGameInfo->m_SkillList[type - 1];
+		if (skill.m_Enabled || skill.m_CoolingTime > 0)return;
+		skill.m_UsingTime = 0;
+		skill.m_Enabled = true;
+		skill.m_UsingTime = skill.m_Duration;
+		m_OwnerRoom->BroadCastSkillChange(uid, &skill);
+		
+	}
+}
+
+void ChannelClient::ParseKillEffect()
+{
+	int uid = 0;
+	ReadInt(uid);
+	byte type = 0;
+	ReadByte(type);
+	ChannelClient* c = gChannelServer.m_ClientPool.Get(uid);
+	if (c)
+	{
+		m_OwnerRoom->BroadCastSkillEffect(uid, c->uid, type);
+	}
+}
+
+int ChannelClient::GetSocore()
+{
+	return m_InGameInfo->m_KillCount + m_InGameInfo->m_DiamondCount;
 }
 
 void ChannelClient::Brith()
 {
+	if (m_InGameInfo->m_PlayTime == 0)m_InGameInfo->m_PlayTime = m_OwnerRoom->m_GameTime;
 	m_InGameInfo->m_HP = m_CharacterInfo.MaxHP;
-	BeginWrite();
-	WriteByte(SM_INGAME_BRITH);
-	WriteInt(uid);
-	WriteInt(m_InGameInfo->m_HP);
-	EndWrite();
+	m_InGameInfo->m_Dead = false;
+	memcpy(&m_InGameInfo->m_SkillList, &gChannelServer.gSkillInfos, sizeof(m_InGameInfo->m_SkillList));
+	if (m_OwnerRoom)
+	{
+		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
+		{
+			ChannelClient *client = *iterClient;
+			if (client->m_GameState == GAME_STATE_IN_GAME)
+			{
+				client->BeginWrite();
+				client->WriteByte(SM_INGAME_BRITH);
+				client->WriteInt(uid);
+				client->WriteInt(m_InGameInfo->m_HP);
+				Vector3 pos(0,0,0);
+				gChannelServer.RandomBrithPos(pos);
+				client->WriteVector3(pos);
+				client->EndWrite();
+			}
+		}
+	}
+
+}
+
+void ChannelClient::Dead()
+{
+	m_InGameInfo->m_Dead = true;
+	m_InGameInfo->m_BrithTime = BRITH_TIME;
+	if (m_OwnerRoom)
+	{
+		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
+		{
+			ChannelClient *client = *iterClient;
+			if (client->m_GameState == GAME_STATE_IN_GAME)
+			{
+				client->BeginWrite();
+				client->WriteByte(SM_INGAME_CHARACTER_DEAD);
+				client->WriteInt(uid);
+				client->EndWrite();
+			}
+		}
+	}
+	else
+	{
+		log_error("m_OwnerRoom is null uid:%d", uid);
+		Disconnect();
+	}
 }
 
 void ChannelClient::InGameStateChange(byte state)
 {
-	ChannelRoom* room = gChannelServer.m_RoomPool.Get(m_RoomID);
-	if (room)
+	if (m_OwnerRoom)
 	{
-		FOR_EACH_LIST(ChannelClient, room->m_ClientList, Client)
+		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
 		{
 			ChannelClient *client = *iterClient;
 			if (client->m_GameState == GAME_STATE_IN_GAME)
@@ -298,10 +515,15 @@ void ChannelClient::InGameStateChange(byte state)
 				client->BeginWrite();
 				client->WriteByte(SM_INGAME_STATE_CHANGE);
 				client->WriteInt(uid);
-				WriteIngameState(client, this, INGAME_STATE_CHANGE_ALL);
+				WriteIngameState(client, this, state);
 				client->EndWrite();
 			}
 		}
+	}
+	else
+	{
+		log_error("m_OwnerRoom is null uid:%d", uid);
+		Disconnect();
 	}
 }
 
@@ -324,6 +546,7 @@ void ChannelClient::WriteCharacterInfo(NetworkStream * stream, ChannelClient * c
 	stream->WriteInt(c->uid);
 	stream->WriteString(c->m_CharacterInfo.Name);
 	stream->WriteInt(c->m_CharacterInfo.MaxHP);
+	stream->WriteVector3(c->m_Position);
 	stream->WriteShort(c->m_InGameInfo->m_WeaponCount);
 	for (int i = 0; i < c->m_InGameInfo->m_WeaponCount; i++)
 	{
@@ -344,12 +567,12 @@ void ChannelClient::WriteIngameState(NetworkStream* stream,ChannelClient * c, by
 	{
 		stream->WriteInt(c->m_InGameInfo->m_Experience);
 	}
-	if ((state & INGMAE_STATE_CHANGE_SCORE) > 0)
-	{
-		stream->WriteInt(c->m_InGameInfo->m_Score);
-	}
 	if ((state & INGMAE_STATE_CHANGE_KILLCOUNT) > 0)
 	{
 		stream->WriteInt(c->m_InGameInfo->m_KillCount);
+	}
+	if ((state & INGAME_STATE_CHANGE_DIAMONDCOUNT) > 0)
+	{
+		stream->WriteInt(c->m_InGameInfo->m_DiamondCount);
 	}
 }

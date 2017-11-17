@@ -176,7 +176,7 @@ void UdpConnection::OnServerMessage(Packet* p)
 void UdpConnection::Disconnect()
 {
 	if (m_Socket == NULL)return;
-	m_Socket->CloseConnection(m_SystemAddress, false);
+	m_Socket->CloseConnection(m_SystemAddress, true, HIGH_PRIORITY);
 	if (!m_IsServer)
 	{
 		m_Socket->Shutdown(300);

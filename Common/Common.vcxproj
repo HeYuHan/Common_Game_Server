@@ -144,9 +144,10 @@
     <ClInclude Include="..\src\common\TcpListener.h" />
     <ClInclude Include="..\src\common\ThreadPool.h" />
     <ClInclude Include="..\src\common\Timer.h" />
+    <ClInclude Include="..\src\common\tools.h" />
     <ClInclude Include="..\src\common\UdpConnection.h" />
     <ClInclude Include="..\src\common\UdpListener.h" />
-    <ClInclude Include="Vector.h" />
+    <ClInclude Include="..\src\common\Vector3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\common\BaseServer.cpp" />
@@ -162,8 +163,10 @@
     <ClCompile Include="..\src\common\TcpListener.cpp" />
     <ClCompile Include="..\src\common\ThreadPool.cpp" />
     <ClCompile Include="..\src\common\Timer.cpp" />
+    <ClCompile Include="..\src\common\tools.cpp" />
     <ClCompile Include="..\src\common\UdpConnection.cpp" />
     <ClCompile Include="..\src\common\UdpListener.cpp" />
+    <ClCompile Include="..\src\common\Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\src\common\json\json_internalarray.inl" />

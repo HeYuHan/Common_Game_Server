@@ -54,9 +54,6 @@
     <ClInclude Include="..\src\common\log.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Vector.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\common\FileReader.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -86,6 +83,12 @@
     </ClInclude>
     <ClInclude Include="..\src\common\json\writer.h">
       <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\tools.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\Vector3.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +136,12 @@
     </ClCompile>
     <ClCompile Include="..\src\common\json\json_writer.cpp">
       <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\tools.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\Vector3.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

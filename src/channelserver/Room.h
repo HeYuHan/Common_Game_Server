@@ -3,8 +3,11 @@
 #include <vector>
 #include<Timer.h>
 #include "ClientInfo.h"
+#define MAX_BLANCE_TIME 10
+#define MAX_GAME_TIME 60*5
 #define MAX_CLIENT 10
 #define LOADING_WAIT_TIME 1
+#define BRITH_TIME 5
 class ChannelClient;
 class NetworkStream;
 typedef enum
@@ -17,10 +20,15 @@ typedef enum
 	ROOM_STATE_WAIT = 1 << 2,
 	ROOM_STATE_LOADING = 1 << 3,
 	ROOM_STATE_PLAYING = 1 << 4,
-	
+	ROOM_STATE_BALANCE = 1 << 5,
 	ROOM_STATE_WAIT_OR_PLAYING = ROOM_STATE_WAIT | ROOM_STATE_PLAYING,
 
 }RoomState;
+struct DropItemTimer
+{
+	float m_RefreshTime;
+	float m_StartTime;
+};
 class ChannelRoom
 {
 public:
@@ -29,6 +37,7 @@ public:
 	void Init();
 	void Clean();
 	void Update(float time);
+	void PlayingUpdate(float time);
 	bool IsFull();
 	void ClientEnter(ChannelClient* c);
 	void ClientLeave(ChannelClient* c);
@@ -38,7 +47,21 @@ public:
 	void WriteAllClientState(NetworkStream* stream,byte state);
 	void ClientLoading(ChannelClient* c);
 	void ClientJoinInGame(ChannelClient* c);
+	
 	void BroadCastGameTime();
+	void BroadCastCreateDropItem(DropItemInfo* info);
+	void BroadCastRemoveDropItem(DropItemInfo* info);
+	void BroadCastGetSkill(uint from_uid, byte skill_type);
+	void BroadCastSkillChange(uint from_uid,SkillInfo* skill);
+	void BroadCastSkillEffect(uint from_uid, uint to_uid, byte skill_type);
+	void UpdateDropItem(float time);
+	void GameToBalance();
+	void LeaveBalance();
+	DropItemInfo* CreateDropItem();
+	void RemoveDropItem(DropItemInfo* info);
+public:
+	void WriteBlanceData(NetworkStream * stream);
+	
 public:
 	uint uid;
 	RoomState m_RoomState;
@@ -47,7 +70,10 @@ public:
 	float m_LoadingTime;
 	float m_GameTime;
 	float m_LastGameTime;
+	float m_BalanceWaitTime;
 	Timer m_UpdateTimer;
+	DropItemTimer m_DropItemTimers[DROP_ITEM_COUNT - 1];
+	std::vector<DropItemInfo*> m_DropItemList;
 	CharacterInGameInfo m_CharacterInfoArray[MAX_CLIENT];
 };
 

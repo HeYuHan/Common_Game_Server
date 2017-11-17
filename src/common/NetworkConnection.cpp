@@ -1,5 +1,6 @@
 #include "NetworkConnection.h"
 #include<string.h>
+#include "log.h"
 NetworkStream::NetworkStream(int send_buff_size, int read_buff_size)
 {
 	read_buff = new char[read_buff_size];
@@ -57,6 +58,7 @@ void NetworkStream::OnRevcMessage()
 	}
 	catch (...)
 	{
+		log_error("%s", "parse message error");
 		if (connection)connection->Disconnect();
 	}
 }
@@ -136,6 +138,23 @@ void NetworkStream::WriteData(const void* data, int count)
 		write_end += count;
 	}
 
+}
+void NetworkStream::WriteVector3(Vector3 & v3)
+{
+	WriteFloat(v3.x);
+	WriteFloat(v3.y);
+	WriteFloat(v3.z);
+}
+void NetworkStream::WriteShortQuaternion(Quaternion & rot)
+{
+	short x = rot.x * 1000;
+	short y = rot.y * 1000;
+	short z = rot.z * 1000;
+	short w = rot.w * 1000;
+	WriteShort(x);
+	WriteShort(y);
+	WriteShort(z);
+	WriteShort(w);
 }
 void NetworkStream::BeginWrite()
 {
@@ -227,6 +246,23 @@ void NetworkStream::ReadData(void* data, int count)
 		memcpy(data, read_position, count);
 		read_position += count;
 	}
+}
+
+void NetworkStream::ReadVector3(Vector3 & v3)
+{
+	ReadFloat(v3.x);
+	ReadFloat(v3.y);
+	ReadFloat(v3.z);
+}
+
+void NetworkStream::ReadShortQuaternion(Quaternion & rot)
+{
+	short x, y, z, w;
+	ReadShort(x);
+	ReadShort(y);
+	ReadShort(z);
+	ReadShort(w);
+	rot = Quaternion(x / 1000.0f, y / 1000.0f, z / 1000.0f, w / 1000.0f);
 }
 
 

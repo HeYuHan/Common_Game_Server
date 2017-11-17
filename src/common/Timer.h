@@ -17,13 +17,13 @@ public:
 private:
 	static void timeout_cb(evutil_socket_t fd, short event, void *arg);
 public:
-	timeval m_LastTime;
+	struct timeval m_LastTime;
 	bool m_Loop;
 	bool m_Stop;
 	float m_Time;
 	void* m_Arg;
 	TimerCallBack m_CallBack;
-	struct event m_TimeOut;
+	struct event *m_TimerEvent;
 	struct event_base *m_Base;
 	struct timeval m_Tv;
 };
