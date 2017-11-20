@@ -127,7 +127,7 @@ bool ChannelRoom::IsFull()
 void ChannelRoom::ClientEnter(ChannelClient * c)
 {
 	m_ClientList.push_back(c);
-	for (int i = 0; i < MAX_CLIENT; i++)
+	for (int i = 0; i < ROOM_MAX_CLIENT; i++)
 	{
 		if (m_CharacterInfoArray[i].uid == 0)
 		{
@@ -137,6 +137,11 @@ void ChannelRoom::ClientEnter(ChannelClient * c)
 			for (int j = WeaponType::MachineGun; j < WeaponType::WeaponCount; j++)
 			{
 				gChannelServer.GetWeaponInfo(c->m_InGameInfo->m_WeaponList[j - 1], (WeaponType)j);
+			}
+			memcpy(c->m_InGameInfo->m_SkillList, gChannelServer.gSkillInfos, sizeof(gChannelServer.gSkillInfos));
+			for (int i = BUFF_TYPE_START; i < BUFF_TYPE_COUNT; i++)
+			{
+				c->m_InGameInfo->m_BuffList[i].m_Type = (BuffType)i;
 			}
 			break;
 		}
@@ -234,21 +239,6 @@ void ChannelRoom::BroadCastSkillUse(uint from_uid, byte skill_type)
 	}
 }
 
-void ChannelRoom::BroadCastGetSkill(uint from_uid, byte skill_type)
-{
-	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
-	{
-		ChannelClient *client = *iterClient;
-		if (client->m_GameState == GAME_STATE_IN_GAME)
-		{
-			client->BeginWrite();
-			client->WriteByte(SM_INGAME_GET_SKILL);
-			client->WriteInt(from_uid);
-			client->WriteByte(skill_type);
-			client->EndWrite();
-		}
-	}
-}
 
 
 void ChannelRoom::BraodCastBuffState(uint from_uid, uint to_uid, BufferInfo* buff)

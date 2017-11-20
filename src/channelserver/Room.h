@@ -5,7 +5,7 @@
 #include "ClientInfo.h"
 #define MAX_BLANCE_TIME 10
 #define MAX_GAME_TIME 60*5
-#define MAX_CLIENT 10
+#define ROOM_MAX_CLIENT 10
 #define LOADING_WAIT_TIME 1
 #define BRITH_TIME 5
 class ChannelClient;
@@ -51,7 +51,6 @@ public:
 	void BroadCastGameTime();
 	void BroadCastCreateDropItem(DropItemInfo* info);
 	void BroadCastRemoveDropItem(DropItemInfo* info);
-	void BroadCastGetSkill(uint from_uid, byte skill_type);
 	void BroadCastSkillUse(uint from_uid, byte skill_type);
 	void BraodCastBuffState(uint from_uid,uint to_uid,BufferInfo* buff);
 	void UpdateDropItem(float time);
@@ -74,7 +73,7 @@ public:
 	Timer m_UpdateTimer;
 	DropItemTimer m_DropItemTimers[DROP_ITEM_COUNT];
 	std::vector<DropItemInfo*> m_DropItemList;
-	CharacterInGameInfo m_CharacterInfoArray[MAX_CLIENT];
+	CharacterInGameInfo m_CharacterInfoArray[ROOM_MAX_CLIENT];
 };
 
 

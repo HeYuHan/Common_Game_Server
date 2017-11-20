@@ -128,13 +128,13 @@ void ChannelClient::IngameUpdate(float time)
 	//skill
 	for (int i = DROP_ITEM_START; i < DROP_ITEM_COUNT; i++)
 	{
-		SkillInfo &info = m_InGameInfo->m_SkillList[i];
-		if (info.m_Enabled)
+		SkillInfo *info = &m_InGameInfo->m_SkillList[i];
+		if (info->m_Enabled)
 		{
-			info.m_UsingTime -= time;
-			if (info.m_UsingTime <= 0)
+			info->m_UsingTime -= time;
+			if (info->m_UsingTime <= 0)
 			{
-				info.m_Enabled = false;
+				info->m_Enabled = false;
 			}
 		}
 	}
@@ -147,24 +147,27 @@ void ChannelClient::IngameUpdate(float time)
 			buff->m_Duration -= time;
 			switch (buff->m_Type)
 			{
-			case BUFF_TYPE_SHIELD:
-			{
-				
-				if (buff->m_Duration <= 0 || buff->m_UserData[0]<=0)
+				case BUFF_TYPE_SHIELD:
 				{
-					buff->m_Enabled = false;
-				}
-				break;
-			}
-			default:
-			{
-				if (buff->m_Duration <= 0)
-				{
-					buff->m_Enabled = false;
-				}
-				break;
-			}
 				
+					if (buff->m_Duration <= 0 || buff->m_UserData[0]<=0)
+					{
+						buff->m_Enabled = false;
+					}
+					break;
+				}
+				default:
+				{
+					if (buff->m_Duration <= 0)
+					{
+						buff->m_Enabled = false;
+					}
+					break;
+				}
+			}
+			if (!buff->m_Enabled)
+			{
+				m_OwnerRoom->BraodCastBuffState(0, uid, buff);
 			}
 		}
 	}
@@ -416,9 +419,9 @@ void ChannelClient::ParseHitCharacter()
 
 void ChannelClient::ParseGetDropItem()
 {
-	int uid = 0;
-	ReadInt(uid);
-	DropItemInfo* info = gChannelServer.m_DropItemPool.Get(uid);
+	int item_id = 0;
+	ReadInt(item_id);
+	DropItemInfo* info = gChannelServer.m_DropItemPool.Get(item_id);
 	if (info)
 	{
 		//ÄÜÁ¿Ë®¾§
@@ -429,7 +432,10 @@ void ChannelClient::ParseGetDropItem()
 		}
 		else
 		{
-			m_OwnerRoom->BroadCastGetSkill(uid, info->m_Type);
+			BeginWrite();
+			WriteByte(SM_INGAME_GET_SKILL);
+			WriteByte(info->m_Type);
+			EndWrite();
 		}
 		m_OwnerRoom->RemoveDropItem(info);
 	}
@@ -441,20 +447,20 @@ void ChannelClient::ParseUseSkill()
 	ReadByte(type);
 	if (type > DROP_ITEM_NONE && type < DROP_ITEM_COUNT)
 	{
-		SkillInfo skill = m_InGameInfo->m_SkillList[type];
-		if (skill.m_Enabled)return;
-		skill.m_Enabled = true;
-		skill.m_UsingTime = skill.m_CoolDown;
-		m_OwnerRoom->BroadCastSkillUse(uid,skill.m_Type);
+		SkillInfo *skill = &m_InGameInfo->m_SkillList[type];
+		if (skill->m_Enabled)return;
+		skill->m_Enabled = true;
+		skill->m_UsingTime = skill->m_CoolDown;
+		m_OwnerRoom->BroadCastSkillUse(uid,skill->m_Type);
 		switch (type)
 		{
 		case DROP_ITEM_SHIELD:
 		{
-			BufferInfo buff = m_InGameInfo->m_BuffList[BUFF_TYPE_SHIELD];
-			buff.m_Enabled = true;
-			buff.m_Duration = skill.m_Duration;
-			memcpy(buff.m_UserData, skill.m_UserData, sizeof(float) * 4);
-			m_OwnerRoom->BraodCastBuffState(uid,uid,&buff);
+			BufferInfo *buff = &m_InGameInfo->m_BuffList[BUFF_TYPE_SHIELD];
+			buff->m_Enabled = true;
+			buff->m_Duration = skill->m_Duration;
+			memcpy(buff->m_UserData, skill->m_UserData, sizeof(float) * 4);
+			m_OwnerRoom->BraodCastBuffState(uid,uid,buff);
 			break;
 		}
 		case DROP_ITEM_PLASMA:
@@ -465,13 +471,13 @@ void ChannelClient::ParseUseSkill()
 				if (uid != client->uid && client->m_GameState == GAME_STATE_IN_GAME)
 				{
 					float dis = Length(client->m_Position - m_Position);
-					if (dis <= skill.m_UserData[1])
+					if (dis <= skill->m_UserData[1])
 					{
-						BufferInfo buff = client->m_InGameInfo->m_BuffList[BUFF_TYPE_PLASMA];
-						buff.m_Enabled = true;
-						buff.m_Duration = skill.m_Duration;
-						memcpy(buff.m_UserData, skill.m_UserData, sizeof(float) * 4);
-						m_OwnerRoom->BraodCastBuffState(uid, client->uid, &buff);
+						BufferInfo *buff = &client->m_InGameInfo->m_BuffList[BUFF_TYPE_PLASMA];
+						buff->m_Enabled = true;
+						buff->m_Duration = skill->m_Duration;
+						memcpy(buff->m_UserData, skill->m_UserData, sizeof(float) * 4);
+						m_OwnerRoom->BraodCastBuffState(uid, client->uid, buff);
 					}
 				}
 			}

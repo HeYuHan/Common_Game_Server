@@ -48,19 +48,19 @@
     ],
     "DropItem":{
         "Points":[
-            [0,3.79,0],
-            [3,3.79,0],
-            [6,3.79,0],
+            [0,0,0],
+            [3,0,0],
+            [6,0,0],
     
-            [9,3.79,0],
-            [12,3.79,0],
-            [15,3.79,0],
+            [9,0,0],
+            [12,0,0],
+            [15,0,0],
     
-            [18,3.79,0],
-            [21,3.79,0],
-            [24,3.79,0],
+            [18,0,0],
+            [21,0,0],
+            [24,0,0],
     
-            [27,3.79,0]
+            [27,0,0]
         ],
         "Refresh":[
             {
@@ -74,16 +74,16 @@
             {
                 "m_Type":2,
                 "m_Desc":"护盾",
-                "m_RefreshTime":30,
+                "m_RefreshTime":10,
                 "m_RefreshCount":1,
                 "m_Duration":15,
-                "m_StartTime":30
+                "m_StartTime":5
             },
             {
                 "m_Type":3,
                 "m_Desc":"电磁风暴",
                 "m_RefreshTime":30,
-                "m_RefreshCount":1,
+                "m_RefreshCount":0,
                 "m_Duration":10,
                 "m_StartTime":50
             }
@@ -108,7 +108,7 @@
                 "m_Desc":"电磁风暴",
                 "m_Duration":10,
                 "m_CoolDown":10,
-                "m_UserData":[]
+                "m_UserData":[10]
             }
         ]
     }

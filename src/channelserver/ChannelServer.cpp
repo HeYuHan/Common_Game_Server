@@ -177,7 +177,7 @@ bool ChannelServer::Init()
 		for (Json::ValueIterator it = items.begin(); it != items.end(); it++)
 		{
 			int type = (*it)["m_Type"].asInt();
-			index = type - 1;
+			index = type;
 			gSkillInfos[index].m_Type = (DropItemType)type;
 			gSkillInfos[index].m_Duration = (*it)["m_Duration"].asDouble();
 			gSkillInfos[index].m_CoolDown = (*it)["m_CoolDown"].asDouble();
