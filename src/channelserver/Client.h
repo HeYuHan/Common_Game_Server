@@ -46,7 +46,7 @@ typedef enum
 	SYNC_TRANSFROM_POSITION = 1 << 1,
 	SYNC_TRANSFROM_ROTATION = 1 << 2,
 	SYNC_TRANSFROM_VELOCITY = 1 << 3
-};
+}SyncData;
 
 class ChannelClient:public NetworkStream,public UdpConnection
 {

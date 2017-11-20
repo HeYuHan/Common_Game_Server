@@ -38,6 +38,18 @@ typedef short int16;
 typedef unsigned long int ulong;
 typedef unsigned short int ushort;
 typedef unsigned int uint;
+
+#ifdef _WIN32
+#define USING_VECOTR using namespace std;
+#else
+#if __GNUC__>2
+#define USING_VECOTR using namespace __gnu_cxx;
+#else
+#define USING_VECOTR using namespace stdext;
+#endif
+#endif // _WIN32
+
+
 #define FOR_EACH_LIST(__TYPE__,__LIST__,__ITER__) \
 	std::vector<__TYPE__*>::iterator iter##__ITER__; \
 	for( iter##__ITER__ =  __LIST__.begin(); iter##__ITER__ != __LIST__.end(); iter##__ITER__++)

@@ -4,6 +4,9 @@
 #include "MessageType.h"
 #include "Client.h"
 #include <log.h>
+#include <algorithm>
+USING_VECOTR
+
 static void RoomUpdate(float time, void* arg)
 {
 	ChannelRoom *room = (ChannelRoom*)arg;
@@ -87,17 +90,17 @@ void ChannelRoom::PlayingUpdate(float time)
 		GameToBalance();
 	}
 	//drop item
-	for (int i = 0; i < DROP_ITEM_COUNT-1; i++)
+	for (int i = DROP_ITEM_START; i < DROP_ITEM_COUNT; i++)
 	{
 		DropItemRefreshInfo &refresh = gChannelServer.gDropRefreshItems[i];
 		DropItemTimer &timer = m_DropItemTimers[i];
 		if (timer.m_StartTime < refresh.m_StartTime)timer.m_StartTime += time;
 		if (timer.m_StartTime >= refresh.m_StartTime)
 		{
-			if (timer.m_RefreshTime < refresh.m_RefreshTime)timer.m_RefreshTime += time;
-			if (timer.m_RefreshTime >= refresh.m_RefreshTime)
+			if (timer.m_RefreshTime > 0)timer.m_RefreshTime -= time;
+			if (timer.m_RefreshTime <= 0)
 			{
-				timer.m_RefreshTime = 0;
+				timer.m_RefreshTime = refresh.m_RefreshTime;
 				for (int j = 0; j < refresh.m_RefreshCount; j++)
 				{
 					DropItemInfo* info = CreateDropItem();
@@ -131,7 +134,6 @@ void ChannelRoom::ClientEnter(ChannelClient * c)
 			c->m_InGameInfo = &m_CharacterInfoArray[i];
 			c->m_RoomID = uid;
 			c->m_InGameInfo->uid = c->uid;
-			c->m_InGameInfo->m_WeaponCount = WeaponCount - 1;
 			for (int j = WeaponType::MachineGun; j < WeaponType::WeaponCount; j++)
 			{
 				gChannelServer.GetWeaponInfo(c->m_InGameInfo->m_WeaponList[j - 1], (WeaponType)j);
@@ -193,6 +195,9 @@ void ChannelRoom::BroadCastCreateDropItem(DropItemInfo * info)
 			client->WriteByte(SM_INGAME_CREATE_DROPITEM);
 			client->WriteInt(info->uid);
 			client->WriteByte(info->m_Type);
+			Vector3 pos(0, 0, 0);
+			gChannelServer.RandomDropPos(pos);
+			client->WriteVector3(pos);
 			client->EndWrite();
 		}
 	}
@@ -213,7 +218,7 @@ void ChannelRoom::BroadCastRemoveDropItem(DropItemInfo * info)
 	}
 }
 
-void ChannelRoom::BroadCastSkillChange(uint from_uid,SkillInfo * skill)
+void ChannelRoom::BroadCastSkillUse(uint from_uid, byte skill_type)
 {
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
@@ -221,10 +226,9 @@ void ChannelRoom::BroadCastSkillChange(uint from_uid,SkillInfo * skill)
 		if (client->m_GameState == GAME_STATE_IN_GAME)
 		{
 			client->BeginWrite();
-			client->WriteByte(SM_INGAME_SKILL_CHANGE);
+			client->WriteByte(SM_INGAME_USE_SKILL);
 			client->WriteInt(from_uid);
-			client->WriteByte(skill->m_Type);
-			client->WriteBool(skill->m_Enabled);
+			client->WriteByte(skill_type);
 			client->EndWrite();
 		}
 	}
@@ -246,7 +250,8 @@ void ChannelRoom::BroadCastGetSkill(uint from_uid, byte skill_type)
 	}
 }
 
-void ChannelRoom::BroadCastSkillEffect(uint from_uid, uint to_uid, byte skill_type)
+
+void ChannelRoom::BraodCastBuffState(uint from_uid, uint to_uid, BufferInfo* buff)
 {
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
@@ -254,10 +259,16 @@ void ChannelRoom::BroadCastSkillEffect(uint from_uid, uint to_uid, byte skill_ty
 		if (client->m_GameState == GAME_STATE_IN_GAME)
 		{
 			client->BeginWrite();
-			client->WriteByte(CM_INGAME_SKILL_EFFECT);
+			client->WriteByte(SM_INGAME_BUFF_STATE);
 			client->WriteInt(from_uid);
 			client->WriteInt(to_uid);
-			client->WriteByte(skill_type);
+			client->WriteByte(buff->m_Type);
+			client->WriteBool(buff->m_Enabled);
+			if (buff->m_Enabled)
+			{
+				client->WriteFloat(buff->m_Duration);
+				client->WriteData(buff->m_UserData, sizeof(float) * 4);
+			}
 			client->EndWrite();
 		}
 	}
@@ -303,7 +314,7 @@ DropItemInfo * ChannelRoom::CreateDropItem()
 void ChannelRoom::RemoveDropItem(DropItemInfo * info)
 {
 	BroadCastRemoveDropItem(info);
-	std::vector<DropItemInfo*>::iterator it = std::find(m_DropItemList.begin(), m_DropItemList.end(), info);
+	std::vector<DropItemInfo*>::iterator it = find(m_DropItemList.begin(), m_DropItemList.end(), info);
 	if (it != m_DropItemList.end())
 	{
 		m_DropItemList.erase(it);

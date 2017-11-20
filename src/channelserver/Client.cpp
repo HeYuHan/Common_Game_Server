@@ -84,6 +84,9 @@ void ChannelClient::OnMessage()
 	case CM_INGAME_GET_DROP_ITEM:
 		ParseGetDropItem();
 		break;
+	case CM_INGAME_USE_SKILL:
+		ParseUseSkill();
+		break;
 	}
 	OnKeepAlive();
 }
@@ -122,45 +125,46 @@ void ChannelClient::IngameUpdate(float time)
 			}
 		}
 	}
-	for (int i = 0; i < DROP_ITEM_COUNT - 1; i++)
+	//skill
+	for (int i = DROP_ITEM_START; i < DROP_ITEM_COUNT; i++)
 	{
 		SkillInfo &info = m_InGameInfo->m_SkillList[i];
 		if (info.m_Enabled)
 		{
 			info.m_UsingTime -= time;
-			switch (info.m_Type)
+			if (info.m_UsingTime <= 0)
 			{
-			case DROP_ITEM_SHIELD:
+				info.m_Enabled = false;
+			}
+		}
+	}
+	//buff
+	for (int i = 0; i < BUFF_TYPE_COUNT; i++)
+	{
+		BufferInfo *buff = &m_InGameInfo->m_BuffList[i];
+		if (buff->m_Enabled)
+		{
+			buff->m_Duration -= time;
+			switch (buff->m_Type)
 			{
-				if (info.m_UsingTime <= 0 || info.m_UseCount <= 0)
+			case BUFF_TYPE_SHIELD:
+			{
+				
+				if (buff->m_Duration <= 0 || buff->m_UserData[0]<=0)
 				{
-					info.m_Enabled = false;
-					info.m_CoolingTime = info.m_CoolDown;
-					m_OwnerRoom->BroadCastSkillChange(uid, &info);
+					buff->m_Enabled = false;
 				}
 				break;
 			}
-			case DROP_ITEM_PLASMA:
+			default:
 			{
-				if (info.m_UsingTime <= 0)
+				if (buff->m_Duration <= 0)
 				{
-					info.m_Enabled = false;
-					info.m_CoolingTime = info.m_CoolDown;
-					m_OwnerRoom->BroadCastSkillChange(uid, &info);
+					buff->m_Enabled = false;
 				}
 				break;
 			}
 				
-			default:
-				break;
-			}
-		}
-		else if(info.m_CoolingTime>0)
-		{
-			info.m_CoolingTime -= time;
-			if (info.m_CoolingTime <= 0)
-			{
-				info.m_CoolingTime = 0;
 			}
 		}
 	}
@@ -172,7 +176,7 @@ void ChannelClient::OnKeepAlive()
 WeaponInfo * ChannelClient::GetWeapon(byte sort)
 {
 	sort = SORT_TO_SERVER(sort);
-	if (m_InGameInfo&&sort >= 0 && sort < m_InGameInfo->m_WeaponCount)
+	if (m_InGameInfo&&sort >= 0 && sort < WeaponCount - 1)
 	{
 		return &m_InGameInfo->m_WeaponList[sort];
 
@@ -391,6 +395,11 @@ void ChannelClient::ParseHitCharacter()
 	if (c && weapon)
 	{
 		if (c->m_InGameInfo->m_Dead)return;
+		//打到盾上了,抵挡攻击
+		if ((c->m_InGameInfo->m_BuffList[BUFF_TYPE_SHIELD].m_UserData[0]--) > 0)
+		{
+			return;
+		}
 		c->m_InGameInfo->m_HP -= weapon->Damage;
 		if (c->m_InGameInfo->m_HP <= 0)
 		{
@@ -412,7 +421,16 @@ void ChannelClient::ParseGetDropItem()
 	DropItemInfo* info = gChannelServer.m_DropItemPool.Get(uid);
 	if (info)
 	{
-		m_OwnerRoom->BroadCastGetSkill(uid, info->m_Type);
+		//能量水晶
+		if (info->m_Type == DROP_ITEM_DIAMOND)
+		{
+			m_InGameInfo->m_DiamondCount += 1;
+			InGameStateChange(INGAME_STATE_CHANGE_DIAMONDCOUNT);
+		}
+		else
+		{
+			m_OwnerRoom->BroadCastGetSkill(uid, info->m_Type);
+		}
 		m_OwnerRoom->RemoveDropItem(info);
 	}
 }
@@ -421,29 +439,62 @@ void ChannelClient::ParseUseSkill()
 {
 	byte type;
 	ReadByte(type);
-	if (type > 0 && type < DROP_ITEM_COUNT)
+	if (type > DROP_ITEM_NONE && type < DROP_ITEM_COUNT)
 	{
-		SkillInfo skill = m_InGameInfo->m_SkillList[type - 1];
-		if (skill.m_Enabled || skill.m_CoolingTime > 0)return;
-		skill.m_UsingTime = 0;
+		SkillInfo skill = m_InGameInfo->m_SkillList[type];
+		if (skill.m_Enabled)return;
 		skill.m_Enabled = true;
-		skill.m_UsingTime = skill.m_Duration;
-		m_OwnerRoom->BroadCastSkillChange(uid, &skill);
-		
+		skill.m_UsingTime = skill.m_CoolDown;
+		m_OwnerRoom->BroadCastSkillUse(uid,skill.m_Type);
+		switch (type)
+		{
+		case DROP_ITEM_SHIELD:
+		{
+			BufferInfo buff = m_InGameInfo->m_BuffList[BUFF_TYPE_SHIELD];
+			buff.m_Enabled = true;
+			buff.m_Duration = skill.m_Duration;
+			memcpy(buff.m_UserData, skill.m_UserData, sizeof(float) * 4);
+			m_OwnerRoom->BraodCastBuffState(uid,uid,&buff);
+			break;
+		}
+		case DROP_ITEM_PLASMA:
+		{
+			FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
+			{
+				ChannelClient *client = *iterClient;
+				if (uid != client->uid && client->m_GameState == GAME_STATE_IN_GAME)
+				{
+					float dis = Length(client->m_Position - m_Position);
+					if (dis <= skill.m_UserData[1])
+					{
+						BufferInfo buff = client->m_InGameInfo->m_BuffList[BUFF_TYPE_PLASMA];
+						buff.m_Enabled = true;
+						buff.m_Duration = skill.m_Duration;
+						memcpy(buff.m_UserData, skill.m_UserData, sizeof(float) * 4);
+						m_OwnerRoom->BraodCastBuffState(uid, client->uid, &buff);
+					}
+				}
+			}
+
+			break;
+		}
+		default:
+			break;
+		}
 	}
 }
 
 void ChannelClient::ParseKillEffect()
 {
-	int uid = 0;
-	ReadInt(uid);
+	/*int to_uid = 0;
+	ReadInt(to_uid);
 	byte type = 0;
 	ReadByte(type);
 	ChannelClient* c = gChannelServer.m_ClientPool.Get(uid);
 	if (c)
 	{
 		m_OwnerRoom->BroadCastSkillEffect(uid, c->uid, type);
-	}
+	}*/
 }
 
 int ChannelClient::GetSocore()
@@ -547,12 +598,22 @@ void ChannelClient::WriteCharacterInfo(NetworkStream * stream, ChannelClient * c
 	stream->WriteString(c->m_CharacterInfo.Name);
 	stream->WriteInt(c->m_CharacterInfo.MaxHP);
 	stream->WriteVector3(c->m_Position);
-	stream->WriteShort(c->m_InGameInfo->m_WeaponCount);
-	for (int i = 0; i < c->m_InGameInfo->m_WeaponCount; i++)
+	stream->WriteShortQuaternion(c->m_Rotation);
+	stream->WriteShort(WeaponCount - 1);
+	for (int i = 0; i < WeaponCount-1; i++)
 	{
 		WeaponInfo &weapon = c->m_InGameInfo->m_WeaponList[i];
-		stream->WriteByte((byte)weapon.Type);
-		stream->WriteByte(SORT_TO_CLIENT(i));
+		stream->WriteFloat(weapon.AttackTime);
+		stream->WriteFloat(weapon.ReloadTime);
+		stream->WriteFloat(weapon.Damage);
+		stream->WriteInt(weapon.Ammunition);
+		stream->WriteBool(weapon.Tracker);
+	}
+	stream->WriteShort(DROP_ITEM_COUNT);
+	for (int i = DROP_ITEM_START; i < DROP_ITEM_COUNT; i++)
+	{
+		SkillInfo &skill = c->m_InGameInfo->m_SkillList[i];
+		stream->WriteFloat(skill.m_CoolDown);
 	}
 }
 

@@ -52,8 +52,8 @@ public:
 	void BroadCastCreateDropItem(DropItemInfo* info);
 	void BroadCastRemoveDropItem(DropItemInfo* info);
 	void BroadCastGetSkill(uint from_uid, byte skill_type);
-	void BroadCastSkillChange(uint from_uid,SkillInfo* skill);
-	void BroadCastSkillEffect(uint from_uid, uint to_uid, byte skill_type);
+	void BroadCastSkillUse(uint from_uid, byte skill_type);
+	void BraodCastBuffState(uint from_uid,uint to_uid,BufferInfo* buff);
 	void UpdateDropItem(float time);
 	void GameToBalance();
 	void LeaveBalance();
@@ -72,7 +72,7 @@ public:
 	float m_LastGameTime;
 	float m_BalanceWaitTime;
 	Timer m_UpdateTimer;
-	DropItemTimer m_DropItemTimers[DROP_ITEM_COUNT - 1];
+	DropItemTimer m_DropItemTimers[DROP_ITEM_COUNT];
 	std::vector<DropItemInfo*> m_DropItemList;
 	CharacterInGameInfo m_CharacterInfoArray[MAX_CLIENT];
 };

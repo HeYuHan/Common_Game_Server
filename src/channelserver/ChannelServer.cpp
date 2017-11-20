@@ -115,9 +115,11 @@ bool ChannelServer::Init()
 		int index = 0;
 		for (Json::ValueIterator it = weapon_list.begin(); it != weapon_list.end(); it++, index++)
 		{
+			
 			Json::Value config = *it;
-			WeaponInfo* info = &gWeaponList[index];
-			info->Type = (WeaponType)(config["Type"].asInt());
+			int type = (config["Type"].asInt());
+			WeaponInfo* info = &gWeaponList[type];
+			info->Type = (WeaponType)type;
 			info->Damage = (config["Damage"].asInt());
 			info->AttackTime = config["AttackTime"].asDouble();
 			info->Ammunition = config["Ammunition"].asInt();
@@ -164,7 +166,7 @@ bool ChannelServer::Init()
 		{
 			int type = (*it)["m_Type"].asInt();
 			index = type - 1;
-			gDropRefreshItems[index].m_Type = (DropItemType)(*it)["Type"].asInt();
+			gDropRefreshItems[index].m_Type = (DropItemType)(*it)["m_Type"].asInt();
 			gDropRefreshItems[index].m_RefreshTime = (*it)["m_RefreshTime"].asDouble();
 			gDropRefreshItems[index].m_RefreshCount = (*it)["m_RefreshCount"].asInt();
 			gDropRefreshItems[index].m_Duration = (*it)["m_Duration"].asDouble();
@@ -179,9 +181,16 @@ bool ChannelServer::Init()
 			gSkillInfos[index].m_Type = (DropItemType)type;
 			gSkillInfos[index].m_Duration = (*it)["m_Duration"].asDouble();
 			gSkillInfos[index].m_CoolDown = (*it)["m_CoolDown"].asDouble();
-			gSkillInfos[index].m_UseCount = (*it)["m_UseCount"].asDouble();
-			gSkillInfos[index].m_SpeedLimit = (*it)["m_SpeedLimit"].asDouble();
-			gSkillInfos[index].m_Range = (*it)["m_Range"].asDouble();
+			//gSkillInfos[index].m_UseToSelf = (*it)["m_UseToSelf"].asDouble();
+			//gSkillInfos[index].m_EffectTime= gSkillInfos[index].m_UseToSelf?0: (*it)["m_EffectTime"].asDouble();
+			Json::Value user_data = (*it)["m_UserData"];
+			if (!user_data.isNull())
+			{
+				for (int u = 0; u < user_data.size(); u++)
+				{
+					gSkillInfos[index].m_UserData[u] = user_data[u].asDouble();
+				}
+			}
 		}
 	}
 	else
