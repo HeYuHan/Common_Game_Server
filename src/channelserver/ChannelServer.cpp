@@ -6,7 +6,6 @@
 #include <json/json.h>
 #include <log.h>
 #include <tools.h>
-
 ChannelServer gChannelServer;
 //weapon
 WeaponInfo gWeaponList[WeaponType::WeaponCount - 1];
@@ -16,7 +15,26 @@ int gBrithPointsCount = 0;
 int gBrithPointIndex = 0;
 //dropitem
 
-
+static void ParseGameConfig(Json::Value json, const char* key,int &value)
+{
+	if (!json[key].isNull())value = json[key].asInt();
+}
+static void ParseGameConfig(Json::Value json, const char* key, float &value)
+{
+	if (!json[key].isNull())value = json[key].asDouble();
+}
+static void ParseGameConfig(Json::Value json, const char* key, char* str,int len)
+{
+	if (!json[key].isNull())
+	{
+		memset(str, 0, len);
+		int str_len = json[key].asString().size();
+		if (str_len < len)
+		{
+			strcpy(str, json[key].asString().c_str());
+		}
+	}
+}
 static void ChannnelUpdate(float time, void *channel)
 {
 	gChannelServer.Update(time);
@@ -52,21 +70,31 @@ void ChannelServer::OnUdpClientDisconnected(Packet* p)
 	UdpClientIterator it = m_UdpClientMap.find(p->guid.g);
 	if (it != m_UdpClientMap.end())
 	{
-		ChannelClient* c = it->second;
-		c->OnDisconnected();
-		m_ClientPool.Free(c->uid);
-		
-		
+		if (it->second)
+		{
+			it->second->Disconnect();
+		}
+		else
+		{
+			m_UdpClientMap.erase(it);
+			m_Socket->CloseConnection(p->systemAddress, true, HIGH_PRIORITY);
+		}
 	}
 }
 
 void ChannelServer::OnUdpAccept(Packet* p)
 {
 	ChannelClient *c = m_ClientPool.Allocate();
+	if (NULL == c)
+	{
+		CloseClient(p->systemAddress);
+		log_error("%s","allocate error client pool is full");
+		return;
+	}
 	c->InitServerSocket(m_Socket, p->systemAddress);
 	c->m_ConnectionID = p->guid.g;
 	m_UdpClientMap.insert(UdpClientMapPair(p->guid.g, c));
-	log_debug("new client connect %s", p->systemAddress.ToString());
+	log_debug("new client connect uid: %d ip:%s", c->uid,p->systemAddress.ToString());
 }
 
 void ChannelServer::OnKeepAlive(Packet * p)
@@ -98,7 +126,7 @@ bool ChannelServer::Init()
 		return false;
 	}
 	m_RoomList.clear();
-	if (!CreateUdpServer(m_Config.ip, m_Config.port, m_Config.pwd,m_Config.max_client))
+	if (!CreateUdpServer(m_Config.ip, m_Config.port, m_Config.pwd,1000))
 	{
 		return false;
 	}
@@ -118,13 +146,14 @@ bool ChannelServer::Init()
 			
 			Json::Value config = *it;
 			int type = (config["Type"].asInt());
-			WeaponInfo* info = &gWeaponList[type];
+			WeaponInfo* info = &gWeaponList[type-1];
 			info->Type = (WeaponType)type;
 			info->Damage = (config["Damage"].asInt());
 			info->AttackTime = config["AttackTime"].asDouble();
 			info->Ammunition = config["Ammunition"].asInt();
 			info->ReloadTime = config["ReloadTime"].asDouble();
 			info->Tracker = config["Tracker"].asBool();
+			info->Range = config["Range"].asDouble();
 		}
 	}
 	else
@@ -165,8 +194,8 @@ bool ChannelServer::Init()
 		for (Json::ValueIterator it = refresh_items.begin(); it != refresh_items.end(); it++, index++)
 		{
 			int type = (*it)["m_Type"].asInt();
-			index = type - 1;
-			gDropRefreshItems[index].m_Type = (DropItemType)(*it)["m_Type"].asInt();
+			index = type;
+			gDropRefreshItems[index].m_Type = (DropItemType)type;
 			gDropRefreshItems[index].m_RefreshTime = (*it)["m_RefreshTime"].asDouble();
 			gDropRefreshItems[index].m_RefreshCount = (*it)["m_RefreshCount"].asInt();
 			gDropRefreshItems[index].m_Duration = (*it)["m_Duration"].asDouble();
@@ -198,7 +227,16 @@ bool ChannelServer::Init()
 		log_error("parse skills config error path:%s", m_Config.data_config_path);
 		return false;
 	}
-
+	Json::Value game_config = root["GameConfig"];
+	if (!game_config.isNull())
+	{
+		ParseGameConfig(game_config, "m_MaxHp", m_Config.max_health);
+		ParseGameConfig(game_config, "m_MaxRoom", m_Config.max_room);
+		ParseGameConfig(game_config, "m_MaxClient", m_Config.max_client);
+		ParseGameConfig(game_config, "m_DropItem", m_Config.max_drop_item);
+		ParseGameConfig(game_config, "m_LogName", gLogger.name,64);
+		ParseGameConfig(game_config, "m_LogPath", gLogger.fileName,128);
+	}
 
 	return true;
 }
@@ -244,7 +282,7 @@ ChannelRoom * ChannelServer::CreateNewRoom()
 		ChannelRoom* room = *it;
 		if (room->m_RoomState== ROOM_STATE_IDLE)
 		{
-			log_debug("%s\n", "create new room in cache");
+			//log_debug("%s\n", "create new room in cache");
 			room->Init();
 			return room;
 		}
@@ -252,7 +290,7 @@ ChannelRoom * ChannelServer::CreateNewRoom()
 	ChannelRoom* room = m_RoomPool.Allocate();
 	if (room)
 	{
-		log_debug("%s\n", "create new room in memory");
+		//log_debug("%s\n", "create new room in memory");
 		room->Init();
 		m_RoomList.push_back(room);
 	}
@@ -269,11 +307,22 @@ void ChannelServer::FreeRoom(ChannelRoom * room)
 
 void ChannelServer::RemoveClient(ChannelClient * c)
 {
-	UdpClientIterator iter = m_UdpClientMap.find(c->m_ConnectionID);
+	RemoveClient(c->m_ConnectionID);
+}
+
+void ChannelServer::RemoveClient(uint64_t connectionID)
+{
+	UdpClientIterator iter = m_UdpClientMap.find(connectionID);
 	if (iter != m_UdpClientMap.end())
 	{
+		if (iter->second)
+		{
+			log_debug("remove client uid:%d", iter->second->uid);
+			m_ClientPool.Free(iter->second->uid);
+			
+		}
 		m_UdpClientMap.erase(iter);
-
+		
 	}
 }
 
@@ -320,9 +369,10 @@ bool ChannelServer::RandomDropPos(Vector3 & v3)
 
 ChannelConfig::ChannelConfig():
 	port(9530),
-	max_client(20),
-	max_room(10),
-	max_drop_item(100)
+	max_client(10),
+	max_room(1),
+	max_drop_item(100),
+	max_health(3000)
 {
 	strcpy(ip, "127.0.0.1");
 	strcpy(pwd, "channel");

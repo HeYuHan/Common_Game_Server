@@ -4,7 +4,6 @@
 #include <UdpConnection.h>
 #include <Timer.h>
 #include "ClientInfo.h"
-
 #define SORT_TO_CLIENT(__sort__) (short)(__sort__ + 1)
 #define SORT_TO_SERVER(__sort__) (short)(__sort__ - 1)
 class ChannelRoom;
@@ -87,12 +86,13 @@ private:
 	void ParseMoveData();
 	void ParseShoot();
 	void ParseHitCharacter();
+	void ParseExplodeCharacter();
 	void ParseGetDropItem();
 	void ParseUseSkill();
-	void ParseKillEffect();
+	void ParseKillSelf();
 public:
 	int GetSocore();
-	void Brith();
+	void Birth();
 	void Dead();
 	void InGameStateChange(byte state);
 	//void WriteCharacterInfo(ChannelClient* c);

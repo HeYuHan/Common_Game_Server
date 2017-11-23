@@ -20,6 +20,7 @@ public:
 	virtual void OnUdpClientMessage(Packet* p)=0;
 	virtual void OnUdpClientDisconnected(Packet* p)=0;
 	virtual void OnKeepAlive(Packet* p) = 0;
+	void CloseClient(SystemAddress &address);
 public:
 	RakPeerInterface *m_Socket;
 	Packet* m_MessagePacket;

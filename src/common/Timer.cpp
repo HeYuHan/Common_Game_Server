@@ -81,7 +81,20 @@ void Timer::timeout_cb(evutil_socket_t fd, short event, void * arg)
 		{
 			timeval current;
 			evutil_gettimeofday(&current, NULL);
-			t->m_CallBack(diff_time(current, t->m_LastTime), t->m_Arg);
+			float d_time = diff_time(current, t->m_LastTime);
+#ifdef _DEBUG
+			//下断点时跳过本次计时
+			if (d_time > t->m_Time * 2)
+			{
+				if (t->m_Loop)
+				{
+					t->Begin();
+				}
+				return;
+			}
+#endif // _DEBUG
+
+			t->m_CallBack(d_time, t->m_Arg);
 			//evutil_gettimeofday(&t->m_LastTime, NULL);
 			if (t->m_Loop)
 			{

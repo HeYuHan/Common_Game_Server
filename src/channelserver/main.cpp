@@ -9,20 +9,14 @@ enum
 	channel_port,
 	password,
 	max_client,
-	max_room,
-	log_path,
-	log_name,
 	data_path,
 };
 struct option long_options[]=
 {
-	{"log_name",1,0,log_path },
-	{"log_path",1,0,log_name },
 	{"ip",1,0,channel_ip },
 	{"port",1,0,channel_port },
 	{"password",1,0,password },
 	{"max_client",1,0,max_client },
-	{"max_room",1,0,max_room },
 	{"data_path",1,0,data_path },
 };
 
@@ -35,11 +29,6 @@ int main(int argc,char **argv)
 		if (option <= 0)break;
 		switch (option)
 		{
-		case log_name:
-			strcpy(gLogger.name, optarg);
-		case log_path:
-			strcpy(gLogger.fileName, optarg);
-			break;
 		case data_path:
 			strcpy(gChannelServer.m_Config.data_config_path, optarg);
 			break;
@@ -54,9 +43,6 @@ int main(int argc,char **argv)
 			break;
 		case password:
 			strcpy(gChannelServer.m_Config.pwd, optarg);
-			break;
-		case max_room:
-			gChannelServer.m_Config.max_room = atoi(optarg);
 			break;
 		case '?':
 			return 1;

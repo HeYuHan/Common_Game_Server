@@ -13,7 +13,7 @@
 #include <UdpListener.h>
 #include<vector>
 #include <Timer.h>
-#define MAX_DROP_POINT_COUNT 20
+#define MAX_DROP_POINT_COUNT 40
 using namespace RakNet;
 class ChannelRoom;
 class ChannelClient;
@@ -32,6 +32,7 @@ struct ChannelConfig
 	int max_client;
 	int max_room;
 	int max_drop_item;
+	int max_health;
 public:
 	ChannelConfig();
 };
@@ -51,6 +52,7 @@ public:
 	ChannelRoom* CreateNewRoom();
 	void FreeRoom(ChannelRoom* room);
 	void RemoveClient(ChannelClient* c);
+	void RemoveClient(uint64_t connectionID);
 	bool GetWeaponInfo(WeaponInfo &info,WeaponType type);
 	bool GetSkillInfo(SkillInfo &info, SkillType type);
 	bool RandomBrithPos(Vector3 &v3);

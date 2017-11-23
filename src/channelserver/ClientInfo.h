@@ -28,6 +28,7 @@ struct DropItemRefreshInfo
 	float m_Duration;
 	float m_StartTime;
 
+
 };
 struct DropItemInfo
 {
@@ -77,6 +78,7 @@ struct WeaponInfo
 	int Ammunition;
 	float ReloadTime;
 	bool Tracker;
+	float Range;
 };
 class CharacterInfo
 {

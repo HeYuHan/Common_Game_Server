@@ -191,6 +191,8 @@ void ChannelRoom::GameToBalance()
 
 void ChannelRoom::BroadCastCreateDropItem(DropItemInfo * info)
 {
+	Vector3 pos(0, 0, 0);
+	gChannelServer.RandomDropPos(pos);
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
 		ChannelClient *client = *iterClient;
@@ -200,8 +202,6 @@ void ChannelRoom::BroadCastCreateDropItem(DropItemInfo * info)
 			client->WriteByte(SM_INGAME_CREATE_DROPITEM);
 			client->WriteInt(info->uid);
 			client->WriteByte(info->m_Type);
-			Vector3 pos(0, 0, 0);
-			gChannelServer.RandomDropPos(pos);
 			client->WriteVector3(pos);
 			client->EndWrite();
 		}
@@ -364,6 +364,7 @@ void ChannelRoom::ClientLeave(ChannelClient * c)
 {
 	if (c->m_RoomID == uid)
 	{
+		c->m_RoomID = 0;
 		if (c->m_InGameInfo)
 		{
 			//CleanCharacterIngameInfo(*(c->m_InGameInfo));
@@ -378,7 +379,7 @@ void ChannelRoom::ClientLeave(ChannelClient * c)
 			if (client->uid == c->uid)
 			{
 				iter = m_ClientList.erase(iter);
-				log_debug("remove client in room uid:%d", c->uid);
+				
 			}
 			else
 			{
@@ -409,7 +410,7 @@ void ChannelRoom::StartGame()
 		ChannelClient *client = *iterClient;
 		if (client->m_GameState == GAME_STATE_IN_GAME)
 		{
-			client->Brith();
+			client->Birth();
 		}
 	}
 }

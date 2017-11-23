@@ -34,7 +34,7 @@ bool UdpListener::CreateUdpServer(const char * ip, int port, const char* pwd, in
 	bool b = m_Socket->Startup(max_client, socketDescriptors, 1) == RakNet::RAKNET_STARTED;
 	if (b)
 	{
-		m_Socket->SetMaximumIncomingConnections(4);
+		m_Socket->SetMaximumIncomingConnections(max_client);
 		m_Socket->SetOccasionalPing(true);
 		m_Socket->SetUnreliableTimeout(1000);
 		return true;
@@ -65,7 +65,7 @@ void UdpListener::Update()
 		case ID_DISCONNECTION_NOTIFICATION:
 			// Connection lost normally
 			OnUdpClientDisconnected(m_MessagePacket);
-			printf("ID_DISCONNECTION_NOTIFICATION from %s\n", m_MessagePacket->systemAddress.ToString(true));;
+			//printf("ID_DISCONNECTION_NOTIFICATION from %s\n", m_MessagePacket->systemAddress.ToString(true));;
 			break;
 
 
@@ -100,7 +100,7 @@ void UdpListener::Update()
 			// Couldn't deliver a reliable packet - i.e. the other system was abnormally
 			// terminated
 			OnUdpClientDisconnected(m_MessagePacket);
-			printf("ID_CONNECTION_LOST from %s\n", m_MessagePacket->systemAddress.ToString(true));;
+			//printf("ID_CONNECTION_LOST from %s\n", m_MessagePacket->systemAddress.ToString(true));;
 			break;
 		case KEEP_ALIVE_MSG:
 			OnKeepAlive(m_MessagePacket);
@@ -120,4 +120,9 @@ void UdpListener::Update()
 		}
 
 	}
+}
+
+void UdpListener::CloseClient(SystemAddress & address)
+{
+	m_Socket->CloseConnection(address, true, HIGH_PRIORITY);
 }

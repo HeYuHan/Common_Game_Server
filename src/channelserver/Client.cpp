@@ -87,6 +87,12 @@ void ChannelClient::OnMessage()
 	case CM_INGAME_USE_SKILL:
 		ParseUseSkill();
 		break;
+	case CM_INGAME_KILL_SELF:
+		ParseKillSelf();
+		break;
+	case CM_INGMAE_EXPLODE_CHARACTER:
+		ParseExplodeCharacter();
+		break;
 	}
 	OnKeepAlive();
 }
@@ -121,7 +127,7 @@ void ChannelClient::IngameUpdate(float time)
 			m_InGameInfo->m_BrithTime -= time;
 			if (m_InGameInfo->m_BrithTime <= 0)
 			{
-				Brith();
+				Birth();
 			}
 		}
 	}
@@ -206,6 +212,7 @@ void ChannelClient::ReadCharacterInfo()
 {
 	ReadString(m_CharacterInfo.Name, sizeof(m_CharacterInfo.Name));
 	ReadInt(m_CharacterInfo.MaxHP);
+	m_CharacterInfo.MaxHP = gChannelServer.m_Config.max_health;
 	ReadyGameEnter();
 
 }
@@ -268,6 +275,11 @@ void ChannelClient::ParseJoinGame()
 			room->LoadingGame();
 		}
 	}
+	else
+	{
+		log_error("create room error %d:", uid);
+		Disconnect();
+	}
 }
 
 void ChannelClient::ParseGameReady()
@@ -285,7 +297,7 @@ void ChannelClient::ParseGameReady()
 		if (m_OwnerRoom->m_RoomState == ROOM_STATE_PLAYING)
 		{
 			m_OwnerRoom->ClientJoinInGame(this);
-			Brith();
+			Birth();
 		}
 	}
 	else
@@ -395,7 +407,7 @@ void ChannelClient::ParseHitCharacter()
 	ReadByte(sort);
 	ChannelClient* c = gChannelServer.m_ClientPool.Get(hit_uid);
 	WeaponInfo* weapon = GetWeapon(sort);
-	if (c && weapon)
+	if (c && weapon && hit_uid != uid)
 	{
 		if (c->m_InGameInfo->m_Dead)return;
 		//´òµ½¶ÜÉÏÁË,µÖµ²¹¥»÷
@@ -404,6 +416,50 @@ void ChannelClient::ParseHitCharacter()
 			return;
 		}
 		c->m_InGameInfo->m_HP -= weapon->Damage;
+		if (c->m_InGameInfo->m_HP <= 0)
+		{
+			c->Dead();
+			m_InGameInfo->m_KillCount += 1;
+			InGameStateChange(INGMAE_STATE_CHANGE_KILLCOUNT);
+		}
+		else
+		{
+			c->InGameStateChange(INGAME_STATE_CHANGE_HEALTH);
+		}
+	}
+}
+
+void ChannelClient::ParseExplodeCharacter()
+{
+	int hit_uid = 0;
+	byte sort = 0;
+	short dis = 0;
+	ReadInt(hit_uid);
+	ReadByte(sort);
+	ReadShort(dis);
+	ChannelClient* c = gChannelServer.m_ClientPool.Get(hit_uid);
+	WeaponInfo* weapon = GetWeapon(sort);
+	if (c && weapon && hit_uid != uid)
+	{
+		if (weapon->Range == 0)
+		{
+			log_error("%d weapon range is zero", sort);
+			return;
+		}
+		if (c->m_InGameInfo->m_Dead)return;
+		//´òµ½¶ÜÉÏÁË,µÖµ²¹¥»÷
+		if ((c->m_InGameInfo->m_BuffList[BUFF_TYPE_SHIELD].m_UserData[0]--) > 0)
+		{
+			return;
+		}
+		int damage = weapon->Damage;
+		float d_dis = weapon->Range / 3.0f;
+		if (dis > d_dis)
+		{
+			damage = (1 - (dis - d_dis) / (weapon->Range - d_dis))*weapon->Damage;
+			if (damage < 0)damage = 0;
+		}
+		c->m_InGameInfo->m_HP -= damage;
 		if (c->m_InGameInfo->m_HP <= 0)
 		{
 			c->Dead();
@@ -471,7 +527,7 @@ void ChannelClient::ParseUseSkill()
 				if (uid != client->uid && client->m_GameState == GAME_STATE_IN_GAME)
 				{
 					float dis = Length(client->m_Position - m_Position);
-					if (dis <= skill->m_UserData[1])
+					if (dis <= skill->m_UserData[0])
 					{
 						BufferInfo *buff = &client->m_InGameInfo->m_BuffList[BUFF_TYPE_PLASMA];
 						buff->m_Enabled = true;
@@ -490,17 +546,12 @@ void ChannelClient::ParseUseSkill()
 	}
 }
 
-void ChannelClient::ParseKillEffect()
+void ChannelClient::ParseKillSelf()
 {
-	/*int to_uid = 0;
-	ReadInt(to_uid);
-	byte type = 0;
-	ReadByte(type);
-	ChannelClient* c = gChannelServer.m_ClientPool.Get(uid);
-	if (c)
+	if (!m_InGameInfo->m_Dead)
 	{
-		m_OwnerRoom->BroadCastSkillEffect(uid, c->uid, type);
-	}*/
+		Dead();
+	}
 }
 
 int ChannelClient::GetSocore()
@@ -508,7 +559,7 @@ int ChannelClient::GetSocore()
 	return m_InGameInfo->m_KillCount + m_InGameInfo->m_DiamondCount;
 }
 
-void ChannelClient::Brith()
+void ChannelClient::Birth()
 {
 	if (m_InGameInfo->m_PlayTime == 0)m_InGameInfo->m_PlayTime = m_OwnerRoom->m_GameTime;
 	m_InGameInfo->m_HP = m_CharacterInfo.MaxHP;
@@ -522,7 +573,7 @@ void ChannelClient::Brith()
 			if (client->m_GameState == GAME_STATE_IN_GAME)
 			{
 				client->BeginWrite();
-				client->WriteByte(SM_INGAME_BRITH);
+				client->WriteByte(SM_INGAME_BIRTH);
 				client->WriteInt(uid);
 				client->WriteInt(m_InGameInfo->m_HP);
 				Vector3 pos(0,0,0);
@@ -537,6 +588,7 @@ void ChannelClient::Brith()
 
 void ChannelClient::Dead()
 {
+	m_InGameInfo->m_HP = 0;
 	m_InGameInfo->m_Dead = true;
 	m_InGameInfo->m_BrithTime = BRITH_TIME;
 	if (m_OwnerRoom)
@@ -549,6 +601,7 @@ void ChannelClient::Dead()
 				client->BeginWrite();
 				client->WriteByte(SM_INGAME_CHARACTER_DEAD);
 				client->WriteInt(uid);
+				client->WriteFloat(BRITH_TIME);
 				client->EndWrite();
 			}
 		}
@@ -605,6 +658,7 @@ void ChannelClient::WriteCharacterInfo(NetworkStream * stream, ChannelClient * c
 	stream->WriteInt(c->m_CharacterInfo.MaxHP);
 	stream->WriteVector3(c->m_Position);
 	stream->WriteShortQuaternion(c->m_Rotation);
+	stream->WriteBool(c->m_InGameInfo->m_Dead);
 	stream->WriteShort(WeaponCount - 1);
 	for (int i = 0; i < WeaponCount-1; i++)
 	{
@@ -614,6 +668,7 @@ void ChannelClient::WriteCharacterInfo(NetworkStream * stream, ChannelClient * c
 		stream->WriteFloat(weapon.Damage);
 		stream->WriteInt(weapon.Ammunition);
 		stream->WriteBool(weapon.Tracker);
+		stream->WriteFloat(weapon.Range);
 	}
 	stream->WriteShort(DROP_ITEM_COUNT);
 	for (int i = DROP_ITEM_START; i < DROP_ITEM_COUNT; i++)

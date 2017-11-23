@@ -29,7 +29,7 @@ public:
 	Category& GetLogger();
 public:
 	char name[64];
-	char fileName[256];
+	char fileName[128];
 private:
 	Category* logger;
 
