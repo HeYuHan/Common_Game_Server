@@ -1,6 +1,7 @@
 #include "NetworkConnection.h"
 #include<string.h>
 #include "log.h"
+#define FLOAT_RATE 100.0f
 NetworkStream::NetworkStream(int send_buff_size, int read_buff_size)
 {
 	read_buff = new char[read_buff_size];
@@ -110,7 +111,8 @@ void NetworkStream::WriteUInt(uint data)
 }
 void NetworkStream::WriteFloat(float data)
 {
-	WriteData(&data, sizeof(float));
+	int int_data = (int)(data*FLOAT_RATE);
+	WriteData(&int_data, sizeof(int));
 }
 void NetworkStream::WriteLong(long data)
 {
@@ -212,7 +214,9 @@ void NetworkStream::ReadUInt(uint &data)
 }
 void NetworkStream::ReadFloat(float &data)
 {
-	ReadData(&data, sizeof(float));
+	int ret = 0;
+	ReadInt(ret);
+	data = ret / FLOAT_RATE;
 }
 void NetworkStream::ReadLong(long &data)
 {
