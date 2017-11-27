@@ -28,6 +28,8 @@ void ChannelRoom::Init()
 {
 	memset(&m_CharacterInfoArray, 0, sizeof(m_CharacterInfoArray));
 	memset(&m_DropItemTimers, 0, sizeof(m_DropItemTimers));
+	memset(m_DropItemIndex, 0, gChannelServer.gDropRefreshPointsCount);
+	memset(&m_DropItemIndex[gChannelServer.gDropRefreshPointsCount], 1, MAX_DROP_POINT_COUNT- gChannelServer.gDropRefreshPointsCount);
 	m_LoadingTime = 0;
 	m_RoomState = ROOM_STATE_WAIT;
 	m_GameTime = 0;
@@ -90,7 +92,7 @@ void ChannelRoom::PlayingUpdate(float time)
 		GameToBalance();
 	}
 	//drop item
-	for (int i = DROP_ITEM_START; i < DROP_ITEM_COUNT; i++)
+	for (int i = DROP_ITEM_START;m_DropItemList.size() <= gChannelServer.gDropRefreshPointsCount && i < DROP_ITEM_COUNT; i++)
 	{
 		DropItemRefreshInfo &refresh = gChannelServer.gDropRefreshItems[i];
 		DropItemTimer &timer = m_DropItemTimers[i];
@@ -111,6 +113,11 @@ void ChannelRoom::PlayingUpdate(float time)
 						//gChannelServer.GetDropItemInfo(*info, refresh.m_Type);
 						BroadCastCreateDropItem(info);
 					}
+					else
+					{
+						break;
+					}
+
 				}
 			}
 		}
@@ -175,7 +182,7 @@ void ChannelRoom::WriteBlanceData(NetworkStream * stream)
 void ChannelRoom::GameToBalance()
 {
 	m_RoomState = ROOM_STATE_BALANCE;
-	m_BalanceWaitTime = MAX_BLANCE_TIME;
+	m_BalanceWaitTime = gChannelServer.m_Config.max_blance_time;
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
 		ChannelClient *client = *iterClient;
@@ -191,8 +198,6 @@ void ChannelRoom::GameToBalance()
 
 void ChannelRoom::BroadCastCreateDropItem(DropItemInfo * info)
 {
-	Vector3 pos(0, 0, 0);
-	gChannelServer.RandomDropPos(pos);
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
 		ChannelClient *client = *iterClient;
@@ -202,7 +207,7 @@ void ChannelRoom::BroadCastCreateDropItem(DropItemInfo * info)
 			client->WriteByte(SM_INGAME_CREATE_DROPITEM);
 			client->WriteInt(info->uid);
 			client->WriteByte(info->m_Type);
-			client->WriteVector3(pos);
+			client->WriteVector3(info->m_Position);
 			client->EndWrite();
 		}
 	}
@@ -297,13 +302,34 @@ void ChannelRoom::LeaveBalance()
 DropItemInfo * ChannelRoom::CreateDropItem()
 {
 	DropItemInfo *info = gChannelServer.m_DropItemPool.Allocate();
-	if (info)m_DropItemList.push_back(info);
+	if (info)
+	{
+		m_DropItemList.push_back(info);
+		info->m_PositionIndex = -1;
+		for (int i = 0; i < gChannelServer.gDropRefreshPointsCount; i++)
+		{
+			if (m_DropItemIndex[i] == 0)
+			{
+				m_DropItemIndex[i] = 1;
+				info->m_PositionIndex = i;
+				gChannelServer.GetDropItemPos(info->m_Position, i);
+			}
+		}
+		if (info->m_PositionIndex == -1)
+		{
+			gChannelServer.RandomDropPos(info->m_Position);
+		}
+	}
 	return info;
 }
 
 void ChannelRoom::RemoveDropItem(DropItemInfo * info)
 {
 	BroadCastRemoveDropItem(info);
+	if (info->m_PositionIndex > 0&&info->m_PositionIndex<gChannelServer.gDropRefreshPointsCount)
+	{
+		m_DropItemIndex[info->m_PositionIndex] = 0;
+	}
 	std::vector<DropItemInfo*>::iterator it = find(m_DropItemList.begin(), m_DropItemList.end(), info);
 	if (it != m_DropItemList.end())
 	{
@@ -397,14 +423,31 @@ void ChannelRoom::ClientLeave(ChannelClient * c)
 		{
 			gChannelServer.FreeRoom(this);
 		}
+		//ÇÐ»»·¿Ö÷
+		else if (m_RoomState == ROOM_STATE_WAIT && c->m_IsRoomHost)
+		{
+			ChannelClient *new_host = m_ClientList.front();
+			if (new_host)
+			{
+				new_host->m_IsRoomHost = true;
+				FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
+				{
+					ChannelClient *client = *iterClient;
+					client->BeginWrite();
+					client->WriteByte(SM_ROOM_HOST_CHANGE);
+					client->WriteInt(new_host->uid);
+					client->EndWrite();
+				}
+			}
+		}
 	}
 }
 
 void ChannelRoom::StartGame()
 {
 	m_RoomState = ROOM_STATE_PLAYING;
-	m_GameTime = MAX_GAME_TIME;
-	m_LastGameTime = MAX_GAME_TIME;
+	m_GameTime = gChannelServer.m_Config.max_game_time;
+	m_LastGameTime = m_GameTime;
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
 		ChannelClient *client = *iterClient;

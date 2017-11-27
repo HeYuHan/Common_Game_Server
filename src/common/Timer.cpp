@@ -84,7 +84,7 @@ void Timer::timeout_cb(evutil_socket_t fd, short event, void * arg)
 			float d_time = diff_time(current, t->m_LastTime);
 #ifdef _DEBUG
 			//下断点时跳过本次计时
-			if (d_time > t->m_Time * 2)
+			if (d_time > t->m_Time * 10)
 			{
 				if (t->m_Loop)
 				{

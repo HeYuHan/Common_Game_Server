@@ -323,9 +323,9 @@ void ChannelClient::ParseMoveData()
 {
 	if (m_OwnerRoom)
 	{
+		char* read_start = read_position;
 		byte delta = 0;
 		byte flag = 0;
-
 		ReadByte(delta);
 		ReadByte(flag);
 
@@ -351,18 +351,7 @@ void ChannelClient::ParseMoveData()
 				client->WriteInt(uid);
 				client->WriteByte(delta);
 				client->WriteByte(flag);
-				if ((flag & SYNC_TRANSFROM_POSITION) > 0)
-				{
-					client->WriteVector3(m_Position);
-				}
-				if ((flag & SYNC_TRANSFROM_ROTATION) > 0)
-				{
-					client->WriteShortQuaternion(m_Rotation);
-				}
-				if ((flag & SYNC_TRANSFROM_VELOCITY) > 0)
-				{
-					client->WriteVector3(m_Velocity);
-				}
+				client->WriteData(read_start, read_end - read_start);
 				client->EndWrite();
 			}
 
@@ -564,6 +553,8 @@ void ChannelClient::Birth()
 	if (m_InGameInfo->m_PlayTime == 0)m_InGameInfo->m_PlayTime = m_OwnerRoom->m_GameTime;
 	m_InGameInfo->m_HP = m_CharacterInfo.MaxHP;
 	m_InGameInfo->m_Dead = false;
+	gChannelServer.RandomBrithPos(m_Position);
+	m_Rotation = Quaternion(0, 0, 0, 1);
 	memcpy(&m_InGameInfo->m_SkillList, &gChannelServer.gSkillInfos, sizeof(m_InGameInfo->m_SkillList));
 	if (m_OwnerRoom)
 	{
@@ -576,9 +567,8 @@ void ChannelClient::Birth()
 				client->WriteByte(SM_INGAME_BIRTH);
 				client->WriteInt(uid);
 				client->WriteInt(m_InGameInfo->m_HP);
-				Vector3 pos(0,0,0);
-				gChannelServer.RandomBrithPos(pos);
-				client->WriteVector3(pos);
+				client->WriteVector3(m_Position);
+				client->WriteShortQuaternion(m_Rotation);
 				client->EndWrite();
 			}
 		}
@@ -590,7 +580,7 @@ void ChannelClient::Dead()
 {
 	m_InGameInfo->m_HP = 0;
 	m_InGameInfo->m_Dead = true;
-	m_InGameInfo->m_BrithTime = BRITH_TIME;
+	m_InGameInfo->m_BrithTime = gChannelServer.m_Config.rebirth_time;
 	if (m_OwnerRoom)
 	{
 		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
@@ -601,7 +591,7 @@ void ChannelClient::Dead()
 				client->BeginWrite();
 				client->WriteByte(SM_INGAME_CHARACTER_DEAD);
 				client->WriteInt(uid);
-				client->WriteFloat(BRITH_TIME);
+				client->WriteFloat(m_InGameInfo->m_BrithTime);
 				client->EndWrite();
 			}
 		}
@@ -669,6 +659,7 @@ void ChannelClient::WriteCharacterInfo(NetworkStream * stream, ChannelClient * c
 		stream->WriteInt(weapon.Ammunition);
 		stream->WriteBool(weapon.Tracker);
 		stream->WriteFloat(weapon.Range);
+		stream->WriteFloat(weapon.Speed);
 	}
 	stream->WriteShort(DROP_ITEM_COUNT);
 	for (int i = DROP_ITEM_START; i < DROP_ITEM_COUNT; i++)

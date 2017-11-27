@@ -2,6 +2,7 @@
 #ifndef __CLIENTINFO_H__
 #define __CLIENTINFO_H__
 #include <common.h>
+#include <Vector3.h>
 typedef enum
 {
 	WeaponNone=0,
@@ -35,6 +36,8 @@ struct DropItemInfo
 	uint uid;
 	DropItemType m_Type;
 	float m_Duration;
+	int m_PositionIndex;
+	Vector3 m_Position;
 
 };
 struct SkillInfo
@@ -79,6 +82,7 @@ struct WeaponInfo
 	float ReloadTime;
 	bool Tracker;
 	float Range;
+	float Speed;
 };
 class CharacterInfo
 {

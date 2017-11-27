@@ -11,6 +11,7 @@
             "Ammunition": 50,
             "ReloadTime": 3,
             "Tracker": false,
+            "Speed":100,
             "Range": 10
         },
         {
@@ -21,6 +22,7 @@
             "Ammunition": 1,
             "ReloadTime": 10,
             "Tracker": true,
+            "Speed":16,
             "Range": 10
         },
         {
@@ -45,26 +47,26 @@
             {
                 "m_Type":1,
                 "m_Desc":"能量水晶",
-                "m_RefreshTime":10,
-                "m_RefreshCount":1,
+                "m_RefreshTime":20,
+                "m_RefreshCount":10,
                 "m_Duration":13,
                 "m_StartTime":3
             },
             {
                 "m_Type":2,
                 "m_Desc":"护盾",
-                "m_RefreshTime":10,
-                "m_RefreshCount":1,
+                "m_RefreshTime":35,
+                "m_RefreshCount":4,
                 "m_Duration":15,
-                "m_StartTime":5
+                "m_StartTime":30
             },
             {
                 "m_Type":3,
                 "m_Desc":"电磁风暴",
-                "m_RefreshTime":10,
-                "m_RefreshCount":1,
-                "m_Duration":2,
-                "m_StartTime":5
+                "m_RefreshTime":30,
+                "m_RefreshCount":3,
+                "m_Duration":10,
+                "m_StartTime":50
             }
         ],
         "Skills":[
@@ -79,15 +81,15 @@
                 "m_Type":2,
                 "m_Desc":"护盾",
                 "m_Duration":10,
-                "m_CoolDown":10,
+                "m_CoolDown":50,
                 "m_UserData":[5]
             },
             {
                 "m_Type":3,
                 "m_Desc":"电磁风暴",
-                "m_Duration":10,
-                "m_CoolDown":10,
-                "m_UserData":[10]
+                "m_Duration":1,
+                "m_CoolDown":50,
+                "m_UserData":[20]
             }
         ]
     }

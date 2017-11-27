@@ -1,1 +1,3 @@
-
+#define ROOM_MAX_CLIENT 10
+#define LOADING_WAIT_TIME 1
+#define MAX_DROP_POINT_COUNT 64

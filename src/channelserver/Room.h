@@ -3,11 +3,7 @@
 #include <vector>
 #include<Timer.h>
 #include "ClientInfo.h"
-#define MAX_BLANCE_TIME 10
-#define MAX_GAME_TIME 60*5
-#define ROOM_MAX_CLIENT 10
-#define LOADING_WAIT_TIME 1
-#define BRITH_TIME 5
+#include "pch.h"
 class ChannelClient;
 class NetworkStream;
 typedef enum
@@ -60,7 +56,6 @@ public:
 	void RemoveDropItem(DropItemInfo* info);
 public:
 	void WriteBlanceData(NetworkStream * stream);
-	
 public:
 	uint uid;
 	RoomState m_RoomState;
@@ -72,6 +67,7 @@ public:
 	float m_BalanceWaitTime;
 	Timer m_UpdateTimer;
 	DropItemTimer m_DropItemTimers[DROP_ITEM_COUNT];
+	char m_DropItemIndex[MAX_DROP_POINT_COUNT];
 	std::vector<DropItemInfo*> m_DropItemList;
 	CharacterInGameInfo m_CharacterInfoArray[ROOM_MAX_CLIENT];
 };

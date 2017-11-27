@@ -38,6 +38,8 @@ typedef short int16;
 typedef unsigned long int ulong;
 typedef unsigned short int ushort;
 typedef unsigned int uint;
+typedef long long llong;
+typedef unsigned long long ullong;
 
 #ifdef _WIN32
 #define USING_VECOTR using namespace std;

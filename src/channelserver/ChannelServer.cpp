@@ -15,15 +15,19 @@ int gBrithPointsCount = 0;
 int gBrithPointIndex = 0;
 //dropitem
 
-static void ParseGameConfig(Json::Value json, const char* key,int &value)
+static void ParseJsonValue(Json::Value json, const char* key,int &value)
 {
 	if (!json[key].isNull())value = json[key].asInt();
 }
-static void ParseGameConfig(Json::Value json, const char* key, float &value)
+static void ParseJsonValue(Json::Value json, const char* key, float &value)
 {
 	if (!json[key].isNull())value = json[key].asDouble();
 }
-static void ParseGameConfig(Json::Value json, const char* key, char* str,int len)
+static void ParseJsonValue(Json::Value json, const char* key, bool &value)
+{
+	if (!json[key].isNull())value = json[key].asBool();
+}
+static void ParseJsonValue(Json::Value json, const char* key, char* str,int len)
 {
 	if (!json[key].isNull())
 	{
@@ -109,27 +113,7 @@ void ChannelServer::OnKeepAlive(Packet * p)
 
 bool ChannelServer::Init()
 {
-	if (!BaseServer::Init())
-	{
-		return false;
-	}
-	if (!m_ClientPool.Initialize(m_Config.max_client))
-	{
-		return false;
-	}
-	if (!m_RoomPool.Initialize(m_Config.max_room))
-	{
-		return false;
-	}
-	if (!m_DropItemPool.Initialize(m_Config.max_drop_item))
-	{
-		return false;
-	}
-	m_RoomList.clear();
-	if (!CreateUdpServer(m_Config.ip, m_Config.port, m_Config.pwd,1000))
-	{
-		return false;
-	}
+	
 	//parse data config
 	Json::Value root;
 	bool ret = ReadJson(root, m_Config.data_config_path);
@@ -148,12 +132,13 @@ bool ChannelServer::Init()
 			int type = (config["Type"].asInt());
 			WeaponInfo* info = &gWeaponList[type-1];
 			info->Type = (WeaponType)type;
-			info->Damage = (config["Damage"].asInt());
-			info->AttackTime = config["AttackTime"].asDouble();
-			info->Ammunition = config["Ammunition"].asInt();
-			info->ReloadTime = config["ReloadTime"].asDouble();
-			info->Tracker = config["Tracker"].asBool();
-			info->Range = config["Range"].asDouble();
+			ParseJsonValue(config, "Damage", info->Damage);
+			ParseJsonValue(config, "AttackTime", info->AttackTime);
+			ParseJsonValue(config, "Ammunition", info->Ammunition);
+			ParseJsonValue(config, "ReloadTime", info->ReloadTime);
+			ParseJsonValue(config, "Tracker", info->Tracker);
+			ParseJsonValue(config, "Range", info->Range);
+			ParseJsonValue(config, "Speed", info->Speed);
 		}
 	}
 	else
@@ -210,8 +195,6 @@ bool ChannelServer::Init()
 			gSkillInfos[index].m_Type = (DropItemType)type;
 			gSkillInfos[index].m_Duration = (*it)["m_Duration"].asDouble();
 			gSkillInfos[index].m_CoolDown = (*it)["m_CoolDown"].asDouble();
-			//gSkillInfos[index].m_UseToSelf = (*it)["m_UseToSelf"].asDouble();
-			//gSkillInfos[index].m_EffectTime= gSkillInfos[index].m_UseToSelf?0: (*it)["m_EffectTime"].asDouble();
 			Json::Value user_data = (*it)["m_UserData"];
 			if (!user_data.isNull())
 			{
@@ -230,14 +213,36 @@ bool ChannelServer::Init()
 	Json::Value game_config = root["GameConfig"];
 	if (!game_config.isNull())
 	{
-		ParseGameConfig(game_config, "m_MaxHp", m_Config.max_health);
-		ParseGameConfig(game_config, "m_MaxRoom", m_Config.max_room);
-		ParseGameConfig(game_config, "m_MaxClient", m_Config.max_client);
-		ParseGameConfig(game_config, "m_DropItem", m_Config.max_drop_item);
-		ParseGameConfig(game_config, "m_LogName", gLogger.name,64);
-		ParseGameConfig(game_config, "m_LogPath", gLogger.fileName,128);
+		ParseJsonValue(game_config, "m_MaxHp", m_Config.max_health);
+		ParseJsonValue(game_config, "m_MaxRoom", m_Config.max_room);
+		ParseJsonValue(game_config, "m_MaxClient", m_Config.max_client);
+		ParseJsonValue(game_config, "m_MaxGameTime", m_Config.max_game_time);
+		ParseJsonValue(game_config, "m_MaxBlanceTime", m_Config.max_blance_time);
+		ParseJsonValue(game_config, "m_RebirthTime", m_Config.rebirth_time);
+		ParseJsonValue(game_config, "m_LogName", gLogger.name,64);
+		ParseJsonValue(game_config, "m_LogPath", gLogger.fileName,128);
 	}
-
+	if (!BaseServer::Init())
+	{
+		return false;
+	}
+	if (!m_ClientPool.Initialize(m_Config.max_client))
+	{
+		return false;
+	}
+	if (!m_RoomPool.Initialize(m_Config.max_room))
+	{
+		return false;
+	}
+	if (!m_DropItemPool.Initialize(gDropRefreshPointsCount))
+	{
+		return false;
+	}
+	m_RoomList.clear();
+	if (!CreateUdpServer(m_Config.ip, m_Config.port, m_Config.pwd, 1000))
+	{
+		return false;
+	}
 	return true;
 }
 
@@ -366,13 +371,22 @@ bool ChannelServer::RandomDropPos(Vector3 & v3)
 	return true;
 }
 
+bool ChannelServer::GetDropItemPos(Vector3 & v3, int index)
+{
+	if (index < 0 || index >= gDropRefreshPointsCount)return false;
+	v3 = gDropRefreshPoints[index];
+	return true;
+}
+
 
 ChannelConfig::ChannelConfig():
 	port(9530),
 	max_client(10),
 	max_room(1),
-	max_drop_item(100),
-	max_health(3000)
+	max_health(3000),
+	max_game_time(60*5),
+	max_blance_time(30),
+	rebirth_time(5)
 {
 	strcpy(ip, "127.0.0.1");
 	strcpy(pwd, "channel");

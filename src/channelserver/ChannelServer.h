@@ -13,16 +13,16 @@
 #include <UdpListener.h>
 #include<vector>
 #include <Timer.h>
-#define MAX_DROP_POINT_COUNT 40
+#include "pch.h"
 using namespace RakNet;
 class ChannelRoom;
 class ChannelClient;
 class Timer;
 typedef std::vector<ChannelClient*>::iterator ClientIterator;
 typedef std::vector<ChannelRoom*>::iterator RoomIterator;
-typedef std::pair<uint64, ChannelClient*> UdpClientMapPair;
-typedef std::tr1::unordered_map<uint64, ChannelClient*> UdpClientMap;
-typedef std::tr1::unordered_map<uint64, ChannelClient*>::iterator UdpClientIterator;
+typedef std::pair<uint64_t, ChannelClient*> UdpClientMapPair;
+typedef std::tr1::unordered_map<uint64_t, ChannelClient*> UdpClientMap;
+typedef std::tr1::unordered_map<uint64_t, ChannelClient*>::iterator UdpClientIterator;
 struct ChannelConfig
 {
 	char ip[64];
@@ -31,8 +31,10 @@ struct ChannelConfig
 	int port;
 	int max_client;
 	int max_room;
-	int max_drop_item;
 	int max_health;
+	int max_game_time;
+	int max_blance_time;
+	int rebirth_time;
 public:
 	ChannelConfig();
 };
@@ -57,6 +59,7 @@ public:
 	bool GetSkillInfo(SkillInfo &info, SkillType type);
 	bool RandomBrithPos(Vector3 &v3);
 	bool RandomDropPos(Vector3 &v3);
+	bool GetDropItemPos(Vector3 &v3, int index);
 public:
 	ChannelConfig m_Config;
 	ObjectPool<ChannelClient> m_ClientPool;
