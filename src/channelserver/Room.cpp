@@ -5,6 +5,7 @@
 #include "Client.h"
 #include <log.h>
 #include <algorithm>
+#include <tools.h>
 USING_VECOTR
 
 static void RoomUpdate(float time, void* arg)
@@ -35,7 +36,6 @@ void ChannelRoom::Init()
 	m_GameTime = 0;
 	m_LastGameTime = 0;
 	m_ClientList.clear();
-	m_DropItemList.clear();
 	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.02f, RoomUpdate, this,true);
 	m_UpdateTimer.Begin();
 }
@@ -57,17 +57,25 @@ void ChannelRoom::Update(float time)
 	if (m_RoomState == ROOM_STATE_LOADING)
 	{
 		m_LoadingTime += time;
-		if (m_LoadingTime >= LOADING_WAIT_TIME)
+		if (m_LoadingTime >= gChannelServer.m_Config.max_loading_time)
 		{
-			
+			m_LoadingTime = 0;
+			m_RoomState = ROOM_STATE_READY_INGMAE;
+		}
+	}
+	else if (m_RoomState == ROOM_STATE_READY_INGMAE)
+	{
+		m_LoadingTime += time;
+		if (m_LoadingTime >= gChannelServer.m_Config.max_ready_time)
+		{
 			StartGame();
 		}
 	}
-	if (m_RoomState == ROOM_STATE_PLAYING)
+	else if (m_RoomState == ROOM_STATE_PLAYING)
 	{
 		PlayingUpdate(time);
 	}
-	if (m_RoomState == ROOM_STATE_BALANCE)
+	else if (m_RoomState == ROOM_STATE_BALANCE)
 	{
 		m_BalanceWaitTime -= time;
 		if (m_BalanceWaitTime <= 0)
@@ -92,37 +100,28 @@ void ChannelRoom::PlayingUpdate(float time)
 		GameToBalance();
 	}
 	//drop item
-	for (int i = DROP_ITEM_START;m_DropItemList.size() <= gChannelServer.gDropRefreshPointsCount && i < DROP_ITEM_COUNT; i++)
+	for (int i = DROP_ITEM_START; i < DROP_ITEM_COUNT; i++)
 	{
 		DropItemRefreshInfo &refresh = gChannelServer.gDropRefreshItems[i];
-		DropItemTimer &timer = m_DropItemTimers[i];
-		if (timer.m_StartTime < refresh.m_StartTime)timer.m_StartTime += time;
-		if (timer.m_StartTime >= refresh.m_StartTime)
+		if (m_DropItemTimers[i] < refresh.m_StartTime)
 		{
-			if (timer.m_RefreshTime > 0)timer.m_RefreshTime -= time;
-			if (timer.m_RefreshTime <= 0)
+			m_DropItemTimers[i] += time;
+			if (m_DropItemTimers[i] >= refresh.m_StartTime)
 			{
-				timer.m_RefreshTime = refresh.m_RefreshTime;
 				for (int j = 0; j < refresh.m_RefreshCount; j++)
 				{
 					DropItemInfo* info = CreateDropItem();
 					if (info)
 					{
 						info->m_Type = refresh.m_Type;
-						info->m_Duration = refresh.m_Duration;
-						//gChannelServer.GetDropItemInfo(*info, refresh.m_Type);
 						BroadCastCreateDropItem(info);
-					}
-					else
-					{
-						break;
 					}
 
 				}
 			}
 		}
+		
 	}
-	UpdateDropItem(time);
 
 }
 
@@ -246,7 +245,7 @@ void ChannelRoom::BroadCastSkillUse(uint from_uid, byte skill_type)
 
 
 
-void ChannelRoom::BraodCastBuffState(uint from_uid, uint to_uid, BufferInfo* buff)
+void ChannelRoom::BroadCastBuffState(uint from_uid, uint to_uid, BufferInfo* buff)
 {
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
@@ -258,8 +257,8 @@ void ChannelRoom::BraodCastBuffState(uint from_uid, uint to_uid, BufferInfo* buf
 			client->WriteInt(from_uid);
 			client->WriteInt(to_uid);
 			client->WriteByte(buff->m_Type);
-			client->WriteBool(buff->m_Enabled);
-			if (buff->m_Enabled)
+			client->WriteByte(buff->m_State);
+			if (buff->m_State != BUFF_STATE_END)
 			{
 				client->WriteFloat(buff->m_Duration);
 				client->WriteData(buff->m_UserData, sizeof(float) * 4);
@@ -268,26 +267,6 @@ void ChannelRoom::BraodCastBuffState(uint from_uid, uint to_uid, BufferInfo* buf
 		}
 	}
 }
-
-void ChannelRoom::UpdateDropItem(float time)
-{
-	for (std::vector<DropItemInfo*>::iterator it = m_DropItemList.begin(); it != m_DropItemList.end();)
-	{
-		DropItemInfo *info = *it;
-		info->m_Duration -= time;
-		if (info->m_Duration <= 0)
-		{
-			BroadCastRemoveDropItem(info);
-			it = m_DropItemList.erase(it);
-			gChannelServer.m_DropItemPool.Free(info->uid);
-		}
-		else
-		{
-			it++;
-		}
-	}
-}
-
 void ChannelRoom::LeaveBalance()
 {
 	m_BalanceWaitTime = 0;
@@ -305,22 +284,35 @@ DropItemInfo * ChannelRoom::CreateDropItem()
 	if (info)
 	{
 		m_DropItemList.push_back(info);
-		info->m_PositionIndex = -1;
-		for (int i = 0; i < gChannelServer.gDropRefreshPointsCount; i++)
-		{
-			if (m_DropItemIndex[i] == 0)
-			{
-				m_DropItemIndex[i] = 1;
-				info->m_PositionIndex = i;
-				gChannelServer.GetDropItemPos(info->m_Position, i);
-			}
-		}
-		if (info->m_PositionIndex == -1)
-		{
-			gChannelServer.RandomDropPos(info->m_Position);
-		}
+		UpdateDropItemPosition(info);
 	}
 	return info;
+}
+
+void ChannelRoom::UpdateDropItemPosition(DropItemInfo * info)
+{
+	info->m_PositionIndex = -1;
+	int empty_pos[MAX_DROP_POINT_COUNT] = { 0 };
+	int count = 0;
+	for (int i = 0; i < gChannelServer.gDropRefreshPointsCount; i++)
+	{
+		if (m_DropItemIndex[i] == 0)
+		{
+			empty_pos[count] = i;
+			count++;
+		}
+	}
+	if (count > 0)
+	{
+		int index = RandomRange(0, count - 1);
+		m_DropItemIndex[empty_pos[index]] = 1;
+		info->m_PositionIndex = empty_pos[index];
+		gChannelServer.GetDropItemPos(info->m_Position, info->m_PositionIndex);
+	}
+	if (info->m_PositionIndex == -1)
+	{
+		gChannelServer.RandomDropPos(info->m_Position);
+	}
 }
 
 void ChannelRoom::RemoveDropItem(DropItemInfo * info)
@@ -330,12 +322,41 @@ void ChannelRoom::RemoveDropItem(DropItemInfo * info)
 	{
 		m_DropItemIndex[info->m_PositionIndex] = 0;
 	}
-	std::vector<DropItemInfo*>::iterator it = find(m_DropItemList.begin(), m_DropItemList.end(), info);
-	if (it != m_DropItemList.end())
+	UpdateDropItemPosition(info);
+	BroadCastCreateDropItem(info);
+	//std::vector<DropItemInfo*>::iterator it = find(m_DropItemList.begin(), m_DropItemList.end(), info);
+	//if (it != m_DropItemList.end())
+	//{
+	//	m_DropItemList.erase(it);
+	//}
+	//gChannelServer.m_DropItemPool.Free(info->uid);
+}
+
+bool ChannelRoom::CheckAllClientReadyInGame()
+{
+	if (m_RoomState != ROOM_STATE_LOADING)return false;
 	{
-		m_DropItemList.erase(it);
+		FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
+		{
+			ChannelClient *client = *iterClient;
+			if (client->m_GameState != GAME_STATE_IN_GAME)
+			{
+				return false;
+			}
+		}
 	}
-	gChannelServer.m_DropItemPool.Free(info->uid);
+	{
+		FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
+		{
+			ChannelClient *client = *iterClient;
+			client->BeginWrite();
+			client->WriteByte(SM_LOADING_END);
+			client->WriteInt(gChannelServer.m_Config.max_ready_time);
+			client->EndWrite();
+		}
+	}
+	m_RoomState = ROOM_STATE_READY_INGMAE;
+	return true;
 }
 
 void ChannelRoom::BroadCastGameTime()
@@ -367,6 +388,21 @@ void ChannelRoom::ClientJoinInGame(ChannelClient * c)
 			client->EndWrite();
 		}
 	}
+	c->Birth();
+	//drop item
+	{
+		FOR_EACH_LIST(DropItemInfo, m_DropItemList, Info)
+		{
+			DropItemInfo *info = *iterInfo;
+			c->BeginWrite();
+			c->WriteByte(SM_INGAME_CREATE_DROPITEM);
+			c->WriteInt(info->uid);
+			c->WriteByte(info->m_Type);
+			c->WriteVector3(info->m_Position);
+			c->EndWrite();
+		}
+	}
+	
 }
 
 void ChannelRoom::WriteAllClientInfo(NetworkStream * stream)

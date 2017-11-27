@@ -34,6 +34,8 @@ struct ChannelConfig
 	int max_health;
 	int max_game_time;
 	int max_blance_time;
+	int max_loading_time;
+	int max_ready_time;
 	int rebirth_time;
 public:
 	ChannelConfig();

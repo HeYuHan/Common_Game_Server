@@ -47,26 +47,20 @@
             {
                 "m_Type":1,
                 "m_Desc":"能量水晶",
-                "m_RefreshTime":20,
-                "m_RefreshCount":10,
-                "m_Duration":13,
-                "m_StartTime":3
+                "m_RefreshCount":12,
+                "m_StartTime":5
             },
             {
                 "m_Type":2,
                 "m_Desc":"护盾",
-                "m_RefreshTime":35,
-                "m_RefreshCount":4,
-                "m_Duration":15,
-                "m_StartTime":30
+                "m_RefreshCount":3,
+                "m_StartTime":10
             },
             {
                 "m_Type":3,
                 "m_Desc":"电磁风暴",
-                "m_RefreshTime":30,
                 "m_RefreshCount":3,
-                "m_Duration":10,
-                "m_StartTime":50
+                "m_StartTime":10
             }
         ],
         "Skills":[

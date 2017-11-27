@@ -90,11 +90,14 @@ private:
 	void ParseGetDropItem();
 	void ParseUseSkill();
 	void ParseKillSelf();
+
+
 public:
 	int GetSocore();
 	void Birth();
 	void Dead();
 	void InGameStateChange(byte state);
+	void BuffStateChange(uint from_uid,int type);
 	//void WriteCharacterInfo(ChannelClient* c);
 	static void WriteCharacterInfo(NetworkStream* stream, ChannelClient* c);
 	static void WriteIngameState(NetworkStream* stream,ChannelClient* c, byte state);

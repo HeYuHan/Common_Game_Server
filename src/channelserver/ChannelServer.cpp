@@ -181,9 +181,9 @@ bool ChannelServer::Init()
 			int type = (*it)["m_Type"].asInt();
 			index = type;
 			gDropRefreshItems[index].m_Type = (DropItemType)type;
-			gDropRefreshItems[index].m_RefreshTime = (*it)["m_RefreshTime"].asDouble();
+			//gDropRefreshItems[index].m_RefreshTime = (*it)["m_RefreshTime"].asDouble();
 			gDropRefreshItems[index].m_RefreshCount = (*it)["m_RefreshCount"].asInt();
-			gDropRefreshItems[index].m_Duration = (*it)["m_Duration"].asDouble();
+			//gDropRefreshItems[index].m_Duration = (*it)["m_Duration"].asDouble();
 			gDropRefreshItems[index].m_StartTime = (*it)["m_StartTime"].asDouble();
 		}
 		memset(&gSkillInfos, 0, sizeof(gSkillInfos));
@@ -218,7 +218,9 @@ bool ChannelServer::Init()
 		ParseJsonValue(game_config, "m_MaxClient", m_Config.max_client);
 		ParseJsonValue(game_config, "m_MaxGameTime", m_Config.max_game_time);
 		ParseJsonValue(game_config, "m_MaxBlanceTime", m_Config.max_blance_time);
+		ParseJsonValue(game_config, "m_LoadingTime", m_Config.max_loading_time);
 		ParseJsonValue(game_config, "m_RebirthTime", m_Config.rebirth_time);
+		ParseJsonValue(game_config, "m_ReadyTime", m_Config.max_ready_time);
 		ParseJsonValue(game_config, "m_LogName", gLogger.name,64);
 		ParseJsonValue(game_config, "m_LogPath", gLogger.fileName,128);
 	}
@@ -386,6 +388,8 @@ ChannelConfig::ChannelConfig():
 	max_health(3000),
 	max_game_time(60*5),
 	max_blance_time(30),
+	max_loading_time(5),
+	max_ready_time(3),
 	rebirth_time(5)
 {
 	strcpy(ip, "127.0.0.1");

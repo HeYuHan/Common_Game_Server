@@ -24,9 +24,7 @@ struct DropItemRefreshInfo
 {
 	DropItemType m_Type;
 	char m_Desc[64];
-	float m_RefreshTime;
 	int m_RefreshCount;
-	float m_Duration;
 	float m_StartTime;
 
 
@@ -57,11 +55,17 @@ typedef enum
 	BUFF_TYPE_COUNT,
 	BUFF_TYPE_START=1,
 }BuffType;
+typedef enum
+{
+	BUFF_STATE_START = 1 << 1,
+	BUFF_STATE_UPDATE = 1 << 2,
+	BUFF_STATE_END = 1 << 3
+}BuffState;
 struct BufferInfo
 {
 	BuffType m_Type;
 	float m_Duration;
-	bool m_Enabled;
+	byte m_State;
 	float m_UserData[4];
 };
 //struct DiamondInfo:public DropItemInfo

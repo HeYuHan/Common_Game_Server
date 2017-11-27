@@ -3,6 +3,12 @@
 #include "ChannelServer.h"
 #include "Room.h"
 #include <common.h>
+#define CHECK_ROOM() \
+if(NULL == m_OwnerRoom) { \
+	log_error("m_OwnerRoom is null uid:%d", uid); \
+	Disconnect(); \
+	return; \
+}
 
 static void ClientUpdate(float time, void* arg)
 {
@@ -148,7 +154,7 @@ void ChannelClient::IngameUpdate(float time)
 	for (int i = 0; i < BUFF_TYPE_COUNT; i++)
 	{
 		BufferInfo *buff = &m_InGameInfo->m_BuffList[i];
-		if (buff->m_Enabled)
+		if (buff->m_State != BUFF_STATE_END)
 		{
 			buff->m_Duration -= time;
 			switch (buff->m_Type)
@@ -158,7 +164,7 @@ void ChannelClient::IngameUpdate(float time)
 				
 					if (buff->m_Duration <= 0 || buff->m_UserData[0]<=0)
 					{
-						buff->m_Enabled = false;
+						buff->m_State = BUFF_STATE_END;
 					}
 					break;
 				}
@@ -166,14 +172,14 @@ void ChannelClient::IngameUpdate(float time)
 				{
 					if (buff->m_Duration <= 0)
 					{
-						buff->m_Enabled = false;
+						buff->m_State = BUFF_STATE_END;
 					}
 					break;
 				}
 			}
-			if (!buff->m_Enabled)
+			if (buff->m_State == BUFF_STATE_END)
 			{
-				m_OwnerRoom->BraodCastBuffState(0, uid, buff);
+				m_OwnerRoom->BroadCastBuffState(0, uid, buff);
 			}
 		}
 	}
@@ -284,26 +290,21 @@ void ChannelClient::ParseJoinGame()
 
 void ChannelClient::ParseGameReady()
 {
+	CHECK_ROOM();
 	if (m_GameState != GAME_STATE_LOADING_GAME)return;
 	m_GameState = GAME_STATE_IN_GAME;
-	if (m_OwnerRoom)
+	BeginWrite();
+	WriteByte(SM_INGAME_ROOM_INFO);
+	WriteByte(m_OwnerRoom->m_ClientList.size());
+	m_OwnerRoom->WriteAllClientInfo(this);
+	EndWrite();
+	if (m_OwnerRoom->m_RoomState == ROOM_STATE_PLAYING)
 	{
-		
-		BeginWrite();
-		WriteByte(SM_INGAME_ROOM_INFO);
-		WriteByte(m_OwnerRoom->m_ClientList.size());
-		m_OwnerRoom->WriteAllClientInfo(this);
-		EndWrite();
-		if (m_OwnerRoom->m_RoomState == ROOM_STATE_PLAYING)
-		{
-			m_OwnerRoom->ClientJoinInGame(this);
-			Birth();
-		}
+		m_OwnerRoom->ClientJoinInGame(this);
 	}
 	else
 	{
-		log_error("m_OwnerRoom is null uid:%d", uid);
-		Disconnect();
+		m_OwnerRoom->CheckAllClientReadyInGame();
 	}
 	
 }
@@ -321,70 +322,55 @@ void ChannelClient::ParseStartGame()
 
 void ChannelClient::ParseMoveData()
 {
-	if (m_OwnerRoom)
+	CHECK_ROOM();
+	char* read_start = read_position;
+	byte delta = 0;
+	byte flag = 0;
+	ReadByte(delta);
+	ReadByte(flag);
+
+	if ((flag & SYNC_TRANSFROM_POSITION) > 0)
 	{
-		char* read_start = read_position;
-		byte delta = 0;
-		byte flag = 0;
-		ReadByte(delta);
-		ReadByte(flag);
-
-		if ((flag & SYNC_TRANSFROM_POSITION) > 0)
-		{
-			ReadVector3(m_Position);
-		}
-		if ((flag & SYNC_TRANSFROM_ROTATION) > 0)
-		{
-			ReadShortQuaternion(m_Rotation);
-		}
-		if ((flag & SYNC_TRANSFROM_VELOCITY) > 0)
-		{
-			ReadVector3(m_Velocity);
-		}
-		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
-		{
-			ChannelClient *client = *iterClient;
-			if (client->m_GameState == GAME_STATE_IN_GAME)
-			{
-				client->BeginWrite();
-				client->WriteByte(SM_INGAME_MOVE_DATA);
-				client->WriteInt(uid);
-				client->WriteByte(delta);
-				client->WriteByte(flag);
-				client->WriteData(read_start, read_end - read_start);
-				client->EndWrite();
-			}
-
-		}
+		ReadVector3(m_Position);
 	}
-	else
+	if ((flag & SYNC_TRANSFROM_ROTATION) > 0)
 	{
-		log_error("m_OwnerRoom is null uid:%d", uid);
-		Disconnect();
+		ReadShortQuaternion(m_Rotation);
+	}
+	if ((flag & SYNC_TRANSFROM_VELOCITY) > 0)
+	{
+		ReadVector3(m_Velocity);
+	}
+	FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
+	{
+		ChannelClient *client = *iterClient;
+		if (client->m_GameState == GAME_STATE_IN_GAME)
+		{
+			client->BeginWrite();
+			client->WriteByte(SM_INGAME_MOVE_DATA);
+			client->WriteInt(uid);
+			client->WriteData(read_start, read_end - read_start);
+			client->EndWrite();
+		}
+
 	}
 }
 
+
 void ChannelClient::ParseShoot()
 {
-	if (m_OwnerRoom)
+	CHECK_ROOM();
+	FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
 	{
-		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
+		ChannelClient *client = *iterClient;
+		if (uid != client->uid)
 		{
-			ChannelClient *client = *iterClient;
-			if (uid != client->uid)
-			{
-				client->BeginWrite();
-				client->WriteByte(SM_INGAME_SHOOT);
-				client->WriteInt(uid);
-				client->WriteData(read_position, read_end - read_position);
-				client->EndWrite();
-			}
+			client->BeginWrite();
+			client->WriteByte(SM_INGAME_SHOOT);
+			client->WriteInt(uid);
+			client->WriteData(read_position, read_end - read_position);
+			client->EndWrite();
 		}
-	}
-	else
-	{
-		log_error("m_OwnerRoom is null uid:%d", uid);
-		Disconnect();
 	}
 }
 
@@ -402,6 +388,7 @@ void ChannelClient::ParseHitCharacter()
 		//´òµ½¶ÜÉÏÁË,µÖµ²¹¥»÷
 		if ((c->m_InGameInfo->m_BuffList[BUFF_TYPE_SHIELD].m_UserData[0]--) > 0)
 		{
+			c->BuffStateChange(uid, BUFF_TYPE_SHIELD);
 			return;
 		}
 		c->m_InGameInfo->m_HP -= weapon->Damage;
@@ -439,6 +426,7 @@ void ChannelClient::ParseExplodeCharacter()
 		//´òµ½¶ÜÉÏÁË,µÖµ²¹¥»÷
 		if ((c->m_InGameInfo->m_BuffList[BUFF_TYPE_SHIELD].m_UserData[0]--) > 0)
 		{
+			c->BuffStateChange(uid, BUFF_TYPE_SHIELD);
 			return;
 		}
 		int damage = weapon->Damage;
@@ -502,10 +490,10 @@ void ChannelClient::ParseUseSkill()
 		case DROP_ITEM_SHIELD:
 		{
 			BufferInfo *buff = &m_InGameInfo->m_BuffList[BUFF_TYPE_SHIELD];
-			buff->m_Enabled = true;
+			buff->m_State = BUFF_STATE_START;
 			buff->m_Duration = skill->m_Duration;
 			memcpy(buff->m_UserData, skill->m_UserData, sizeof(float) * 4);
-			m_OwnerRoom->BraodCastBuffState(uid,uid,buff);
+			m_OwnerRoom->BroadCastBuffState(uid,uid,buff);
 			break;
 		}
 		case DROP_ITEM_PLASMA:
@@ -519,10 +507,10 @@ void ChannelClient::ParseUseSkill()
 					if (dis <= skill->m_UserData[0])
 					{
 						BufferInfo *buff = &client->m_InGameInfo->m_BuffList[BUFF_TYPE_PLASMA];
-						buff->m_Enabled = true;
+						buff->m_State = BUFF_STATE_START;
 						buff->m_Duration = skill->m_Duration;
 						memcpy(buff->m_UserData, skill->m_UserData, sizeof(float) * 4);
-						m_OwnerRoom->BraodCastBuffState(uid, client->uid, buff);
+						m_OwnerRoom->BroadCastBuffState(uid, client->uid, buff);
 					}
 				}
 			}
@@ -556,21 +544,19 @@ void ChannelClient::Birth()
 	gChannelServer.RandomBrithPos(m_Position);
 	m_Rotation = Quaternion(0, 0, 0, 1);
 	memcpy(&m_InGameInfo->m_SkillList, &gChannelServer.gSkillInfos, sizeof(m_InGameInfo->m_SkillList));
-	if (m_OwnerRoom)
+	CHECK_ROOM();
+	FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
 	{
-		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
+		ChannelClient *client = *iterClient;
+		if (client->m_GameState == GAME_STATE_IN_GAME)
 		{
-			ChannelClient *client = *iterClient;
-			if (client->m_GameState == GAME_STATE_IN_GAME)
-			{
-				client->BeginWrite();
-				client->WriteByte(SM_INGAME_BIRTH);
-				client->WriteInt(uid);
-				client->WriteInt(m_InGameInfo->m_HP);
-				client->WriteVector3(m_Position);
-				client->WriteShortQuaternion(m_Rotation);
-				client->EndWrite();
-			}
+			client->BeginWrite();
+			client->WriteByte(SM_INGAME_BIRTH);
+			client->WriteInt(uid);
+			client->WriteInt(m_InGameInfo->m_HP);
+			client->WriteVector3(m_Position);
+			client->WriteShortQuaternion(m_Rotation);
+			client->EndWrite();
 		}
 	}
 
@@ -578,53 +564,46 @@ void ChannelClient::Birth()
 
 void ChannelClient::Dead()
 {
+	CHECK_ROOM();
 	m_InGameInfo->m_HP = 0;
 	m_InGameInfo->m_Dead = true;
 	m_InGameInfo->m_BrithTime = gChannelServer.m_Config.rebirth_time;
-	if (m_OwnerRoom)
+	FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
 	{
-		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
+		ChannelClient *client = *iterClient;
+		if (client->m_GameState == GAME_STATE_IN_GAME)
 		{
-			ChannelClient *client = *iterClient;
-			if (client->m_GameState == GAME_STATE_IN_GAME)
-			{
-				client->BeginWrite();
-				client->WriteByte(SM_INGAME_CHARACTER_DEAD);
-				client->WriteInt(uid);
-				client->WriteFloat(m_InGameInfo->m_BrithTime);
-				client->EndWrite();
-			}
+			client->BeginWrite();
+			client->WriteByte(SM_INGAME_CHARACTER_DEAD);
+			client->WriteInt(uid);
+			client->WriteFloat(m_InGameInfo->m_BrithTime);
+			client->EndWrite();
 		}
-	}
-	else
-	{
-		log_error("m_OwnerRoom is null uid:%d", uid);
-		Disconnect();
 	}
 }
 
 void ChannelClient::InGameStateChange(byte state)
 {
-	if (m_OwnerRoom)
+	CHECK_ROOM();
+	FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
 	{
-		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
+		ChannelClient *client = *iterClient;
+		if (client->m_GameState == GAME_STATE_IN_GAME)
 		{
-			ChannelClient *client = *iterClient;
-			if (client->m_GameState == GAME_STATE_IN_GAME)
-			{
-				client->BeginWrite();
-				client->WriteByte(SM_INGAME_STATE_CHANGE);
-				client->WriteInt(uid);
-				WriteIngameState(client, this, state);
-				client->EndWrite();
-			}
+			client->BeginWrite();
+			client->WriteByte(SM_INGAME_STATE_CHANGE);
+			client->WriteInt(uid);
+			WriteIngameState(client, this, state);
+			client->EndWrite();
 		}
 	}
-	else
-	{
-		log_error("m_OwnerRoom is null uid:%d", uid);
-		Disconnect();
-	}
+}
+
+void ChannelClient::BuffStateChange(uint from_uid, int type)
+{
+	CHECK_ROOM();
+	m_InGameInfo->m_BuffList[type].m_State = BUFF_STATE_UPDATE;
+	m_OwnerRoom->BroadCastBuffState(from_uid, uid, &m_InGameInfo->m_BuffList[type]);
 }
 
 //void ChannelClient::WriteCharacterInfo(ChannelClient* c)
