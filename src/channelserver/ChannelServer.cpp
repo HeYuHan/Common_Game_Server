@@ -219,8 +219,11 @@ bool ChannelServer::Init()
 		ParseJsonValue(game_config, "m_LoadingTime", m_Config.max_loading_time);
 		ParseJsonValue(game_config, "m_RebirthTime", m_Config.rebirth_time);
 		ParseJsonValue(game_config, "m_ReadyTime", m_Config.max_ready_time);
+		//log
 		ParseJsonValue(game_config, "m_LogName", gLogger.name,64);
 		ParseJsonValue(game_config, "m_LogPath", gLogger.fileName,128);
+		ParseJsonValue(game_config, "m_LogToConsole", gLogger.m_LogToConsole);
+		ParseJsonValue(game_config, "m_LogToFile", gLogger.m_LogToFile);
 	}
 	if (!BaseServer::Init())
 	{

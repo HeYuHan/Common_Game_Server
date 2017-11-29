@@ -30,6 +30,8 @@ public:
 public:
 	char name[64];
 	char fileName[128];
+	bool m_LogToConsole;
+	bool m_LogToFile;
 private:
 	Category* logger;
 

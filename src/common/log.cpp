@@ -2,6 +2,8 @@
 #include <memory.h>
 Logger gLogger;
 Logger::Logger():
+	m_LogToConsole(true),
+	m_LogToFile(false),
 	logger(NULL)
 {
 	memset(name, 0, sizeof(name));
@@ -27,15 +29,20 @@ void Logger::Init()
 	PatternLayout *layout = new PatternLayout();
 	layout->setConversionPattern("%d:%c|%p:%m%n");
 	logger = &Category::getRoot().getInstance(name);
-#ifndef _DEBUG
-	RollingFileAppender *fileAppender = new RollingFileAppender(name, fileName);
-	fileAppender->setLayout(layout);
-	logger->addAppender(fileAppender);
-#else
-	OstreamAppender *consoleAppender = new OstreamAppender(name, &std::cout);
-	consoleAppender->setLayout(layout);
-	logger->addAppender(consoleAppender);
-#endif
+	if (m_LogToFile)
+	{
+		RollingFileAppender *fileAppender = new RollingFileAppender(name, fileName);
+		fileAppender->setLayout(layout);
+		logger->addAppender(fileAppender);
+	}
+
+	if (m_LogToConsole)
+	{
+		OstreamAppender *consoleAppender = new OstreamAppender(name, &std::cout);
+		consoleAppender->setLayout(layout);
+		logger->addAppender(consoleAppender);
+	}
+
 
 	logger->setPriority(Priority::DEBUG);
 }

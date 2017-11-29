@@ -15,3 +15,8 @@ deps:
 
 clean_deps:
 	$(MAKE) clean_deps -C common
+
+package:
+	cp ./../exe/Config.json bin
+	tar -zcvf tsr_server.$(shell date +%Y%m%d%H%M%S).tar.gz bin
+
