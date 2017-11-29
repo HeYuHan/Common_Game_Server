@@ -22,14 +22,14 @@
             "Ammunition": 1,
             "ReloadTime": 10,
             "Tracker": true,
-            "Speed":16,
+            "Speed":17,
             "Range": 10
         },
         {
             "Type": 3,
             "ID": 3,
             "Damage": 30,
-            "AttackTime": 0.1,
+            "AttackTime": 0.2,
             "Ammunition": 50,
             "ReloadTime": 10,
             "Tracker": false,

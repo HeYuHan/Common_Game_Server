@@ -63,6 +63,12 @@ deps: $(EVENT_SOURCE_DIR)/configure $(LOG4CPP_SOURCE_DIR)/configure
 	$(MAKE) -C $(EVENT_SOURCE_DIR)
 	$(MAKE) -C $(EVENT_SOURCE_DIR) install
 
+clean_deps:
+	$(MAKE) -C $(EVENT_SOURCE_DIR) clean
+	$(MAKE) -C $(EVENT_SOURCE_DIR) clean
+
+
+
 $(TARGET) : $(TEMP) $(OBJS)
 	$(AR) -x $(RAKNET_LIB)
 	$(AR) -x $(EVENT_LIB)

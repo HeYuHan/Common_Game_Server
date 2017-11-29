@@ -3,6 +3,8 @@
 #define __CLIENTINFO_H__
 #include <common.h>
 #include <Vector3.h>
+#include "pch.h"
+
 typedef enum
 {
 	WeaponNone=0,
@@ -104,9 +106,35 @@ struct CharacterInGameInfo
 	int m_KillCount;
 	int m_HP;
 	int m_DiamondCount;
+	int m_Level;
 	bool m_Dead;
 	float m_BrithTime;
 	float m_PlayTime;
 	uint uid;
 };
+struct LevelRewardInfo
+{
+	int m_RewardHP;
+	int m_RewardAttack;
+	int m_RequireEnergy;
+
+};
+struct GameConfig
+{
+	//level
+	LevelRewardInfo LevelReward[MAX_LEVEL_REWARD];
+	//weapon
+	WeaponInfo WeaponList[WeaponType::WeaponCount - 1];
+	//brith
+	Vector3 BrithPoints[10];
+	int BrithPointsCount;
+	int BrithPointIndex;
+	//dropitem
+	DropItemRefreshInfo DropRefreshItems[DROP_ITEM_COUNT];
+	Vector3 DropRefreshPoints[MAX_DROP_POINT_COUNT];
+	int DropRefreshPointsCount;
+	//skill
+	SkillInfo SkillInfos[DROP_ITEM_COUNT];
+};
+extern GameConfig gGameConfig;
 #endif // !__CLIENTINFO_H__

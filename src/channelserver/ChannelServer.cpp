@@ -7,13 +7,7 @@
 #include <log.h>
 #include <tools.h>
 ChannelServer gChannelServer;
-//weapon
-WeaponInfo gWeaponList[WeaponType::WeaponCount - 1];
-//brith
-Vector3 gBrithPoints[10];
-int gBrithPointsCount = 0;
-int gBrithPointIndex = 0;
-//dropitem
+GameConfig gGameConfig;
 
 static void ParseJsonValue(Json::Value json, const char* key,int &value)
 {
@@ -49,8 +43,7 @@ static void ParseJosnVector3(Json::Value json,Vector3 &v3)
 	v3.y = json[((Json::UInt)1)].asDouble();
 	v3.z = json[((Json::UInt)2)].asDouble();
 }
-ChannelServer::ChannelServer():
-	gDropRefreshPointsCount(0)
+ChannelServer::ChannelServer()
 {
 
 }
@@ -64,8 +57,14 @@ void ChannelServer::OnUdpClientMessage(Packet * p)
 	UdpClientIterator it = m_UdpClientMap.find(p->guid.g);
 	if (it != m_UdpClientMap.end())
 	{
-		it->second->m_MessagePacket = p;
-		it->second->OnRevcMessage();
+		ChannelClient *client = it->second;
+		if (client)
+		{
+			client->m_MessagePacket = p;
+			client->m_KeepAliveTime = 0;
+			client->OnRevcMessage();
+		}
+
 	}
 }
 
@@ -76,6 +75,7 @@ void ChannelServer::OnUdpClientDisconnected(Packet* p)
 	{
 		if (it->second)
 		{
+			log_error("client disconnect uid %d", it->second->uid);
 			it->second->Disconnect();
 		}
 		else
@@ -113,13 +113,12 @@ void ChannelServer::OnKeepAlive(Packet * p)
 
 bool ChannelServer::Init()
 {
-	
+	memset(&gGameConfig, 0, sizeof(GameConfig));
 	//parse data config
 	Json::Value root;
 	bool ret = ReadJson(root, m_Config.data_config_path);
 	Json::Value weapon_list;
 	//weapon
-	memset(&gWeaponList, 0, sizeof(gWeaponList));
 	ret = ret && !(weapon_list = root["m_InfoList"]).isNull();
 	ret = ret && weapon_list.isArray() && weapon_list.size() == WeaponType::WeaponCount - 1;
 	if (ret)
@@ -130,7 +129,7 @@ bool ChannelServer::Init()
 			
 			Json::Value config = *it;
 			int type = (config["Type"].asInt());
-			WeaponInfo* info = &gWeaponList[type-1];
+			WeaponInfo* info = &gGameConfig.WeaponList[type-1];
 			info->Type = (WeaponType)type;
 			ParseJsonValue(config, "Damage", info->Damage);
 			ParseJsonValue(config, "AttackTime", info->AttackTime);
@@ -152,10 +151,10 @@ bool ChannelServer::Init()
 	if (ret)
 	{
 		
-		gBrithPointsCount = 0;
-		for (Json::ValueIterator it = brith_points.begin(); it != brith_points.end(); it++, gBrithPointsCount++)
+		gGameConfig.BrithPointsCount = 0;
+		for (Json::ValueIterator it = brith_points.begin(); it != brith_points.end(); it++, gGameConfig.BrithPointsCount++)
 		{
-			ParseJosnVector3(*it,gBrithPoints[gBrithPointsCount]);
+			ParseJosnVector3(*it, gGameConfig.BrithPoints[gGameConfig.BrithPointsCount]);
 		}
 	}
 	else
@@ -168,39 +167,38 @@ bool ChannelServer::Init()
 	if (!drop_itmes.isNull())
 	{
 		Json::Value drop_points = drop_itmes["Points"];
-		gDropRefreshPointsCount = drop_points.size();
-		gDropRefreshPointsCount= gDropRefreshPointsCount< MAX_DROP_POINT_COUNT? gDropRefreshPointsCount: MAX_DROP_POINT_COUNT;
+		gGameConfig.DropRefreshPointsCount = drop_points.size();
+		gGameConfig.DropRefreshPointsCount= gGameConfig.DropRefreshPointsCount< MAX_DROP_POINT_COUNT? gGameConfig.DropRefreshPointsCount: MAX_DROP_POINT_COUNT;
 		int index = 0;
-		for (Json::ValueIterator it = drop_points.begin(); it != drop_points.end() && index<gDropRefreshPointsCount; it++, index++)
+		for (Json::ValueIterator it = drop_points.begin(); it != drop_points.end() && index<gGameConfig.DropRefreshPointsCount; it++, index++)
 		{
-			ParseJosnVector3(*it, gDropRefreshPoints[index]);
+			ParseJosnVector3(*it, gGameConfig.DropRefreshPoints[index]);
 		}
 		Json::Value refresh_items = drop_itmes["Refresh"];
 		for (Json::ValueIterator it = refresh_items.begin(); it != refresh_items.end(); it++, index++)
 		{
 			int type = (*it)["m_Type"].asInt();
 			index = type;
-			gDropRefreshItems[index].m_Type = (DropItemType)type;
+			gGameConfig.DropRefreshItems[index].m_Type = (DropItemType)type;
 			//gDropRefreshItems[index].m_RefreshTime = (*it)["m_RefreshTime"].asDouble();
-			gDropRefreshItems[index].m_RefreshCount = (*it)["m_RefreshCount"].asInt();
+			gGameConfig.DropRefreshItems[index].m_RefreshCount = (*it)["m_RefreshCount"].asInt();
 			//gDropRefreshItems[index].m_Duration = (*it)["m_Duration"].asDouble();
-			gDropRefreshItems[index].m_StartTime = (*it)["m_StartTime"].asDouble();
+			gGameConfig.DropRefreshItems[index].m_StartTime = (*it)["m_StartTime"].asDouble();
 		}
-		memset(&gSkillInfos, 0, sizeof(gSkillInfos));
 		Json::Value items = drop_itmes["Skills"];
 		for (Json::ValueIterator it = items.begin(); it != items.end(); it++)
 		{
 			int type = (*it)["m_Type"].asInt();
 			index = type;
-			gSkillInfos[index].m_Type = (DropItemType)type;
-			gSkillInfos[index].m_Duration = (*it)["m_Duration"].asDouble();
-			gSkillInfos[index].m_CoolDown = (*it)["m_CoolDown"].asDouble();
+			gGameConfig.SkillInfos[index].m_Type = (DropItemType)type;
+			gGameConfig.SkillInfos[index].m_Duration = (*it)["m_Duration"].asDouble();
+			gGameConfig.SkillInfos[index].m_CoolDown = (*it)["m_CoolDown"].asDouble();
 			Json::Value user_data = (*it)["m_UserData"];
 			if (!user_data.isNull())
 			{
-				for (int u = 0; u < user_data.size(); u++)
+				for (Json::UInt u = 0; u < user_data.size(); u++)
 				{
-					gSkillInfos[index].m_UserData[u] = user_data[u].asDouble();
+					gGameConfig.SkillInfos[index].m_UserData[u] = user_data[u].asDouble();
 				}
 			}
 		}
@@ -236,7 +234,7 @@ bool ChannelServer::Init()
 	{
 		return false;
 	}
-	if (!m_DropItemPool.Initialize(gDropRefreshPointsCount))
+	if (!m_DropItemPool.Initialize(gGameConfig.DropRefreshPointsCount))
 	{
 		return false;
 	}
@@ -337,9 +335,9 @@ bool ChannelServer::GetWeaponInfo(WeaponInfo & info, WeaponType type)
 {
 	for (int i = 0; i < WeaponCount - 1; i++)
 	{
-		if (gWeaponList[i].Type == type)
+		if (gGameConfig.WeaponList[i].Type == type)
 		{
-			info = gWeaponList[i];
+			info = gGameConfig.WeaponList[i];
 			return true;
 		}
 	}
@@ -350,33 +348,33 @@ bool ChannelServer::GetSkillInfo(SkillInfo &info, SkillType type)
 {
 	if (type > 0 && type < DROP_ITEM_COUNT)
 	{
-		info = gSkillInfos[type - 1];
+		info = gGameConfig.SkillInfos[type - 1];
 	}
 	return false;
 }
 
 bool ChannelServer::RandomBrithPos(Vector3 & v3)
 {
-	if (gBrithPointsCount == 0)return false;
-	int index = gBrithPointIndex % gBrithPointsCount;
-	gBrithPointIndex++;
-	v3 = gBrithPoints[index];
+	if (gGameConfig.BrithPointsCount == 0)return false;
+	int index = gGameConfig.BrithPointIndex % gGameConfig.BrithPointsCount;
+	gGameConfig.BrithPointIndex++;
+	v3 = gGameConfig.BrithPoints[index];
 	return true;
 }
 
 bool ChannelServer::RandomDropPos(Vector3 & v3)
 {
-	if (gDropRefreshPointsCount == 0 || gDropRefreshPoints == NULL)return false;
+	if (gGameConfig.DropRefreshPointsCount == 0 || gGameConfig.DropRefreshPoints == NULL)return false;
 
-	int index = RandomRange(0, gDropRefreshPointsCount - 1);
-	v3 = gDropRefreshPoints[index];
+	int index = RandomRange(0, gGameConfig.DropRefreshPointsCount - 1);
+	v3 = gGameConfig.DropRefreshPoints[index];
 	return true;
 }
 
 bool ChannelServer::GetDropItemPos(Vector3 & v3, int index)
 {
-	if (index < 0 || index >= gDropRefreshPointsCount)return false;
-	v3 = gDropRefreshPoints[index];
+	if (index < 0 || index >= gGameConfig.DropRefreshPointsCount)return false;
+	v3 = gGameConfig.DropRefreshPoints[index];
 	return true;
 }
 

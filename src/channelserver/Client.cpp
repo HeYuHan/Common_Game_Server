@@ -114,11 +114,12 @@ void ChannelClient::Update(float time)
 	default:
 		break;
 	}
-	if ((m_Proto & PROTOCOL_KEEPALIVE) > 0)
+	if ((m_Proto & PROTOCOL_KEEPALIVE) > 0 && m_NetState == NET_STATE_CONNECTED)
 	{
 		m_KeepAliveTime += time;
 		if (m_KeepAliveTime > KEEP_ALIVE_TIME)
 		{
+			log_error("keep alive time out disconnect %d", uid);
 			Disconnect();
 		}
 	}
@@ -269,22 +270,15 @@ void ChannelClient::ParseJoinGame()
 		}
 	}
 	EndWrite();
-	if (room)
+	CHECK_ROOM();
+	if (room->m_RoomState == ROOM_STATE_PLAYING)
 	{
-		if (room->m_RoomState == ROOM_STATE_PLAYING)
-		{
-			room->ClientLoading(this);
-			//room->ClientJoinInGame(this);
-		}
-		else if (room->IsFull())
-		{
-			room->LoadingGame();
-		}
+		room->ClientLoading(this);
+		//room->ClientJoinInGame(this);
 	}
-	else
+	else if (room->IsFull())
 	{
-		log_error("create room error %d:", uid);
-		Disconnect();
+		room->LoadingGame();
 	}
 }
 
@@ -376,9 +370,9 @@ void ChannelClient::ParseShoot()
 
 void ChannelClient::ParseHitCharacter()
 {
-	int hit_uid = 0;
+	uint hit_uid = 0;
 	byte sort = 0;
-	ReadInt(hit_uid);
+	ReadUInt(hit_uid);
 	ReadByte(sort);
 	ChannelClient* c = gChannelServer.m_ClientPool.Get(hit_uid);
 	WeaponInfo* weapon = GetWeapon(sort);
@@ -407,10 +401,10 @@ void ChannelClient::ParseHitCharacter()
 
 void ChannelClient::ParseExplodeCharacter()
 {
-	int hit_uid = 0;
+	uint hit_uid = 0;
 	byte sort = 0;
 	short dis = 0;
-	ReadInt(hit_uid);
+	ReadUInt(hit_uid);
 	ReadByte(sort);
 	ReadShort(dis);
 	ChannelClient* c = gChannelServer.m_ClientPool.Get(hit_uid);
@@ -543,7 +537,7 @@ void ChannelClient::Birth()
 	m_InGameInfo->m_Dead = false;
 	gChannelServer.RandomBrithPos(m_Position);
 	m_Rotation = Quaternion(0, 0, 0, 1);
-	memcpy(&m_InGameInfo->m_SkillList, &gChannelServer.gSkillInfos, sizeof(m_InGameInfo->m_SkillList));
+	memcpy(&m_InGameInfo->m_SkillList, &gGameConfig.SkillInfos, sizeof(m_InGameInfo->m_SkillList));
 	CHECK_ROOM();
 	FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
 	{
@@ -606,6 +600,17 @@ void ChannelClient::BuffStateChange(uint from_uid, int type)
 	m_OwnerRoom->BroadCastBuffState(from_uid, uid, &m_InGameInfo->m_BuffList[type]);
 }
 
+void ChannelClient::UpdateLevel()
+{
+	int k = 4;
+	if (m_InGameInfo->m_Level == 0)
+		m_InGameInfo->m_Level = 1;
+	if (m_InGameInfo->m_Level == 1 && m_InGameInfo->m_DiamondCount >= k)
+	{
+
+	}
+}
+
 //void ChannelClient::WriteCharacterInfo(ChannelClient* c)
 //{
 //	WriteInt(c->uid);
@@ -666,5 +671,9 @@ void ChannelClient::WriteIngameState(NetworkStream* stream,ChannelClient * c, by
 	if ((state & INGAME_STATE_CHANGE_DIAMONDCOUNT) > 0)
 	{
 		stream->WriteInt(c->m_InGameInfo->m_DiamondCount);
+	}
+	if ((state & INGAME_STATE_CHANGE_LEVELUP) > 0)
+	{
+		stream->WriteInt(c->m_InGameInfo->m_Level);
 	}
 }

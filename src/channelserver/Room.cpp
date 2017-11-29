@@ -29,8 +29,8 @@ void ChannelRoom::Init()
 {
 	memset(&m_CharacterInfoArray, 0, sizeof(m_CharacterInfoArray));
 	memset(&m_DropItemTimers, 0, sizeof(m_DropItemTimers));
-	memset(m_DropItemIndex, 0, gChannelServer.gDropRefreshPointsCount);
-	memset(&m_DropItemIndex[gChannelServer.gDropRefreshPointsCount], 1, MAX_DROP_POINT_COUNT- gChannelServer.gDropRefreshPointsCount);
+	memset(m_DropItemIndex, 0, gGameConfig.DropRefreshPointsCount);
+	memset(&m_DropItemIndex[gGameConfig.DropRefreshPointsCount], 1, MAX_DROP_POINT_COUNT- gGameConfig.DropRefreshPointsCount);
 	m_LoadingTime = 0;
 	m_RoomState = ROOM_STATE_WAIT;
 	m_GameTime = 0;
@@ -102,7 +102,7 @@ void ChannelRoom::PlayingUpdate(float time)
 	//drop item
 	for (int i = DROP_ITEM_START; i < DROP_ITEM_COUNT; i++)
 	{
-		DropItemRefreshInfo &refresh = gChannelServer.gDropRefreshItems[i];
+		DropItemRefreshInfo &refresh = gGameConfig.DropRefreshItems[i];
 		if (m_DropItemTimers[i] < refresh.m_StartTime)
 		{
 			m_DropItemTimers[i] += time;
@@ -144,7 +144,7 @@ void ChannelRoom::ClientEnter(ChannelClient * c)
 			{
 				gChannelServer.GetWeaponInfo(c->m_InGameInfo->m_WeaponList[j - 1], (WeaponType)j);
 			}
-			memcpy(c->m_InGameInfo->m_SkillList, gChannelServer.gSkillInfos, sizeof(gChannelServer.gSkillInfos));
+			memcpy(c->m_InGameInfo->m_SkillList, gGameConfig.SkillInfos, sizeof(gGameConfig.SkillInfos));
 			for (int i = BUFF_TYPE_START; i < BUFF_TYPE_COUNT; i++)
 			{
 				c->m_InGameInfo->m_BuffList[i].m_Type = (BuffType)i;
@@ -261,7 +261,8 @@ void ChannelRoom::BroadCastBuffState(uint from_uid, uint to_uid, BufferInfo* buf
 			if (buff->m_State != BUFF_STATE_END)
 			{
 				client->WriteFloat(buff->m_Duration);
-				client->WriteData(buff->m_UserData, sizeof(float) * 4);
+				for (int i = 0; i < 4; i++)
+					client->WriteFloat(buff->m_UserData[i]);
 			}
 			client->EndWrite();
 		}
@@ -294,7 +295,7 @@ void ChannelRoom::UpdateDropItemPosition(DropItemInfo * info)
 	info->m_PositionIndex = -1;
 	int empty_pos[MAX_DROP_POINT_COUNT] = { 0 };
 	int count = 0;
-	for (int i = 0; i < gChannelServer.gDropRefreshPointsCount; i++)
+	for (int i = 0; i < gGameConfig.DropRefreshPointsCount; i++)
 	{
 		if (m_DropItemIndex[i] == 0)
 		{
@@ -318,7 +319,7 @@ void ChannelRoom::UpdateDropItemPosition(DropItemInfo * info)
 void ChannelRoom::RemoveDropItem(DropItemInfo * info)
 {
 	BroadCastRemoveDropItem(info);
-	if (info->m_PositionIndex > 0&&info->m_PositionIndex<gChannelServer.gDropRefreshPointsCount)
+	if (info->m_PositionIndex > 0&&info->m_PositionIndex<gGameConfig.DropRefreshPointsCount)
 	{
 		m_DropItemIndex[info->m_PositionIndex] = 0;
 	}

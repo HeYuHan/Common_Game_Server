@@ -72,13 +72,9 @@ public:
 private:
 	UdpClientMap m_UdpClientMap;
 	Timer m_UpdateTimer;
-public:
-	DropItemRefreshInfo gDropRefreshItems[DROP_ITEM_COUNT];
-	Vector3 gDropRefreshPoints[MAX_DROP_POINT_COUNT];
-	int gDropRefreshPointsCount;
-	SkillInfo gSkillInfos[DROP_ITEM_COUNT];
 };
 extern ChannelServer gChannelServer;
+
 
 
 #endif // !__CHANNELSERVER_H__

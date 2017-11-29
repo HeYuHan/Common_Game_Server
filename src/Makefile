@@ -13,3 +13,5 @@ clean:
 deps:
 	$(MAKE) deps -C common
 
+clean_deps:
+	$(MAKE) clean_deps -C common

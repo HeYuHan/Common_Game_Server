@@ -22,7 +22,7 @@ void Logger::Init()
 	}
 	if (strlen(fileName) == 0)
 	{
-		strcpy(fileName, "../log/log_file.log");
+		strcpy(fileName, "./log/log_file.log");
 	}
 	PatternLayout *layout = new PatternLayout();
 	layout->setConversionPattern("%d:%c|%p:%m%n");
@@ -31,10 +31,11 @@ void Logger::Init()
 	RollingFileAppender *fileAppender = new RollingFileAppender(name, fileName);
 	fileAppender->setLayout(layout);
 	logger->addAppender(fileAppender);
-#endif
+#else
 	OstreamAppender *consoleAppender = new OstreamAppender(name, &std::cout);
 	consoleAppender->setLayout(layout);
 	logger->addAppender(consoleAppender);
+#endif
 
 	logger->setPriority(Priority::DEBUG);
 }

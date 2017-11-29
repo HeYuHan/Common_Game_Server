@@ -1,5 +1,6 @@
 #include "UdpListener.h"
 #include "common.h"
+#include "log.h"
 static unsigned char GetPacketIdentifier(RakNet::Packet *p)
 {
 	if (p == 0)
@@ -64,8 +65,9 @@ void UdpListener::Update()
 		{
 		case ID_DISCONNECTION_NOTIFICATION:
 			// Connection lost normally
+			
 			OnUdpClientDisconnected(m_MessagePacket);
-			//printf("ID_DISCONNECTION_NOTIFICATION from %s\n", m_MessagePacket->systemAddress.ToString(true));;
+			//log_debug("ID_DISCONNECTION_NOTIFICATION from %s\n", m_MessagePacket->systemAddress.ToString(true));;
 			break;
 
 
@@ -100,7 +102,7 @@ void UdpListener::Update()
 			// Couldn't deliver a reliable packet - i.e. the other system was abnormally
 			// terminated
 			OnUdpClientDisconnected(m_MessagePacket);
-			//printf("ID_CONNECTION_LOST from %s\n", m_MessagePacket->systemAddress.ToString(true));;
+			log_debug("ID_CONNECTION_LOST from %s\n", m_MessagePacket->systemAddress.ToString(true));;
 			break;
 		case KEEP_ALIVE_MSG:
 			OnKeepAlive(m_MessagePacket);

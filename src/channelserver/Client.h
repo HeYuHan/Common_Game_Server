@@ -37,7 +37,8 @@ typedef enum
 	INGAME_STATE_CHANGE_EXP = 1 << 2,
 	INGMAE_STATE_CHANGE_KILLCOUNT = 1 << 3,
 	INGAME_STATE_CHANGE_DIAMONDCOUNT= 1<<4,
-	INGAME_STATE_CHANGE_ALL = INGAME_STATE_CHANGE_HEALTH | INGAME_STATE_CHANGE_EXP | INGMAE_STATE_CHANGE_KILLCOUNT | INGAME_STATE_CHANGE_DIAMONDCOUNT
+	INGAME_STATE_CHANGE_LEVELUP = 1<<5,
+	INGAME_STATE_CHANGE_ALL = INGAME_STATE_CHANGE_HEALTH | INGAME_STATE_CHANGE_EXP | INGMAE_STATE_CHANGE_KILLCOUNT | INGAME_STATE_CHANGE_DIAMONDCOUNT | INGAME_STATE_CHANGE_LEVELUP
 }ClinetInGameState;
 
 typedef enum
@@ -98,6 +99,7 @@ public:
 	void Dead();
 	void InGameStateChange(byte state);
 	void BuffStateChange(uint from_uid,int type);
+	void UpdateLevel();
 	//void WriteCharacterInfo(ChannelClient* c);
 	static void WriteCharacterInfo(NetworkStream* stream, ChannelClient* c);
 	static void WriteIngameState(NetworkStream* stream,ChannelClient* c, byte state);
