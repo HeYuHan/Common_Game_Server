@@ -55,7 +55,9 @@ objs/%.o: %.cpp
 	$(CC) $(CFLAGS) -o $@ $<
 
 clean :
+	$(MAKE) clean -C $(RAKNET_SOURCE_DIR)
 	rm -f $(TARGET) objs/*.o objs/json/*.o
+	
 
 deps: $(EVENT_SOURCE_DIR)/configure $(LOG4CPP_SOURCE_DIR)/configure
 	$(MAKE) -C $(LOG4CPP_SOURCE_DIR)
