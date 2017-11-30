@@ -51,6 +51,8 @@ typedef unsigned long long ullong;
 #endif
 #endif // _WIN32
 
+#define MAX(a,b) (a)>(b)?(a):(b)
+#define MIN(a,b) (a)<(b)?(a):(b)
 
 #define FOR_EACH_LIST(__TYPE__,__LIST__,__ITER__) \
 	std::vector<__TYPE__*>::iterator iter##__ITER__; \

@@ -225,6 +225,21 @@ bool ChannelServer::Init()
 		ParseJsonValue(game_config, "m_LogToConsole", gLogger.m_LogToConsole);
 		ParseJsonValue(game_config, "m_LogToFile", gLogger.m_LogToFile);
 	}
+	Json::Value level_config = root["LevelReward"];
+	if (!level_config.isNull())
+	{
+		gGameConfig.LevelRewardCount = MIN(level_config.size(), MAX_LEVEL_REWARD);
+		for (Json::UInt i = 0; i < level_config.size(); i++)
+		{
+			int index = level_config[i][(uint)0].asInt();
+			if (index > MAX_LEVEL_REWARD)continue;
+			index -= 1;
+			LevelRewardInfo &info = gGameConfig.LevelReward[index];
+			info.m_RewardHP= level_config[i][1].asInt();
+			info.m_RewardAttack = level_config[i][2].asInt();
+			info.m_RequireEnergy = level_config[i][3].asInt();
+		}
+	}
 	if (!BaseServer::Init())
 	{
 		return false;
@@ -241,7 +256,7 @@ bool ChannelServer::Init()
 	{
 		return false;
 	}
-	m_RoomList.clear();
+	
 	if (!CreateUdpServer(m_Config.ip, m_Config.port, m_Config.pwd, 1000))
 	{
 		return false;
@@ -254,6 +269,7 @@ int ChannelServer::Run()
 	if (Init())
 	{
 		log_debug("server run in %s:%d pwd:%s", m_Config.ip, m_Config.port,m_Config.pwd);
+		m_RoomList.clear();
 		m_UpdateTimer.Init(GetEventBase(), 0.01f, ChannnelUpdate, this, true);
 		m_UpdateTimer.Begin();
 		int ret =BaseServer::Run();

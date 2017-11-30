@@ -102,7 +102,6 @@ struct CharacterInGameInfo
 	WeaponInfo m_WeaponList[WeaponCount - 1];
 	SkillInfo m_SkillList[DROP_ITEM_COUNT];
 	BufferInfo m_BuffList[BUFF_TYPE_COUNT];
-	int m_Experience;
 	int m_KillCount;
 	int m_HP;
 	int m_DiamondCount;
@@ -123,6 +122,7 @@ struct GameConfig
 {
 	//level
 	LevelRewardInfo LevelReward[MAX_LEVEL_REWARD];
+	int LevelRewardCount;
 	//weapon
 	WeaponInfo WeaponList[WeaponType::WeaponCount - 1];
 	//brith

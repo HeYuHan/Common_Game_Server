@@ -385,7 +385,7 @@ void ChannelClient::ParseHitCharacter()
 			c->BuffStateChange(uid, BUFF_TYPE_SHIELD);
 			return;
 		}
-		c->m_InGameInfo->m_HP -= weapon->Damage;
+		c->m_InGameInfo->m_HP -= GetWeaponDamage(weapon);
 		if (c->m_InGameInfo->m_HP <= 0)
 		{
 			c->Dead();
@@ -401,45 +401,52 @@ void ChannelClient::ParseHitCharacter()
 
 void ChannelClient::ParseExplodeCharacter()
 {
-	uint hit_uid = 0;
+	CHECK_ROOM();
 	byte sort = 0;
-	short dis = 0;
-	ReadUInt(hit_uid);
+	Vector3 explode_pos;
+	byte bullet_id;
 	ReadByte(sort);
-	ReadShort(dis);
-	ChannelClient* c = gChannelServer.m_ClientPool.Get(hit_uid);
+	ReadVector3(explode_pos);
+	ReadByte(bullet_id);
 	WeaponInfo* weapon = GetWeapon(sort);
-	if (c && weapon && hit_uid != uid)
+	if (weapon)
 	{
 		if (weapon->Range == 0)
 		{
 			log_error("%d weapon range is zero", sort);
 			return;
 		}
-		if (c->m_InGameInfo->m_Dead)return;
-		//´òµ½¶ÜÉÏÁË,µÖµ²¹¥»÷
-		if ((c->m_InGameInfo->m_BuffList[BUFF_TYPE_SHIELD].m_UserData[0]--) > 0)
+		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
 		{
-			c->BuffStateChange(uid, BUFF_TYPE_SHIELD);
-			return;
-		}
-		int damage = weapon->Damage;
-		float d_dis = weapon->Range / 3.0f;
-		if (dis > d_dis)
-		{
-			damage = (1 - (dis - d_dis) / (weapon->Range - d_dis))*weapon->Damage;
-			if (damage < 0)damage = 0;
-		}
-		c->m_InGameInfo->m_HP -= damage;
-		if (c->m_InGameInfo->m_HP <= 0)
-		{
-			c->Dead();
-			m_InGameInfo->m_KillCount += 1;
-			InGameStateChange(INGMAE_STATE_CHANGE_KILLCOUNT);
-		}
-		else
-		{
-			c->InGameStateChange(INGAME_STATE_CHANGE_HEALTH);
+			ChannelClient *c = *iterClient;
+			if (c->uid == uid || c->m_InGameInfo->m_Dead || c->m_GameState != GAME_STATE_IN_GAME)continue;
+			//´òµ½¶ÜÉÏÁË,µÖµ²¹¥»÷
+			if ((c->m_InGameInfo->m_BuffList[BUFF_TYPE_SHIELD].m_UserData[0]--) > 0)
+			{
+				c->BuffStateChange(uid, BUFF_TYPE_SHIELD);
+				continue;
+			}
+			int damage = GetWeaponDamage(weapon);
+			float d_dis = weapon->Range / 3.0f;
+			float dis = Length(c->m_Position - explode_pos);
+			if (dis > d_dis)
+			{
+				damage = (1 - (dis - d_dis) / (weapon->Range - d_dis))*weapon->Damage;
+				if (damage < 0)damage = 0;
+			}
+			c->m_InGameInfo->m_HP -= damage;
+			if (c->m_InGameInfo->m_HP <= 0)
+			{
+				c->Dead();
+				m_InGameInfo->m_KillCount += 1;
+				InGameStateChange(INGMAE_STATE_CHANGE_KILLCOUNT);
+			}
+			else
+			{
+				c->InGameStateChange(INGAME_STATE_CHANGE_HEALTH);
+
+			}
+			c->Explode(uid, sort, bullet_id, explode_pos);
 		}
 	}
 }
@@ -455,7 +462,7 @@ void ChannelClient::ParseGetDropItem()
 		if (info->m_Type == DROP_ITEM_DIAMOND)
 		{
 			m_InGameInfo->m_DiamondCount += 1;
-			InGameStateChange(INGAME_STATE_CHANGE_DIAMONDCOUNT);
+			UpdateLevel();
 		}
 		else
 		{
@@ -535,6 +542,7 @@ void ChannelClient::Birth()
 	if (m_InGameInfo->m_PlayTime == 0)m_InGameInfo->m_PlayTime = m_OwnerRoom->m_GameTime;
 	m_InGameInfo->m_HP = m_CharacterInfo.MaxHP;
 	m_InGameInfo->m_Dead = false;
+	m_InGameInfo->m_Level = 0;
 	gChannelServer.RandomBrithPos(m_Position);
 	m_Rotation = Quaternion(0, 0, 0, 1);
 	memcpy(&m_InGameInfo->m_SkillList, &gGameConfig.SkillInfos, sizeof(m_InGameInfo->m_SkillList));
@@ -576,6 +584,11 @@ void ChannelClient::Dead()
 	}
 }
 
+int ChannelClient::GetWeaponDamage(WeaponInfo *info)
+{
+	return (int)(info->Damage * (1 + gGameConfig.LevelReward[m_InGameInfo->m_Level].m_RewardAttack / 100.0f));
+}
+
 void ChannelClient::InGameStateChange(byte state)
 {
 	CHECK_ROOM();
@@ -602,13 +615,30 @@ void ChannelClient::BuffStateChange(uint from_uid, int type)
 
 void ChannelClient::UpdateLevel()
 {
-	int k = 4;
-	if (m_InGameInfo->m_Level == 0)
-		m_InGameInfo->m_Level = 1;
-	if (m_InGameInfo->m_Level == 1 && m_InGameInfo->m_DiamondCount >= k)
+	byte state = INGAME_STATE_CHANGE_DIAMONDCOUNT;
+	if (m_InGameInfo->m_Level < gGameConfig.LevelRewardCount)
 	{
-
+		LevelRewardInfo* info = &gGameConfig.LevelReward[m_InGameInfo->m_Level + 1];
+		if (m_InGameInfo->m_DiamondCount >= info->m_RequireEnergy)
+		{
+			m_InGameInfo->m_Level++;
+			m_InGameInfo->m_HP = MIN(m_CharacterInfo.MaxHP, m_InGameInfo->m_HP + info->m_RewardHP);
+			state |= INGAME_STATE_CHANGE_LEVELUP | INGAME_STATE_CHANGE_HEALTH;
+		}
 	}
+	InGameStateChange(state);
+
+}
+
+void ChannelClient::Explode(int from_uid, byte sort, byte bullet_id,Vector3 &pos)
+{
+	BeginWrite();
+	WriteByte(SM_INGMAE_EXPLODE);
+	WriteInt(from_uid);
+	WriteByte(sort);
+	WriteByte(bullet_id);
+	WriteVector3(pos);
+	EndWrite();
 }
 
 //void ChannelClient::WriteCharacterInfo(ChannelClient* c)
@@ -658,22 +688,25 @@ void ChannelClient::WriteIngameState(NetworkStream* stream,ChannelClient * c, by
 	stream->WriteByte(state);
 	if ((state & INGAME_STATE_CHANGE_HEALTH) > 0)
 	{
-		stream->WriteInt(c->m_InGameInfo->m_HP);
-	}
-	if ((state & INGAME_STATE_CHANGE_EXP) > 0)
-	{
-		stream->WriteInt(c->m_InGameInfo->m_Experience);
+		stream->WriteShort(c->m_InGameInfo->m_HP);
 	}
 	if ((state & INGMAE_STATE_CHANGE_KILLCOUNT) > 0)
 	{
-		stream->WriteInt(c->m_InGameInfo->m_KillCount);
+		stream->WriteShort(c->m_InGameInfo->m_KillCount);
 	}
 	if ((state & INGAME_STATE_CHANGE_DIAMONDCOUNT) > 0)
 	{
-		stream->WriteInt(c->m_InGameInfo->m_DiamondCount);
+		stream->WriteShort(c->m_InGameInfo->m_DiamondCount);
+		int level = MIN(c->m_InGameInfo->m_Level, gGameConfig.LevelRewardCount - 1);
+		LevelRewardInfo &current = gGameConfig.LevelReward[level];
+		LevelRewardInfo &next = gGameConfig.LevelReward[level + 1];
+		int req = next.m_RequireEnergy - current.m_RequireEnergy;
+		int have = MAX(c->m_InGameInfo->m_DiamondCount - current.m_RequireEnergy, 0);
+		stream->WriteShort(have);
+		stream->WriteShort(req);
 	}
 	if ((state & INGAME_STATE_CHANGE_LEVELUP) > 0)
 	{
-		stream->WriteInt(c->m_InGameInfo->m_Level);
+		stream->WriteShort(c->m_InGameInfo->m_Level);
 	}
 }
