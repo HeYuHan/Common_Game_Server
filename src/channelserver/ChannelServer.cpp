@@ -383,7 +383,7 @@ bool ChannelServer::RandomBrithPos(Vector3 & v3)
 
 bool ChannelServer::RandomDropPos(Vector3 & v3)
 {
-	if (gGameConfig.DropRefreshPointsCount == 0 || gGameConfig.DropRefreshPoints == NULL)return false;
+	if (gGameConfig.DropRefreshPointsCount == 0)return false;
 
 	int index = RandomRange(0, gGameConfig.DropRefreshPointsCount - 1);
 	v3 = gGameConfig.DropRefreshPoints[index];

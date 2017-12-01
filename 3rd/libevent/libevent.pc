@@ -11,6 +11,6 @@ Version: 2.0.22-stable
 Requires:
 Conflicts:
 Libs: -L${libdir} -levent
-Libs.private: -lrt 
+Libs.private: 
 Cflags: -I${includedir}
 

@@ -32,12 +32,13 @@ bool UdpListener::CreateUdpServer(const char * ip, int port, const char* pwd, in
 	RakNet::SocketDescriptor socketDescriptors[2];
 	socketDescriptors[0].port = port;
 	socketDescriptors[0].socketFamily = AF_INET; // Test out IPV4
+	m_Socket->SetOccasionalPing(true);
+	m_Socket->SetUnreliableTimeout(10000);
 	bool b = m_Socket->Startup(max_client, socketDescriptors, 1) == RakNet::RAKNET_STARTED;
 	if (b)
 	{
 		m_Socket->SetMaximumIncomingConnections(max_client);
-		m_Socket->SetOccasionalPing(true);
-		m_Socket->SetUnreliableTimeout(1000);
+
 		return true;
 	}
 	else

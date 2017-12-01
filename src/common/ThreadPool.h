@@ -1,6 +1,7 @@
 #pragma once
 #ifndef __THREADPOOL_H__
 #define __THREADPOOL_H__
+
 #include <vector>
 #include <queue>
 #include <pthread.h>
@@ -113,13 +114,9 @@ public:
 	ThreadTask* GetTask();
 	void Process();
 private:
-	int m_BuffSize;
 	ThreadBuffer m_Buffer;
 	int m_ThreadCount;
 	bool m_Running;
 	std::vector<Thread*> m_ThreadList;
 };
-
-
-
 #endif // !__THREADPOOL_H__

@@ -11,7 +11,7 @@ class TcpConnection:public NetworkConnection
 public:
 	TcpConnection();
 	~TcpConnection();
-	virtual void Update();
+	virtual void Update(float time);
 	virtual int Read(void* data, int size);
 	virtual int Send(void* data, int size);
 	void InitSocket(int socket, sockaddr* addr, struct event_base *base);

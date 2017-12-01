@@ -41,14 +41,15 @@ typedef unsigned int uint;
 typedef long long llong;
 typedef unsigned long long ullong;
 
-#ifdef _WIN32
-#define USING_VECOTR using namespace std;
-#else
+#ifdef LINUX
 #if __GNUC__>2
 #define USING_VECOTR using namespace __gnu_cxx;
 #else
 #define USING_VECOTR using namespace stdext;
 #endif
+
+#else
+#define USING_VECOTR using namespace std;
 #endif // _WIN32
 
 #define MAX(a,b) (a)>(b)?(a):(b)

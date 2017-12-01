@@ -19,7 +19,7 @@ TcpConnection::~TcpConnection()
 	m_Socket = -1;
 }
 
-void TcpConnection::Update()
+void TcpConnection::Update(float time)
 {
 }
 

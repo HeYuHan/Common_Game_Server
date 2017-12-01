@@ -97,7 +97,6 @@ ThreadTask::~ThreadTask()
 
 
 ThreadPool::ThreadPool(int buff_size, int thread_count):
-	m_BuffSize(buff_size),
 	m_Buffer(buff_size),
 	m_ThreadCount(thread_count),
 	m_Running(true),

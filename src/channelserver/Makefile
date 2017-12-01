@@ -3,6 +3,14 @@ CC = g++
 LFLAGS = -m64 -pthread -lrt
 CFLAGS = -c -fPIC
 
+PF = LINUX
+
+ifneq ($(shell uname), Linux) 
+PF = MACOS
+endif
+
+CFLAGS += -D$(PF)
+
 ifdef RELEASE
 	CFLAGS += -Wall -Werror -g -O2
 	LFLAGS += -Wall -Werror -g -O2

@@ -9,11 +9,18 @@ CFLAGS = -c -fPIC
 CFLAGS += -I.
 CFLAGS += -I./$(RAKNET_SOURCE_DIR)/Source
 
+PF = LINUX
+
+ifneq ($(shell uname), Linux) 
+PF = MACOS
+endif
+
+CFLAGS += -D$(PF)
 
 ifdef RELEASE
-	CFLAGS += -Wall -Werror -g -O2
+	CFLAGS += -Wall -Werror -g -O2 
 else
-	CFLAGS += -Wall -Werror -g -D_DEBUG
+	CFLAGS += -Wall -Werror -g -D_DEBUG 
 endif
 
 
@@ -55,7 +62,7 @@ objs/%.o: %.cpp
 	$(CC) $(CFLAGS) -o $@ $<
 
 clean :
-	$(MAKE) clean -C $(RAKNET_SOURCE_DIR)
+	#$(MAKE) clean -C $(RAKNET_SOURCE_DIR)
 	rm -f $(TARGET) objs/*.o objs/json/*.o
 	
 

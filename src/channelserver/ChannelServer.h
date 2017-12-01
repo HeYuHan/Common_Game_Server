@@ -1,7 +1,7 @@
-#pragma once
+﻿#pragma once
 #ifndef __CHANNELSERVER_H__
 #define __CHANNELSERVER_H__
-#ifndef _WIN32
+#ifdef LINUX
 #include <tr1/unordered_map>
 #else
 #include <unordered_map>
@@ -21,8 +21,8 @@ class Timer;
 typedef std::vector<ChannelClient*>::iterator ClientIterator;
 typedef std::vector<ChannelRoom*>::iterator RoomIterator;
 typedef std::pair<uint64_t, ChannelClient*> UdpClientMapPair;
-typedef std::tr1::unordered_map<uint64_t, ChannelClient*> UdpClientMap;
-typedef std::tr1::unordered_map<uint64_t, ChannelClient*>::iterator UdpClientIterator;
+typedef std::unordered_map<uint64_t, ChannelClient*> UdpClientMap;
+typedef std::unordered_map<uint64_t, ChannelClient*>::iterator UdpClientIterator;
 struct ChannelConfig
 {
 	char ip[64];
