@@ -9,10 +9,21 @@ CFLAGS = -c -fPIC
 CFLAGS += -I.
 CFLAGS += -I./$(RAKNET_SOURCE_DIR)/Source
 
+EVENT_LIB = /usr/local/lib/libevent.a 
+EVENT_LIB_CORE = /usr/local/lib/libevent_core.a 
+EVENT_LIB_EXT = /usr/local/lib/libevent_extra.a 
+LOG_LIB = /usr/local/lib/liblog4cpp.a
+RAKNET_LIB = ../../3rd/RakNet/Lib/libraknet.a
+
+TARGET = ../lib/libcommon.a
+SOURCES = $(wildcard *.cpp) $(wildcard json/*.cpp)
+OBJS    = $(patsubst %.cpp,objs/%.o,$(SOURCES))
+
 PF = LINUX
+DEPS_LIB = $(LOG_LIB) $(EVENT_LIB) $(RAKNET_LIB) 
 
 ifneq ($(shell uname), Linux) 
-PF = MACOS
+	PF = MACOS
 endif
 
 CFLAGS += -D$(PF)
@@ -24,15 +35,7 @@ else
 endif
 
 
-EVENT_LIB = /usr/local/lib/libevent.a 
-EVENT_LIB_CORE = /usr/local/lib/libevent_core.a 
-EVENT_LIB_EXT = /usr/local/lib/libevent_extra.a 
-LOG_LIB = /usr/local/lib/liblog4cpp.a
-RAKNET_LIB = ../../3rd/RakNet/Lib/libraknet.a
 
-TARGET = ../lib/libcommon.a
-SOURCES = $(wildcard *.cpp) $(wildcard json/*.cpp)
-OBJS    = $(RAKNET_LIB) $(patsubst %.cpp,objs/%.o,$(SOURCES))
 
 
 default : $(TARGET)
@@ -43,7 +46,7 @@ $(EVENT_LIB) : $(EVENT_SOURCE_DIR)/Makefile
 	$(MAKE) -C $(EVENT_SOURCE_DIR) install
 
 $(EVENT_SOURCE_DIR)/Makefile : $(EVENT_SOURCE_DIR)/configure
-	./$(EVENT_SOURCE_DIR)/configure --prefix=/usr/local
+	$(EVENT_SOURCE_DIR)/configure --prefix=/usr/local
 
 #log4cpp
 $(LOG_LIB) : $(LOG4CPP_SOURCE_DIR)/Makefile
@@ -51,7 +54,7 @@ $(LOG_LIB) : $(LOG4CPP_SOURCE_DIR)/Makefile
 	$(MAKE) -C $(LOG4CPP_SOURCE_DIR) install
 
 $(LOG4CPP_SOURCE_DIR)/Makefile : $(LOG4CPP_SOURCE_DIR)/configure
-	./$(LOG4CPP_SOURCE_DIR)/configure --prefix=/usr/local
+	$(LOG4CPP_SOURCE_DIR)/configure --prefix=/usr/local
 
 #raknet
 $(RAKNET_LIB) : $(RAKNET_SOURCE_DIR)/Makefile
@@ -62,19 +65,18 @@ objs/%.o: %.cpp
 	$(CC) $(CFLAGS) -o $@ $<
 
 clean :
-	$(MAKE) clean -C $(RAKNET_SOURCE_DIR)
 	rm -f $(TARGET) objs/*.o objs/json/*.o
 	
 
-deps: $(EVENT_SOURCE_DIR)/configure $(LOG4CPP_SOURCE_DIR)/configure
-	$(MAKE) -C $(LOG4CPP_SOURCE_DIR)
-	$(MAKE) -C $(LOG4CPP_SOURCE_DIR) install
-	$(MAKE) -C $(EVENT_SOURCE_DIR)
-	$(MAKE) -C $(EVENT_SOURCE_DIR) install
+deps: $(DEPS_LIB)
 
 clean_deps:
+	$(MAKE) -C $(RAKNET_SOURCE_DIR) clean
 	$(MAKE) -C $(EVENT_SOURCE_DIR) clean
-	$(MAKE) -C $(EVENT_SOURCE_DIR) clean
+	$(MAKE) -C $(LOG4CPP_SOURCE_DIR) clean
+	$(MAKE) -C $(EVENT_SOURCE_DIR) uninstall
+	$(MAKE) -C $(LOG4CPP_SOURCE_DIR) uninstall
+
 
 
 
