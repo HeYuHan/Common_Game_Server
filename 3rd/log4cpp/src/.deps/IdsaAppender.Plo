@@ -1,0 +1,11 @@
+IdsaAppender.lo: IdsaAppender.cpp PortabilityImpl.hh \
+ ../include/log4cpp/Portability.hh ../include/log4cpp/config.h \
+ ../include/log4cpp/Export.hh
+
+PortabilityImpl.hh:
+
+../include/log4cpp/Portability.hh:
+
+../include/log4cpp/config.h:
+
+../include/log4cpp/Export.hh:

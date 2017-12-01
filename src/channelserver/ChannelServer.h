@@ -18,11 +18,11 @@ using namespace RakNet;
 class ChannelRoom;
 class ChannelClient;
 class Timer;
-typedef std::vector<ChannelClient*>::iterator ClientIterator;
-typedef std::vector<ChannelRoom*>::iterator RoomIterator;
-typedef std::pair<uint64_t, ChannelClient*> UdpClientMapPair;
-typedef std::unordered_map<uint64_t, ChannelClient*> UdpClientMap;
-typedef std::unordered_map<uint64_t, ChannelClient*>::iterator UdpClientIterator;
+typedef NS_VECTOR::vector<ChannelClient*>::iterator ClientIterator;
+typedef NS_VECTOR::vector<ChannelRoom*>::iterator RoomIterator;
+typedef NS_VECTOR::pair<uint64_t, ChannelClient*> UdpClientMapPair;
+typedef NS_MAP::unordered_map<uint64_t, ChannelClient*> UdpClientMap;
+typedef NS_MAP::unordered_map<uint64_t, ChannelClient*>::iterator UdpClientIterator;
 struct ChannelConfig
 {
 	char ip[64];

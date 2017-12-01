@@ -11,16 +11,16 @@
 /* #undef DISABLE_THREAD_SUPPORT */
 
 /* Define to 1 if you have the `arc4random' function. */
-#define HAVE_ARC4RANDOM 1
+/* #undef HAVE_ARC4RANDOM */
 
 /* Define to 1 if you have the `arc4random_buf' function. */
-#define HAVE_ARC4RANDOM_BUF 1
+/* #undef HAVE_ARC4RANDOM_BUF */
 
 /* Define to 1 if you have the <arpa/inet.h> header file. */
 #define HAVE_ARPA_INET_H 1
 
 /* Define to 1 if you have the `clock_gettime' function. */
-/* #undef HAVE_CLOCK_GETTIME */
+#define HAVE_CLOCK_GETTIME 1
 
 /* Define to 1 if you have the declaration of `CTL_KERN', and to 0 if you
    don't. */
@@ -32,11 +32,11 @@
 
 /* Define to 1 if you have the declaration of `KERN_RANDOM', and to 0 if you
    don't. */
-#define HAVE_DECL_KERN_RANDOM 0
+#define HAVE_DECL_KERN_RANDOM 1
 
 /* Define to 1 if you have the declaration of `RANDOM_UUID', and to 0 if you
    don't. */
-#define HAVE_DECL_RANDOM_UUID 0
+#define HAVE_DECL_RANDOM_UUID 1
 
 /* Define if /dev/poll is available */
 /* #undef HAVE_DEVPOLL */
@@ -45,13 +45,13 @@
 #define HAVE_DLFCN_H 1
 
 /* Define if your system supports the epoll system calls */
-/* #undef HAVE_EPOLL */
+#define HAVE_EPOLL 1
 
 /* Define to 1 if you have the `epoll_ctl' function. */
-/* #undef HAVE_EPOLL_CTL */
+#define HAVE_EPOLL_CTL 1
 
 /* Define to 1 if you have the `eventfd' function. */
-/* #undef HAVE_EVENTFD */
+#define HAVE_EVENTFD 1
 
 /* Define if your system supports event ports */
 /* #undef HAVE_EVENT_PORTS */
@@ -111,13 +111,13 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the `issetugid' function. */
-#define HAVE_ISSETUGID 1
+/* #undef HAVE_ISSETUGID */
 
 /* Define to 1 if you have the `kqueue' function. */
-#define HAVE_KQUEUE 1
+/* #undef HAVE_KQUEUE */
 
 /* Define if the system has zlib */
-#define HAVE_LIBZ 1
+/* #undef HAVE_LIBZ */
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
@@ -135,7 +135,7 @@
 #define HAVE_NETINET_IN_H 1
 
 /* Define if the system has openssl */
-#define HAVE_OPENSSL 1
+/* #undef HAVE_OPENSSL */
 
 /* Define to 1 if you have the <openssl/bio.h> header file. */
 /* #undef HAVE_OPENSSL_BIO_H */
@@ -186,7 +186,7 @@
 #define HAVE_SIGNAL 1
 
 /* Define to 1 if you have the `splice' function. */
-/* #undef HAVE_SPLICE */
+#define HAVE_SPLICE 1
 
 /* Define to 1 if you have the <stdarg.h> header file. */
 #define HAVE_STDARG_H 1
@@ -207,7 +207,7 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `strlcpy' function. */
-#define HAVE_STRLCPY 1
+/* #undef HAVE_STRLCPY */
 
 /* Define to 1 if you have the `strsep' function. */
 #define HAVE_STRSEP 1
@@ -225,19 +225,19 @@
 #define HAVE_STRUCT_IN6_ADDR 1
 
 /* Define to 1 if `s6_addr16' is a member of `struct in6_addr'. */
-/* #undef HAVE_STRUCT_IN6_ADDR_S6_ADDR16 */
+#define HAVE_STRUCT_IN6_ADDR_S6_ADDR16 1
 
 /* Define to 1 if `s6_addr32' is a member of `struct in6_addr'. */
-/* #undef HAVE_STRUCT_IN6_ADDR_S6_ADDR32 */
+#define HAVE_STRUCT_IN6_ADDR_S6_ADDR32 1
 
 /* Define to 1 if the system has the type `struct sockaddr_in6'. */
 #define HAVE_STRUCT_SOCKADDR_IN6 1
 
 /* Define to 1 if `sin6_len' is a member of `struct sockaddr_in6'. */
-#define HAVE_STRUCT_SOCKADDR_IN6_SIN6_LEN 1
+/* #undef HAVE_STRUCT_SOCKADDR_IN6_SIN6_LEN */
 
 /* Define to 1 if `sin_len' is a member of `struct sockaddr_in'. */
-#define HAVE_STRUCT_SOCKADDR_IN_SIN_LEN 1
+/* #undef HAVE_STRUCT_SOCKADDR_IN_SIN_LEN */
 
 /* Define to 1 if the system has the type `struct sockaddr_storage'. */
 #define HAVE_STRUCT_SOCKADDR_STORAGE 1
@@ -255,13 +255,13 @@
 /* #undef HAVE_SYS_DEVPOLL_H */
 
 /* Define to 1 if you have the <sys/epoll.h> header file. */
-/* #undef HAVE_SYS_EPOLL_H */
+#define HAVE_SYS_EPOLL_H 1
 
 /* Define to 1 if you have the <sys/eventfd.h> header file. */
-/* #undef HAVE_SYS_EVENTFD_H */
+#define HAVE_SYS_EVENTFD_H 1
 
 /* Define to 1 if you have the <sys/event.h> header file. */
-#define HAVE_SYS_EVENT_H 1
+/* #undef HAVE_SYS_EVENT_H */
 
 /* Define to 1 if you have the <sys/ioctl.h> header file. */
 #define HAVE_SYS_IOCTL_H 1
@@ -279,7 +279,7 @@
 #define HAVE_SYS_SELECT_H 1
 
 /* Define to 1 if you have the <sys/sendfile.h> header file. */
-/* #undef HAVE_SYS_SENDFILE_H */
+#define HAVE_SYS_SENDFILE_H 1
 
 /* Define to 1 if you have the <sys/socket.h> header file. */
 #define HAVE_SYS_SOCKET_H 1
@@ -345,10 +345,10 @@
 #define HAVE_VASPRINTF 1
 
 /* Define if kqueue works correctly with pipes */
-#define HAVE_WORKING_KQUEUE 1
+/* #undef HAVE_WORKING_KQUEUE */
 
 /* Define to 1 if you have the <zlib.h> header file. */
-#define HAVE_ZLIB_H 1
+/* #undef HAVE_ZLIB_H */
 
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
    */

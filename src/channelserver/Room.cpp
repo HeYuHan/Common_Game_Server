@@ -6,7 +6,6 @@
 #include <log.h>
 #include <algorithm>
 #include <tools.h>
-USING_VECOTR
 
 static void RoomUpdate(float time, void* arg)
 {

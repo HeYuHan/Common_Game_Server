@@ -40,17 +40,20 @@ typedef unsigned short int ushort;
 typedef unsigned int uint;
 typedef long long llong;
 typedef unsigned long long ullong;
+#define NS_MAP std::tr1
+#define NS_VECTOR std
+//#ifdef LINUX
+//#if __GNUC__>2
+//#define USING_VECOTR using namespace __gnu_cxx;
+//#else
+//#define USING_VECOTR using namespace stdext;
+//#define USING_MAP using namespace std::tr1;
+//#endif
+//
+//#else
 
-#ifdef LINUX
-#if __GNUC__>2
-#define USING_VECOTR using namespace __gnu_cxx;
-#else
-#define USING_VECOTR using namespace stdext;
-#endif
 
-#else
-#define USING_VECOTR using namespace std;
-#endif // _WIN32
+//#endif // _WIN32
 
 #define MAX(a,b) (a)>(b)?(a):(b)
 #define MIN(a,b) (a)<(b)?(a):(b)

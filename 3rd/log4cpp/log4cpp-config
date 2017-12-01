@@ -103,10 +103,10 @@ if test -z "$target" ; then
   target=""
 fi
 if test -z "$host" ; then
-  host="i386-apple-darwin15.6.0"
+  host="x86_64-unknown-linux-gnu"
 fi
 if test -z "$build" ; then
-  build="i386-apple-darwin15.6.0"
+  build="x86_64-unknown-linux-gnu"
 fi
  
 # generate output
@@ -114,7 +114,7 @@ if test x$echo_module != xyes ; then
   echo_module_log4cpp="yes"
 fi
 if test x$echo_module_log4cpp = xyes ; then
-  cflags="$cflags  "
+  cflags="$cflags -pthread "
   libs="$libs -llog4cpp  "
   version="$version 1.1"
 fi

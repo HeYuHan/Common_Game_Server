@@ -11,6 +11,6 @@ Version: 2.0.22-stable
 Requires: libevent
 Conflicts:
 Libs: -L${libdir} -levent_pthreads
-Libs.private:  
-Cflags: -I${includedir} -D_THREAD_SAFE 
+Libs.private: -lrt  
+Cflags: -I${includedir} 
 

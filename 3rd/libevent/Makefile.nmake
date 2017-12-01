@@ -23,7 +23,6 @@ ALL_OBJS=$(CORE_OBJS) $(WIN_OBJS) $(EXTRA_OBJS)
 STATIC_LIBS=libevent_core.lib libevent_extras.lib libevent.lib
 
 
-#all: static_libs tests
 all: static_libs
 
 static_libs: $(STATIC_LIBS)
@@ -40,9 +39,9 @@ libevent.lib: $(CORE_OBJS) $(WIN_OBJS) $(EXTRA_OBJS)
 clean:
 	del $(ALL_OBJS)
 	del $(STATIC_LIBS)
-#	cd test
-#	$(MAKE) /F Makefile.nmake clean
+	cd test
+	$(MAKE) /F Makefile.nmake clean
 
-#tests:
-#	cd test
-#	$(MAKE) /F Makefile.nmake
+tests:
+	cd test
+	$(MAKE) /F Makefile.nmake
