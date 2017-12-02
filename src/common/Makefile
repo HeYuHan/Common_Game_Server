@@ -8,12 +8,16 @@ RAKNET_SOURCE_DIR = ../../3rd/RakNet
 CFLAGS = -c -fPIC
 CFLAGS += -I.
 CFLAGS += -I./$(RAKNET_SOURCE_DIR)/Source
+CFLAGS += -I/usr/local
 
 EVENT_LIB = /usr/local/lib/libevent.a 
 EVENT_LIB_CORE = /usr/local/lib/libevent_core.a 
 EVENT_LIB_EXT = /usr/local/lib/libevent_extra.a 
 LOG_LIB = /usr/local/lib/liblog4cpp.a
 RAKNET_LIB = ../../3rd/RakNet/Lib/libraknet.a
+
+EVENT_LIB_PREFIX = --prefix=/usr/local
+LOG_LIB_PREFIX = --prefix=/usr/local
 
 TARGET = ../lib/libcommon.a
 SOURCES = $(wildcard *.cpp) $(wildcard json/*.cpp)
@@ -24,6 +28,7 @@ DEPS_LIB = $(LOG_LIB) $(EVENT_LIB) $(RAKNET_LIB)
 
 ifneq ($(shell uname), Linux) 
 	PF = MACOS
+	EVENT_LIB_PREFIX += CPPFLAGS="-I/usr/local/Cellar/openssl/1.0.2h_1/include" LDFLAGS="-I/usr/local/Cellar/openssl/1.0.2h_1/lib"
 endif
 
 CFLAGS += -D$(PF)

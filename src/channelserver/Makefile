@@ -21,6 +21,7 @@ endif
 CFLAGS += -I.
 CFLAGS += -I./../common/
 CFLAGS += -I./$(RAKNET_SOURCE_DIR)/Source
+CFLAGS += -I/usr/local
 CFLAGS += -std=c++0x
 
 RAKNET_SOURCE_DIR = ../../3rd/RakNet
