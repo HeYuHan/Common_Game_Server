@@ -272,7 +272,7 @@ int ChannelServer::Run()
 	{
 		log_debug("server run in %s:%d pwd:%s", m_Config.ip, m_Config.port,m_Config.pwd);
 		m_RoomList.clear();
-		m_UpdateTimer.Init(GetEventBase(), 0.01f, ChannnelUpdate, this, true);
+		m_UpdateTimer.Init(0, ChannnelUpdate, this, true);
 		m_UpdateTimer.Begin();
 		int ret =BaseServer::Run();
 		log_debug("server end result %d", ret);

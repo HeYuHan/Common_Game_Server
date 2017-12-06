@@ -35,7 +35,7 @@ void ChannelRoom::Init()
 	m_GameTime = 0;
 	m_LastGameTime = 0;
 	m_ClientList.clear();
-	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.02f, RoomUpdate, this,true);
+	m_UpdateTimer.Init(0.02f, RoomUpdate, this,true);
 	m_UpdateTimer.Begin();
 }
 

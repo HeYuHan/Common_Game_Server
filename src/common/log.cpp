@@ -11,8 +11,8 @@ Logger::Logger():
 }
 Logger::~Logger()
 {
-	if(NULL != logger)logger->shutdown();
-	logger = NULL;
+	/*if(NULL != logger)logger->shutdown();
+	logger = NULL;*/
 }
 
 void Logger::Init()

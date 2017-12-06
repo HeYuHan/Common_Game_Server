@@ -127,6 +127,7 @@
     <ClInclude Include="..\src\common\BaseServer.h" />
     <ClInclude Include="..\src\common\common.h" />
     <ClInclude Include="..\src\common\FileReader.h" />
+    <ClInclude Include="..\src\common\HttpConnection3.h" />
     <ClInclude Include="..\src\common\json\autolink.h" />
     <ClInclude Include="..\src\common\json\config.h" />
     <ClInclude Include="..\src\common\json\features.h" />
@@ -153,6 +154,7 @@
     <ClCompile Include="..\src\common\BaseServer.cpp" />
     <ClCompile Include="..\src\common\common.cpp" />
     <ClCompile Include="..\src\common\FileReader.cpp" />
+    <ClCompile Include="..\src\common\HttpConnection3.cpp" />
     <ClCompile Include="..\src\common\json\json_reader.cpp" />
     <ClCompile Include="..\src\common\json\json_value.cpp" />
     <ClCompile Include="..\src\common\json\json_writer.cpp" />
@@ -172,6 +174,11 @@
     <None Include="..\src\common\json\json_internalarray.inl" />
     <None Include="..\src\common\json\json_internalmap.inl" />
     <None Include="..\src\common\json\json_valueiterator.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3rd\RakNet\Lib\LibStatic\LibStatic_vc9.vcxproj">
+      <Project>{6533bdae-0f0c-45e4-8fe7-add0f37fe063}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -70,7 +70,7 @@ objs/%.o: %.cpp
 	$(CC) $(CFLAGS) -o $@ $<
 
 clean :
-	rm -f $(TARGET) objs/*.o objs/json/*.o
+	rm -f $(TARGET) objs/*.o objs/json/*.o *.o
 	
 
 deps: $(DEPS_LIB)

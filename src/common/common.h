@@ -14,15 +14,6 @@
 #pragma comment(lib,"./../3rd/libevent/libevent.lib")
 #pragma comment(lib,"./../3rd/libevent/libevent_core.lib")
 #pragma comment(lib,"./../3rd/libevent/libevent_extras.lib")
-//RakNet_VS2008_LibStatic_Release_Win32.lib
-//raknet
-#ifdef _DEBUG
-#pragma comment(lib,"./../3rd/RakNet/Lib/RakNet_VS2008_LibStatic_Debug_Win32.lib")
-#else
-#pragma comment(lib,"./../3rd/RakNet/Lib/RakNet_VS2008_LibStatic_Release_Win32.lib")
-
-#endif
-
 #endif
 
 
@@ -40,8 +31,15 @@ typedef unsigned short int ushort;
 typedef unsigned int uint;
 typedef long long llong;
 typedef unsigned long long ullong;
+#if defined(MACOS)
+#define NS_MAP std
+#define NS_VECTOR std
+#else
 #define NS_MAP std::tr1
 #define NS_VECTOR std
+#endif // defined(MACOS)
+
+
 //#ifdef LINUX
 //#if __GNUC__>2
 //#define USING_VECOTR using namespace __gnu_cxx;

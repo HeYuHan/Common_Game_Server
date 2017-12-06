@@ -2,6 +2,8 @@
 #include <getopt.h>
 #include <log.h>
 #include <json/json.h>
+#include <HttpConnection3.h>
+#include <Timer.h>
 using namespace Json;
 enum
 {
@@ -19,7 +21,6 @@ struct option long_options[]=
 	{"max_client",1,0,max_client },
 	{"data_path",1,0,data_path },
 };
-
 int main(int argc,char **argv)
 {
 	while (1)

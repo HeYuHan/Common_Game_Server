@@ -449,7 +449,7 @@ Copyright (C) 2010 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/root/Window_Share/Common_Game_Server/3rd/log4cpp'
+ac_pwd='/root/Desktop/Windows/Common_Game_Server/3rd/log4cpp'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/bin/mkdir -p'
@@ -687,7 +687,7 @@ finish_cmds='PATH="\$PATH:/sbin" ldconfig -n $libdir'
 finish_eval=''
 hardcode_into_libs='yes'
 sys_lib_search_path_spec='/usr/lib/gcc/x86_64-redhat-linux/4.4.7 /usr/lib64 /lib64 '
-sys_lib_dlsearch_path_spec='/lib /usr/lib /usr/lib64/mysql '
+sys_lib_dlsearch_path_spec='/lib /usr/lib /usr/lib64/mysql /usr/lib64/qt-3.3/lib /usr/lib64/xulrunner '
 hardcode_action='immediate'
 enable_dlopen='unknown'
 enable_dlopen_self='unknown'
@@ -1002,7 +1002,7 @@ S["mkdir_p"]="/bin/mkdir -p"
 S["MKDIR_P"]="/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="strip"
-S["install_sh"]="${SHELL} /root/Window_Share/Common_Game_Server/3rd/log4cpp/config/install-sh"
+S["install_sh"]="${SHELL} /root/Desktop/Windows/Common_Game_Server/3rd/log4cpp/config/install-sh"
 S["MAKEINFO"]="makeinfo"
 S["AUTOHEADER"]="autoheader"
 S["AUTOMAKE"]="automake-1.11"

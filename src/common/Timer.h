@@ -11,9 +11,12 @@ class Timer
 public:
 	Timer();
 	~Timer();
-	void Init(struct event_base *base, float time, TimerCallBack call_back, void* arg, bool loop = false);
+	void Init(float time, TimerCallBack call_back, void* arg, bool loop = false);
 	void Begin();
 	void Stop();
+	static int Loop();
+	static void ExitLoop();
+	static struct event_base* GetEventBase();
 private:
 	static void timeout_cb(evutil_socket_t fd, short event, void *arg);
 public:
@@ -24,10 +27,8 @@ public:
 	void* m_Arg;
 	TimerCallBack m_CallBack;
 	struct event *m_TimerEvent;
-	struct event_base *m_Base;
 	struct timeval m_Tv;
 };
-
 
 #endif // !__TIMER_H__
 

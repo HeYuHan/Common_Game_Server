@@ -212,7 +212,7 @@ void ChannelClient::Init()
 	gChannelServer.RandomBrithPos(m_Position);
 	m_Velocity = Vector3(0, 0, 0);
 	m_Rotation = Quaternion(0, 0, 0, 1);
-	m_UpdateTimer.Init(gChannelServer.GetEventBase(), 0.05f, ClientUpdate, this, true);
+	m_UpdateTimer.Init(0.05f, ClientUpdate, this, true);
 	m_UpdateTimer.Begin();
 }
 void ChannelClient::ReadCharacterInfo()
@@ -248,6 +248,7 @@ void ChannelClient::ParseJoinGame()
 		m_GameState = GAME_STATE_IN_ROOM;
 		room->ClientEnter(this);
 		WriteInt(m_RoomID);
+		//WriteFloat(gChannelServer.m_Config.max_game_time);
 		WriteByte(room->m_MaxClient);
 		byte room_client_count = room->m_ClientList.size();
 		WriteByte(room_client_count);

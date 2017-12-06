@@ -1,12 +1,20 @@
 CC = g++
 
-LFLAGS = -m64 -pthread -lrt
+LFLAGS = -m64 -pthread
 CFLAGS = -c -fPIC
 
 PF = LINUX
+RAKNET_SOURCE_DIR = ../../3rd/RakNet
+COMMON_LIB = ../lib/libcommon.a
+TARGET = ../bin/channelserver
+SOURCES = $(wildcard *.cpp)
+OBJS = $(patsubst %.cpp,objs/%.o,$(SOURCES)) $(COMMON_LIB)
+
 
 ifneq ($(shell uname), Linux) 
-PF = MACOS
+	PF = MACOS
+else
+	LFLAGS += -lrt
 endif
 
 CFLAGS += -D$(PF)
@@ -24,13 +32,7 @@ CFLAGS += -I./$(RAKNET_SOURCE_DIR)/Source
 CFLAGS += -I/usr/local
 CFLAGS += -std=c++0x
 
-RAKNET_SOURCE_DIR = ../../3rd/RakNet
 
-COMMON_LIB = ../lib/libcommon.a
-
-TARGET = ../bin/channelserver
-SOURCES = $(wildcard *.cpp)
-OBJS = $(patsubst %.cpp,objs/%.o,$(SOURCES)) $(COMMON_LIB)
 #DEPS = $(patsubst %.cpp,objs/%.d,$(SOURCES))
 
 

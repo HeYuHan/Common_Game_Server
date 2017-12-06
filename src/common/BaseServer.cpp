@@ -1,17 +1,14 @@
 #include "BaseServer.h"
 #include <event2/event_struct.h>
 #include <event2/util.h>
-
-BaseServer::BaseServer():
-	m_EvetBase(NULL)
+#include "Timer.h"
+BaseServer::BaseServer()
 {
 	
 }
 
 BaseServer::~BaseServer()
 {
-	if(m_EvetBase)event_base_free(m_EvetBase);
-	m_EvetBase = NULL;
 }
 
 bool BaseServer::Init()
@@ -20,18 +17,11 @@ bool BaseServer::Init()
 	WSAData wsaData;
 	WSAStartup(MAKEWORD(2, 0), &wsaData);
 #endif
-	m_EvetBase = event_base_new();
-	return NULL != m_EvetBase;
+	return true;
 }
 
 int BaseServer::Run()
 {
-	return event_base_dispatch(m_EvetBase);
+	return Timer::Loop();
 	
-}
-
-event_base * BaseServer::GetEventBase()
-{
-	if (m_EvetBase)return &(*m_EvetBase);
-	return NULL;
 }

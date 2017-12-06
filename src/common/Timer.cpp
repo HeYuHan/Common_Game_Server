@@ -1,7 +1,7 @@
 #include "Timer.h"
 #include "common.h"
 #include "log.h"
-
+struct event_base* gEventBase=NULL;
 static float diff_time(timeval &v1, timeval &v2)
 {
 	float diff_sec = v1.tv_sec - v2.tv_sec;
@@ -9,11 +9,8 @@ static float diff_time(timeval &v1, timeval &v2)
 	return diff_sec + diff_usec;
 }
 Timer::Timer():
-	m_Stop(false),
-	m_TimerEvent(NULL),
-	m_Base(NULL)
-	
-	
+	m_Stop(true),
+	m_TimerEvent(NULL)
 {
 }
 
@@ -27,11 +24,10 @@ Timer::~Timer()
 	}
 }
 
-void Timer::Init( event_base *base, float time, TimerCallBack call_back, void * arg, bool loop)
+void Timer::Init(float time, TimerCallBack call_back, void * arg, bool loop)
 {
 	m_Stop = true;
 	m_Loop = loop;
-	m_Base = base;
 	m_Time = time;
 	m_CallBack = call_back;
 	m_Arg = arg;
@@ -40,11 +36,11 @@ void Timer::Init( event_base *base, float time, TimerCallBack call_back, void * 
 
 void Timer::Begin()
 {
-	if (NULL == m_Base)return;
+	if (NULL == GetEventBase())return;
 	m_Stop = false;
 	if (NULL == m_TimerEvent)
 	{
-		m_TimerEvent = evtimer_new(m_Base, timeout_cb, this);
+		m_TimerEvent = evtimer_new(GetEventBase(), timeout_cb, this);
 	}
 	evutil_timerclear(&m_LastTime);
 	long sec = (long)m_Time;
@@ -69,6 +65,28 @@ void Timer::Stop()
 	}
 	
 
+}
+
+int Timer::Loop()
+{
+	int ret = event_base_dispatch(GetEventBase());
+	event_base_free(gEventBase);
+	gEventBase = NULL;
+	return ret;
+}
+
+void Timer::ExitLoop()
+{
+	if(NULL != gEventBase)event_base_loopexit(gEventBase, NULL);
+}
+
+event_base * Timer::GetEventBase()
+{
+	if (NULL == gEventBase)
+	{
+		gEventBase= event_base_new();
+	}
+	return gEventBase;
 }
 
 void Timer::timeout_cb(evutil_socket_t fd, short event, void * arg)
