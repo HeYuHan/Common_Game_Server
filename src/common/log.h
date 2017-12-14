@@ -37,6 +37,8 @@ private:
 
 };
 extern Logger gLogger;
+#define log_info(__format__,...) \
+	gLogger.GetLogger().info(__format__,__VA_ARGS__)
 #define log_debug(__format__,...) \
 	gLogger.GetLogger().debug(__format__,__VA_ARGS__)
 #define log_error(__format__,...) \

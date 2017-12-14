@@ -248,7 +248,7 @@ void ChannelClient::ParseJoinGame()
 		m_GameState = GAME_STATE_IN_ROOM;
 		room->ClientEnter(this);
 		WriteInt(m_RoomID);
-		//WriteFloat(gChannelServer.m_Config.max_game_time);
+		WriteFloat(gChannelServer.m_Config.max_game_time);
 		WriteByte(room->m_MaxClient);
 		byte room_client_count = room->m_ClientList.size();
 		WriteByte(room_client_count);
@@ -319,9 +319,9 @@ void ChannelClient::ParseMoveData()
 {
 	CHECK_ROOM();
 	char* read_start = read_position;
-	byte delta = 0;
+	float delta = 0;
 	byte flag = 0;
-	ReadByte(delta);
+	ReadFloat(delta);
 	ReadByte(flag);
 
 	if ((flag & SYNC_TRANSFROM_POSITION) > 0)

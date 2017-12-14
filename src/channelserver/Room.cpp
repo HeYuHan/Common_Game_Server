@@ -167,6 +167,7 @@ void ChannelRoom::ClientLoading(ChannelClient * c)
 
 void ChannelRoom::WriteBlanceData(NetworkStream * stream)
 {
+
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
 		ChannelClient *client = *iterClient;
@@ -174,23 +175,30 @@ void ChannelRoom::WriteBlanceData(NetworkStream * stream)
 		stream->WriteInt(client->m_InGameInfo->m_KillCount);
 		stream->WriteInt(client->m_InGameInfo->m_DiamondCount);
 		stream->WriteFloat(client->m_InGameInfo->m_PlayTime);
+		
 	}
+	
 }
 
 void ChannelRoom::GameToBalance()
 {
 	m_RoomState = ROOM_STATE_BALANCE;
 	m_BalanceWaitTime = gChannelServer.m_Config.max_blance_time;
+	char log[1024] = { 0 };
+	sprintf(log, "BalanceData\nRoomID:%d\n", uid);
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
 		ChannelClient *client = *iterClient;
 		client->m_GameState = GAME_STATE_IN_BALANCE;
 		client->BeginWrite();
 		client->WriteByte(SM_INGAME_TO_BALANCE);
+		client->WriteInt(m_BalanceWaitTime);
 		client->WriteByte(m_ClientList.size());
 		WriteBlanceData(client);
 		client->EndWrite();
+		sprintf(&log[strlen(log)], "Name:%-10s UID:%-10d Kill:%-4d Energy:%-4d Time:%-6d\n", client->m_CharacterInfo.Name, client->uid, client->m_InGameInfo->m_KillCount, client->m_InGameInfo->m_DiamondCount, (int)client->m_InGameInfo->m_PlayTime);
 	}
+	log_info("%s", log);
 }
 
 
