@@ -14,14 +14,29 @@ GameConfig gGameConfig;
 static void ParseJsonValue(Json::Value json, const char* key,int &value)
 {
 	if (!json[key].isNull())value = json[key].asInt();
+	else
+	{
+
+		log_warn("%s config miss use default:%d", key,value);
+	}
 }
 static void ParseJsonValue(Json::Value json, const char* key, float &value)
 {
 	if (!json[key].isNull())value = json[key].asDouble();
+	else
+	{
+
+		log_warn("%s config miss use default:%f", key,value);
+	}
 }
 static void ParseJsonValue(Json::Value json, const char* key, bool &value)
 {
 	if (!json[key].isNull())value = json[key].asBool();
+	else
+	{
+
+		log_warn("%s config miss use default:%s", key,value?"true":"false");
+	}
 }
 static void ParseJsonValue(Json::Value json, const char* key, char* str,int len)
 {
@@ -33,6 +48,11 @@ static void ParseJsonValue(Json::Value json, const char* key, char* str,int len)
 		{
 			strcpy(str, json[key].asString().c_str());
 		}
+	}
+	else
+	{
+		
+		log_warn("%s config miss use default :%s", key,str);
 	}
 }
 static void ChannnelUpdate(float time, void *channel)

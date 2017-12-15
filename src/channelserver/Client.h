@@ -101,7 +101,7 @@ public:
 	void InGameStateChange(byte state);
 	void BuffStateChange(uint from_uid,int type);
 	void UpdateLevel();
-	void Explode(int from_uid,byte sort,byte bullet_id, Vector3 &pos);
+	void ExplodeChatacters(uint from_uid,int* targets,int size,byte sort,byte bullet_id, Vector3 &pos);
 	//void WriteCharacterInfo(ChannelClient* c);
 	static void WriteCharacterInfo(NetworkStream* stream, ChannelClient* c);
 	static void WriteIngameState(NetworkStream* stream,ChannelClient* c, byte state);

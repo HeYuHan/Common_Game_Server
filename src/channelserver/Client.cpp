@@ -417,6 +417,8 @@ void ChannelClient::ParseExplodeCharacter()
 			log_error("%d weapon range is zero", sort);
 			return;
 		}
+		int explode_target_count=0;
+		int explode_targets[10] = { 0 };
 		FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
 		{
 			ChannelClient *c = *iterClient;
@@ -447,7 +449,15 @@ void ChannelClient::ParseExplodeCharacter()
 				c->InGameStateChange(INGAME_STATE_CHANGE_HEALTH);
 
 			}
-			c->Explode(uid, sort, bullet_id, explode_pos);
+			explode_targets[explode_target_count++] = c->uid;
+		}
+		if (explode_target_count > 0)
+		{
+			FOR_EACH_LIST(ChannelClient, m_OwnerRoom->m_ClientList, Client)
+			{
+				ChannelClient *c = *iterClient;
+				c->ExplodeChatacters(uid, explode_targets, explode_target_count, sort, bullet_id, explode_pos);
+			}
 		}
 	}
 }
@@ -631,7 +641,7 @@ void ChannelClient::UpdateLevel()
 
 }
 
-void ChannelClient::Explode(int from_uid, byte sort, byte bullet_id,Vector3 &pos)
+void ChannelClient::ExplodeChatacters(uint from_uid, int* targets, int size,byte sort, byte bullet_id,Vector3 &pos)
 {
 	BeginWrite();
 	WriteByte(SM_INGMAE_EXPLODE);
@@ -639,6 +649,8 @@ void ChannelClient::Explode(int from_uid, byte sort, byte bullet_id,Vector3 &pos
 	WriteByte(sort);
 	WriteByte(bullet_id);
 	WriteVector3(pos);
+	WriteByte(size);
+	WriteData(targets, sizeof(int)*size);
 	EndWrite();
 }
 
