@@ -52,7 +52,7 @@ static void ParseJsonValue(Json::Value json, const char* key, char* str,int len)
 	else
 	{
 		
-		log_warn("%s config miss use default :%s", key,str);
+		log_warn("%s config miss use default:%s", key,str);
 	}
 }
 static void ChannnelUpdate(float time, void *channel)
