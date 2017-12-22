@@ -166,6 +166,7 @@ void ChannelClient::IngameUpdate(float time)
 					if (buff->m_Duration <= 0 || buff->m_UserData[0]<=0)
 					{
 						buff->m_State = BUFF_STATE_END;
+						buff->m_UserData[0] = 0;
 					}
 					break;
 				}
@@ -449,7 +450,7 @@ void ChannelClient::ParseExplodeCharacter()
 				c->InGameStateChange(INGAME_STATE_CHANGE_HEALTH);
 
 			}
-			explode_targets[explode_target_count++] = c->uid;
+			if(damage>0)explode_targets[explode_target_count++] = c->uid;
 		}
 		if (explode_target_count > 0)
 		{
@@ -721,5 +722,8 @@ void ChannelClient::WriteIngameState(NetworkStream* stream,ChannelClient * c, by
 	if ((state & INGAME_STATE_CHANGE_LEVELUP) > 0)
 	{
 		stream->WriteShort(c->m_InGameInfo->m_Level);
+		LevelRewardInfo &info = gGameConfig.LevelReward[c->m_InGameInfo->m_Level];
+		stream->WriteInt(info.m_RewardHP);
+		stream->WriteInt(info.m_RewardAttack);
 	}
 }

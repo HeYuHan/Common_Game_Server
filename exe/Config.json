@@ -76,7 +76,7 @@
                 "m_Desc":"护盾",
                 "m_Duration":10,
                 "m_CoolDown":50,
-                "m_UserData":[10]
+                "m_UserData":[20]
             },
             {
                 "m_Type":3,

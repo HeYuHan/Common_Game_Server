@@ -245,7 +245,6 @@ bool ChannelServer::Init()
 		ParseJsonValue(game_config, "m_LogName", gLogger.name,64);
 		ParseJsonValue(game_config, "m_LogPath", gLogger.fileName,128);
 		ParseJsonValue(game_config, "m_LogToConsole", gLogger.m_LogToConsole);
-		ParseJsonValue(game_config, "m_LogToFile", gLogger.m_LogToFile);
 	}
 	Json::Value level_config = root["LevelReward"];
 	if (!level_config.isNull())

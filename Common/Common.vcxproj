@@ -128,6 +128,7 @@
     <ClInclude Include="..\src\common\common.h" />
     <ClInclude Include="..\src\common\FileReader.h" />
     <ClInclude Include="..\src\common\HttpConnection3.h" />
+    <ClInclude Include="..\src\common\HttpListenner.h" />
     <ClInclude Include="..\src\common\json\autolink.h" />
     <ClInclude Include="..\src\common\json\config.h" />
     <ClInclude Include="..\src\common\json\features.h" />
@@ -155,6 +156,7 @@
     <ClCompile Include="..\src\common\common.cpp" />
     <ClCompile Include="..\src\common\FileReader.cpp" />
     <ClCompile Include="..\src\common\HttpConnection3.cpp" />
+    <ClCompile Include="..\src\common\HttpListenner.cpp" />
     <ClCompile Include="..\src\common\json\json_reader.cpp" />
     <ClCompile Include="..\src\common\json\json_value.cpp" />
     <ClCompile Include="..\src\common\json\json_writer.cpp" />
