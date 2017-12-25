@@ -38,11 +38,11 @@ void* Thread::RunInThread(void * arg)
 }
 
 
-ThreadBuffer::ThreadBuffer(int size):
+ThreadBuffer::ThreadBuffer():
 	mutex(),
 	notfull(mutex),
 	notempty(mutex),
-	m_Size(size)
+	m_Size(0)
 {
 }
 
@@ -75,9 +75,15 @@ ThreadTask * ThreadBuffer::Pop()
 	return task;
 }
 
+bool ThreadBuffer::Init(int size)
+{
+	m_Size = size;
+	return true;
+}
+
 bool ThreadBuffer::Empty()
 {
-	return m_TaskQueue.size()==0;
+	return m_TaskQueue.empty();
 }
 
 bool ThreadBuffer::Full()
@@ -96,11 +102,9 @@ ThreadTask::~ThreadTask()
 
 
 
-ThreadPool::ThreadPool(int buff_size, int thread_count):
-	m_Buffer(buff_size),
-	m_ThreadCount(thread_count),
-	m_Running(true),
-	m_ThreadList(thread_count)
+ThreadPool::ThreadPool():
+	m_ThreadCount(0),
+	m_Running(true)
 
 {
 }
@@ -110,14 +114,22 @@ ThreadPool::~ThreadPool()
 	Stop();
 }
 
-void ThreadPool::Start()
+bool ThreadPool::Start(int buff_size, int thread_count)
 {
+	m_ThreadCount = thread_count;
+	m_ThreadList.reserve(m_ThreadCount);
+	if (!m_Buffer.Init(buff_size))
+	{
+		return false;
+	}
+
 	for (int i = 0; i != m_ThreadCount; i++)
 	{
 		Thread *thread = new Thread(*this);
 		m_ThreadList.push_back(thread);
 		thread->Start();
 	}
+	return true;
 }
 
 void ThreadPool::Stop()

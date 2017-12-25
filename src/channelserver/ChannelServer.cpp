@@ -11,50 +11,7 @@
 ChannelServer gChannelServer;
 GameConfig gGameConfig;
 
-static void ParseJsonValue(Json::Value json, const char* key,int &value)
-{
-	if (!json[key].isNull())value = json[key].asInt();
-	else
-	{
 
-		log_warn("%s config miss use default:%d", key,value);
-	}
-}
-static void ParseJsonValue(Json::Value json, const char* key, float &value)
-{
-	if (!json[key].isNull())value = json[key].asDouble();
-	else
-	{
-
-		log_warn("%s config miss use default:%f", key,value);
-	}
-}
-static void ParseJsonValue(Json::Value json, const char* key, bool &value)
-{
-	if (!json[key].isNull())value = json[key].asBool();
-	else
-	{
-
-		log_warn("%s config miss use default:%s", key,value?"true":"false");
-	}
-}
-static void ParseJsonValue(Json::Value json, const char* key, char* str,int len)
-{
-	if (!json[key].isNull())
-	{
-		memset(str, 0, len);
-		int str_len = json[key].asString().size();
-		if (str_len < len)
-		{
-			strcpy(str, json[key].asString().c_str());
-		}
-	}
-	else
-	{
-		
-		log_warn("%s config miss use default:%s", key,str);
-	}
-}
 static void ChannnelUpdate(float time, void *channel)
 {
 	gChannelServer.Update(time);
@@ -97,7 +54,7 @@ void ChannelServer::OnUdpClientDisconnected(Packet* p)
 	{
 		if (it->second)
 		{
-			log_error("client disconnect uid %d", it->second->uid);
+			//log_error("client disconnect uid %d", it->second->uid);
 			it->second->Disconnect();
 		}
 		else
@@ -120,7 +77,7 @@ void ChannelServer::OnUdpAccept(Packet* p)
 	c->InitServerSocket(m_Socket, p->systemAddress);
 	c->m_ConnectionID = p->guid.g;
 	m_UdpClientMap.insert(UdpClientMapPair(p->guid.g, c));
-	log_debug("new client connect uid: %d ip:%s", c->uid,p->systemAddress.ToString());
+	//log_debug("new client connect uid: %d ip:%s", c->uid,p->systemAddress.ToString());
 }
 
 void ChannelServer::OnKeepAlive(Packet * p)
@@ -164,7 +121,7 @@ bool ChannelServer::Init()
 	}
 	else
 	{
-		log_error("parse weapon config error path:%s", m_Config.data_config_path);
+		printf("parse weapon config error path:%s\n", m_Config.data_config_path);
 		return false;
 	}
 	Json::Value brith_points;
@@ -181,7 +138,7 @@ bool ChannelServer::Init()
 	}
 	else
 	{
-		log_error("parse brith point config error path:%s", m_Config.data_config_path);
+		console_error("parse brith point config error path:%s", m_Config.data_config_path);
 		return false;
 	}
 
@@ -227,7 +184,7 @@ bool ChannelServer::Init()
 	}
 	else
 	{
-		log_error("parse skills config error path:%s", m_Config.data_config_path);
+		console_error("parse skills config error path:%s", m_Config.data_config_path);
 		return false;
 	}
 	Json::Value game_config = root["GameConfig"];
@@ -242,9 +199,10 @@ bool ChannelServer::Init()
 		ParseJsonValue(game_config, "m_RebirthTime", m_Config.rebirth_time);
 		ParseJsonValue(game_config, "m_ReadyTime", m_Config.max_ready_time);
 		//log
-		ParseJsonValue(game_config, "m_LogName", gLogger.name,64);
+		ParseJsonValue(game_config, "m_LogName", gLogger.logName,64);
 		ParseJsonValue(game_config, "m_LogPath", gLogger.fileName,128);
 		ParseJsonValue(game_config, "m_LogToConsole", gLogger.m_LogToConsole);
+		ParseJsonValue(game_config, "m_LogToFile", gLogger.m_LogToFile);
 	}
 	Json::Value level_config = root["LevelReward"];
 	if (!level_config.isNull())
@@ -362,7 +320,7 @@ void ChannelServer::RemoveClient(uint64_t connectionID)
 	{
 		if (iter->second)
 		{
-			log_debug("remove client uid:%d", iter->second->uid);
+			//log_debug("remove client uid:%d", iter->second->uid);
 			m_ClientPool.Free(iter->second->uid);
 			
 		}

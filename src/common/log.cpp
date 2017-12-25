@@ -6,7 +6,7 @@ Logger::Logger():
 	m_LogToFile(false),
 	logger(NULL)
 {
-	memset(name, 0, sizeof(name));
+	memset(logName, 0, sizeof(logName));
 	memset(fileName, 0, sizeof(fileName));
 }
 Logger::~Logger()
@@ -17,9 +17,9 @@ Logger::~Logger()
 
 void Logger::Init()
 {
-	if (strlen(name) == 0)
+	if (strlen(logName) == 0)
 	{
-		strcpy(name, "Log");
+		strcpy(logName, "Log");
 		
 	}
 	if (strlen(fileName) == 0)
@@ -28,17 +28,17 @@ void Logger::Init()
 	}
 	PatternLayout *layout = new PatternLayout();
 	layout->setConversionPattern("%d:%c|%p:%m%n");
-	logger = &Category::getRoot().getInstance(name);
+	logger = &Category::getRoot().getInstance(logName);
 	if (m_LogToFile)
 	{
-		RollingFileAppender *fileAppender = new RollingFileAppender(name, fileName);
+		RollingFileAppender *fileAppender = new RollingFileAppender(logName, fileName);
 		fileAppender->setLayout(layout);
 		logger->addAppender(fileAppender);
 	}
 
 	if (m_LogToConsole)
 	{
-		OstreamAppender *consoleAppender = new OstreamAppender(name, &std::cout);
+		OstreamAppender *consoleAppender = new OstreamAppender(logName, &std::cout);
 		consoleAppender->setLayout(layout);
 		logger->addAppender(consoleAppender);
 	}

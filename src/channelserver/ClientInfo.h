@@ -105,6 +105,7 @@ struct CharacterInGameInfo
 	int m_KillCount;
 	int m_HP;
 	int m_DiamondCount;
+	int m_LevelDiamond;
 	int m_Level;
 	bool m_Dead;
 	float m_BrithTime;

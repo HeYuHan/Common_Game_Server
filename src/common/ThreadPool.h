@@ -76,10 +76,11 @@ private:
 class ThreadBuffer
 {
 public:
-	ThreadBuffer(int size);
+	ThreadBuffer();
 	~ThreadBuffer();
 	void Push(ThreadTask* task);
 	ThreadTask* Pop();
+	bool Init(int size);
 	bool Empty();
 	bool Full();
 private:
@@ -106,9 +107,9 @@ private:
 class ThreadPool
 {
 public:
-	ThreadPool(int buff_size,int thread_count);
+	ThreadPool();
 	~ThreadPool();
-	void Start();
+	bool Start(int buff_size, int thread_count);
 	void Stop();
 	void AddTask(ThreadTask* task);
 	ThreadTask* GetTask();

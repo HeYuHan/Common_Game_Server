@@ -1,6 +1,10 @@
 {
     "GameConfig":{
-        "m_MaxHp":3000
+        "m_MaxHp":3000,
+        "m_LogToFile":true,
+        "m_LogToConsole":true,
+        "m_LogName":"channel",
+        "m_LogPath":"../log/channel.log"
     },
     "m_InfoList": [
         {

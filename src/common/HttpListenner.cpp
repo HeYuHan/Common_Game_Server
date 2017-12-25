@@ -3,10 +3,9 @@
 #include <event2/http.h>
 #include <event2/http_struct.h>
 #include <event2/buffer.h>
-
+#include "tools.h"
 #include "HttpListenner.h"
 #include "log.h"
-#define THREAD_COUNT 10
 static void OnClientRequest(struct evhttp_request *req, void *arg)
 {
 	HttpTask* task = static_cast<HttpTask*>(arg);
@@ -15,19 +14,18 @@ static void OnClientRequest(struct evhttp_request *req, void *arg)
 		task->listenner->OnRequest(req);
 	}
 }
-static int BindSocket(int port, int count)
+static int BindSocket(const char* ip, int port, int count)
 {
 	int r;
 	int nfd;
-	nfd = socket(AF_INET, SOCK_STREAM, 0);
-	if (nfd < 0) return -1;
-	r = evutil_make_listen_socket_reuseable(nfd);
-
 	struct sockaddr_in addr;
 	memset(&addr, 0, sizeof(addr));
 	addr.sin_family = AF_INET;
-	addr.sin_addr.s_addr = INADDR_ANY;
 	addr.sin_port = htons(port);
+	if (!ParseSockAddr(addr, ip, false))return 0;
+	nfd = socket(AF_INET, SOCK_STREAM, 0);
+	if (nfd < 0) return -1;
+	r = evutil_make_listen_socket_reuseable(nfd);
 
 	r = bind(nfd, (struct sockaddr*)&addr, sizeof(addr));
 	if (r < 0) return -1;
@@ -40,8 +38,7 @@ static int BindSocket(int port, int count)
 	}
 	return nfd;
 }
-HttpListenner::HttpListenner():
-	m_ThreadPool(THREAD_COUNT, THREAD_COUNT)
+HttpListenner::HttpListenner()
 {
 }
 
@@ -51,19 +48,19 @@ HttpListenner::~HttpListenner()
 	m_ThreadPool.Stop();
 }
 
-bool HttpListenner::CreateHttpServer(int port, int listen_count)
+bool HttpListenner::CreateHttpServer(const char* ip,int port, int listen_count,int thread_count)
 {
-	if (!m_TaskPool.Initialize(THREAD_COUNT))return false;
-	m_Socket = BindSocket(port, listen_count);
+	if (!m_TaskPool.Initialize(thread_count))return false;
+	m_Socket = BindSocket(ip,port, listen_count);
 	if (m_Socket < 0)return false;
-	m_ThreadPool.Start();
-	for (int i = 0; i < THREAD_COUNT; i++)
+	if (!m_ThreadPool.Start(thread_count, thread_count))return false;
+	for (int i = 0; i < thread_count; i++)
 	{
 		HttpTask *t = m_TaskPool.Allocate();
 		t->listenner = this;
 		m_ThreadPool.AddTask(t);
 	}
-	return false;
+	return true;
 }
 
 void HttpListenner::OnRequest(evhttp_request * req)

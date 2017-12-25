@@ -56,6 +56,10 @@ void ChannelClient::OnDisconnected()
 
 void ChannelClient::OnMessage()
 {
+	if (m_NetState == NET_STATE_DISCONNECTED)
+	{
+		return;
+	}
 	if (m_NetState == NET_STATE_VERIFY_PROTOCOL)
 	{
 		m_NetState = NET_STATE_CONNECTED;
@@ -119,7 +123,7 @@ void ChannelClient::Update(float time)
 		m_KeepAliveTime += time;
 		if (m_KeepAliveTime > KEEP_ALIVE_TIME)
 		{
-			log_error("keep alive time out disconnect %d", uid);
+			log_error("keep alive time out disconnect %s", m_CharacterInfo.Name);
 			Disconnect();
 		}
 	}
@@ -474,6 +478,7 @@ void ChannelClient::ParseGetDropItem()
 		if (info->m_Type == DROP_ITEM_DIAMOND)
 		{
 			m_InGameInfo->m_DiamondCount += 1;
+			m_InGameInfo->m_LevelDiamond += 1;
 			UpdateLevel();
 		}
 		else
@@ -483,7 +488,7 @@ void ChannelClient::ParseGetDropItem()
 			WriteByte(info->m_Type);
 			EndWrite();
 		}
-		m_OwnerRoom->RemoveDropItem(info);
+		m_OwnerRoom->RemoveDropItem(info,uid);
 	}
 }
 
@@ -579,6 +584,8 @@ void ChannelClient::Birth()
 void ChannelClient::Dead()
 {
 	CHECK_ROOM();
+	m_InGameInfo->m_Level = 0;
+	m_InGameInfo->m_LevelDiamond = 0;
 	m_InGameInfo->m_HP = 0;
 	m_InGameInfo->m_Dead = true;
 	m_InGameInfo->m_BrithTime = gChannelServer.m_Config.rebirth_time;
@@ -628,10 +635,10 @@ void ChannelClient::BuffStateChange(uint from_uid, int type)
 void ChannelClient::UpdateLevel()
 {
 	byte state = INGAME_STATE_CHANGE_DIAMONDCOUNT;
-	if (m_InGameInfo->m_Level < gGameConfig.LevelRewardCount)
+	if (m_InGameInfo->m_Level < gGameConfig.LevelRewardCount - 1)
 	{
 		LevelRewardInfo* info = &gGameConfig.LevelReward[m_InGameInfo->m_Level + 1];
-		if (m_InGameInfo->m_DiamondCount >= info->m_RequireEnergy)
+		if (m_InGameInfo->m_LevelDiamond >= info->m_RequireEnergy)
 		{
 			m_InGameInfo->m_Level++;
 			m_InGameInfo->m_HP = MIN(m_CharacterInfo.MaxHP, m_InGameInfo->m_HP + info->m_RewardHP);
@@ -715,7 +722,7 @@ void ChannelClient::WriteIngameState(NetworkStream* stream,ChannelClient * c, by
 		LevelRewardInfo &current = gGameConfig.LevelReward[level];
 		LevelRewardInfo &next = gGameConfig.LevelReward[level + 1];
 		int req = next.m_RequireEnergy - current.m_RequireEnergy;
-		int have = MAX(c->m_InGameInfo->m_DiamondCount - current.m_RequireEnergy, 0);
+		int have = MAX(c->m_InGameInfo->m_LevelDiamond - current.m_RequireEnergy, 0);
 		stream->WriteShort(have);
 		stream->WriteShort(req);
 	}

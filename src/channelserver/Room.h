@@ -42,14 +42,14 @@ public:
 	
 	void BroadCastGameTime();
 	void BroadCastCreateDropItem(DropItemInfo* info);
-	void BroadCastRemoveDropItem(DropItemInfo* info);
+	void BroadCastRemoveDropItem(DropItemInfo* info,uint from_id=0);
 	void BroadCastSkillUse(uint from_uid, byte skill_type);
 	void BroadCastBuffState(uint from_uid,uint to_uid,BufferInfo* buff);
 	void GameToBalance();
 	void LeaveBalance();
 	DropItemInfo* CreateDropItem();
 	void UpdateDropItemPosition(DropItemInfo* info);
-	void RemoveDropItem(DropItemInfo* info);
+	void RemoveDropItem(DropItemInfo* info,uint from_id=0);
 	bool CheckAllClientReadyInGame();
 public:
 	void WriteBlanceData(NetworkStream * stream);

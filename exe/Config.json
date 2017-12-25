@@ -1,6 +1,10 @@
 {
     "GameConfig":{
-        "m_MaxHp":3000
+        "m_MaxHp":3000,
+        "m_LogToFile":true,
+        "m_LogToConsole":true,
+        "m_LogName":"channel",
+        "m_LogPath":"../log/channel.log"
     },
     "m_InfoList": [
         {
@@ -33,7 +37,7 @@
             "Ammunition": 50,
             "ReloadTime": 10,
             "Tracker": false,
-            "Range": 10
+            "Range": 12
         }
     ],
     "BrithPonits":[

@@ -30,7 +30,7 @@ public:
 	HttpListenner();
 	~HttpListenner();
 public:
-	bool CreateHttpServer(int port,int listen_count);
+	bool CreateHttpServer(const char* ip, int port,int listen_count,int thread_count);
 	void OnRequest(struct evhttp_request *req);
 	virtual void OnGet(struct evhttp_request *req,const char* path,const char* query)=0;
 	virtual void OnPost(struct evhttp_request *req, const char* path, const char* query, struct evbuffer *buffer)=0;

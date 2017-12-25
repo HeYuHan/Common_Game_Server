@@ -185,7 +185,8 @@ void ChannelRoom::GameToBalance()
 	m_RoomState = ROOM_STATE_BALANCE;
 	m_BalanceWaitTime = gChannelServer.m_Config.max_blance_time;
 	char log[1024] = { 0 };
-	sprintf(log, "BalanceData\nRoomID:%d\n", uid);
+	sprintf(log, "\nBalanceDataBegin=================================\nRoomID:%d\n", uid);
+	sprintf(&log[strlen(log)], "%-15s\t%-4s\t%-4s\t%-6s\n","Name","Kill","Energy","Time");
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
 		ChannelClient *client = *iterClient;
@@ -196,8 +197,9 @@ void ChannelRoom::GameToBalance()
 		client->WriteByte(m_ClientList.size());
 		WriteBlanceData(client);
 		client->EndWrite();
-		sprintf(&log[strlen(log)], "Name:%-10s UID:%-10d Kill:%-4d Energy:%-4d Time:%-6d\n", client->m_CharacterInfo.Name, client->uid, client->m_InGameInfo->m_KillCount, client->m_InGameInfo->m_DiamondCount, (int)client->m_InGameInfo->m_PlayTime);
+		sprintf(&log[strlen(log)], "%-15s\t%-4d\t%-4d\t%-6d\n", client->m_CharacterInfo.Name,client->m_InGameInfo->m_KillCount, client->m_InGameInfo->m_DiamondCount, (int)client->m_InGameInfo->m_PlayTime);
 	}
+	sprintf(&log[strlen(log)],"BalanceDataEnd%s","===================================\n");
 	log_info("%s", log);
 }
 
@@ -219,7 +221,7 @@ void ChannelRoom::BroadCastCreateDropItem(DropItemInfo * info)
 	}
 }
 
-void ChannelRoom::BroadCastRemoveDropItem(DropItemInfo * info)
+void ChannelRoom::BroadCastRemoveDropItem(DropItemInfo * info,uint from_id)
 {
 	FOR_EACH_LIST(ChannelClient, m_ClientList, Client)
 	{
@@ -229,6 +231,7 @@ void ChannelRoom::BroadCastRemoveDropItem(DropItemInfo * info)
 			client->BeginWrite();
 			client->WriteByte(SM_INGAME_REMOVE_DROPITEM);
 			client->WriteInt(info->uid);
+			client->WriteInt(from_id);
 			client->EndWrite();
 		}
 	}
@@ -323,9 +326,9 @@ void ChannelRoom::UpdateDropItemPosition(DropItemInfo * info)
 	}
 }
 
-void ChannelRoom::RemoveDropItem(DropItemInfo * info)
+void ChannelRoom::RemoveDropItem(DropItemInfo * info,uint from_id)
 {
-	BroadCastRemoveDropItem(info);
+	BroadCastRemoveDropItem(info, from_id);
 	if (info->m_PositionIndex > 0&&info->m_PositionIndex<gGameConfig.DropRefreshPointsCount)
 	{
 		m_DropItemIndex[info->m_PositionIndex] = 0;
