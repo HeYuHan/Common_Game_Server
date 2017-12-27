@@ -59,10 +59,13 @@ bool HttpManager::Request(const char * url, char * data, int port, int flag, IHt
 {
 	struct evhttp_uri *uri = evhttp_uri_parse(url);
 	const char* host = evhttp_uri_get_host(uri);
-	struct evhttp_connection* connection = evhttp_connection_base_new(Timer::GetEventBase(), NULL, evhttp_uri_get_host(uri), port);
+	int url_port = evhttp_uri_get_port(uri);
+	if (url_port > 0)port = url_port;
+	struct event_base* base = (NULL == user_data) ? Timer::GetEventBase() : user_data->GetEventBase();
+	struct evhttp_connection* connection = evhttp_connection_base_new(base, NULL, evhttp_uri_get_host(uri), port);
 	struct evhttp_request* req = evhttp_request_new(http_request_done, (user_data == NULL) ? connection : (void*)user_data);
 	evhttp_add_header(req->output_headers, "Host", host);
-	evhttp_connection_set_timeout(connection, 100);
+	evhttp_connection_set_timeout(connection, 10000);
 	if (NULL != user_data)
 	{
 		user_data->connection = connection;
@@ -153,4 +156,10 @@ int IHttpInterface::ReadBuffer(void * data, int size)
 int IHttpInterface::GetState()
 {
 	return state;
+}
+
+event_base * IHttpInterface::GetEventBase()
+{
+
+	return Timer::GetEventBase();
 }

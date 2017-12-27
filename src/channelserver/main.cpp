@@ -4,25 +4,23 @@
 #include <json/json.h>
 #include <HttpConnection3.h>
 #include <Timer.h>
+#include <tools.h>
 using namespace Json;
 enum
 {
-	channel_ip = 0x100,
-	channel_port,
+	addr = 0x100,
 	password,
-	max_client,
 	data_path,
 };
 struct option long_options[]=
 {
-	{"ip",1,0,channel_ip },
-	{"port",1,0,channel_port },
+	{"addr",1,0,addr },
 	{"password",1,0,password },
-	{"max_client",1,0,max_client },
 	{"data_path",1,0,data_path },
 };
 int main(int argc,char **argv)
 {
+	
 	while (1)
 	{
 		int option_index = 0;
@@ -33,14 +31,8 @@ int main(int argc,char **argv)
 		case data_path:
 			strcpy(gChannelServer.m_Config.data_config_path, optarg);
 			break;
-		case channel_ip:
-			strcpy(gChannelServer.m_Config.ip, optarg);
-			break;
-		case channel_port:
-			gChannelServer.m_Config.port = atoi(optarg);
-			break;
-		case max_client:
-			gChannelServer.m_Config.max_client= atoi(optarg);
+		case addr:
+			strcpy(gChannelServer.m_Config.addr, optarg);
 			break;
 		case password:
 			strcpy(gChannelServer.m_Config.pwd, optarg);
@@ -52,6 +44,7 @@ int main(int argc,char **argv)
 			break;
 		}
 	}
-	gChannelServer.Run();
-	return 0;
+	if (!RunAsDaemon())return -1;
+
+	return 	gChannelServer.Run();
 }

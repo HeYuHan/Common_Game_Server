@@ -236,7 +236,7 @@ bool ChannelServer::Init()
 		return false;
 	}
 	
-	if (!CreateUdpServer(m_Config.ip, m_Config.port, m_Config.pwd, 1000))
+	if (!CreateUdpServer(m_Config.addr, m_Config.pwd, 1000))
 	{
 		return false;
 	}
@@ -247,7 +247,7 @@ int ChannelServer::Run()
 {
 	if (Init())
 	{
-		log_debug("server run in %s:%d pwd:%s", m_Config.ip, m_Config.port,m_Config.pwd);
+		log_debug("server run in %s pwd:%s", m_Config.addr,m_Config.pwd);
 		m_RoomList.clear();
 		m_UpdateTimer.Init(0, ChannnelUpdate, this, true);
 		m_UpdateTimer.Begin();
@@ -378,7 +378,6 @@ bool ChannelServer::GetDropItemPos(Vector3 & v3, int index)
 
 
 ChannelConfig::ChannelConfig():
-	port(9530),
 	max_client(10),
 	max_room(1),
 	max_health(3000),
@@ -388,7 +387,7 @@ ChannelConfig::ChannelConfig():
 	max_ready_time(3),
 	rebirth_time(5)
 {
-	strcpy(ip, "127.0.0.1");
+	strcpy(addr, "127.0.0.1:9500");
 	strcpy(pwd, "channel");
-	strcpy(data_config_path, "./Config.json");
+	strcpy(data_config_path, "./channelserver.json");
 }

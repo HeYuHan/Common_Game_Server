@@ -19,6 +19,9 @@
 #include <log4cpp/PatternLayout.hh>
 #include <log4cpp/RollingFileAppender.hh>
 #include <log4cpp/OstreamAppender.hh>
+#include <stdio.h>
+#include <string.h>
+#include <errno.h>
 using namespace log4cpp;
 class Logger
 {
@@ -45,7 +48,8 @@ extern Logger gLogger;
 	gLogger.GetLogger().debug(__format__,__VA_ARGS__)
 #define log_error(__format__,...) \
 	gLogger.GetLogger().error(__format__,__VA_ARGS__)
-
+#define log_lasterror() \
+	printf("ERROR:%s",strerror(errno))
 
 #define console_warn(__format__,...) \
 	printf("WARN:"#__format__,__VA_ARGS__); \

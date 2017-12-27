@@ -2,7 +2,7 @@
 #include "common.h"
 #include "log.h"
 struct event_base* gEventBase=NULL;
-static float diff_time(timeval &v1, timeval &v2)
+float DiffTime(timeval &v1, timeval &v2)
 {
 	float diff_sec = v1.tv_sec - v2.tv_sec;
 	float diff_usec = (v1.tv_usec - v2.tv_usec) / 1000000.0f;
@@ -99,7 +99,7 @@ void Timer::timeout_cb(evutil_socket_t fd, short event, void * arg)
 		{
 			timeval current;
 			evutil_gettimeofday(&current, NULL);
-			float d_time = diff_time(current, t->m_LastTime);
+			float d_time = DiffTime(current, t->m_LastTime);
 #ifdef _DEBUG
 			//下断点时跳过本次计时
 			if (d_time > t->m_Time * 10)

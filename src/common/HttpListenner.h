@@ -13,13 +13,17 @@
 #endif
 class HttpListenner;
 struct evhttp_request;
+struct event_base;
 class HttpTask :public ThreadTask
 {
 public:
 	HttpTask();
 	~HttpTask();
 public:
+	
 	uint uid;
+	struct event_base* evbase;
+	struct evhttp_request* request;
 	HttpListenner* listenner;
 	virtual void Process();
 };
@@ -30,10 +34,11 @@ public:
 	HttpListenner();
 	~HttpListenner();
 public:
-	bool CreateHttpServer(const char* ip, int port,int listen_count,int thread_count);
-	void OnRequest(struct evhttp_request *req);
-	virtual void OnGet(struct evhttp_request *req,const char* path,const char* query)=0;
-	virtual void OnPost(struct evhttp_request *req, const char* path, const char* query, struct evbuffer *buffer)=0;
+	bool CreateHttpServer(const char* addr,int listen_count,int thread_count);
+	void StopServer();
+	void OnRequest(HttpTask *task);
+	virtual void OnGet(HttpTask *task,const char* path,const char* query)=0;
+	virtual void OnPost(HttpTask *task, const char* path, const char* query, struct evbuffer *buffer)=0;
 	static int ReadData(struct evhttp_request *req,char* input, int size);
 	static int WriteData(struct evhttp_request *req, const char* output);
 	static void EndWrite(struct evhttp_request *req,int code,const char* reason);

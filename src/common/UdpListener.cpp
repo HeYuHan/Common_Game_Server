@@ -1,6 +1,7 @@
 #include "UdpListener.h"
 #include "common.h"
 #include "log.h"
+
 static unsigned char GetPacketIdentifier(RakNet::Packet *p)
 {
 	if (p == 0)
@@ -24,13 +25,15 @@ UdpListener::~UdpListener()
 {
 }
 
-bool UdpListener::CreateUdpServer(const char * ip, int port, const char* pwd, int max_client)
+bool UdpListener::CreateUdpServer(const char * addr, const char* pwd, int max_client)
 {
 	m_Socket = RakNet::RakPeerInterface::GetInstance();
 	m_Socket->SetIncomingPassword(pwd, strlen(pwd));
 	m_Socket->SetTimeoutTime(30000, RakNet::UNASSIGNED_SYSTEM_ADDRESS);
-	RakNet::SocketDescriptor socketDescriptors[2];
-	socketDescriptors[0].port = port;
+	RakNet::SocketDescriptor socketDescriptors[1];
+	SystemAddress address;
+	address.FromString(addr, ':');
+	socketDescriptors[0].port = address.GetPort();
 	socketDescriptors[0].socketFamily = AF_INET; // Test out IPV4
 	m_Socket->SetOccasionalPing(true);
 	m_Socket->SetUnreliableTimeout(10000);

@@ -14,7 +14,7 @@ class UdpListener
 public:
 	UdpListener();
 	~UdpListener();
-	bool CreateUdpServer(const char *ip, int port, const char* pwd,int max_client);
+	bool CreateUdpServer(const char *addr, const char* pwd,int max_client);
 	virtual void OnUdpAccept(Packet* p)=0;
 	void Update();
 	virtual void OnUdpClientMessage(Packet* p)=0;

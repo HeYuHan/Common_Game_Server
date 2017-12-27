@@ -29,6 +29,6 @@ public:
 	struct event *m_TimerEvent;
 	struct timeval m_Tv;
 };
-
+float DiffTime(timeval &v1, timeval &v2);
 #endif // !__TIMER_H__
 

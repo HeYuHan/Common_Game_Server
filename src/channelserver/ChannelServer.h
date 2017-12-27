@@ -25,10 +25,9 @@ typedef NS_MAP::unordered_map<uint64_t, ChannelClient*> UdpClientMap;
 typedef NS_MAP::unordered_map<uint64_t, ChannelClient*>::iterator UdpClientIterator;
 struct ChannelConfig
 {
-	char ip[64];
+	char addr[64];
 	char pwd[64];
 	char data_config_path[64];
-	int port;
 	int max_client;
 	int max_room;
 	int max_health;

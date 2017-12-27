@@ -2,8 +2,8 @@
 
 #include <event2/http.h>
 
-#ifndef __HTTP_CONNECTION_H__
-#define __HTTP_CONNECTION_H__
+#ifndef __HTTP_CONNECTION3_H__
+#define __HTTP_CONNECTION3_H__
 class IHttpInterface
 {
 	friend class HttpManager;
@@ -13,6 +13,7 @@ public:
 	int GetBufferLength();
 	int ReadBuffer(void *data, int size);
 	int GetState();
+	virtual struct event_base* GetEventBase();
 private:
 	struct evhttp_connection* connection;
 	struct evhttp_request* request;

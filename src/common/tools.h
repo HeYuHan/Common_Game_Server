@@ -13,4 +13,5 @@ void ParseJsonValue(Json::Value json, const char* key, float &value);
 void ParseJsonValue(Json::Value json, const char* key, bool &value);
 void ParseJsonValue(Json::Value json, const char* key, char* str, int len);
 bool ParseSockAddr(sockaddr_in & addr, const char * str, bool by_name);
+bool RunAsDaemon();
 #endif // !__TOOLS_H__

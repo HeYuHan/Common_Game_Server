@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include<json/reader.h>
+
 using namespace std;
 std::string ReadText(const std::string & path)
 {
@@ -10,15 +11,15 @@ std::string ReadText(const std::string & path)
 
 bool ReadJson(Json::Value &root, const char* path)
 {
-	ifstream file_in(path,ios::in | ios::binary);
-	if (file_in.is_open())
+	ifstream file_in(path,ios::in|ios::binary);
+	bool ret = false;
+	if (!file_in.fail())
 	{
 
 		Json::Reader reader;
-		bool ret = reader.parse(file_in, root);
-		file_in.close();
-		return ret;
+		ret = reader.parse(file_in, root);
+		
 	}
-	
-	return false;
+	file_in.close();
+	return ret;
 }

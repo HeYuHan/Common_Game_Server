@@ -4,6 +4,11 @@
 #include "log.h"
 #include <string.h>
 #include "common.h"
+#ifdef LINUX
+#include <arpa/inet.h>
+#include <sys/signal.h>
+#endif // LINUX
+
 static bool m_RandomFirst = true;
 int RandomRange(int a, int b)
 {
@@ -78,7 +83,7 @@ bool ParseSockAddr(sockaddr_in & addr, const char * str, bool by_name)
 			struct hostent* host = NULL;
 			if (by_name && (host = gethostbyname(address)))
 			{
-				addr.sin_addr.s_addr = inet_addr(inet_ntoa(*((struct in_addr*)host->h_addr)));
+				addr.sin_addr.s_addr =   inet_addr(inet_ntoa(*((struct in_addr*)host->h_addr)));
 			}
 			else
 			{
@@ -91,4 +96,18 @@ bool ParseSockAddr(sockaddr_in & addr, const char * str, bool by_name)
 	}
 
 	return false;
+}
+bool RunAsDaemon()
+{
+#ifdef LINUX
+
+	// ignore signals
+	signal(SIGTTOU, SIG_IGN);
+	signal(SIGTTIN, SIG_IGN);
+	signal(SIGTSTP, SIG_IGN);
+	signal(SIGHUP, SIG_IGN);
+
+	return daemon(1, 0) == 0;
+#endif // LINUX
+	return true;
 }

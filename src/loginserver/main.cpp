@@ -1,23 +1,27 @@
 #include "LoginServer.h"
 #include <getopt.h>
+#include <tools.h>
+#include <log.h>
+#include <HttpConnection4.h>
 enum
 {
-	ip = 0x100,
-	port,
-	config_path
+	addr = 0x100,
+	data_path
 };
 struct option long_options[] =
 {
-	{"ip",1,0,ip},
-	{ "port",1,0,port },
-	{"data_path",1,0,config_path}
+	{"addr",1,0,addr},
+	{"data_path",1,0,data_path }
 };
 
 int main(int argc, char **argv)
 {
+
 	memset(&gServer.m_Config, 0, sizeof(Config));
-	strcpy(gServer.m_Config.ip, "127.0.0.1");
-	gServer.m_Config.port = 9300;
+	strcpy(gServer.m_Config.addr, "127.0.0.1:9300");
+	strcpy(gLogger.fileName, "./../log/loginserver.log");
+	strcpy(gLogger.logName, "login");
+	gServer.m_Config.thread_count = 10;
 	strcpy(gServer.m_Config.data_path, "./loginserver.json");
 	while (1)
 	{
@@ -26,13 +30,10 @@ int main(int argc, char **argv)
 		if (option <= 0)break;
 		switch (option)
 		{
-		case ip:
-			strcpy(gServer.m_Config.ip, optarg);
+		case addr:
+			strcpy(gServer.m_Config.addr, optarg);
 			break;
-		case port:
-			gServer.m_Config.port= atoi(optarg);
-			break;
-		case config_path:
+		case data_path:
 			strcpy(gServer.m_Config.data_path, optarg);
 			break;
 		case '?':
@@ -41,6 +42,12 @@ int main(int argc, char **argv)
 		default:
 			break;
 		}
+	}
+
+	if (!RunAsDaemon())
+	{
+		console_error("%s","run as daemon error!");
+		return -1;
 	}
 	return gServer.Run();
 }
