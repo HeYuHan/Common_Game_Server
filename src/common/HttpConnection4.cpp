@@ -2,9 +2,7 @@
 #include<HTTPConnection2.h>
 #include<TCPInterface.h>
 #include <RakPeerInterface.h>
-#include <event2/http.h>
 #include <GetTime.h>
-#include "log.h"
 using namespace RakNet;
 int HttpRequet(const char* url, RakString &request,std::string &content)
 {
@@ -14,14 +12,10 @@ int HttpRequet(const char* url, RakString &request,std::string &content)
 	TCPInterface *tcp = TCPInterface::GetInstance();
 	tcp->Start(0, 64);
 	tcp->AttachPlugin(httpConnection2);
-	
-	int port = 80;
-	struct evhttp_uri *uri = evhttp_uri_parse(url);
-	const char* host = evhttp_uri_get_host(uri);
-	int url_port = evhttp_uri_get_port(uri);
-	if (url_port > 0)port = url_port;
-	httpConnection2->TransmitRequest(request, host, 9300);
-	evhttp_uri_free(uri);
+	SystemAddress address;
+	UriParser parser;
+	if (!parser.Parse(url))return ret;
+	httpConnection2->TransmitRequest(request, parser.host, parser.port);
 	RakNet::Time timeout = RakNet::GetTime() + 2000;
 	while (RakNet::GetTime() < timeout)
 	{
@@ -82,4 +76,27 @@ int HttpPost(const char * url, const char* data,std::string & content)
 	RakString rsRequest = RakString::FormatForPOST(url, "text/plain", data);
 	return HttpRequet(url, rsRequest, content);
 	
+}
+
+UriParser::UriParser():
+	port(80)
+{
+}
+
+
+bool UriParser::Parse(const char * url)
+{
+	memset(host, 0, 64);
+	struct evhttp_uri *uri = evhttp_uri_parse(url);
+	const char* h = evhttp_uri_get_host(uri);
+	strcpy(host, h);
+	int url_port = evhttp_uri_get_port(uri);
+	port = 80;
+	if (url_port > 0)port = url_port;
+	if (NULL != uri)
+	{
+		evhttp_uri_free(uri);
+		uri = NULL;
+	}
+	return strlen(host)>0;
 }

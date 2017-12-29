@@ -7,7 +7,7 @@ Logger::Logger():
 	logger(NULL)
 {
 	memset(logName, 0, sizeof(logName));
-	memset(fileName, 0, sizeof(fileName));
+	memset(filePath, 0, sizeof(filePath));
 }
 Logger::~Logger()
 {
@@ -22,16 +22,16 @@ void Logger::Init()
 		strcpy(logName, "Log");
 		
 	}
-	if (strlen(fileName) == 0)
+	if (strlen(filePath) == 0)
 	{
-		strcpy(fileName, "./log/log_file.log");
+		strcpy(filePath, "./log/log_file.log");
 	}
 	PatternLayout *layout = new PatternLayout();
 	layout->setConversionPattern("%d:%c|%p:%m%n");
 	logger = &Category::getRoot().getInstance(logName);
 	if (m_LogToFile)
 	{
-		RollingFileAppender *fileAppender = new RollingFileAppender(logName, fileName);
+		RollingFileAppender *fileAppender = new RollingFileAppender(logName, filePath);
 		fileAppender->setLayout(layout);
 		logger->addAppender(fileAppender);
 	}

@@ -138,7 +138,7 @@ bool ChannelServer::Init()
 	}
 	else
 	{
-		console_error("parse brith point config error path:%s", m_Config.data_config_path);
+		log_error("parse brith point config error path:%s", m_Config.data_config_path);
 		return false;
 	}
 
@@ -184,7 +184,7 @@ bool ChannelServer::Init()
 	}
 	else
 	{
-		console_error("parse skills config error path:%s", m_Config.data_config_path);
+		log_error("parse skills config error path:%s", m_Config.data_config_path);
 		return false;
 	}
 	Json::Value game_config = root["GameConfig"];
@@ -199,10 +199,10 @@ bool ChannelServer::Init()
 		ParseJsonValue(game_config, "m_RebirthTime", m_Config.rebirth_time);
 		ParseJsonValue(game_config, "m_ReadyTime", m_Config.max_ready_time);
 		//log
-		ParseJsonValue(game_config, "m_LogName", gLogger.logName,64);
-		ParseJsonValue(game_config, "m_LogPath", gLogger.fileName,128);
-		ParseJsonValue(game_config, "m_LogToConsole", gLogger.m_LogToConsole);
-		ParseJsonValue(game_config, "m_LogToFile", gLogger.m_LogToFile);
+		//ParseJsonValue(game_config, "m_LogName", gLogger.logName,64);
+		//ParseJsonValue(game_config, "m_LogPath", gLogger.filePath,128);
+		//ParseJsonValue(game_config, "m_LogToConsole", gLogger.m_LogToConsole);
+		//ParseJsonValue(game_config, "m_LogToFile", gLogger.m_LogToFile);
 	}
 	Json::Value level_config = root["LevelReward"];
 	if (!level_config.isNull())

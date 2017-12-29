@@ -32,7 +32,7 @@ public:
 	Category& GetLogger();
 public:
 	char logName[64];
-	char fileName[128];
+	char filePath[128];
 	bool m_LogToConsole;
 	bool m_LogToFile;
 private:
@@ -49,19 +49,8 @@ extern Logger gLogger;
 #define log_error(__format__,...) \
 	gLogger.GetLogger().error(__format__,__VA_ARGS__)
 #define log_lasterror() \
-	printf("ERROR:%s",strerror(errno))
+	log_error("%s",strerror(errno))
 
-#define console_warn(__format__,...) \
-	printf("WARN:"#__format__,__VA_ARGS__); \
-	printf("\n");
-#define console_info(__format__,...) \
-	printf("INFO:"#__format__,__VA_ARGS__); \
-	printf("\n");
-#define console_debug(__format__,...) \
-	printf("DEBUG:"#__format__,__VA_ARGS__); \
-	printf("\n");
-#define console_error(__format__,...) \
-	printf("ERROR:"#__format__,__VA_ARGS__); \
-	printf("\n");
+
 #endif
 

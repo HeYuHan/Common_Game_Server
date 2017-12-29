@@ -39,7 +39,7 @@ public:
 	virtual void OnPost(HttpTask *task, const char* path, const char* query, struct evbuffer *buffer);
 	void Response(HttpTask* task, Json::Value &ret);
 private:
-	void VerifyAccount(HttpTask *task, const char *id);
+	void VerifyAccount(HttpTask *task, const char *query);
 	void GetServerList(HttpTask *task);
 	
 private:

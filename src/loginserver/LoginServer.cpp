@@ -40,10 +40,8 @@ bool LoginServer::Init()
 	if (!server_config.isNull())
 	{
 		//log
-		ParseJsonValue(server_config, "m_LogName", gLogger.logName, 64);
-		ParseJsonValue(server_config, "m_LogPath", gLogger.fileName, 128);
-		ParseJsonValue(server_config, "m_LogToConsole", gLogger.m_LogToConsole);
-		ParseJsonValue(server_config, "m_LogToFile", gLogger.m_LogToFile);
+		//ParseJsonValue(server_config, "m_LogToConsole", gLogger.m_LogToConsole);
+		//ParseJsonValue(server_config, "m_LogToFile", gLogger.m_LogToFile);
 
 		ParseJsonValue(server_config, "m_AccountVerifyOn", m_AccountVerifyOn);
 		ParseJsonValue(server_config, "m_VerifyAccountUrl", m_Config.verify_account_url, 128);
@@ -96,11 +94,10 @@ int LoginServer::Run()
 
 void LoginServer::OnGet(HttpTask *task, const char * path, const char * query)
 {
-	NS_MAP::unordered_map<std::string, std::string> result;
-	HttpListenner::PasreQuery(query, result);
+	
 	if (strcmp(path, "/verify_id") == 0)
 	{
-		VerifyAccount(task,result["id"].c_str());
+		VerifyAccount(task, query);
 	}
 	if (strcmp(path, "/server_list") == 0)
 	{
@@ -112,8 +109,11 @@ void LoginServer::OnPost(HttpTask *task, const char * path, const char * query, 
 {
 }
 
-void LoginServer::VerifyAccount(HttpTask *task, const char * id)
+void LoginServer::VerifyAccount(HttpTask *task, const char * query)
 {
+	NS_MAP::unordered_map<std::string, std::string> query_map;
+	HttpListenner::PasreQuery(query, query_map);
+	const char* id = query_map["id"].c_str();
 	Json::Value ret;
 	if (strlen(id)==0)
 	{
@@ -122,13 +122,14 @@ void LoginServer::VerifyAccount(HttpTask *task, const char * id)
 	}
 	if (!m_AccountVerifyOn)
 	{
-		ret["result"] = ERROR_VERIFY_OFF;
+		ret["result"] = ERROR_NONE;
+		ret["msg"] = "server verify off";
 	}
 	else if (strlen(m_Config.verify_account_url) != 0)
 	{
 		ret["result"] = ERROR_VERIFY_BY_OTHER_URL;
-		char url[128] = { 0 };
-		sprintf(url, "%s?id=%s", m_Config.verify_account_url, id);
+		char url[512] = { 0 };
+		sprintf(url, "%s?%s", m_Config.verify_account_url, query);
 		std::string content;
 		ret["state"] = HttpGet(url, content);
 		ret["msg"] = content;

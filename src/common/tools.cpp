@@ -24,7 +24,7 @@ void ParseJsonValue(Json::Value json, const char* key, int &value)
 	else
 	{
 
-		console_warn("%s config miss use default:%d", key, value);
+		log_warn("%s config miss use default:%d", key, value);
 	}
 }
 void ParseJsonValue(Json::Value json, const char* key, float &value)
@@ -33,7 +33,7 @@ void ParseJsonValue(Json::Value json, const char* key, float &value)
 	else
 	{
 
-		console_warn("%s config miss use default:%f", key, value);
+		log_warn("%s config miss use default:%f", key, value);
 	}
 }
 void ParseJsonValue(Json::Value json, const char* key, bool &value)
@@ -42,7 +42,7 @@ void ParseJsonValue(Json::Value json, const char* key, bool &value)
 	else
 	{
 
-		console_warn("%s config miss use default:%s", key, value ? "true" : "false");
+		log_warn("%s config miss use default:%s", key, value ? "true" : "false");
 	}
 }
 void ParseJsonValue(Json::Value json, const char* key, char* str, int len)
@@ -59,7 +59,7 @@ void ParseJsonValue(Json::Value json, const char* key, char* str, int len)
 	else
 	{
 
-		console_warn("%s config miss use default:%s", key, str);
+		log_warn("%s config miss use default:%s", key, str);
 	}
 }
 bool ParseSockAddr(sockaddr_in & addr, const char * str, bool by_name)
