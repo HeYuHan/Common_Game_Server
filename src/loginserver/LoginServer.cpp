@@ -111,8 +111,10 @@ void LoginServer::OnPost(HttpTask *task, const char * path, const char * query, 
 
 void LoginServer::VerifyAccount(HttpTask *task, const char * query)
 {
+	UriParser parser;
+	char* decode_query = parser.Decode(query);
 	NS_MAP::unordered_map<std::string, std::string> query_map;
-	HttpListenner::PasreQuery(query, query_map);
+	HttpListenner::PasreQuery(decode_query, query_map);
 	const char* id = query_map["id"].c_str();
 	Json::Value ret;
 	if (strlen(id)==0)

@@ -78,9 +78,24 @@ int HttpPost(const char * url, const char* data,std::string & content)
 	
 }
 
-UriParser::UriParser():
-	port(80)
+void DecodeUrl(const char* uri, std::string &result)
 {
+	
+	RakString rak=uri;
+	RakString decode;
+	decode =rak.URLDecode();
+	result = decode.C_String();
+}
+
+UriParser::UriParser():
+	port(80),
+	m_DecodeData(NULL)
+{
+}
+
+UriParser::~UriParser()
+{
+	Clean();
 }
 
 
@@ -99,4 +114,20 @@ bool UriParser::Parse(const char * url)
 		uri = NULL;
 	}
 	return strlen(host)>0;
+}
+
+char * UriParser::Decode(const char * url)
+{
+	Clean();
+	m_DecodeData = evhttp_decode_uri(url);
+	return m_DecodeData;
+}
+
+void UriParser::Clean()
+{
+	if (m_DecodeData)
+	{
+		delete[] m_DecodeData;
+		m_DecodeData = NULL;
+	}
 }

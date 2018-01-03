@@ -80,6 +80,7 @@ void HttpListenner::OnRequest(HttpTask *task)
 	const struct evhttp_uri* uri = evhttp_request_get_evhttp_uri(req);
 	const char* path = evhttp_uri_get_path(uri);
 	const char* query = evhttp_uri_get_query(uri);
+	
 	if (type == EVHTTP_REQ_GET)
 	{
 		OnGet(task, path, query);
@@ -92,6 +93,7 @@ void HttpListenner::OnRequest(HttpTask *task)
 	{
 		evhttp_send_error(req, HTTP_BADREQUEST, "request type error");
 	}
+	
 }
 
 int HttpListenner::ReadData(evhttp_request * req, char * input, int size)

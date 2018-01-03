@@ -1,10 +1,13 @@
 {
     "Config":
     {
-        "m_AccountVerifyOn":false
+        "m_AccountVerifyOn":true
     },
     "m_AccountData":{
         "12345":{
+            "name":"hlx"
+        },
+        "你好":{
             "name":"hlx"
         }
     },

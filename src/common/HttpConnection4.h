@@ -7,10 +7,16 @@ class UriParser
 {
 public:
 	UriParser();
+	~UriParser();
 	bool Parse(const char* url);
+	char* Decode(const char* url);
+private:
+	void Clean();
+	
 public:
 	int port;
 	char host[64];
+	char* m_DecodeData;
 
 };
 
