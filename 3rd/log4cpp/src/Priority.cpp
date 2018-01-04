@@ -41,7 +41,8 @@ namespace log4cpp {
         return names()[((priority < 0) || (priority > 8)) ? 8 : priority];
     }
 
-    Priority::Value Priority::getPriorityValue(const std::string& priorityName) {
+    Priority::Value Priority::getPriorityValue(const std::string& priorityName) 
+    throw(std::invalid_argument) {
 	Priority::Value value = -1;
 
 	for (unsigned int i = 0; i < 10; i++) {

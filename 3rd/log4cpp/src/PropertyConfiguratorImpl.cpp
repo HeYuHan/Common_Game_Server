@@ -66,7 +66,7 @@ namespace log4cpp {
     PropertyConfiguratorImpl::~PropertyConfiguratorImpl() {
     }
 
-    void PropertyConfiguratorImpl::doConfigure(const std::string& initFileName) {
+    void PropertyConfiguratorImpl::doConfigure(const std::string& initFileName) throw (ConfigureFailure) {
         std::ifstream initFile(initFileName.c_str());
 
         if (!initFile) {
@@ -77,7 +77,7 @@ namespace log4cpp {
     }
 
 
-    void PropertyConfiguratorImpl::doConfigure(std::istream& in) {
+    void PropertyConfiguratorImpl::doConfigure(std::istream& in) throw (ConfigureFailure) {
         // parse the file to get all of the configuration
         _properties.load(in);
 
@@ -93,7 +93,7 @@ namespace log4cpp {
         }
     }
 
-    void PropertyConfiguratorImpl::instantiateAllAppenders() {
+    void PropertyConfiguratorImpl::instantiateAllAppenders() throw(ConfigureFailure) {
         std::string currentAppender;
 
         std::string prefix("appender");
@@ -132,7 +132,7 @@ namespace log4cpp {
         }
     }
 
-    void PropertyConfiguratorImpl::configureCategory(const std::string& categoryName) {
+    void PropertyConfiguratorImpl::configureCategory(const std::string& categoryName) throw (ConfigureFailure) {
         // start by reading the "rootCategory" key
         std::string tempCatName = 
             (categoryName == "rootCategory") ? categoryName : "category." + categoryName;

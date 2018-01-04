@@ -276,7 +276,7 @@ namespace log4cpp {
         _conversionPattern = "";
     }
 
-    void PatternLayout::setConversionPattern(const std::string& conversionPattern) {
+    void PatternLayout::setConversionPattern(const std::string& conversionPattern) throw(ConfigureFailure) {
 #ifdef LOG4CPP_HAVE_SSTREAM 
         std::istringstream conversionStream(conversionPattern);
 #else
