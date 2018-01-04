@@ -1,0 +1,158 @@
+#!/bin/sh
+login_server_addr=:9300
+login_server_data_path=./loginserver.json
+channel_server_addr=:9500
+channel_server_data_path=./channelserver.json
+function loginserver()
+{
+	login_server_addr=$1
+	login_server_data_path=$2
+}
+function channelserver()
+{
+	channel_server_addr=$1
+	channel_server_data_path=$2
+}
+source `pwd`/tsr_config
+
+declare -a command_list
+declare -i command_count
+
+
+function get_address()
+{
+	addr=`echo $1 | sed -r "s/([0-9.]*):[0-9]+/\1/"`
+	if [ -z $addr ]; then
+		echo ${2:-0.0.0.0}
+	else
+		echo $addr
+	fi
+}
+
+function is_valid_address()
+{
+	addr=`get_address $1`
+
+	# all address is always a valid address
+	if [ "$addr" == "0.0.0.0" ]; then
+		return 0
+	fi
+
+	# search local address
+	for ip in `ifconfig | sed -nr "s/ *inet addr:([0-9.]+).*$/\1/p"`; do
+		if [ "$addr" == "$ip" ]; then
+			return 0
+		fi
+	done
+
+	return 1
+}
+function add_command()
+{
+	command_list[$command_count]="$1"
+	command_count=$command_count+1
+}
+
+if is_valid_address $login_server_addr; then
+	CMD="./loginserver"
+	CMD+=" --addr=$login_server_addr"
+	CMD+=" --data_path=$login_server_data_path"
+	CMD+=" --daemon"
+	CMD+=" --log_path=../log/loginserver.log"
+	add_command "$CMD"
+fi
+
+if is_valid_address $channel_server_addr; then
+	CMD="./channelserver"
+	CMD+=" --addr=$channel_server_addr"
+	CMD+=" --data_path=$channel_server_data_path"
+	CMD+=" --daemon"
+	CMD+=" --log_path=../log/channelserver.log"
+	add_command "$CMD"
+fi
+
+function ps2()
+{
+	pgrep -f "$1" > /dev/null
+	if [[ $? == 0 ]]; then
+		return 1 
+	else
+		return 0
+	fi
+}
+
+
+function start()
+{
+	for c in "${command_list[@]}"; do
+		echo "$c" | awk '{print $1}' | xargs basename | xargs -I{} printf "Starting % -50s" "{} ..."
+		$c
+		sleep 1
+		if $(ps2 "$c"); then
+			echo -ne "[FAILED]\n"
+		else
+			echo -ne "[  OK  ]\n"
+		fi
+	done
+}
+
+function stop()
+{
+	for c in "${command_list[@]}"; do
+		echo "$c" | awk '{print $1}' | xargs basename | xargs -I{} printf "Stopping % -50s" "{} ..."
+		pkill -f "$c"
+		sleep 1
+		if $(ps2 "$c"); then
+			echo -ne "[  OK  ]\n"
+		else
+			echo -ne "[FAILED]\n"
+		fi
+	done
+}
+function countdown() {
+	declare -i seconds
+	declare -i minutes
+	declare -i notified
+	seconds=$2
+	notified=0
+
+	while [ $seconds -gt 0 ]; do
+		minutes=($seconds+59)/60
+		msg=""
+		if [ $minutes -gt 1 ]; then
+			if [ $minutes -ne $notified ]; then
+				msg="服务器将在$minutes分钟后$1"
+				notified=$minutes
+			fi
+		else
+			msg="服务器将在$seconds秒后$1"
+		fi
+
+		if [ -n "$msg" ]; then
+			echo $msg
+			./gmconsole -p $proxy_gm_addr broadcast 0 "/info" "" "$msg"
+		fi
+
+		sleep 1
+		seconds=$seconds-1
+	done
+}
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		countdown "关闭！" $2
+		stop
+		;;
+	restart)
+		countdown "重新启动！" $2
+		stop
+		sleep 3
+		start
+		;;
+	*)
+		echo "Usage: $0 (start|stop|restart)"
+		exit 1
+		;;
+esac
