@@ -1,7 +1,7 @@
 {
     "Config":
     {
-        "m_AccountVerifyOn":true
+        "m_AccountVerifyOn":false
     },
     "m_AccountData":{
         "12345":{

@@ -164,7 +164,7 @@ void LoginServer::GetServerList(HttpTask *task)
 	{
 		ret["result"] = ERROR_NONE;
 		Json::Value list;
-		for (int i = 0; i < m_ServerList.size(); i++)
+		for (NS_VECTOR::vector<std::string>::size_type i = 0; i < m_ServerList.size(); i++)
 		{
 			list[i] = m_ServerList[i];
 		}
@@ -176,6 +176,8 @@ void LoginServer::GetServerList(HttpTask *task)
 void LoginServer::Response(HttpTask * task, Json::Value &ret)
 {
 	Json::FastWriter writer;
+	struct evkeyvalq *header = evhttp_request_get_output_headers(task->request);
+	evhttp_add_header(header, "Access-Control-Allow-Origin", "*");
 	HttpListenner::WriteData(task->request, writer.write(ret).c_str());
 	HttpListenner::EndWrite(task->request, HTTP_OK, "ok");
 }
